@@ -1,0 +1,1563 @@
+
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!-- Application: penguin -->
+<!-- Page: PicturePage -->
+<!-- Generated: Wed Jul 01 21:03:55 EDT 2026 -->
+<html>
+<head>
+<meta name="generator" content="Tapestry Application Framework, version 4.1.6-SNAPSHOT" />
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+<title>Cystic Fibrosis Mutation Database: Mutation Distribution</title>
+<meta key="keywords" content="genet, cystic fibrosis mutation database, CFTR, CFMDB, chromosome 7, chromosome7, bioinformatics resources, bioinformatic, genetic, research, human, genome project, hospital sick children, sickkids" />
+<script type="text/javascript">djConfig = {"baseRelativePath":"/assets/static/dojo-0.4.3-custom-4.1.6/","parseWidgets":false,"locale":"en-us"} </script>
+
+<script type="text/javascript" src="/assets/static/dojo-0.4.3-custom-4.1.6/dojo.js"></script>
+<script type="text/javascript">
+dojo.registerModulePath("tapestry", "/assets/static/tapestry-4.1.6");
+</script>
+<script type="text/javascript" src="/assets/static/tapestry-4.1.6/core.js"></script>
+<script type="text/javascript">
+dojo.require("tapestry.namespace");
+tapestry.requestEncoding='UTF-8';
+</script>
+<link rel="stylesheet" type="text/css" href="/include/main.css" />
+<link rel="stylesheet" type="text/css" href="/include/mutationSearch.css" />
+<link rel="stylesheet" type="text/css" href="/include/forms.css" />
+<link rel="stylesheet" type="text/css" href="/include/phoenix.css" />
+<link rel="stylesheet" type="text/css" href="/include/institution.css" />
+<link rel="stylesheet" type="text/css" href="/include/mutationSubmission.css" />
+</head>
+
+<script language="JavaScript" type="text/javascript">
+    function DivSetVisible(divid, divshimid) {
+        if (document.all && (navigator.userAgent.indexOf("Opera") == -1)) {
+            var DivRef = document.getElementById(divid);
+            DivRef.style.display = "block";
+
+            var IfrRef = document.getElementById(divshimid); // co
+            IfrRef.style.width = DivRef.offsetWidth;
+            IfrRef.style.height = DivRef.offsetHeight;
+            IfrRef.style.top = DivRef.style.top;
+            IfrRef.style.left = DivRef.style.left;
+            IfrRef.style.zIndex = DivRef.style.zIndex - 1;
+            IfrRef.style.display = "block";
+        }
+    }
+    function DivSetInvisible(divid, divshimid) {
+        if (document.all && (navigator.userAgent.indexOf("Opera") == -1)) {
+            var DivRef = document.getElementById(divid);
+            DivRef.style.display = "none";
+            var IfrRef = document.getElementById(divshimid);
+            IfrRef.style.display = "none";
+        }
+    }
+	function setElemCoords(evnt, elem) {
+	// this function was changed to work for both Firefox and IE
+		var myposx = 0;
+		var posy = 0;
+		if (!evnt) var evnt = window.evnt;
+		if (evnt.pageX || evnt.pageY) 	{
+			myposx = evnt.pageX;
+			posy = evnt.pageY;
+		}
+		else if (evnt.clientX || evnt.clientY) 	{
+			myposx = evnt.clientX + document.body.scrollLeft
+			+ document.documentElement.scrollLeft;
+			posy = evnt.clientY + document.body.scrollTop
+			+ document.documentElement.scrollTop;
+		}
+		elem.style.left = myposx + 20 + "px";
+		elem.style.top = posy + 10 + "px";
+	}
+	function xCoord (e){
+
+	}
+	function hideElem(id) {
+		document.getElementById(id).style.display = "none";
+	}
+	function showElem(event, id) {
+		var elem = document.getElementById(id);
+		elem.style.position = "absolute";
+		setElemCoords(event, elem);
+		elem.style.display = "block";
+	}
+</script>
+<noscript>
+    <META HTTP-EQUIV="Refresh" CONTENT="0; URL=/">
+</noscript>
+
+
+
+
+<body marginwidth="0" topmargin="0" marginheight="0" leftmargin="0" id="Body">
+<script type="text/javascript"><!--
+dojo.require("tapestry.fx");
+// --></script>
+<table border="0" cellpadding="0" cellspacing="0" width="791" height="110">
+    <tr>
+        <td rowspan="1" colspan="3" width="691" height="58">
+        	<a id="PageLink" href="/Home.html"><img src="image/mutationlogo.gif" width="791" height="98" border="0"/></a>
+		</td>
+    </tr>
+    <tr><td>
+        <div class="container">
+            <div class="pageHeader">
+
+                <div class="clearBoth"></div>
+
+                <div class="mainMenu">
+                    <ul id="topnav">
+                        <li class="topnavhead"
+                            style="width: 80px;"><a href="Home.html" class="headnavref">Home</a>
+                        </li>
+                        <li class="topnavhead"
+                            onMouseOver="this.className='sfhover'; DivSetVisible('navitem1', 'ulShim1');"
+                            onMouseOut="this.className='topnavhead'; DivSetInvisible('navitem1', 'ulShim1');"
+                            style="width: 76px;"><a href="PicturePage.html" class="headnavref">Search</a>
+                            <ul id="navitem1" style="width: 14em; z-index: 100;">
+                                <li style="width: 14em;"><a href="PicturePage.html">Graphic Search</a></li>
+                                <li style="width: 14em;"><a href="SearchPage.html">Basic Text Search</a></li>
+                                <li style="width: 14em;"><a href="AdvancedSearchPage.html">Advanced Text Search</a></li>
+                                <!--
+                                <li style="width: 14em;"><a href="MutationSearch.html">Criteria Search</a></li>
+                                -->
+                            </ul>
+                            <!--
+                            <iframe id="ulShim1" src="include/iframe_blank.html" scrolling="no" frameborder="0" style="position:absolute; top:0px; left:0px; display:none;"></iframe>
+                            -->
+                        <li class="headdivide"></li>
+                        <li class="topnavhead"
+                            onMouseOver="this.className='sfhover'; DivSetVisible('navitem2', 'ulShim2');"
+                            onMouseOut="this.className='topnavhead'; DivSetInvisible('navitem2', 'ulShim2');"
+                            style="width: 96px;"><a href="GenomicDnaSequencePage.html" class="headnavref">CFTR&nbsp;Gene</a>
+                             <ul id="navitem2" style="width: 24em; z-index: 100;">
+                                <li style="width: 24em;"><a href="GenomicDnaSequencePage.html">Genomic DNA Sequence</a>
+                                </li>
+                                <li style="width: 24em;"><a href="MRnaPolypeptideSequencePage.html">mRNA(cDNA) and Polypeptide Sequence</a>
+                                </li>
+                                <li style="width: 24em;"><a href="CftrDomainPage.html">CFTR Domains</a></li>
+                                 <li style="width: 24em;"><a href="download/mouse_cftr_genomic.doc">Mouse CFTR Genomic Sequence</a></li>
+                            </ul>
+                            <!--
+                            <iframe id="ulShim2" src="include/iframe_blank.html" scrolling="no" frameborder="0" style="position:absolute; top:0px; left:0px; display:none;"></iframe>
+                            -->
+                        <li class="headdivide"></li>
+                        <li class="headdivide"></li>
+
+                        <li class="topnavhead"
+                            onMouseOver="this.className='sfhover'; DivSetVisible('navitem3', 'ulShim3');"
+                            onMouseOut="this.className='topnavhead'; DivSetInvisible('navitem3', 'ulShim3');"
+                            style="width: 70px;"><a href="ConsortiumBackgroundPage.html"  class="headnavref">History</a>
+                            <ul id="navitem3" style="width: 10em; z-index: 100;">
+                                <li style="width: 10em;"><a href="ConsortiumBackgroundPage.html">Background</a></li>
+                                <li style="width: 10em;"><a href="ConsortiumGuidelinesPage.html">Guidelines</a></li>
+                                <li style="width: 10em;"><a href="ConsortiumDataPage1.html">Data</a></li>
+                                <li style="width: 10em;"><a href="NewsLetters.html">News&nbsp;Letters</a></li>
+                            </ul>
+                            <!--
+                            <iframe id="ulShim3" src="include/iframe_blank.html" scrolling="no" frameborder="0" style="position:absolute; top:0px; left:0px; display:none;"></iframe>                        <li class="headdivide"></li>
+                            -->
+                        </li>
+
+                        <li class="headdivide"></li>
+                        <li class="topnavhead"
+                            style="width: 70px;"><a href="Team.html" class="headnavref">Team</a>
+                        </li>
+
+                        <li class="headdivide"></li>
+                        <li class="topnavhead"
+                            style="width: 80px;"><a href="StatisticsPage.html" class="headnavref">Statistics</a>
+                        </li>
+
+                        <li class="headdivide"></li>
+                        <li class="topnavhead"
+                            style="width: 70px;"><a href="LinkPage.html" class="headnavref">Links</a>
+                        </li>
+
+                        <li class="headdivide"></li>
+                        <li class="topnavhead"
+                            style="width: 70px;"><a href="SubmitPage.html" class="headnavref">Submit</a>
+                        </li>
+                        <li class="topnavhead"
+
+                            onMouseOver="this.className='sfhover'; DivSetVisible('navitem5', 'ulShim5');"
+                            onMouseOut="this.className='topnavhead'; DivSetInvisible('navitem5', 'ulShim5');"
+                            style="width: 58px;"><a href="HelpPage.html" class="headnavref">Help</a>
+                            <ul id="navitem5" style="width: 18em; z-index: 100;">
+                                <li style="width: 18em;"><a href="Contact.html">Contact Information</a></li>
+                                <li style="width: 18em;"><a href="HelpPage.html#term">Terminology</a></li>
+                                <li style="width: 18em;"><a href="HelpPage.html#faq">Frequently Asked Questions</a></li>
+                            </ul>
+                            <!--
+                            <iframe id="ulShim5" src="include/iframe_blank.html" scrolling="no" frameborder="0" style="position:absolute; top:0px; left:0px; display:none;"></iframe>                        <li class="headdivide"></li>
+                            -->
+                        </li>
+
+                    </ul>
+
+                </div>
+                <style type="text/css">
+                    ul#navitem1, ul#navitem2, ul#navitem3, ul#navitem4, ul#navitem5, {
+                        width: 10em;
+                    }
+
+                    ul#navitem1 li, ul#navitem2 li, ul#navitem3 li, ul#navitem4 li, ul#navitem5 li, {
+                        font-family: verdana, arial, helvetica, sans-serif;
+                        font-size: 11px;
+                        width: 10em;
+                        font-weight: normal;
+                        border-bottom: 1px solid #cccccc;
+                        background: #eEF3F7;
+                    }
+
+                    ul#navitem1 li a, ul#navitem2 li a, ul#navitem3 li a, ul#navitem4 li a, ul#navitem5 li a, {
+                        font-size: 11px;
+                    }
+                </style>
+                <script type="text/javascript" language="javascript">
+                    // remove menu flicker when useing overLIB  in IE.
+                    if (document.all && (navigator.userAgent.indexOf("Opera") == -1)) {
+                        sfHover = function() {
+                            var sfEls =document.getElementById("topnav").getElementsByTagName("li");
+                            for (var i = 0; i < sfEls.length; i++) {
+                                // **** use onmousemove instead of onmouseover ****
+                                sfEls[i].onmousemove = sfEls[i].onmouseover;
+                            }
+                        }
+                        if (window.attachEvent) window.attachEvent("onload", sfHover);
+                    }
+                </script>
+
+
+            </div>
+
+        </div>
+
+    </td></tr>
+    <tr><td>
+    	<div style="display:none;color:white;background:red;position:absolute;top:0;right:0" id="AjaxStatus">
+			Loading...
+		</div>
+	</td></tr>
+    <tr><td>
+
+        <br><br>
+        <table cellpadding="2" cellspacing="2" width="100%"><tr><td style="font-size:small; ">
+
+
+<div align="center">
+    
+<img src="/overviewImage.svc?imageWidth=760.0" border="0" usemap="#OverviewMapName" />
+<script type="text/javascript" src="include/overlib.js"></script><!-- overLIB (c) Erik Bosrup -->
+<Map name="OverviewMapName">
+
+<AREA SHAPE="rect" COORDS="130,16,135,25" ONMOUSEOUT="return nd();" 
+ONMOUSEOVER="return overlib('Total Mutation: 31<BR>&nbsp;&nbsp;Total FrameShift: 1<BR>&nbsp;&nbsp;Total Sequence Variation: 13<BR>&nbsp;&nbsp;Total Promoter: 12<BR>&nbsp;&nbsp;Total Unknown: 5', 
+CAPTION,'click to view mutations on promoter',CENTER,WIDTH,215);"
+HREF="/PicturePage.html?domain_id=0">
+
+<AREA SHAPE="rect" COORDS="135,16,140,25" ONMOUSEOUT="return nd();" 
+ONMOUSEOVER="return overlib('Total Mutation: 27<BR>&nbsp;&nbsp;Total Missense: 12<BR>&nbsp;&nbsp;Total Nonsense: 4<BR>&nbsp;&nbsp;Total FrameShift: 6<BR>&nbsp;&nbsp;Total Sequence Variation: 2<BR>&nbsp;&nbsp;Total Large in/del: 3', 
+CAPTION,'click to view mutations on exon 1',CENTER,WIDTH,215);"
+HREF="/PicturePage.html?domain_id=1">
+
+<AREA SHAPE="rect" COORDS="140,16,146,25" ONMOUSEOUT="return nd();" 
+ONMOUSEOVER="return overlib('Total Mutation: 10<BR>&nbsp;&nbsp;Total Sequence Variation: 3<BR>&nbsp;&nbsp;Total Splicing: 5<BR>&nbsp;&nbsp;Total Large in/del: 2', 
+CAPTION,'click to view mutations on intron 1',CENTER,WIDTH,215);"
+HREF="/PicturePage.html?domain_id=i1">
+
+<AREA SHAPE="rect" COORDS="146,16,157,25" ONMOUSEOUT="return nd();" 
+ONMOUSEOVER="return overlib('Total Mutation: 33<BR>&nbsp;&nbsp;Total Missense: 18<BR>&nbsp;&nbsp;Total Nonsense: 5<BR>&nbsp;&nbsp;Total FrameShift: 7<BR>&nbsp;&nbsp;Total In Frame in/del: 1<BR>&nbsp;&nbsp;Total Sequence Variation: 2', 
+CAPTION,'click to view mutations on exon 2',CENTER,WIDTH,215);"
+HREF="/PicturePage.html?domain_id=2">
+
+<AREA SHAPE="rect" COORDS="157,16,163,25" ONMOUSEOUT="return nd();" 
+ONMOUSEOVER="return overlib('Total Mutation: 24<BR>&nbsp;&nbsp;Total Sequence Variation: 7<BR>&nbsp;&nbsp;Total Splicing: 17', 
+CAPTION,'click to view mutations on intron 2',CENTER,WIDTH,215);"
+HREF="/PicturePage.html?domain_id=i2">
+
+<AREA SHAPE="rect" COORDS="163,16,174,25" ONMOUSEOUT="return nd();" 
+ONMOUSEOVER="return overlib('Total Mutation: 53<BR>&nbsp;&nbsp;Total Missense: 31<BR>&nbsp;&nbsp;Total Nonsense: 7<BR>&nbsp;&nbsp;Total FrameShift: 12<BR>&nbsp;&nbsp;Total Sequence Variation: 2<BR>&nbsp;&nbsp;Total Unknown: 1', 
+CAPTION,'click to view mutations on exon 3',CENTER,WIDTH,215);"
+HREF="/PicturePage.html?domain_id=3">
+
+<AREA SHAPE="rect" COORDS="174,16,179,25" ONMOUSEOUT="return nd();" 
+ONMOUSEOVER="return overlib('Total Mutation: 20<BR>&nbsp;&nbsp;Total Sequence Variation: 7<BR>&nbsp;&nbsp;Total Splicing: 12<BR>&nbsp;&nbsp;Total Unknown: 1', 
+CAPTION,'click to view mutations on intron 3',CENTER,WIDTH,215);"
+HREF="/PicturePage.html?domain_id=i3">
+
+<AREA SHAPE="rect" COORDS="179,16,202,25" ONMOUSEOUT="return nd();" 
+ONMOUSEOVER="return overlib('Total Mutation: 120<BR>&nbsp;&nbsp;Total Missense: 68<BR>&nbsp;&nbsp;Total Nonsense: 10<BR>&nbsp;&nbsp;Total FrameShift: 24<BR>&nbsp;&nbsp;Total In Frame in/del: 5<BR>&nbsp;&nbsp;Total Sequence Variation: 8<BR>&nbsp;&nbsp;Total Splicing: 1<BR>&nbsp;&nbsp;Total Large in/del: 1<BR>&nbsp;&nbsp;Total Unknown: 3', 
+CAPTION,'click to view mutations on exon 4',CENTER,WIDTH,215);"
+HREF="/PicturePage.html?domain_id=4">
+
+<AREA SHAPE="rect" COORDS="202,16,207,25" ONMOUSEOUT="return nd();" 
+ONMOUSEOVER="return overlib('Total Mutation: 12<BR>&nbsp;&nbsp;Total Sequence Variation: 5<BR>&nbsp;&nbsp;Total Splicing: 7', 
+CAPTION,'click to view mutations on intron 4',CENTER,WIDTH,215);"
+HREF="/PicturePage.html?domain_id=i4">
+
+<AREA SHAPE="rect" COORDS="207,16,217,25" ONMOUSEOUT="return nd();" 
+ONMOUSEOVER="return overlib('Total Mutation: 31<BR>&nbsp;&nbsp;Total Missense: 20<BR>&nbsp;&nbsp;Total Nonsense: 1<BR>&nbsp;&nbsp;Total FrameShift: 7<BR>&nbsp;&nbsp;Total In Frame in/del: 1<BR>&nbsp;&nbsp;Total Sequence Variation: 1<BR>&nbsp;&nbsp;Total Unknown: 1', 
+CAPTION,'click to view mutations on exon 5',CENTER,WIDTH,215);"
+HREF="/PicturePage.html?domain_id=5">
+
+<AREA SHAPE="rect" COORDS="217,16,222,25" ONMOUSEOUT="return nd();" 
+ONMOUSEOVER="return overlib('Total Mutation: 8<BR>&nbsp;&nbsp;Total Sequence Variation: 1<BR>&nbsp;&nbsp;Total Splicing: 7', 
+CAPTION,'click to view mutations on intron 5',CENTER,WIDTH,215);"
+HREF="/PicturePage.html?domain_id=i5">
+
+<AREA SHAPE="rect" COORDS="222,16,239,25" ONMOUSEOUT="return nd();" 
+ONMOUSEOVER="return overlib('Total Mutation: 51<BR>&nbsp;&nbsp;Total Missense: 36<BR>&nbsp;&nbsp;Total Nonsense: 6<BR>&nbsp;&nbsp;Total FrameShift: 6<BR>&nbsp;&nbsp;Total Sequence Variation: 3', 
+CAPTION,'click to view mutations on exon 6',CENTER,WIDTH,215);"
+HREF="/PicturePage.html?domain_id=6">
+
+<AREA SHAPE="rect" COORDS="239,16,244,25" ONMOUSEOUT="return nd();" 
+ONMOUSEOVER="return overlib('Total Mutation: 11<BR>&nbsp;&nbsp;Total FrameShift: 1<BR>&nbsp;&nbsp;Total Sequence Variation: 2<BR>&nbsp;&nbsp;Total Splicing: 8', 
+CAPTION,'click to view mutations on intron 6',CENTER,WIDTH,215);"
+HREF="/PicturePage.html?domain_id=i6">
+
+<AREA SHAPE="rect" COORDS="244,16,258,25" ONMOUSEOUT="return nd();" 
+ONMOUSEOVER="return overlib('Total Mutation: 23<BR>&nbsp;&nbsp;Total Missense: 11<BR>&nbsp;&nbsp;Total Nonsense: 3<BR>&nbsp;&nbsp;Total FrameShift: 6<BR>&nbsp;&nbsp;Total In Frame in/del: 1<BR>&nbsp;&nbsp;Total Splicing: 1<BR>&nbsp;&nbsp;Total Large in/del: 1', 
+CAPTION,'click to view mutations on exon 7',CENTER,WIDTH,215);"
+HREF="/PicturePage.html?domain_id=7">
+
+<AREA SHAPE="rect" COORDS="258,16,263,25" ONMOUSEOUT="return nd();" 
+ONMOUSEOVER="return overlib('Total Mutation: 10<BR>&nbsp;&nbsp;Total Sequence Variation: 3<BR>&nbsp;&nbsp;Total Splicing: 5<BR>&nbsp;&nbsp;Total Unknown: 2', 
+CAPTION,'click to view mutations on intron 7',CENTER,WIDTH,215);"
+HREF="/PicturePage.html?domain_id=i7">
+
+<AREA SHAPE="rect" COORDS="263,16,289,25" ONMOUSEOUT="return nd();" 
+ONMOUSEOVER="return overlib('Total Mutation: 100<BR>&nbsp;&nbsp;Total Missense: 60<BR>&nbsp;&nbsp;Total Nonsense: 7<BR>&nbsp;&nbsp;Total FrameShift: 15<BR>&nbsp;&nbsp;Total In Frame in/del: 6<BR>&nbsp;&nbsp;Total Sequence Variation: 12', 
+CAPTION,'click to view mutations on exon 8',CENTER,WIDTH,215);"
+HREF="/PicturePage.html?domain_id=8">
+
+<AREA SHAPE="rect" COORDS="289,16,294,25" ONMOUSEOUT="return nd();" 
+ONMOUSEOVER="return overlib('Total Mutation: 12<BR>&nbsp;&nbsp;Total Sequence Variation: 4<BR>&nbsp;&nbsp;Total Splicing: 8', 
+CAPTION,'click to view mutations on intron 8',CENTER,WIDTH,215);"
+HREF="/PicturePage.html?domain_id=i8">
+
+<AREA SHAPE="rect" COORDS="294,16,304,25" ONMOUSEOUT="return nd();" 
+ONMOUSEOVER="return overlib('Total Mutation: 29<BR>&nbsp;&nbsp;Total Missense: 14<BR>&nbsp;&nbsp;Total Nonsense: 3<BR>&nbsp;&nbsp;Total FrameShift: 9<BR>&nbsp;&nbsp;Total Sequence Variation: 3', 
+CAPTION,'click to view mutations on exon 9',CENTER,WIDTH,215);"
+HREF="/PicturePage.html?domain_id=9">
+
+<AREA SHAPE="rect" COORDS="304,16,309,25" ONMOUSEOUT="return nd();" 
+ONMOUSEOVER="return overlib('Total Mutation: 15<BR>&nbsp;&nbsp;Total FrameShift: 1<BR>&nbsp;&nbsp;Total Sequence Variation: 6<BR>&nbsp;&nbsp;Total Splicing: 7<BR>&nbsp;&nbsp;Total Unknown: 1', 
+CAPTION,'click to view mutations on intron 9',CENTER,WIDTH,215);"
+HREF="/PicturePage.html?domain_id=i9">
+
+<AREA SHAPE="rect" COORDS="309,16,329,25" ONMOUSEOUT="return nd();" 
+ONMOUSEOVER="return overlib('Total Mutation: 40<BR>&nbsp;&nbsp;Total Missense: 18<BR>&nbsp;&nbsp;Total Nonsense: 2<BR>&nbsp;&nbsp;Total FrameShift: 11<BR>&nbsp;&nbsp;Total In Frame in/del: 1<BR>&nbsp;&nbsp;Total Sequence Variation: 3<BR>&nbsp;&nbsp;Total Splicing: 1<BR>&nbsp;&nbsp;Total Large in/del: 1<BR>&nbsp;&nbsp;Total Unknown: 3', 
+CAPTION,'click to view mutations on exon 10',CENTER,WIDTH,215);"
+HREF="/PicturePage.html?domain_id=10">
+
+<AREA SHAPE="rect" COORDS="329,16,334,25" ONMOUSEOUT="return nd();" 
+ONMOUSEOVER="return overlib('Total Mutation: 11<BR>&nbsp;&nbsp;Total Sequence Variation: 4<BR>&nbsp;&nbsp;Total Splicing: 5<BR>&nbsp;&nbsp;Total Unknown: 2', 
+CAPTION,'click to view mutations on intron 10',CENTER,WIDTH,215);"
+HREF="/PicturePage.html?domain_id=i10">
+
+<AREA SHAPE="rect" COORDS="334,16,354,25" ONMOUSEOUT="return nd();" 
+ONMOUSEOVER="return overlib('Total Mutation: 78<BR>&nbsp;&nbsp;Total Missense: 43<BR>&nbsp;&nbsp;Total Nonsense: 10<BR>&nbsp;&nbsp;Total FrameShift: 12<BR>&nbsp;&nbsp;Total In Frame in/del: 2<BR>&nbsp;&nbsp;Total Sequence Variation: 9<BR>&nbsp;&nbsp;Total Splicing: 2', 
+CAPTION,'click to view mutations on exon 11',CENTER,WIDTH,215);"
+HREF="/PicturePage.html?domain_id=11">
+
+<AREA SHAPE="rect" COORDS="354,16,359,25" ONMOUSEOUT="return nd();" 
+ONMOUSEOVER="return overlib('Total Mutation: 17<BR>&nbsp;&nbsp;Total Sequence Variation: 8<BR>&nbsp;&nbsp;Total Splicing: 9', 
+CAPTION,'click to view mutations on intron 11',CENTER,WIDTH,215);"
+HREF="/PicturePage.html?domain_id=i11">
+
+<AREA SHAPE="rect" COORDS="359,16,369,25" ONMOUSEOUT="return nd();" 
+ONMOUSEOVER="return overlib('Total Mutation: 49<BR>&nbsp;&nbsp;Total Missense: 29<BR>&nbsp;&nbsp;Total Nonsense: 4<BR>&nbsp;&nbsp;Total FrameShift: 10<BR>&nbsp;&nbsp;Total In Frame in/del: 1<BR>&nbsp;&nbsp;Total Sequence Variation: 2<BR>&nbsp;&nbsp;Total Splicing: 2<BR>&nbsp;&nbsp;Total Unknown: 1', 
+CAPTION,'click to view mutations on exon 12',CENTER,WIDTH,215);"
+HREF="/PicturePage.html?domain_id=12">
+
+<AREA SHAPE="rect" COORDS="369,16,375,25" ONMOUSEOUT="return nd();" 
+ONMOUSEOVER="return overlib('Total Mutation: 22<BR>&nbsp;&nbsp;Total Nonsense: 1<BR>&nbsp;&nbsp;Total Sequence Variation: 5<BR>&nbsp;&nbsp;Total Splicing: 13<BR>&nbsp;&nbsp;Total Unknown: 3', 
+CAPTION,'click to view mutations on intron 12',CENTER,WIDTH,215);"
+HREF="/PicturePage.html?domain_id=i12">
+
+<AREA SHAPE="rect" COORDS="375,16,384,25" ONMOUSEOUT="return nd();" 
+ONMOUSEOVER="return overlib('Total Mutation: 46<BR>&nbsp;&nbsp;Total Missense: 33<BR>&nbsp;&nbsp;Total Nonsense: 4<BR>&nbsp;&nbsp;Total FrameShift: 6<BR>&nbsp;&nbsp;Total Sequence Variation: 2<BR>&nbsp;&nbsp;Total Unknown: 1', 
+CAPTION,'click to view mutations on exon 13',CENTER,WIDTH,215);"
+HREF="/PicturePage.html?domain_id=13">
+
+<AREA SHAPE="rect" COORDS="384,16,389,25" ONMOUSEOUT="return nd();" 
+ONMOUSEOVER="return overlib('Total Mutation: 11<BR>&nbsp;&nbsp;Total Sequence Variation: 2<BR>&nbsp;&nbsp;Total Splicing: 9', 
+CAPTION,'click to view mutations on intron 13',CENTER,WIDTH,215);"
+HREF="/PicturePage.html?domain_id=i13">
+
+<AREA SHAPE="rect" COORDS="389,16,465,25" ONMOUSEOUT="return nd();" 
+ONMOUSEOVER="return overlib('Total Mutation: 159<BR>&nbsp;&nbsp;Total Missense: 65<BR>&nbsp;&nbsp;Total Nonsense: 29<BR>&nbsp;&nbsp;Total FrameShift: 43<BR>&nbsp;&nbsp;Total In Frame in/del: 3<BR>&nbsp;&nbsp;Total Sequence Variation: 13<BR>&nbsp;&nbsp;Total Large in/del: 1<BR>&nbsp;&nbsp;Total Unknown: 5', 
+CAPTION,'click to view mutations on exon 14',CENTER,WIDTH,215);"
+HREF="/PicturePage.html?domain_id=14">
+
+<AREA SHAPE="rect" COORDS="465,16,470,25" ONMOUSEOUT="return nd();" 
+ONMOUSEOVER="return overlib('Total Mutation: 10<BR>&nbsp;&nbsp;Total Sequence Variation: 3<BR>&nbsp;&nbsp;Total Splicing: 6<BR>&nbsp;&nbsp;Total Unknown: 1', 
+CAPTION,'click to view mutations on intron 14',CENTER,WIDTH,215);"
+HREF="/PicturePage.html?domain_id=i14">
+
+<AREA SHAPE="rect" COORDS="470,16,484,25" ONMOUSEOUT="return nd();" 
+ONMOUSEOVER="return overlib('Total Mutation: 35<BR>&nbsp;&nbsp;Total Missense: 9<BR>&nbsp;&nbsp;Total Nonsense: 7<BR>&nbsp;&nbsp;Total FrameShift: 11<BR>&nbsp;&nbsp;Total Sequence Variation: 6<BR>&nbsp;&nbsp;Total Splicing: 2', 
+CAPTION,'click to view mutations on exon 15',CENTER,WIDTH,215);"
+HREF="/PicturePage.html?domain_id=15">
+
+<AREA SHAPE="rect" COORDS="484,16,489,25" ONMOUSEOUT="return nd();" 
+ONMOUSEOVER="return overlib('Total Mutation: 15<BR>&nbsp;&nbsp;Total Sequence Variation: 5<BR>&nbsp;&nbsp;Total Splicing: 8<BR>&nbsp;&nbsp;Total Unknown: 2', 
+CAPTION,'click to view mutations on intron 15',CENTER,WIDTH,215);"
+HREF="/PicturePage.html?domain_id=i15">
+
+<AREA SHAPE="rect" COORDS="489,16,493,25" ONMOUSEOUT="return nd();" 
+ONMOUSEOVER="return overlib('Total Mutation: 3<BR>&nbsp;&nbsp;Total Nonsense: 1<BR>&nbsp;&nbsp;Total FrameShift: 1<BR>&nbsp;&nbsp;Total In Frame in/del: 1', 
+CAPTION,'click to view mutations on exon 16',CENTER,WIDTH,215);"
+HREF="/PicturePage.html?domain_id=16">
+
+<AREA SHAPE="rect" COORDS="493,16,498,25" ONMOUSEOUT="return nd();" 
+ONMOUSEOVER="return overlib('Total Mutation: 9<BR>&nbsp;&nbsp;Total Sequence Variation: 3<BR>&nbsp;&nbsp;Total Splicing: 6', 
+CAPTION,'click to view mutations on intron 16',CENTER,WIDTH,215);"
+HREF="/PicturePage.html?domain_id=i16">
+
+<AREA SHAPE="rect" COORDS="498,16,525,25" ONMOUSEOUT="return nd();" 
+ONMOUSEOVER="return overlib('Total Mutation: 75<BR>&nbsp;&nbsp;Total Missense: 44<BR>&nbsp;&nbsp;Total Nonsense: 4<BR>&nbsp;&nbsp;Total FrameShift: 14<BR>&nbsp;&nbsp;Total In Frame in/del: 1<BR>&nbsp;&nbsp;Total Sequence Variation: 12', 
+CAPTION,'click to view mutations on exon 17',CENTER,WIDTH,215);"
+HREF="/PicturePage.html?domain_id=17">
+
+<AREA SHAPE="rect" COORDS="525,16,530,25" ONMOUSEOUT="return nd();" 
+ONMOUSEOVER="return overlib('Total Mutation: 11<BR>&nbsp;&nbsp;Total FrameShift: 1<BR>&nbsp;&nbsp;Total Sequence Variation: 4<BR>&nbsp;&nbsp;Total Splicing: 6', 
+CAPTION,'click to view mutations on intron 17',CENTER,WIDTH,215);"
+HREF="/PicturePage.html?domain_id=i17">
+
+<AREA SHAPE="rect" COORDS="530,16,539,25" ONMOUSEOUT="return nd();" 
+ONMOUSEOVER="return overlib('Total Mutation: 26<BR>&nbsp;&nbsp;Total Missense: 17<BR>&nbsp;&nbsp;Total Nonsense: 1<BR>&nbsp;&nbsp;Total FrameShift: 4<BR>&nbsp;&nbsp;Total In Frame in/del: 1<BR>&nbsp;&nbsp;Total Splicing: 1<BR>&nbsp;&nbsp;Total Unknown: 2', 
+CAPTION,'click to view mutations on exon 18',CENTER,WIDTH,215);"
+HREF="/PicturePage.html?domain_id=18">
+
+<AREA SHAPE="rect" COORDS="539,16,544,25" ONMOUSEOUT="return nd();" 
+ONMOUSEOVER="return overlib('Total Mutation: 15<BR>&nbsp;&nbsp;Total Sequence Variation: 5<BR>&nbsp;&nbsp;Total Splicing: 8<BR>&nbsp;&nbsp;Total Unknown: 2', 
+CAPTION,'click to view mutations on intron 18',CENTER,WIDTH,215);"
+HREF="/PicturePage.html?domain_id=i18">
+
+<AREA SHAPE="rect" COORDS="544,16,560,25" ONMOUSEOUT="return nd();" 
+ONMOUSEOVER="return overlib('Total Mutation: 45<BR>&nbsp;&nbsp;Total Missense: 22<BR>&nbsp;&nbsp;Total Nonsense: 2<BR>&nbsp;&nbsp;Total FrameShift: 13<BR>&nbsp;&nbsp;Total In Frame in/del: 5<BR>&nbsp;&nbsp;Total Sequence Variation: 2<BR>&nbsp;&nbsp;Total Splicing: 1', 
+CAPTION,'click to view mutations on exon 19',CENTER,WIDTH,215);"
+HREF="/PicturePage.html?domain_id=19">
+
+<AREA SHAPE="rect" COORDS="560,16,565,25" ONMOUSEOUT="return nd();" 
+ONMOUSEOVER="return overlib('Total Mutation: 17<BR>&nbsp;&nbsp;Total Sequence Variation: 8<BR>&nbsp;&nbsp;Total Splicing: 8<BR>&nbsp;&nbsp;Total Large in/del: 1', 
+CAPTION,'click to view mutations on intron 19',CENTER,WIDTH,215);"
+HREF="/PicturePage.html?domain_id=i19">
+
+<AREA SHAPE="rect" COORDS="565,16,589,25" ONMOUSEOUT="return nd();" 
+ONMOUSEOVER="return overlib('Total Mutation: 90<BR>&nbsp;&nbsp;Total Missense: 56<BR>&nbsp;&nbsp;Total Nonsense: 10<BR>&nbsp;&nbsp;Total FrameShift: 12<BR>&nbsp;&nbsp;Total Sequence Variation: 8<BR>&nbsp;&nbsp;Total Splicing: 1<BR>&nbsp;&nbsp;Total Large in/del: 1<BR>&nbsp;&nbsp;Total Unknown: 2', 
+CAPTION,'click to view mutations on exon 20',CENTER,WIDTH,215);"
+HREF="/PicturePage.html?domain_id=20">
+
+<AREA SHAPE="rect" COORDS="589,16,594,25" ONMOUSEOUT="return nd();" 
+ONMOUSEOVER="return overlib('Total Mutation: 12<BR>&nbsp;&nbsp;Total Sequence Variation: 6<BR>&nbsp;&nbsp;Total Splicing: 6', 
+CAPTION,'click to view mutations on intron 20',CENTER,WIDTH,215);"
+HREF="/PicturePage.html?domain_id=i20">
+
+<AREA SHAPE="rect" COORDS="594,16,605,25" ONMOUSEOUT="return nd();" 
+ONMOUSEOVER="return overlib('Total Mutation: 31<BR>&nbsp;&nbsp;Total Missense: 21<BR>&nbsp;&nbsp;Total Nonsense: 3<BR>&nbsp;&nbsp;Total FrameShift: 3<BR>&nbsp;&nbsp;Total In Frame in/del: 2<BR>&nbsp;&nbsp;Total Splicing: 1<BR>&nbsp;&nbsp;Total Unknown: 1', 
+CAPTION,'click to view mutations on exon 21',CENTER,WIDTH,215);"
+HREF="/PicturePage.html?domain_id=21">
+
+<AREA SHAPE="rect" COORDS="605,16,610,25" ONMOUSEOUT="return nd();" 
+ONMOUSEOVER="return overlib('Total Mutation: 9<BR>&nbsp;&nbsp;Total Sequence Variation: 4<BR>&nbsp;&nbsp;Total Splicing: 5', 
+CAPTION,'click to view mutations on intron 21',CENTER,WIDTH,215);"
+HREF="/PicturePage.html?domain_id=i21">
+
+<AREA SHAPE="rect" COORDS="610,16,636,25" ONMOUSEOUT="return nd();" 
+ONMOUSEOVER="return overlib('Total Mutation: 67<BR>&nbsp;&nbsp;Total Missense: 24<BR>&nbsp;&nbsp;Total Nonsense: 11<BR>&nbsp;&nbsp;Total FrameShift: 18<BR>&nbsp;&nbsp;Total Sequence Variation: 9<BR>&nbsp;&nbsp;Total Splicing: 1<BR>&nbsp;&nbsp;Total Large in/del: 3<BR>&nbsp;&nbsp;Total Unknown: 1', 
+CAPTION,'click to view mutations on exon 22',CENTER,WIDTH,215);"
+HREF="/PicturePage.html?domain_id=22">
+
+<AREA SHAPE="rect" COORDS="636,16,642,25" ONMOUSEOUT="return nd();" 
+ONMOUSEOVER="return overlib('Total Mutation: 13<BR>&nbsp;&nbsp;Total Sequence Variation: 3<BR>&nbsp;&nbsp;Total Splicing: 9<BR>&nbsp;&nbsp;Total Unknown: 1', 
+CAPTION,'click to view mutations on intron 22',CENTER,WIDTH,215);"
+HREF="/PicturePage.html?domain_id=i22">
+
+<AREA SHAPE="rect" COORDS="642,16,658,25" ONMOUSEOUT="return nd();" 
+ONMOUSEOVER="return overlib('Total Mutation: 62<BR>&nbsp;&nbsp;Total Missense: 35<BR>&nbsp;&nbsp;Total Nonsense: 6<BR>&nbsp;&nbsp;Total FrameShift: 10<BR>&nbsp;&nbsp;Total In Frame in/del: 2<BR>&nbsp;&nbsp;Total Sequence Variation: 5<BR>&nbsp;&nbsp;Total Splicing: 1<BR>&nbsp;&nbsp;Total Unknown: 3', 
+CAPTION,'click to view mutations on exon 23',CENTER,WIDTH,215);"
+HREF="/PicturePage.html?domain_id=23">
+
+<AREA SHAPE="rect" COORDS="658,16,663,25" ONMOUSEOUT="return nd();" 
+ONMOUSEOVER="return overlib('Total Mutation: 19<BR>&nbsp;&nbsp;Total In Frame in/del: 1<BR>&nbsp;&nbsp;Total Sequence Variation: 6<BR>&nbsp;&nbsp;Total Splicing: 12', 
+CAPTION,'click to view mutations on intron 23',CENTER,WIDTH,215);"
+HREF="/PicturePage.html?domain_id=i23">
+
+<AREA SHAPE="rect" COORDS="663,16,673,25" ONMOUSEOUT="return nd();" 
+ONMOUSEOVER="return overlib('Total Mutation: 40<BR>&nbsp;&nbsp;Total Missense: 19<BR>&nbsp;&nbsp;Total Nonsense: 5<BR>&nbsp;&nbsp;Total FrameShift: 10<BR>&nbsp;&nbsp;Total In Frame in/del: 1<BR>&nbsp;&nbsp;Total Sequence Variation: 3<BR>&nbsp;&nbsp;Total Large in/del: 1<BR>&nbsp;&nbsp;Total Unknown: 1', 
+CAPTION,'click to view mutations on exon 24',CENTER,WIDTH,215);"
+HREF="/PicturePage.html?domain_id=24">
+
+<AREA SHAPE="rect" COORDS="673,16,678,25" ONMOUSEOUT="return nd();" 
+ONMOUSEOVER="return overlib('Total Mutation: 12<BR>&nbsp;&nbsp;Total Sequence Variation: 3<BR>&nbsp;&nbsp;Total Splicing: 8<BR>&nbsp;&nbsp;Total Unknown: 1', 
+CAPTION,'click to view mutations on intron 24',CENTER,WIDTH,215);"
+HREF="/PicturePage.html?domain_id=i24">
+
+<AREA SHAPE="rect" COORDS="678,16,696,25" ONMOUSEOUT="return nd();" 
+ONMOUSEOVER="return overlib('Total Mutation: 37<BR>&nbsp;&nbsp;Total Missense: 21<BR>&nbsp;&nbsp;Total Nonsense: 1<BR>&nbsp;&nbsp;Total FrameShift: 12<BR>&nbsp;&nbsp;Total In Frame in/del: 2<BR>&nbsp;&nbsp;Total Unknown: 1', 
+CAPTION,'click to view mutations on exon 25',CENTER,WIDTH,215);"
+HREF="/PicturePage.html?domain_id=25">
+
+<AREA SHAPE="rect" COORDS="696,16,701,25" ONMOUSEOUT="return nd();" 
+ONMOUSEOVER="return overlib('Total Mutation: 3<BR>&nbsp;&nbsp;Total Sequence Variation: 3', 
+CAPTION,'click to view mutations on intron 25',CENTER,WIDTH,215);"
+HREF="/PicturePage.html?domain_id=i25">
+
+<AREA SHAPE="rect" COORDS="701,16,713,25" ONMOUSEOUT="return nd();" 
+ONMOUSEOVER="return overlib('Total Mutation: 30<BR>&nbsp;&nbsp;Total Missense: 13<BR>&nbsp;&nbsp;Total Nonsense: 5<BR>&nbsp;&nbsp;Total FrameShift: 7<BR>&nbsp;&nbsp;Total Sequence Variation: 4<BR>&nbsp;&nbsp;Total Unknown: 1', 
+CAPTION,'click to view mutations on exon 26',CENTER,WIDTH,215);"
+HREF="/PicturePage.html?domain_id=26">
+
+<AREA SHAPE="rect" COORDS="713,16,718,25" ONMOUSEOUT="return nd();" 
+ONMOUSEOVER="return overlib('Total Mutation: 12<BR>&nbsp;&nbsp;Total Sequence Variation: 4<BR>&nbsp;&nbsp;Total Splicing: 8', 
+CAPTION,'click to view mutations on intron 27',CENTER,WIDTH,215);"
+HREF="/PicturePage.html?domain_id=i26">
+
+<AREA SHAPE="rect" COORDS="718,16,739,25" ONMOUSEOUT="return nd();" 
+ONMOUSEOVER="return overlib('Total Mutation: 24<BR>&nbsp;&nbsp;Total Missense: 9<BR>&nbsp;&nbsp;Total Nonsense: 5<BR>&nbsp;&nbsp;Total FrameShift: 2<BR>&nbsp;&nbsp;Total Sequence Variation: 7<BR>&nbsp;&nbsp;Total Unknown: 1', 
+CAPTION,'click to view mutations on exon 27',CENTER,WIDTH,215);"
+HREF="/PicturePage.html?domain_id=27">
+
+<AREA SHAPE="rect" COORDS="739,16,744,25" ONMOUSEOUT="return nd();" 
+ONMOUSEOVER="return overlib('Total Mutation: 0', 
+CAPTION,'click to view mutations on 3\'UTR',CENTER,WIDTH,215);"
+HREF="/PicturePage.html?domain_id=i27"></Map>
+<p align="left" style="padding-left:10px;font-size:x-small;">
+"Sequence Variation" is sometimes designated as "polymorphism",
+indicating that it is "non-disease causing".
+According to the general definition in human genetics,
+a "polymorphism" has to reach an allelic frequency of 1%. In addition,
+when a sequence variation is found in one single individual,
+it is not possible to determine if it is "non-disease causing"
+</p>
+<br>
+
+<span id="If">
+
+    <p align="left" style="padding-left:10px;font-size:small">
+    <b>Detailed View of exon 14</b>
+    <br>
+    <span style="font-size:x-small">Get the summary of a mutation by putting your mouse over that mutation. Click to view the details of that mutation.</span>
+    </p>
+  <img src="/exonImage.svc?exonId=14" usemap="#DomainMapName" border="0" />
+  <script type="text/javascript" src="include/overlib.js"></script><!-- overLIB (c) Erik Bosrup -->
+<Map name="DomainMapName">
+
+<area onMouseOut="return nd();" COORDS="35,52,50,69" href=""
+onMouseOver="return overlib('1902',CAPTION,'Old Nomenclature',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="75,52,90,69" href=""
+onMouseOver="return overlib('1907',CAPTION,'Old Nomenclature',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="115,52,130,69" href=""
+onMouseOver="return overlib('1912',CAPTION,'Old Nomenclature',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="155,52,170,69" href=""
+onMouseOver="return overlib('1917',CAPTION,'Old Nomenclature',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="195,52,210,69" href=""
+onMouseOver="return overlib('1922',CAPTION,'Old Nomenclature',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="235,52,250,69" href=""
+onMouseOver="return overlib('1927',CAPTION,'Old Nomenclature',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="275,52,290,69" href=""
+onMouseOver="return overlib('1932',CAPTION,'Old Nomenclature',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="315,52,330,69" href=""
+onMouseOver="return overlib('1937',CAPTION,'Old Nomenclature',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="355,52,370,69" href=""
+onMouseOver="return overlib('1942',CAPTION,'Old Nomenclature',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="395,52,410,69" href=""
+onMouseOver="return overlib('1947',CAPTION,'Old Nomenclature',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="435,52,450,69" href=""
+onMouseOver="return overlib('1952',CAPTION,'Old Nomenclature',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="475,52,490,69" href=""
+onMouseOver="return overlib('1957',CAPTION,'Old Nomenclature',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="515,52,530,69" href=""
+onMouseOver="return overlib('1962',CAPTION,'Old Nomenclature',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="555,52,570,69" href=""
+onMouseOver="return overlib('1967',CAPTION,'Old Nomenclature',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="595,52,610,69" href=""
+onMouseOver="return overlib('1972',CAPTION,'Old Nomenclature',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="635,52,650,69" href=""
+onMouseOver="return overlib('1977',CAPTION,'Old Nomenclature',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="675,52,690,69" href=""
+onMouseOver="return overlib('1982',CAPTION,'Old Nomenclature',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="11,172,26,189" href=""
+onMouseOver="return overlib('1987',CAPTION,'Old Nomenclature',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="51,172,66,189" href=""
+onMouseOver="return overlib('1992',CAPTION,'Old Nomenclature',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="91,172,106,189" href=""
+onMouseOver="return overlib('1997',CAPTION,'Old Nomenclature',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="131,172,146,189" href=""
+onMouseOver="return overlib('2002',CAPTION,'Old Nomenclature',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="171,172,186,189" href=""
+onMouseOver="return overlib('2007',CAPTION,'Old Nomenclature',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="211,172,226,189" href=""
+onMouseOver="return overlib('2012',CAPTION,'Old Nomenclature',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="251,172,266,189" href=""
+onMouseOver="return overlib('2017',CAPTION,'Old Nomenclature',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="291,172,306,189" href=""
+onMouseOver="return overlib('2022',CAPTION,'Old Nomenclature',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="331,172,346,189" href=""
+onMouseOver="return overlib('2027',CAPTION,'Old Nomenclature',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="371,172,386,189" href=""
+onMouseOver="return overlib('2032',CAPTION,'Old Nomenclature',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="411,172,426,189" href=""
+onMouseOver="return overlib('2037',CAPTION,'Old Nomenclature',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="451,172,466,189" href=""
+onMouseOver="return overlib('2042',CAPTION,'Old Nomenclature',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="491,172,506,189" href=""
+onMouseOver="return overlib('2047',CAPTION,'Old Nomenclature',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="531,172,546,189" href=""
+onMouseOver="return overlib('2052',CAPTION,'Old Nomenclature',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="571,172,586,189" href=""
+onMouseOver="return overlib('2057',CAPTION,'Old Nomenclature',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="611,172,626,189" href=""
+onMouseOver="return overlib('2062',CAPTION,'Old Nomenclature',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="651,172,666,189" href=""
+onMouseOver="return overlib('2067',CAPTION,'Old Nomenclature',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="691,172,706,189" href=""
+onMouseOver="return overlib('2072',CAPTION,'Old Nomenclature',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="11,292,26,309" href=""
+onMouseOver="return overlib('2077',CAPTION,'Old Nomenclature',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="51,292,66,309" href=""
+onMouseOver="return overlib('2082',CAPTION,'Old Nomenclature',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="91,292,106,309" href=""
+onMouseOver="return overlib('2087',CAPTION,'Old Nomenclature',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="131,292,146,309" href=""
+onMouseOver="return overlib('2092',CAPTION,'Old Nomenclature',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="171,292,186,309" href=""
+onMouseOver="return overlib('2097',CAPTION,'Old Nomenclature',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="211,292,226,309" href=""
+onMouseOver="return overlib('2102',CAPTION,'Old Nomenclature',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="251,292,266,309" href=""
+onMouseOver="return overlib('2107',CAPTION,'Old Nomenclature',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="291,292,306,309" href=""
+onMouseOver="return overlib('2112',CAPTION,'Old Nomenclature',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="331,292,346,309" href=""
+onMouseOver="return overlib('2117',CAPTION,'Old Nomenclature',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="371,292,386,309" href=""
+onMouseOver="return overlib('2122',CAPTION,'Old Nomenclature',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="411,292,426,309" href=""
+onMouseOver="return overlib('2127',CAPTION,'Old Nomenclature',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="451,292,466,309" href=""
+onMouseOver="return overlib('2132',CAPTION,'Old Nomenclature',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="491,292,506,309" href=""
+onMouseOver="return overlib('2137',CAPTION,'Old Nomenclature',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="531,292,546,309" href=""
+onMouseOver="return overlib('2142',CAPTION,'Old Nomenclature',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="571,292,586,309" href=""
+onMouseOver="return overlib('2147',CAPTION,'Old Nomenclature',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="611,292,626,309" href=""
+onMouseOver="return overlib('2152',CAPTION,'Old Nomenclature',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="651,292,666,309" href=""
+onMouseOver="return overlib('2157',CAPTION,'Old Nomenclature',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="691,292,706,309" href=""
+onMouseOver="return overlib('2162',CAPTION,'Old Nomenclature',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="11,412,26,429" href=""
+onMouseOver="return overlib('2167',CAPTION,'Old Nomenclature',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="51,412,66,429" href=""
+onMouseOver="return overlib('2172',CAPTION,'Old Nomenclature',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="91,412,106,429" href=""
+onMouseOver="return overlib('2177',CAPTION,'Old Nomenclature',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="131,412,146,429" href=""
+onMouseOver="return overlib('2182',CAPTION,'Old Nomenclature',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="171,412,186,429" href=""
+onMouseOver="return overlib('2187',CAPTION,'Old Nomenclature',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="211,412,226,429" href=""
+onMouseOver="return overlib('2192',CAPTION,'Old Nomenclature',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="251,412,266,429" href=""
+onMouseOver="return overlib('2197',CAPTION,'Old Nomenclature',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="291,412,306,429" href=""
+onMouseOver="return overlib('2202',CAPTION,'Old Nomenclature',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="331,412,346,429" href=""
+onMouseOver="return overlib('2207',CAPTION,'Old Nomenclature',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="371,412,386,429" href=""
+onMouseOver="return overlib('2212',CAPTION,'Old Nomenclature',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="411,412,426,429" href=""
+onMouseOver="return overlib('2217',CAPTION,'Old Nomenclature',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="451,412,466,429" href=""
+onMouseOver="return overlib('2222',CAPTION,'Old Nomenclature',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="491,412,506,429" href=""
+onMouseOver="return overlib('2227',CAPTION,'Old Nomenclature',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="531,412,546,429" href=""
+onMouseOver="return overlib('2232',CAPTION,'Old Nomenclature',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="571,412,586,429" href=""
+onMouseOver="return overlib('2237',CAPTION,'Old Nomenclature',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="611,412,626,429" href=""
+onMouseOver="return overlib('2242',CAPTION,'Old Nomenclature',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="651,412,666,429" href=""
+onMouseOver="return overlib('2247',CAPTION,'Old Nomenclature',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="691,412,706,429" href=""
+onMouseOver="return overlib('2252',CAPTION,'Old Nomenclature',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="11,532,26,549" href=""
+onMouseOver="return overlib('2257',CAPTION,'Old Nomenclature',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="51,532,66,549" href=""
+onMouseOver="return overlib('2262',CAPTION,'Old Nomenclature',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="91,532,106,549" href=""
+onMouseOver="return overlib('2267',CAPTION,'Old Nomenclature',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="131,532,146,549" href=""
+onMouseOver="return overlib('2272',CAPTION,'Old Nomenclature',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="171,532,186,549" href=""
+onMouseOver="return overlib('2277',CAPTION,'Old Nomenclature',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="211,532,226,549" href=""
+onMouseOver="return overlib('2282',CAPTION,'Old Nomenclature',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="251,532,266,549" href=""
+onMouseOver="return overlib('2287',CAPTION,'Old Nomenclature',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="291,532,306,549" href=""
+onMouseOver="return overlib('2292',CAPTION,'Old Nomenclature',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="331,532,346,549" href=""
+onMouseOver="return overlib('2297',CAPTION,'Old Nomenclature',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="371,532,386,549" href=""
+onMouseOver="return overlib('2302',CAPTION,'Old Nomenclature',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="411,532,426,549" href=""
+onMouseOver="return overlib('2307',CAPTION,'Old Nomenclature',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="451,532,466,549" href=""
+onMouseOver="return overlib('2312',CAPTION,'Old Nomenclature',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="491,532,506,549" href=""
+onMouseOver="return overlib('2317',CAPTION,'Old Nomenclature',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="531,532,546,549" href=""
+onMouseOver="return overlib('2322',CAPTION,'Old Nomenclature',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="571,532,586,549" href=""
+onMouseOver="return overlib('2327',CAPTION,'Old Nomenclature',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="611,532,626,549" href=""
+onMouseOver="return overlib('2332',CAPTION,'Old Nomenclature',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="651,532,666,549" href=""
+onMouseOver="return overlib('2337',CAPTION,'Old Nomenclature',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="691,532,706,549" href=""
+onMouseOver="return overlib('2342',CAPTION,'Old Nomenclature',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="11,652,26,669" href=""
+onMouseOver="return overlib('2347',CAPTION,'Old Nomenclature',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="51,652,66,669" href=""
+onMouseOver="return overlib('2352',CAPTION,'Old Nomenclature',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="91,652,106,669" href=""
+onMouseOver="return overlib('2357',CAPTION,'Old Nomenclature',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="131,652,146,669" href=""
+onMouseOver="return overlib('2362',CAPTION,'Old Nomenclature',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="171,652,186,669" href=""
+onMouseOver="return overlib('2367',CAPTION,'Old Nomenclature',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="211,652,226,669" href=""
+onMouseOver="return overlib('2372',CAPTION,'Old Nomenclature',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="251,652,266,669" href=""
+onMouseOver="return overlib('2377',CAPTION,'Old Nomenclature',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="291,652,306,669" href=""
+onMouseOver="return overlib('2382',CAPTION,'Old Nomenclature',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="331,652,346,669" href=""
+onMouseOver="return overlib('2387',CAPTION,'Old Nomenclature',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="371,652,386,669" href=""
+onMouseOver="return overlib('2392',CAPTION,'Old Nomenclature',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="411,652,426,669" href=""
+onMouseOver="return overlib('2397',CAPTION,'Old Nomenclature',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="451,652,466,669" href=""
+onMouseOver="return overlib('2402',CAPTION,'Old Nomenclature',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="491,652,506,669" href=""
+onMouseOver="return overlib('2407',CAPTION,'Old Nomenclature',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="531,652,546,669" href=""
+onMouseOver="return overlib('2412',CAPTION,'Old Nomenclature',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="571,652,586,669" href=""
+onMouseOver="return overlib('2417',CAPTION,'Old Nomenclature',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="611,652,626,669" href=""
+onMouseOver="return overlib('2422',CAPTION,'Old Nomenclature',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="651,652,666,669" href=""
+onMouseOver="return overlib('2427',CAPTION,'Old Nomenclature',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="691,652,706,669" href=""
+onMouseOver="return overlib('2432',CAPTION,'Old Nomenclature',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="11,772,26,789" href=""
+onMouseOver="return overlib('2437',CAPTION,'Old Nomenclature',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="51,772,66,789" href=""
+onMouseOver="return overlib('2442',CAPTION,'Old Nomenclature',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="91,772,106,789" href=""
+onMouseOver="return overlib('2447',CAPTION,'Old Nomenclature',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="131,772,146,789" href=""
+onMouseOver="return overlib('2452',CAPTION,'Old Nomenclature',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="171,772,186,789" href=""
+onMouseOver="return overlib('2457',CAPTION,'Old Nomenclature',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="211,772,226,789" href=""
+onMouseOver="return overlib('2462',CAPTION,'Old Nomenclature',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="251,772,266,789" href=""
+onMouseOver="return overlib('2467',CAPTION,'Old Nomenclature',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="291,772,306,789" href=""
+onMouseOver="return overlib('2472',CAPTION,'Old Nomenclature',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="331,772,346,789" href=""
+onMouseOver="return overlib('2477',CAPTION,'Old Nomenclature',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="371,772,386,789" href=""
+onMouseOver="return overlib('2482',CAPTION,'Old Nomenclature',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="411,772,426,789" href=""
+onMouseOver="return overlib('2487',CAPTION,'Old Nomenclature',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="451,772,466,789" href=""
+onMouseOver="return overlib('2492',CAPTION,'Old Nomenclature',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="491,772,506,789" href=""
+onMouseOver="return overlib('2497',CAPTION,'Old Nomenclature',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="531,772,546,789" href=""
+onMouseOver="return overlib('2502',CAPTION,'Old Nomenclature',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="571,772,586,789" href=""
+onMouseOver="return overlib('2507',CAPTION,'Old Nomenclature',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="611,772,626,789" href=""
+onMouseOver="return overlib('2512',CAPTION,'Old Nomenclature',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="651,772,666,789" href=""
+onMouseOver="return overlib('2517',CAPTION,'Old Nomenclature',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="691,772,706,789" href=""
+onMouseOver="return overlib('2522',CAPTION,'Old Nomenclature',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="11,892,26,909" href=""
+onMouseOver="return overlib('2527',CAPTION,'Old Nomenclature',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="51,892,66,909" href=""
+onMouseOver="return overlib('2532',CAPTION,'Old Nomenclature',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="91,892,106,909" href=""
+onMouseOver="return overlib('2537',CAPTION,'Old Nomenclature',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="131,892,146,909" href=""
+onMouseOver="return overlib('2542',CAPTION,'Old Nomenclature',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="171,892,186,909" href=""
+onMouseOver="return overlib('2547',CAPTION,'Old Nomenclature',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="211,892,226,909" href=""
+onMouseOver="return overlib('2552',CAPTION,'Old Nomenclature',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="251,892,266,909" href=""
+onMouseOver="return overlib('2557',CAPTION,'Old Nomenclature',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="291,892,306,909" href=""
+onMouseOver="return overlib('2562',CAPTION,'Old Nomenclature',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="331,892,346,909" href=""
+onMouseOver="return overlib('2567',CAPTION,'Old Nomenclature',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="371,892,386,909" href=""
+onMouseOver="return overlib('2572',CAPTION,'Old Nomenclature',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="411,892,426,909" href=""
+onMouseOver="return overlib('2577',CAPTION,'Old Nomenclature',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="451,892,466,909" href=""
+onMouseOver="return overlib('2582',CAPTION,'Old Nomenclature',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="491,892,506,909" href=""
+onMouseOver="return overlib('2587',CAPTION,'Old Nomenclature',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="531,892,546,909" href=""
+onMouseOver="return overlib('2592',CAPTION,'Old Nomenclature',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="571,892,586,909" href=""
+onMouseOver="return overlib('2597',CAPTION,'Old Nomenclature',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="611,892,626,909" href=""
+onMouseOver="return overlib('2602',CAPTION,'Old Nomenclature',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="651,892,666,909" href=""
+onMouseOver="return overlib('2607',CAPTION,'Old Nomenclature',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="691,892,706,909" href=""
+onMouseOver="return overlib('2612',CAPTION,'Old Nomenclature',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="11,1012,26,1029" href=""
+onMouseOver="return overlib('2617',CAPTION,'Old Nomenclature',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="51,1012,66,1029" href=""
+onMouseOver="return overlib('2622',CAPTION,'Old Nomenclature',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="123,74,129,82" href="/MutationDetailPage.external?sp=1643"
+onMouseOver="return overlib('cDNA Name: c.1781T>C<BR>Protein Name: p.Leu594Pro<BR><b>Legacy Name: L594P</b>',CAPTION,'Click to view details of c.1781T>C',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="139,74,145,82" href="/MutationDetailPage.external?sp=1905"
+onMouseOver="return overlib('cDNA Name: c.1783A>G<BR>Protein Name: p.Met595Val<BR><b>Legacy Name: null</b>',CAPTION,'Click to view details of c.1783A>G',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="147,74,153,82" href="/MutationDetailPage.external?sp=1493"
+onMouseOver="return overlib('cDNA Name: c.1784T>C<BR>Protein Name: p.Met595Thr<BR><b>Legacy Name: M595T</b>',CAPTION,'Click to view details of c.1784T>C',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="155,74,161,82" href="/MutationDetailPage.external?sp=1632"
+onMouseOver="return overlib('cDNA Name: c.1785G>A<BR>Protein Name: p.Met595Ile<BR><b>Legacy Name: M595I</b>',CAPTION,'Click to view details of c.1785G>A',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="163,74,169,82" href="/MutationDetailPage.external?sp=316"
+onMouseOver="return overlib('cDNA Name: c.1786_1787delGC<BR>Protein Name: p.Ala596X<BR><b>Legacy Name: 1918delGC</b>',CAPTION,'Click to view details of c.1786_1787delGC',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="211,74,217,82" href="/MutationDetailPage.external?sp=317"
+onMouseOver="return overlib('cDNA Name: c.1792_1798delAAAACTA<BR>Protein Name: p.Lys598GlyfsX11<BR><b>Legacy Name: 1924del7</b>',CAPTION,'Click to view details of c.1792_1798delAAAACTA',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="211,86,217,94" href="/MutationDetailPage.external?sp=1618"
+onMouseOver="return overlib('cDNA Name: c.1792A>T<BR>Protein Name: p.Lys598X<BR><b>Legacy Name: K598X</b>',CAPTION,'Click to view details of c.1792A>T',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="251,74,257,82" href="/MutationDetailPage.external?sp=1151"
+onMouseOver="return overlib('cDNA Name: c.1797T>A<BR><b>Legacy Name: T599T (1929T/A)</b>',CAPTION,'Click to view details of c.1797T>A',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="259,74,265,82" href="/MutationDetailPage.external?sp=753"
+onMouseOver="return overlib('cDNA Name: c.1798A>G<BR>Protein Name: p.Arg600Gly<BR><b>Legacy Name: R600G</b>',CAPTION,'Click to view details of c.1798A>G',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="275,74,281,82" href="/MutationDetailPage.external?sp=1593"
+onMouseOver="return overlib('cDNA Name: c.1800delG<BR>Protein Name: p.Ile601PhefsX10<BR><b>Legacy Name: 1932delG</b>',CAPTION,'Click to view details of c.1800delG',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="283,74,289,82" href="/MutationDetailPage.external?sp=666"
+onMouseOver="return overlib('cDNA Name: c.1801A>T<BR>Protein Name: p.Ile601Phe<BR><b>Legacy Name: I601F</b>',CAPTION,'Click to view details of c.1801A>T',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="283,86,289,94" href="/MutationDetailPage.external?sp=1949"
+onMouseOver="return overlib('cDNA Name: c.1801A>G<BR>Protein Name: p.Ile601Val<BR><b>Legacy Name: null</b>',CAPTION,'Click to view details of c.1801A>G',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="331,74,337,82" href="/MutationDetailPage.external?sp=852"
+onMouseOver="return overlib('cDNA Name: c.1807G>T<BR>Protein Name: p.Val603Phe<BR><b>Legacy Name: V603F</b>',CAPTION,'Click to view details of c.1807G>T',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="355,74,361,82" href="/MutationDetailPage.external?sp=2230"
+onMouseOver="return overlib('cDNA Name: c.1810A>C<BR>Protein Name: p.Thr604Pro<BR><b>Legacy Name: null</b>',CAPTION,'Click to view details of c.1810A>C',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="363,74,369,82" href="/MutationDetailPage.external?sp=1192"
+onMouseOver="return overlib('cDNA Name: c.1811C>T<BR>Protein Name: p.Thr604Ile<BR><b>Legacy Name: T604I</b>',CAPTION,'Click to view details of c.1811C>T',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="363,86,369,94" href="/MutationDetailPage.external?sp=1502"
+onMouseOver="return overlib('cDNA Name: c.1811C>G<BR>Protein Name: p.Thr604Ser<BR><b>Legacy Name: T604S</b>',CAPTION,'Click to view details of c.1811C>G',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="411,74,417,82" href="/MutationDetailPage.external?sp=318"
+onMouseOver="return overlib('cDNA Name: c.1817_1900delAAATGGAACATTTAAAGAAAGCTGACAAAATATTAATTTTGCATGAAGGTAGCAGCTATTTTTATGGGACATTTTCAGAACTCC<BR>Protein Name: p.Met607_Gln634del<BR><b>Legacy Name: 1949del84</b>',CAPTION,'Click to view details of c.1817_1900delAAATGGAACATTTAAAGAAAGCTGACAAAATATTAATTTTGCATGAAGGTAGCAGCTATTTTTATGGGACATTTTCAGAACTCC',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="427,74,433,82" href="/MutationDetailPage.external?sp=2126"
+onMouseOver="return overlib('cDNA Name: c.1819_1902delATGGAACATTTAAAGAAAGCTGACAAAATATTAATTTTGCATGAAGGTAGCAGCTATTTTTATGGGACATTTTCAGAACTCCAA<BR>Protein Name: p.Met607_Gln634del<BR><b>Legacy Name: null</b>',CAPTION,'Click to view details of c.1819_1902delATGGAACATTTAAAGAAAGCTGACAAAATATTAATTTTGCATGAAGGTAGCAGCTATTTTTATGGGACATTTTCAGAACTCCAA',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="459,74,465,82" href="/MutationDetailPage.external?sp=1257"
+onMouseOver="return overlib('cDNA Name: c.1823A>G<BR>Protein Name: p.Glu608Gly<BR><b>Legacy Name: E608G</b>',CAPTION,'Click to view details of c.1823A>G',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="483,74,489,82" href="/MutationDetailPage.external?sp=1536"
+onMouseOver="return overlib('cDNA Name: c.1826A>T<BR>Protein Name: p.His609Leu<BR><b>Legacy Name: H609L</b>',CAPTION,'Click to view details of c.1826A>T',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="483,86,489,94" href="/MutationDetailPage.external?sp=754"
+onMouseOver="return overlib('cDNA Name: c.1826A>G<BR>Protein Name: p.His609Arg<BR><b>Legacy Name: H609R</b>',CAPTION,'Click to view details of c.1826A>G',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="507,74,513,82" href="/MutationDetailPage.external?sp=319"
+onMouseOver="return overlib('cDNA Name: c.1829T>C<BR>Protein Name: p.Leu610Ser<BR><b>Legacy Name: L610S</b>',CAPTION,'Click to view details of c.1829T>C',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="571,74,577,82" href="/MutationDetailPage.external?sp=667"
+onMouseOver="return overlib('cDNA Name: c.1837G>A<BR>Protein Name: p.Ala613Thr<BR><b>Legacy Name: A613T</b>',CAPTION,'Click to view details of c.1837G>A',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="595,74,601,82" href="/MutationDetailPage.external?sp=1193"
+onMouseOver="return overlib('cDNA Name: c.1840G>T<BR>Protein Name: p.Asp614Tyr<BR><b>Legacy Name: D614Y</b>',CAPTION,'Click to view details of c.1840G>T',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="603,74,609,82" href="/MutationDetailPage.external?sp=320"
+onMouseOver="return overlib('cDNA Name: c.1841A>G<BR>Protein Name: p.Asp614Gly<BR><b>Legacy Name: D614G</b>',CAPTION,'Click to view details of c.1841A>G',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="699,74,705,82" href="/MutationDetailPage.external?sp=321"
+onMouseOver="return overlib('cDNA Name: c.1853T>C<BR>Protein Name: p.Ile618Thr<BR><b>Legacy Name: I618T</b>',CAPTION,'Click to view details of c.1853T>C',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="19,194,25,202" href="/MutationDetailPage.external?sp=322"
+onMouseOver="return overlib('cDNA Name: c.1856T>C<BR>Protein Name: p.Leu619Ser<BR><b>Legacy Name: L619S</b>',CAPTION,'Click to view details of c.1856T>C',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="43,194,49,202" href="/MutationDetailPage.external?sp=323"
+onMouseOver="return overlib('cDNA Name: c.1859A>C<BR>Protein Name: p.His620Pro<BR><b>Legacy Name: H620P</b>',CAPTION,'Click to view details of c.1859A>C',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="51,194,57,202" href="/MutationDetailPage.external?sp=668"
+onMouseOver="return overlib('cDNA Name: c.1860T>G<BR>Protein Name: p.His620Gln<BR><b>Legacy Name: H620Q</b>',CAPTION,'Click to view details of c.1860T>G',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="91,194,97,202" href="/MutationDetailPage.external?sp=669"
+onMouseOver="return overlib('cDNA Name: c.1865G>A<BR>Protein Name: p.Gly622Asp<BR><b>Legacy Name: G622D</b>',CAPTION,'Click to view details of c.1865G>A',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="139,194,145,202" href="/MutationDetailPage.external?sp=1689"
+onMouseOver="return overlib('cDNA Name: c.1871_1878delGCTATTTT<BR>Protein Name: p.Ser624IlefsX15<BR><b>Legacy Name: 2003del8</b>',CAPTION,'Click to view details of c.1871_1878delGCTATTTT',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="163,194,169,202" href="/MutationDetailPage.external?sp=2129"
+onMouseOver="return overlib('cDNA Name: c.1874_1875delAT<BR>Protein Name: p.Tyr625PhefsX16<BR><b>Legacy Name: null</b>',CAPTION,'Click to view details of c.1874_1875delAT',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="227,194,233,202" href="/MutationDetailPage.external?sp=324"
+onMouseOver="return overlib('cDNA Name: c.1882G>A<BR>Protein Name: p.Gly628Arg<BR><b>Legacy Name: G628R(G->A)</b>',CAPTION,'Click to view details of c.1882G>A',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="227,206,233,214" href="/MutationDetailPage.external?sp=325"
+onMouseOver="return overlib('cDNA Name: c.1882G>C<BR>Protein Name: p.Gly628Arg<BR><b>Legacy Name: G628R(G->C)</b>',CAPTION,'Click to view details of c.1882G>C',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="323,194,329,202" href="/MutationDetailPage.external?sp=2153"
+onMouseOver="return overlib('cDNA Name: c.1894_1895delGA<BR>Protein Name: p.Glu632ThrfsX9<BR><b>Legacy Name: null</b>',CAPTION,'Click to view details of c.1894_1895delGA',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="347,194,353,202" href="/MutationDetailPage.external?sp=1520"
+onMouseOver="return overlib('cDNA Name: c.1897C>A<BR>Protein Name: p.Leu633Ile<BR><b>Legacy Name: L633I</b>',CAPTION,'Click to view details of c.1897C>A',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="355,194,361,202" href="/MutationDetailPage.external?sp=326"
+onMouseOver="return overlib('cDNA Name: c.1898T>C<BR>Protein Name: p.Leu633Pro<BR><b>Legacy Name: L633P</b>',CAPTION,'Click to view details of c.1898T>C',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="371,194,377,202" href="/MutationDetailPage.external?sp=637"
+onMouseOver="return overlib('cDNA Name: c.1900C>T<BR>Protein Name: p.Gln634X<BR><b>Legacy Name: Q634X</b>',CAPTION,'Click to view details of c.1900C>T',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="427,194,433,202" href="/MutationDetailPage.external?sp=962"
+onMouseOver="return overlib('cDNA Name: c.1907T>C<BR>Protein Name: p.Leu636Pro<BR><b>Legacy Name: L636P</b>',CAPTION,'Click to view details of c.1907T>C',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="443,194,449,202" href="/MutationDetailPage.external?sp=1044"
+onMouseOver="return overlib('cDNA Name: c.1909C>T<BR>Protein Name: p.Gln637X<BR><b>Legacy Name: Q637X</b>',CAPTION,'Click to view details of c.1909C>T',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="459,194,465,202" href="/MutationDetailPage.external?sp=327"
+onMouseOver="return overlib('cDNA Name: c.1911delG<BR>Protein Name: p.Gln637HisfsX26<BR><b>Legacy Name: 2043delG</b>',CAPTION,'Click to view details of c.1911delG',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="491,194,497,202" href="/MutationDetailPage.external?sp=1270"
+onMouseOver="return overlib('cDNA Name: c.1915G>T<BR>Protein Name: p.Asp639Tyr<BR><b>Legacy Name: D639Y</b>',CAPTION,'Click to view details of c.1915G>T',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="523,194,529,202" href="/MutationDetailPage.external?sp=969"
+onMouseOver="return overlib('cDNA Name: c.1919_1920delTT<BR>Protein Name: p.Phe640X<BR><b>Legacy Name: 2051delTT</b>',CAPTION,'Click to view details of c.1919_1920delTT',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="531,194,537,202" href="/MutationDetailPage.external?sp=1737"
+onMouseOver="return overlib('cDNA Name: c.1920T>C<BR>Protein Name: p.Phe640Phe<BR><b>Legacy Name: null</b>',CAPTION,'Click to view details of c.1920T>C',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="531,206,537,214" href="/MutationDetailPage.external?sp=1889"
+onMouseOver="return overlib('cDNA Name: c.1920_1921dupTA<BR>Protein Name: p.Ser641IlefsX23<BR><b>Legacy Name: null</b>',CAPTION,'Click to view details of c.1920_1921dupTA',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="555,194,561,202" href="/MutationDetailPage.external?sp=328"
+onMouseOver="return overlib('cDNA Name: c.1923_1931del9insA<BR>Protein Name: p.Ser641ArgfsX5<BR><b>Legacy Name: 2055del9->A</b>',CAPTION,'Click to view details of c.1923_1931del9insA',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="627,194,633,202" href="/MutationDetailPage.external?sp=824"
+onMouseOver="return overlib('cDNA Name: c.1932C>G<BR><b>Legacy Name: 2064C/G</b>',CAPTION,'Click to view details of c.1932C>G',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="51,314,57,322" href="/MutationDetailPage.external?sp=981"
+onMouseOver="return overlib('cDNA Name: c.1950C>T<BR><b>Legacy Name: 2082C/T</b>',CAPTION,'Click to view details of c.1950C>T',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="59,314,65,322" href="/MutationDetailPage.external?sp=1259"
+onMouseOver="return overlib('cDNA Name: c.1951G>C<BR>Protein Name: p.Asp651His<BR><b>Legacy Name: D651H</b>',CAPTION,'Click to view details of c.1951G>C',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="59,326,65,334" href="/MutationDetailPage.external?sp=961"
+onMouseOver="return overlib('cDNA Name: c.1951G>A<BR>Protein Name: p.Asp651Asn<BR><b>Legacy Name: D651N</b>',CAPTION,'Click to view details of c.1951G>A',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="131,314,137,322" href="/MutationDetailPage.external?sp=1030"
+onMouseOver="return overlib('cDNA Name: c.1960A>G<BR>Protein Name: p.Ser654Gly<BR><b>Legacy Name: 2092A/G</b>',CAPTION,'Click to view details of c.1960A>G',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="179,314,185,322" href="/MutationDetailPage.external?sp=761"
+onMouseOver="return overlib('cDNA Name: c.1966G>T<BR>Protein Name: p.Glu656X<BR><b>Legacy Name: E656X</b>',CAPTION,'Click to view details of c.1966G>T',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="227,314,233,322" href="/MutationDetailPage.external?sp=1194"
+onMouseOver="return overlib('cDNA Name: c.1972_1973insA<BR>Protein Name: p.Arg658LysfsX7<BR><b>Legacy Name: 2104insA+2109-2118del10</b>',CAPTION,'Click to view details of c.1972_1973insA',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="235,314,241,322" href="/MutationDetailPage.external?sp=1283"
+onMouseOver="return overlib('cDNA Name: c.1973_1985del13insAGAAA<BR>Protein Name: p.Arg658LysfsX4<BR><b>Legacy Name: 2105-2117del13insAGAAA</b>',CAPTION,'Click to view details of c.1973_1985del13insAGAAA',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="259,314,265,322" href="/MutationDetailPage.external?sp=1056"
+onMouseOver="return overlib('cDNA Name: c.1976delA<BR>Protein Name: p.Asn659IlefsX4<BR><b>Legacy Name: 2108delA</b>',CAPTION,'Click to view details of c.1976delA',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="275,314,281,322" href="/MutationDetailPage.external?sp=1544"
+onMouseOver="return overlib('cDNA Name: c.1978T>A<BR>Protein Name: p.Ser660Thr<BR><b>Legacy Name: S660T</b>',CAPTION,'Click to view details of c.1978T>A',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="299,314,305,322" href="/MutationDetailPage.external?sp=330"
+onMouseOver="return overlib('cDNA Name: c.1981delA<BR>Protein Name: p.Ile661SerfsX2<BR><b>Legacy Name: 2113delA</b>',CAPTION,'Click to view details of c.1981delA',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="323,314,329,322" href="/MutationDetailPage.external?sp=1093"
+onMouseOver="return overlib('cDNA Name: c.1984_1987delCTAA<BR>Protein Name: p.Thr663ArgfsX8<BR><b>Legacy Name: 2116delCTAA</b>',CAPTION,'Click to view details of c.1984_1987delCTAA',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="339,314,345,322" href="/MutationDetailPage.external?sp=331"
+onMouseOver="return overlib('cDNA Name: c.1986_1989delAACT<BR>Protein Name: p.Thr663ArgfsX8<BR><b>Legacy Name: 2118del4</b>',CAPTION,'Click to view details of c.1986_1989delAACT',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="371,314,377,322" href="/MutationDetailPage.external?sp=332"
+onMouseOver="return overlib('cDNA Name: c.1990G>T<BR>Protein Name: p.Glu664X<BR><b>Legacy Name: E664X</b>',CAPTION,'Click to view details of c.1990G>T',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="395,314,401,322" href="/MutationDetailPage.external?sp=333"
+onMouseOver="return overlib('cDNA Name: c.1993A>T<BR>Protein Name: p.Thr665Ser<BR><b>Legacy Name: T665S</b>',CAPTION,'Click to view details of c.1993A>T',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="467,314,473,322" href="/MutationDetailPage.external?sp=764"
+onMouseOver="return overlib('cDNA Name: c.2002C>T<BR>Protein Name: p.Arg668Cys<BR><b>Legacy Name: R668C</b>',CAPTION,'Click to view details of c.2002C>T',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="523,314,529,322" href="/MutationDetailPage.external?sp=334"
+onMouseOver="return overlib('cDNA Name: c.2009_2010insA<BR>Protein Name: p.Leu671IlefsX18<BR><b>Legacy Name: 2141insA</b>',CAPTION,'Click to view details of c.2009_2010insA',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="539,314,545,322" href="/MutationDetailPage.external?sp=335"
+onMouseOver="return overlib('cDNA Name: c.2012delT<BR>Protein Name: p.Leu671X<BR><b>Legacy Name: 2143delT</b>',CAPTION,'Click to view details of c.2012delT',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="555,314,561,322" href="/MutationDetailPage.external?sp=714"
+onMouseOver="return overlib('cDNA Name: c.2013_2015delAGA<BR>Protein Name: p.Glu672del<BR><b>Legacy Name: E672del</b>',CAPTION,'Click to view details of c.2013_2015delAGA',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="587,314,593,322" href="/MutationDetailPage.external?sp=336"
+onMouseOver="return overlib('cDNA Name: c.2017G>T<BR>Protein Name: p.Gly673X<BR><b>Legacy Name: G673X</b>',CAPTION,'Click to view details of c.2017G>T',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="619,314,625,322" href="/MutationDetailPage.external?sp=1534"
+onMouseOver="return overlib('cDNA Name: c.2021A>T<BR>Protein Name: p.Asp674Val<BR><b>Legacy Name: D674V </b>',CAPTION,'Click to view details of c.2021A>T',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="19,434,25,442" href="/MutationDetailPage.external?sp=1066"
+onMouseOver="return overlib('cDNA Name: c.2036G>A<BR>Protein Name: p.Trp679X<BR><b>Legacy Name: W679X</b>',CAPTION,'Click to view details of c.2036G>A',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="83,434,89,442" href="/MutationDetailPage.external?sp=337"
+onMouseOver="return overlib('cDNA Name: c.2044_2045insC<BR>Protein Name: p.Gln685ThrfsX4<BR><b>Legacy Name: 2176insC</b>',CAPTION,'Click to view details of c.2044_2045insC',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="83,446,89,454" href="/MutationDetailPage.external?sp=1718"
+onMouseOver="return overlib('cDNA Name: c.2044delA<BR>Protein Name: p.Thr682GlnfsX40<BR><b>Legacy Name: null</b>',CAPTION,'Click to view details of c.2044delA',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="115,434,121,442" href="/MutationDetailPage.external?sp=1102"
+onMouseOver="return overlib('cDNA Name: c.2048A>G<BR>Protein Name: p.Lys683Arg<BR><b>Legacy Name: K683R</b>',CAPTION,'Click to view details of c.2048A>G',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="139,434,145,442" href="/MutationDetailPage.external?sp=338"
+onMouseOver="return overlib('cDNA Name: c.2051_2052delAAinsG<BR>Protein Name: p.Lys684SerfsX38<BR><b>Legacy Name: 2183AA->G</b>',CAPTION,'Click to view details of c.2051_2052delAAinsG',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="139,446,145,454" href="/MutationDetailPage.external?sp=758"
+onMouseOver="return overlib('cDNA Name: c.2051_2052delAA<BR>Protein Name: p.Lys684ThrfsX4<BR><b>Legacy Name: 2183delAA</b>',CAPTION,'Click to view details of c.2051_2052delAA',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="147,434,153,442" href="/MutationDetailPage.external?sp=1437"
+onMouseOver="return overlib('cDNA Name: c.2052A>G<BR><b>Legacy Name: 2184A/G</b>',CAPTION,'Click to view details of c.2052A>G',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="147,446,153,454" href="/MutationDetailPage.external?sp=339"
+onMouseOver="return overlib('cDNA Name: c.2052delA<BR>Protein Name: p.Lys684AsnfsX38<BR><b>Legacy Name: 2184delA</b>',CAPTION,'Click to view details of c.2052delA',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="147,458,153,466" href="/MutationDetailPage.external?sp=340"
+onMouseOver="return overlib('cDNA Name: c.2052_2053insA<BR>Protein Name: p.Gln685ThrfsX4<BR><b>Legacy Name: 2184insA</b>',CAPTION,'Click to view details of c.2052_2053insA',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="147,470,153,478" href="/MutationDetailPage.external?sp=2019"
+onMouseOver="return overlib('cDNA Name: c.2052dupA<BR>Protein Name: p.Gln685ThrfsX4<BR><b>Legacy Name: null</b>',CAPTION,'Click to view details of c.2052dupA',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="155,434,161,442" href="/MutationDetailPage.external?sp=1060"
+onMouseOver="return overlib('cDNA Name: c.2053_2054insC<BR>Protein Name: p.Gln685ProfsX4<BR><b>Legacy Name: 2185insC</b>',CAPTION,'Click to view details of c.2053_2054insC',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="155,446,161,454" href="/MutationDetailPage.external?sp=341"
+onMouseOver="return overlib('cDNA Name: c.2053C>T<BR>Protein Name: p.Gln685X<BR><b>Legacy Name: Q685X</b>',CAPTION,'Click to view details of c.2053C>T',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="187,434,193,442" href="/MutationDetailPage.external?sp=1526"
+onMouseOver="return overlib('cDNA Name: c.2057C>A<BR>Protein Name: p.Ser686Tyr<BR><b>Legacy Name: S686Y</b>',CAPTION,'Click to view details of c.2057C>A',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="219,434,225,442" href="/MutationDetailPage.external?sp=1396"
+onMouseOver="return overlib('cDNA Name: c.2061_2062insTTTT<BR>Protein Name: p.Lys688PhefsX?<BR><b>Legacy Name: 2193ins4</b>',CAPTION,'Click to view details of c.2061_2062insTTTT',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="227,434,233,442" href="/MutationDetailPage.external?sp=1609"
+onMouseOver="return overlib('cDNA Name: c.2062A>T<BR>Protein Name: p.Lys688X<BR><b>Legacy Name: K688X</b>',CAPTION,'Click to view details of c.2062A>T',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="251,434,257,442" href="/MutationDetailPage.external?sp=1339"
+onMouseOver="return overlib('cDNA Name: c.2065C>T<BR>Protein Name: p.Gln689X<BR><b>Legacy Name: Q689X</b>',CAPTION,'Click to view details of c.2065C>T',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="275,434,281,442" href="/MutationDetailPage.external?sp=2043"
+onMouseOver="return overlib('cDNA Name: c.2068A>G<BR>Protein Name: p.Thr690Ala<BR><b>Legacy Name: null</b>',CAPTION,'Click to view details of c.2068A>G',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="323,434,329,442" href="/MutationDetailPage.external?sp=342"
+onMouseOver="return overlib('cDNA Name: c.2074G>T<BR>Protein Name: p.Glu692X<BR><b>Legacy Name: E692X</b>',CAPTION,'Click to view details of c.2074G>T',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="347,434,353,442" href="/MutationDetailPage.external?sp=343"
+onMouseOver="return overlib('cDNA Name: c.2077T>C<BR>Protein Name: p.Phe693Leu<BR><b>Legacy Name: F693L(CTT)</b>',CAPTION,'Click to view details of c.2077T>C',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="363,434,369,442" href="/MutationDetailPage.external?sp=1209"
+onMouseOver="return overlib('cDNA Name: c.2079T>G<BR>Protein Name: p.Phe693Leu<BR><b>Legacy Name: F693L(TTG)</b>',CAPTION,'Click to view details of c.2079T>G',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="395,434,401,442" href="/MutationDetailPage.external?sp=1180"
+onMouseOver="return overlib('cDNA Name: c.2083_2084insG<BR>Protein Name: p.Glu695GlyfsX35<BR><b>Legacy Name: 2215insG</b>',CAPTION,'Click to view details of c.2083_2084insG',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="403,434,409,442" href="/MutationDetailPage.external?sp=2083"
+onMouseOver="return overlib('cDNA Name: c.2084A>G<BR>Protein Name: p.Glu695Gly<BR><b>Legacy Name: null</b>',CAPTION,'Click to view details of c.2084A>G',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="427,434,433,442" href="/MutationDetailPage.external?sp=1733"
+onMouseOver="return overlib('cDNA Name: c.2087A>G<BR>Protein Name: p.Lys696Arg<BR><b>Legacy Name: null</b>',CAPTION,'Click to view details of c.2087A>G',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="443,434,449,442" href="/MutationDetailPage.external?sp=1594"
+onMouseOver="return overlib('cDNA Name: c.2089_2090insA<BR>Protein Name: p.Arg697LysfsX33<BR><b>Legacy Name: 2221insA</b>',CAPTION,'Click to view details of c.2089_2090insA',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="579,434,585,442" href="/MutationDetailPage.external?sp=766"
+onMouseOver="return overlib('cDNA Name: c.2106C>G<BR><b>Legacy Name: 2238C/G</b>',CAPTION,'Click to view details of c.2106C>G',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="11,554,17,562" href="/MutationDetailPage.external?sp=344"
+onMouseOver="return overlib('cDNA Name: c.2125C>T<BR>Protein Name: p.Arg709X<BR><b>Legacy Name: R709X</b>',CAPTION,'Click to view details of c.2125C>T',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="19,554,25,562" href="/MutationDetailPage.external?sp=1285"
+onMouseOver="return overlib('cDNA Name: c.2126G>A<BR>Protein Name: p.Arg709Gln<BR><b>Legacy Name: R709Q</b>',CAPTION,'Click to view details of c.2126G>A',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="35,554,41,562" href="/MutationDetailPage.external?sp=345"
+onMouseOver="return overlib('cDNA Name: c.2128A>T<BR>Protein Name: p.Lys710X<BR><b>Legacy Name: K710X</b>',CAPTION,'Click to view details of c.2128A>T',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="91,554,97,562" href="/MutationDetailPage.external?sp=1305"
+onMouseOver="return overlib('cDNA Name: c.2135C>G<BR>Protein Name: p.Ser712Cys<BR><b>Legacy Name: S712C</b>',CAPTION,'Click to view details of c.2135C>G',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="155,554,161,562" href="/MutationDetailPage.external?sp=1661"
+onMouseOver="return overlib('cDNA Name: c.2143C>T<BR>Protein Name: p.Gln715X<BR><b>Legacy Name: Q715X</b>',CAPTION,'Click to view details of c.2143C>T',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="171,554,177,562" href="/MutationDetailPage.external?sp=346"
+onMouseOver="return overlib('cDNA Name: c.2145_2146delAAinsGT<BR>Protein Name: p.Lys716X<BR><b>Legacy Name: K716X</b>',CAPTION,'Click to view details of c.2145_2146delAAinsGT',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="259,554,265,562" href="/MutationDetailPage.external?sp=347"
+onMouseOver="return overlib('cDNA Name: c.2156T>A<BR>Protein Name: p.Leu719X<BR><b>Legacy Name: L719X</b>',CAPTION,'Click to view details of c.2156T>A',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="267,554,273,562" href="/MutationDetailPage.external?sp=1333"
+onMouseOver="return overlib('cDNA Name: c.2157_2163delinsGT<BR>Protein Name: p.Gln720MetfsX11<BR><b>Legacy Name: 2289-2295del7bpinsGT</b>',CAPTION,'Click to view details of c.2157_2163delinsGT',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="275,554,281,562" href="/MutationDetailPage.external?sp=1048"
+onMouseOver="return overlib('cDNA Name: c.2158C>T<BR>Protein Name: p.Gln720X<BR><b>Legacy Name: Q720X</b>',CAPTION,'Click to view details of c.2158C>T',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="355,554,361,562" href="/MutationDetailPage.external?sp=1306"
+onMouseOver="return overlib('cDNA Name: c.2168G>T<BR>Protein Name: p.Gly723Val<BR><b>Legacy Name: G723V</b>',CAPTION,'Click to view details of c.2168G>T',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="395,554,401,562" href="/MutationDetailPage.external?sp=799"
+onMouseOver="return overlib('cDNA Name: c.2173G>A<BR>Protein Name: p.Glu725Lys<BR><b>Legacy Name: E725K</b>',CAPTION,'Click to view details of c.2173G>A',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="411,554,417,562" href="/MutationDetailPage.external?sp=348"
+onMouseOver="return overlib('cDNA Name: c.2175_2176insA<BR>Protein Name: p.Glu726ArgfsX4<BR><b>Legacy Name: 2307insA</b>',CAPTION,'Click to view details of c.2175_2176insA',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="475,554,481,562" href="/MutationDetailPage.external?sp=2091"
+onMouseOver="return overlib('cDNA Name: c.2183_2184delinsG<BR>Protein Name: p.Ser728TrpfsX5<BR><b>Legacy Name: null</b>',CAPTION,'Click to view details of c.2183_2184delinsG',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="515,554,521,562" href="/MutationDetailPage.external?sp=349"
+onMouseOver="return overlib('cDNA Name: c.2188G>T<BR>Protein Name: p.Glu730X<BR><b>Legacy Name: E730X</b>',CAPTION,'Click to view details of c.2188G>T',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="571,554,577,562" href="/MutationDetailPage.external?sp=350"
+onMouseOver="return overlib('cDNA Name: c.2195T>G<BR>Protein Name: p.Leu732X<BR><b>Legacy Name: L732X</b>',CAPTION,'Click to view details of c.2195T>G',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="635,554,641,562" href="/MutationDetailPage.external?sp=1153"
+onMouseOver="return overlib('cDNA Name: c.2203delA<BR>Protein Name: p.Arg735GlyfsX4<BR><b>Legacy Name: 2335delA</b>',CAPTION,'Click to view details of c.2203delA',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="643,554,649,562" href="/MutationDetailPage.external?sp=1222"
+onMouseOver="return overlib('cDNA Name: c.2204G>A<BR>Protein Name: p.Arg735Lys<BR><b>Legacy Name: R735K</b>',CAPTION,'Click to view details of c.2204G>A',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="691,554,697,562" href="/MutationDetailPage.external?sp=1391"
+onMouseOver="return overlib('cDNA Name: c.2210C>T<BR>Protein Name: p.Ser737Phe<BR><b>Legacy Name: S737F</b>',CAPTION,'Click to view details of c.2210C>T',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="691,566,697,574" href="/MutationDetailPage.external?sp=1393"
+onMouseOver="return overlib('cDNA Name: c.2210C>T<BR>Protein Name: p.Ser737Phe<BR><b>Legacy Name: S737F </b>',CAPTION,'Click to view details of c.2210C>T',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="11,674,17,682" href="/MutationDetailPage.external?sp=351"
+onMouseOver="return overlib('cDNA Name: c.2215delG<BR>Protein Name: p.Val739TyrfsX16<BR><b>Legacy Name: 2347delG</b>',CAPTION,'Click to view details of c.2215delG',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="131,674,137,682" href="/MutationDetailPage.external?sp=2141"
+onMouseOver="return overlib('cDNA Name: c.2230C>T<BR>Protein Name: p.Gln744X<BR><b>Legacy Name: null</b>',CAPTION,'Click to view details of c.2230C>T',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="155,674,161,682" href="/MutationDetailPage.external?sp=1461"
+onMouseOver="return overlib('cDNA Name: c.2233G>T<BR>Protein Name: p.Gly745X<BR><b>Legacy Name: G745X(Gly745X)</b>',CAPTION,'Click to view details of c.2233G>T',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="211,674,217,682" href="/MutationDetailPage.external?sp=352"
+onMouseOver="return overlib('cDNA Name: c.2240_2247delCGATACTG<BR>Protein Name: p.Ile748SerfsX28<BR><b>Legacy Name: 2372del8</b>',CAPTION,'Click to view details of c.2240_2247delCGATACTG',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="251,674,257,682" href="/MutationDetailPage.external?sp=715"
+onMouseOver="return overlib('cDNA Name: c.2245C>T<BR><b>Legacy Name: 2377C/T</b>',CAPTION,'Click to view details of c.2245C>T',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="275,674,281,682" href="/MutationDetailPage.external?sp=1648"
+onMouseOver="return overlib('cDNA Name: c.2248_2255del<BR>Protein Name: p.Pro750GlnfsX26<BR><b>Legacy Name: 2380_2387del</b>',CAPTION,'Click to view details of c.2248_2255del',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="283,674,289,682" href="/MutationDetailPage.external?sp=1103"
+onMouseOver="return overlib('cDNA Name: c.2249C>T<BR>Protein Name: p.Pro750Leu<BR><b>Legacy Name: P750L</b>',CAPTION,'Click to view details of c.2249C>T',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="283,686,289,694" href="/MutationDetailPage.external?sp=2224"
+onMouseOver="return overlib('cDNA Name: c.53+1125t>T<BR><b>Legacy Name: null</b>',CAPTION,'Click to view details of c.53+1125t>T',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="299,674,305,682" href="/MutationDetailPage.external?sp=1870"
+onMouseOver="return overlib('cDNA Name: c.2251C>T<BR>Protein Name: p.Arg751Cys<BR><b>Legacy Name: R751C</b>',CAPTION,'Click to view details of c.2251C>T',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="307,674,313,682" href="/MutationDetailPage.external?sp=1307"
+onMouseOver="return overlib('cDNA Name: c.2252G>C<BR>Protein Name: p.Arg751Pro<BR><b>Legacy Name: R751P</b>',CAPTION,'Click to view details of c.2252G>C',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="307,686,313,694" href="/MutationDetailPage.external?sp=1987"
+onMouseOver="return overlib('cDNA Name: c.2252G>T<BR>Protein Name: p.Arg751Leu<BR><b>Legacy Name: null</b>',CAPTION,'Click to view details of c.2252G>T',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="331,674,337,682" href="/MutationDetailPage.external?sp=1425"
+onMouseOver="return overlib('cDNA Name: c.2255T>G<BR>Protein Name: p.Ile752Ser<BR><b>Legacy Name: I752S</b>',CAPTION,'Click to view details of c.2255T>G',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="363,674,369,682" href="/MutationDetailPage.external?sp=1649"
+onMouseOver="return overlib('cDNA Name: c.2259C>T<BR>Protein Name: No Changes<BR><b>Legacy Name: 2391 C/T</b>',CAPTION,'Click to view details of c.2259C>T',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="363,686,369,694" href="/MutationDetailPage.external?sp=1657"
+onMouseOver="return overlib('cDNA Name: c.2259C>G<BR>Protein Name: p.Ser753Arg<BR><b>Legacy Name: S753R</b>',CAPTION,'Click to view details of c.2259C>G',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="363,698,369,706" href="/MutationDetailPage.external?sp=1755"
+onMouseOver="return overlib('cDNA Name: c.2259C>G<BR>Protein Name: p.Ser753Arg<BR><b>Legacy Name: null</b>',CAPTION,'Click to view details of c.2259C>G',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="371,674,377,682" href="/MutationDetailPage.external?sp=610"
+onMouseOver="return overlib('cDNA Name: c.2260G>A<BR>Protein Name: p.Val754Met<BR><b>Legacy Name: V754M</b>',CAPTION,'Click to view details of c.2260G>A',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="483,674,489,682" href="/MutationDetailPage.external?sp=1621"
+onMouseOver="return overlib('cDNA Name: c.2276_2277delCC<BR>Protein Name: p.Pro759HisfsX19<BR><b>Legacy Name: 2406delCC</b>',CAPTION,'Click to view details of c.2276_2277delCC',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="507,674,513,682" href="/MutationDetailPage.external?sp=1691"
+onMouseOver="return overlib('cDNA Name: c.2277delC<BR>Protein Name: p.Thr760ArgfsX11<BR><b>Legacy Name: 2409delC</b>',CAPTION,'Click to view details of c.2277delC',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="523,674,529,682" href="/MutationDetailPage.external?sp=1049"
+onMouseOver="return overlib('cDNA Name: c.2279C>T<BR>Protein Name: p.Thr760Met<BR><b>Legacy Name: T760M</b>',CAPTION,'Click to view details of c.2279C>T',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="531,674,537,682" href="/MutationDetailPage.external?sp=1617"
+onMouseOver="return overlib('cDNA Name: c.2280G>A<BR><b>Legacy Name: 2412G/A</b>',CAPTION,'Click to view details of c.2280G>A',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="579,674,585,682" href="/MutationDetailPage.external?sp=1390"
+onMouseOver="return overlib('cDNA Name: c.2286G>T<BR>Protein Name: p.Gln762His<BR><b>Legacy Name: 2418GG>T </b>',CAPTION,'Click to view details of c.2286G>T',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="611,674,617,682" href="/MutationDetailPage.external?sp=353"
+onMouseOver="return overlib('cDNA Name: c.2290C>T<BR>Protein Name: p.Arg764X<BR><b>Legacy Name: R764X</b>',CAPTION,'Click to view details of c.2290C>T',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="611,686,617,694" href="/MutationDetailPage.external?sp=2233"
+onMouseOver="return overlib('cDNA Name: c.2290C>C<BR>Protein Name: p.Arg764Arg<BR><b>Legacy Name: null</b>',CAPTION,'Click to view details of c.2290C>C',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="611,698,617,706" href="/MutationDetailPage.external?sp=2110"
+onMouseOver="return overlib('cDNA Name: c.2290_2300delCGAAGGAGGCA<BR>Protein Name: p.Arg764ValfsX11<BR><b>Legacy Name: null</b>',CAPTION,'Click to view details of c.2290_2300delCGAAGGAGGCA',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="619,674,625,682" href="/MutationDetailPage.external?sp=354"
+onMouseOver="return overlib('cDNA Name: c.2291delG<BR>Protein Name: p.Arg764GlnfsX7<BR><b>Legacy Name: 2423delG</b>',CAPTION,'Click to view details of c.2291delG',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="651,674,657,682" href="/MutationDetailPage.external?sp=1736"
+onMouseOver="return overlib('cDNA Name: c.2295G>T<BR>Protein Name: p.Arg765Ser<BR><b>Legacy Name: null</b>',CAPTION,'Click to view details of c.2295G>T',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="667,674,673,682" href="/MutationDetailPage.external?sp=355"
+onMouseOver="return overlib('cDNA Name: c.2297G>T<BR>Protein Name: p.Arg766Met<BR><b>Legacy Name: R766M</b>',CAPTION,'Click to view details of c.2297G>T',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="59,794,65,802" href="/MutationDetailPage.external?sp=2184"
+onMouseOver="return overlib('cDNA Name: c.2312delA<BR>Protein Name: p.Asn771ThrfsX2<BR><b>Legacy Name: null</b>',CAPTION,'Click to view details of c.2312delA',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="163,794,169,802" href="/MutationDetailPage.external?sp=1207"
+onMouseOver="return overlib('cDNA Name: c.2324_2325delAC<BR>Protein Name: p.His775LeufsX3<BR><b>Legacy Name: 2456delAC</b>',CAPTION,'Click to view details of c.2324_2325delAC',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="187,794,193,802" href="/MutationDetailPage.external?sp=757"
+onMouseOver="return overlib('cDNA Name: c.2327C>G<BR>Protein Name: p.Ser776X<BR><b>Legacy Name: S776X</b>',CAPTION,'Click to view details of c.2327C>G',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="251,794,257,802" href="/MutationDetailPage.external?sp=2026"
+onMouseOver="return overlib('cDNA Name: c.2335C>T<BR>Protein Name: p.Gln779X<BR><b>Legacy Name: null</b>',CAPTION,'Click to view details of c.2335C>T',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="283,794,289,802" href="/MutationDetailPage.external?sp=2208"
+onMouseOver="return overlib('cDNA Name: c.2339delG<BR>Protein Name: p.Gly780ValfsX23<BR><b>Legacy Name: null</b>',CAPTION,'Click to view details of c.2339delG',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="299,794,305,802" href="/MutationDetailPage.external?sp=745"
+onMouseOver="return overlib('cDNA Name: c.2341C>T<BR>Protein Name: p.Gln781X<BR><b>Legacy Name: Q781X</b>',CAPTION,'Click to view details of c.2341C>T',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="339,794,345,802" href="/MutationDetailPage.external?sp=1195"
+onMouseOver="return overlib('cDNA Name: c.2346C>A<BR>Protein Name: p.Asn782Lys<BR><b>Legacy Name: N782K</b>',CAPTION,'Click to view details of c.2346C>A',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="395,794,401,802" href="/MutationDetailPage.external?sp=356"
+onMouseOver="return overlib('cDNA Name: c.2353C>T<BR>Protein Name: p.Arg785X<BR><b>Legacy Name: R785X</b>',CAPTION,'Click to view details of c.2353C>T',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="459,794,465,802" href="/MutationDetailPage.external?sp=1208"
+onMouseOver="return overlib('cDNA Name: c.2361_2362ins8<BR>Protein Name: p.Thr788fsX?<BR><b>Legacy Name: 2493ins8</b>',CAPTION,'Click to view details of c.2361_2362ins8',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="475,794,481,802" href="/MutationDetailPage.external?sp=1581"
+onMouseOver="return overlib('cDNA Name: c.2363C>T<BR>Protein Name: p.Thr788Ile<BR><b>Legacy Name: T788I</b>',CAPTION,'Click to view details of c.2363C>T',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="475,806,481,814" href="/MutationDetailPage.external?sp=2213"
+onMouseOver="return overlib('cDNA Name: c.2363C>G<BR>Protein Name: p.Thr788Arg<BR><b>Legacy Name: null</b>',CAPTION,'Click to view details of c.2363C>G',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="563,794,569,802" href="/MutationDetailPage.external?sp=358"
+onMouseOver="return overlib('cDNA Name: c.2374C>G<BR>Protein Name: p.Arg792Gly<BR><b>Legacy Name: R792G</b>',CAPTION,'Click to view details of c.2374C>G',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="563,806,569,814" href="/MutationDetailPage.external?sp=357"
+onMouseOver="return overlib('cDNA Name: c.2374C>T<BR>Protein Name: p.Arg792X<BR><b>Legacy Name: R792X</b>',CAPTION,'Click to view details of c.2374C>T',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="611,794,617,802" href="/MutationDetailPage.external?sp=1697"
+onMouseOver="return overlib('cDNA Name: c.2380delG<BR>Protein Name: p.Val794CysfsX9<BR><b>Legacy Name: 2512delG </b>',CAPTION,'Click to view details of c.2380delG',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="691,794,697,802" href="/MutationDetailPage.external?sp=359"
+onMouseOver="return overlib('cDNA Name: c.2390_2391insC<BR>Protein Name: p.Gln799SerfsX6<BR><b>Legacy Name: 2522insC</b>',CAPTION,'Click to view details of c.2390_2391insC',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="707,794,713,802" href="/MutationDetailPage.external?sp=1868"
+onMouseOver="return overlib('cDNA Name: c.2392C>T<BR>Protein Name: p.Pro798Ser<BR><b>Legacy Name: P798S</b>',CAPTION,'Click to view details of c.2392C>T',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="43,914,49,922" href="/MutationDetailPage.external?sp=360"
+onMouseOver="return overlib('cDNA Name: c.2399C>G<BR>Protein Name: p.Ala800Gly<BR><b>Legacy Name: A800G</b>',CAPTION,'Click to view details of c.2399C>G',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="187,914,193,922" href="/MutationDetailPage.external?sp=1585"
+onMouseOver="return overlib('cDNA Name: c.2417A>G<BR>Protein Name: p.Asp806Gly<BR><b>Legacy Name: D806G</b>',CAPTION,'Click to view details of c.2417A>G',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="203,914,209,922" href="/MutationDetailPage.external?sp=1579"
+onMouseOver="return overlib('cDNA Name: c.2419A>G<BR>Protein Name: p.Ile807Val<BR><b>Legacy Name: I807V</b>',CAPTION,'Click to view details of c.2419A>G',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="219,914,225,922" href="/MutationDetailPage.external?sp=767"
+onMouseOver="return overlib('cDNA Name: c.2421A>G<BR>Protein Name: p.Ile807Met<BR><b>Legacy Name: 2553A/G</b>',CAPTION,'Click to view details of c.2421A>G',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="219,926,225,934" href="/MutationDetailPage.external?sp=866"
+onMouseOver="return overlib('cDNA Name: c.2421A>G<BR>Protein Name: p.Ile807Met<BR><b>Legacy Name: I807M</b>',CAPTION,'Click to view details of c.2421A>G',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="243,914,249,922" href="/MutationDetailPage.external?sp=361"
+onMouseOver="return overlib('cDNA Name: c.2424_2425insAT<BR>Protein Name: p.Ser809IlefsX13<BR><b>Legacy Name: 2556insAT</b>',CAPTION,'Click to view details of c.2424_2425insAT',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="275,914,281,922" href="/MutationDetailPage.external?sp=1221"
+onMouseOver="return overlib('cDNA Name: c.2428A>G<BR>Protein Name: p.Arg810Gly<BR><b>Legacy Name: R810G</b>',CAPTION,'Click to view details of c.2428A>G',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="315,914,321,922" href="/MutationDetailPage.external?sp=1742"
+onMouseOver="return overlib('cDNA Name: c.2433_2437delinsATA<BR>Protein Name: p.Leu812TyrfsX10<BR><b>Legacy Name: null</b>',CAPTION,'Click to view details of c.2433_2437delinsATA',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="323,914,329,922" href="/MutationDetailPage.external?sp=362"
+onMouseOver="return overlib('cDNA Name: c.2434_2435insT<BR>Protein Name: p.Leu812PhefsX11<BR><b>Legacy Name: 2566insT</b>',CAPTION,'Click to view details of c.2434_2435insT',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="347,914,353,922" href="/MutationDetailPage.external?sp=1265"
+onMouseOver="return overlib('cDNA Name: c.2437T>C<BR>Protein Name: p.Ser813Pro<BR><b>Legacy Name: S813P</b>',CAPTION,'Click to view details of c.2437T>C',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="371,914,377,922" href="/MutationDetailPage.external?sp=1670"
+onMouseOver="return overlib('cDNA Name: c.2440C>T<BR>Protein Name: p.Gln814X<BR><b>Legacy Name: Q814X</b>',CAPTION,'Click to view details of c.2440C>T',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="395,914,401,922" href="/MutationDetailPage.external?sp=2096"
+onMouseOver="return overlib('cDNA Name: c.2443G>T<BR>Protein Name: p.Glu815X<BR><b>Legacy Name: null</b>',CAPTION,'Click to view details of c.2443G>T',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="403,914,409,922" href="/MutationDetailPage.external?sp=2069"
+onMouseOver="return overlib('cDNA Name: c.2446delA<BR>Protein Name: p.Thr816LeufsX5<BR><b>Legacy Name: null</b>',CAPTION,'Click to view details of c.2446delA',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="451,914,457,922" href="/MutationDetailPage.external?sp=1908"
+onMouseOver="return overlib('cDNA Name: c.2450G>T<BR>Protein Name: p.Gly817Val<BR><b>Legacy Name: null</b>',CAPTION,'Click to view details of c.2450G>T',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="475,914,481,922" href="/MutationDetailPage.external?sp=1504"
+onMouseOver="return overlib('cDNA Name: c.2453delT<BR>Protein Name: p.Leu818TrpfsX3<BR><b>Legacy Name: 2585delT</b>',CAPTION,'Click to view details of c.2453delT',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="547,914,553,922" href="/MutationDetailPage.external?sp=1791"
+onMouseOver="return overlib('cDNA Name: c.2462_2463delGT<BR>Protein Name: p.Ser821ArgfsX4<BR><b>Legacy Name: null</b>',CAPTION,'Click to view details of c.2462_2463delGT',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="563,914,569,922" href="/MutationDetailPage.external?sp=363"
+onMouseOver="return overlib('cDNA Name: c.2464G>A<BR>Protein Name: p.Glu822Lys<BR><b>Legacy Name: E822K</b>',CAPTION,'Click to view details of c.2464G>A',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="563,926,569,934" href="/MutationDetailPage.external?sp=364"
+onMouseOver="return overlib('cDNA Name: c.2464G>T<BR>Protein Name: p.Glu822X<BR><b>Legacy Name: E822X</b>',CAPTION,'Click to view details of c.2464G>T',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="587,914,593,922" href="/MutationDetailPage.external?sp=800"
+onMouseOver="return overlib('cDNA Name: c.2467G>T<BR>Protein Name: p.Glu823X<BR><b>Legacy Name: E823X</b>',CAPTION,'Click to view details of c.2467G>T',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="619,914,625,922" href="/MutationDetailPage.external?sp=365"
+onMouseOver="return overlib('cDNA Name: c.2472delT<BR>Protein Name: p.Asn825ThrfsX5<BR><b>Legacy Name: 2603delT</b>',CAPTION,'Click to view details of c.2472delT',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="659,914,665,922" href="/MutationDetailPage.external?sp=366"
+onMouseOver="return overlib('cDNA Name: c.2476G>A<BR>Protein Name: p.Glu826Lys<BR><b>Legacy Name: E826K</b>',CAPTION,'Click to view details of c.2476G>A',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="659,926,665,934" href="/MutationDetailPage.external?sp=2108"
+onMouseOver="return overlib('cDNA Name: c.2473_2476dupAACG<BR>Protein Name: p.Glu827ArgfsX10<BR><b>Legacy Name: null</b>',CAPTION,'Click to view details of c.2473_2476dupAACG',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="683,914,689,922" href="/MutationDetailPage.external?sp=367"
+onMouseOver="return overlib('cDNA Name: c.2479G>T<BR>Protein Name: p.Glu827X<BR><b>Legacy Name: E827X</b>',CAPTION,'Click to view details of c.2479G>T',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="715,914,721,922" href="/MutationDetailPage.external?sp=1308"
+onMouseOver="return overlib('cDNA Name: c.2483A>G<BR>Protein Name: p.Asp828Gly<BR><b>Legacy Name: D828G</b>',CAPTION,'Click to view details of c.2483A>G',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="27,1034,33,1042" href="/MutationDetailPage.external?sp=1152"
+onMouseOver="return overlib('cDNA Name: c.2487A>G<BR><b>Legacy Name: L829L (2619A/G)</b>',CAPTION,'Click to view details of c.2487A>G',CENTER);">
+
+<area onMouseOut="return nd();" COORDS="35,1034,41,1042" href="/MutationDetailPage.external?sp=368"
+onMouseOver="return overlib('cDNA Name: c.2488A>T<BR>Protein Name: p.Lys830X<BR><b>Legacy Name: K830X</b>',CAPTION,'Click to view details of c.2488A>T',CENTER);">
+
+</Map>
+</span>
+
+</div>
+
+
+        </td></tr></table>
+    </td></tr>
+    <!-- bottom part -->
+     <tr><td rowspan="1" colspan="3" width="691">
+         <br>
+         <br>
+         <br>
+         <br>
+
+         <img src="image/sumhorsa.gif" width="791" />
+        <p align="center">Comments or questions? Please email to <a href="mailto:cftr.admin@genet.sickkids.on.ca">cftr.admin</a>
+            <br>
+            The Database was last updated at Apr 25, 2011
+        </p>
+    </td></tr>
+</table>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-7453350-1");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+<script type="text/javascript"><!--
+tapestry.addOnLoad(function(e) {
+if(tapestry.fx) { tapestry.fx.attachAjaxStatus("AjaxStatus"); }});
+// --></script></body>
+</html>
+<!-- Render time: ~ 865 ms -->
+
+
