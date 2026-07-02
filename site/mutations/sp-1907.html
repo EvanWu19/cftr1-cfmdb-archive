@@ -1,0 +1,369 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!-- Application: penguin -->
+<!-- Page: MutationDetailPage -->
+<!-- Generated: Wed Jul 01 19:57:33 EDT 2026 -->
+<html>
+<head>
+<meta name="generator" content="Tapestry Application Framework, version 4.1.6-SNAPSHOT" />
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+<title>Cystic Fibrosis Mutation Database: Mutation Detail</title>
+<meta key="keywords" content="genet, cystic fibrosis mutation database, CFTR, CFMDB, chromosome 7, chromosome7, bioinformatics resources, bioinformatic, genetic, research, human, genome project, hospital sick children, sickkids" />
+<script type="text/javascript">djConfig = {"baseRelativePath":"../assets/static/dojo-0.4.3-custom-4.1.6/","preventBackButtonFix":false,"parseWidgets":false,"locale":"en-us"} </script>
+
+<script type="text/javascript" src="../assets/static/dojo-0.4.3-custom-4.1.6/dojo.js"></script><script type="text/javascript" src="../assets/static/dojo-0.4.3-custom-4.1.6/dojo2.js"></script>
+<script type="text/javascript">
+dojo.registerModulePath("tapestry", "../assets/static/tapestry-4.1.6");
+</script>
+<script type="text/javascript" src="../assets/static/tapestry-4.1.6/core.js"></script>
+<script type="text/javascript">
+dojo.require("tapestry.namespace");
+tapestry.requestEncoding='UTF-8';
+</script>
+<link rel="stylesheet" type="text/css" href="../include/main.css" />
+<link rel="stylesheet" type="text/css" href="../include/mutationSearch.css" />
+<link rel="stylesheet" type="text/css" href="../include/forms.css" />
+<link rel="stylesheet" type="text/css" href="../include/phoenix.css" />
+<link rel="stylesheet" type="text/css" href="../include/institution.css" />
+<link rel="stylesheet" type="text/css" href="../include/mutationSubmission.css" />
+</head>
+
+<script language="JavaScript" type="text/javascript">
+    function DivSetVisible(divid, divshimid) {
+        if (document.all && (navigator.userAgent.indexOf("Opera") == -1)) {
+            var DivRef = document.getElementById(divid);
+            DivRef.style.display = "block";
+
+            var IfrRef = document.getElementById(divshimid); // co
+            IfrRef.style.width = DivRef.offsetWidth;
+            IfrRef.style.height = DivRef.offsetHeight;
+            IfrRef.style.top = DivRef.style.top;
+            IfrRef.style.left = DivRef.style.left;
+            IfrRef.style.zIndex = DivRef.style.zIndex - 1;
+            IfrRef.style.display = "block";
+        }
+    }
+    function DivSetInvisible(divid, divshimid) {
+        if (document.all && (navigator.userAgent.indexOf("Opera") == -1)) {
+            var DivRef = document.getElementById(divid);
+            DivRef.style.display = "none";
+            var IfrRef = document.getElementById(divshimid);
+            IfrRef.style.display = "none";
+        }
+    }
+	function setElemCoords(evnt, elem) {
+	// this function was changed to work for both Firefox and IE
+		var myposx = 0;
+		var posy = 0;
+		if (!evnt) var evnt = window.evnt;
+		if (evnt.pageX || evnt.pageY) 	{
+			myposx = evnt.pageX;
+			posy = evnt.pageY;
+		}
+		else if (evnt.clientX || evnt.clientY) 	{
+			myposx = evnt.clientX + document.body.scrollLeft
+			+ document.documentElement.scrollLeft;
+			posy = evnt.clientY + document.body.scrollTop
+			+ document.documentElement.scrollTop;
+		}
+		elem.style.left = myposx + 20 + "px";
+		elem.style.top = posy + 10 + "px";
+	}
+	function xCoord (e){
+
+	}
+	function hideElem(id) {
+		document.getElementById(id).style.display = "none";
+	}
+	function showElem(event, id) {
+		var elem = document.getElementById(id);
+		elem.style.position = "absolute";
+		setElemCoords(event, elem);
+		elem.style.display = "block";
+	}
+</script>
+<noscript>
+    <META HTTP-EQUIV="Refresh" CONTENT="0; URL=/">
+</noscript>
+
+
+
+
+<body marginwidth="0" topmargin="0" marginheight="0" leftmargin="0" id="Body">
+<script type="text/javascript"><!--
+dojo.require("tapestry.fx");
+// --></script>
+<table border="0" cellpadding="0" cellspacing="0" width="791" height="110">
+    <tr>
+        <td rowspan="1" colspan="3" width="691" height="58">
+        	<a id="PageLink" href="../Home.html"><img src="image/mutationlogo.gif" width="791" height="98" border="0"/></a>
+		</td>
+    </tr>
+    <tr><td>
+        <div class="container">
+            <div class="pageHeader">
+
+                <div class="clearBoth"></div>
+
+                <div class="mainMenu">
+                    <ul id="topnav">
+                        <li class="topnavhead"
+                            style="width: 80px;"><a href="Home.html" class="headnavref">Home</a>
+                        </li>
+                        <li class="topnavhead"
+                            onMouseOver="this.className='sfhover'; DivSetVisible('navitem1', 'ulShim1');"
+                            onMouseOut="this.className='topnavhead'; DivSetInvisible('navitem1', 'ulShim1');"
+                            style="width: 76px;"><a href="PicturePage.html" class="headnavref">Search</a>
+                            <ul id="navitem1" style="width: 14em; z-index: 100;">
+                                <li style="width: 14em;"><a href="PicturePage.html">Graphic Search</a></li>
+                                <li style="width: 14em;"><a href="SearchPage.html">Basic Text Search</a></li>
+                                <li style="width: 14em;"><a href="AdvancedSearchPage.html">Advanced Text Search</a></li>
+                                <!--
+                                <li style="width: 14em;"><a href="MutationSearch.html">Criteria Search</a></li>
+                                -->
+                            </ul>
+                            <!--
+                            <iframe id="ulShim1" src="include/iframe_blank.html" scrolling="no" frameborder="0" style="position:absolute; top:0px; left:0px; display:none;"></iframe>
+                            -->
+                        <li class="headdivide"></li>
+                        <li class="topnavhead"
+                            onMouseOver="this.className='sfhover'; DivSetVisible('navitem2', 'ulShim2');"
+                            onMouseOut="this.className='topnavhead'; DivSetInvisible('navitem2', 'ulShim2');"
+                            style="width: 96px;"><a href="GenomicDnaSequencePage.html" class="headnavref">CFTR&nbsp;Gene</a>
+                             <ul id="navitem2" style="width: 24em; z-index: 100;">
+                                <li style="width: 24em;"><a href="GenomicDnaSequencePage.html">Genomic DNA Sequence</a>
+                                </li>
+                                <li style="width: 24em;"><a href="MRnaPolypeptideSequencePage.html">mRNA(cDNA) and Polypeptide Sequence</a>
+                                </li>
+                                <li style="width: 24em;"><a href="CftrDomainPage.html">CFTR Domains</a></li>
+                                 <li style="width: 24em;"><a href="../download/mouse_cftr_genomic.doc">Mouse CFTR Genomic Sequence</a></li>
+                            </ul>
+                            <!--
+                            <iframe id="ulShim2" src="include/iframe_blank.html" scrolling="no" frameborder="0" style="position:absolute; top:0px; left:0px; display:none;"></iframe>
+                            -->
+                        <li class="headdivide"></li>
+                        <li class="headdivide"></li>
+
+                        <li class="topnavhead"
+                            onMouseOver="this.className='sfhover'; DivSetVisible('navitem3', 'ulShim3');"
+                            onMouseOut="this.className='topnavhead'; DivSetInvisible('navitem3', 'ulShim3');"
+                            style="width: 70px;"><a href="ConsortiumBackgroundPage.html"  class="headnavref">History</a>
+                            <ul id="navitem3" style="width: 10em; z-index: 100;">
+                                <li style="width: 10em;"><a href="ConsortiumBackgroundPage.html">Background</a></li>
+                                <li style="width: 10em;"><a href="ConsortiumGuidelinesPage.html">Guidelines</a></li>
+                                <li style="width: 10em;"><a href="ConsortiumDataPage1.html">Data</a></li>
+                                <li style="width: 10em;"><a href="NewsLetters.html">News&nbsp;Letters</a></li>
+                            </ul>
+                            <!--
+                            <iframe id="ulShim3" src="include/iframe_blank.html" scrolling="no" frameborder="0" style="position:absolute; top:0px; left:0px; display:none;"></iframe>                        <li class="headdivide"></li>
+                            -->
+                        </li>
+
+                        <li class="headdivide"></li>
+                        <li class="topnavhead"
+                            style="width: 70px;"><a href="Team.html" class="headnavref">Team</a>
+                        </li>
+
+                        <li class="headdivide"></li>
+                        <li class="topnavhead"
+                            style="width: 80px;"><a href="StatisticsPage.html" class="headnavref">Statistics</a>
+                        </li>
+
+                        <li class="headdivide"></li>
+                        <li class="topnavhead"
+                            style="width: 70px;"><a href="LinkPage.html" class="headnavref">Links</a>
+                        </li>
+
+                        <li class="headdivide"></li>
+                        <li class="topnavhead"
+                            style="width: 70px;"><a href="SubmitPage.html" class="headnavref">Submit</a>
+                        </li>
+                        <li class="topnavhead"
+
+                            onMouseOver="this.className='sfhover'; DivSetVisible('navitem5', 'ulShim5');"
+                            onMouseOut="this.className='topnavhead'; DivSetInvisible('navitem5', 'ulShim5');"
+                            style="width: 58px;"><a href="HelpPage.html" class="headnavref">Help</a>
+                            <ul id="navitem5" style="width: 18em; z-index: 100;">
+                                <li style="width: 18em;"><a href="Contact.html">Contact Information</a></li>
+                                <li style="width: 18em;"><a href="HelpPage.html#term">Terminology</a></li>
+                                <li style="width: 18em;"><a href="HelpPage.html#faq">Frequently Asked Questions</a></li>
+                            </ul>
+                            <!--
+                            <iframe id="ulShim5" src="include/iframe_blank.html" scrolling="no" frameborder="0" style="position:absolute; top:0px; left:0px; display:none;"></iframe>                        <li class="headdivide"></li>
+                            -->
+                        </li>
+
+                    </ul>
+
+                </div>
+                <style type="text/css">
+                    ul#navitem1, ul#navitem2, ul#navitem3, ul#navitem4, ul#navitem5, {
+                        width: 10em;
+                    }
+
+                    ul#navitem1 li, ul#navitem2 li, ul#navitem3 li, ul#navitem4 li, ul#navitem5 li, {
+                        font-family: verdana, arial, helvetica, sans-serif;
+                        font-size: 11px;
+                        width: 10em;
+                        font-weight: normal;
+                        border-bottom: 1px solid #cccccc;
+                        background: #eEF3F7;
+                    }
+
+                    ul#navitem1 li a, ul#navitem2 li a, ul#navitem3 li a, ul#navitem4 li a, ul#navitem5 li a, {
+                        font-size: 11px;
+                    }
+                </style>
+                <script type="text/javascript" language="javascript">
+                    // remove menu flicker when useing overLIB  in IE.
+                    if (document.all && (navigator.userAgent.indexOf("Opera") == -1)) {
+                        sfHover = function() {
+                            var sfEls =document.getElementById("topnav").getElementsByTagName("li");
+                            for (var i = 0; i < sfEls.length; i++) {
+                                // **** use onmousemove instead of onmouseover ****
+                                sfEls[i].onmousemove = sfEls[i].onmouseover;
+                            }
+                        }
+                        if (window.attachEvent) window.attachEvent("onload", sfHover);
+                    }
+                </script>
+
+
+            </div>
+
+        </div>
+
+    </td></tr>
+    <tr><td>
+    	<div style="display:none;color:white;background:red;position:absolute;top:0;right:0" id="AjaxStatus">
+			Loading...
+		</div>
+	</td></tr>
+    <tr><td>
+
+        <br><br>
+        <table cellpadding="2" cellspacing="2" width="100%"><tr><td style="font-size:small; ">
+
+<table border="0" style="width:780px">
+	<tr>
+	<td  align="center" >
+	    <h3>Mutation Details for c.1561A&gt;T </h3>
+	</td>
+	</tr>
+	
+	<tr><td>
+	<table border="1" cellpadding="4" cellspacing="3" style="table-layout:fixed;">
+	    <tr>
+	        <td width="15%">
+	            <span class="thead">cDNA Name</span>
+	        </td>
+	        <td width="85%">
+	            <!-- <span jwcid="@Insert" value="ognl:mutation.description"></span>&nbsp; -->         
+	            c.1561A&gt;T&nbsp;
+	        </td>
+	    </tr>
+	    	    
+	    <tr>
+	        <td width="15%">
+	            <span class="thead">Protein Name</span>
+	        </td>
+	        <td width="85%">
+	            p.Ile521Phe&nbsp;
+	        </td>
+	    </tr>
+	    
+	    <tr>
+	        <td width="15%">
+	            <span class="thead">Exon or Intron</span>
+	        </td>
+	        <td width="85%">
+	            exon 11&nbsp;
+	        </td>
+	    </tr>
+            
+	    <tr>
+	        <td width="15%">
+	            <span class="notification">Other Details</span>
+	        </td>
+	        <td width="85%">
+				&nbsp;
+	        </td>
+	    </tr>
+	    
+		    <tr>
+		        <td width="15%">
+		            <span class="thead">Contributors and Institutes</span>
+		        </td>
+		        <td width="85%">
+					<table border='0' cellpadding='4' cellspacing='3'><tr><td>Myrto Poulou</td><td> - </td><td>Department of Medical Genetics, Athens University</td></tr><tr><td>Emmanuel Kanavakis</td><td> - </td><td>Department of Medical Genetics, Athens University</td></tr><tr><td>Maria Tzetis</td><td> - </td><td>Department of Medical Genetics, Athens University</td></tr></table>&nbsp;&nbsp;
+					
+		        </td>
+		    </tr>	    
+		
+		
+	    <tr>
+	    
+		<span>
+	        <td width="15%">
+	            <span class="thead">Submitted Phenotype Details</span>
+	        </td>
+	        <td width="85%">
+				This change has been identified through DGGE and direct sequencing, while screening a male presenting with CBAVD. No other change was identified after screening all the coding regions&nbsp;
+	        </td>
+		</span>
+	    </tr>
+	    <tr>
+	        <td width="15%" valign="top">
+	            <span class="thead">Reference</span>
+	        </td>
+	        <td width="85%">
+	            &nbsp;
+	        </td>
+	    </tr>
+	</table>
+
+	
+	<br>
+	To check if there are any papers published about this mutation/variant on PubMed, please <a href="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?cmd=Search&amp;db=PubMed&amp;term=null" id="Any">click here.</a>
+	<br>
+	</td></tr>
+	
+	<tr><td width="100%">
+	
+	</td></tr>
+</table>
+
+
+        </td></tr></table>
+    </td></tr>
+    <!-- bottom part -->
+     <tr><td rowspan="1" colspan="3" width="691">
+         <br>
+         <br>
+         <br>
+         <br>
+
+         <img src="image/sumhorsa.gif" width="791" />
+        <p align="center">Comments or questions? Please email to <a href="mailto:cftr.admin@genet.sickkids.on.ca">cftr.admin</a>
+            <br>
+            The Database was last updated at Apr 25, 2011
+        </p>
+    </td></tr>
+</table>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-7453350-1");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+<script type="text/javascript"><!--
+tapestry.addOnLoad(function(e) {
+if(tapestry.fx) { tapestry.fx.attachAjaxStatus("AjaxStatus"); }});
+// --></script></body>
+</html>
+<!-- Render time: ~ 0 ms -->
+
+

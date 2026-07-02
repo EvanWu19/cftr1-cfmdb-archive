@@ -1,0 +1,1426 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!-- Application: penguin -->
+<!-- Page: StatisticsPage -->
+<!-- Generated: Wed Jul 01 19:46:04 EDT 2026 -->
+<html>
+<head>
+<meta name="generator" content="Tapestry Application Framework, version 4.1.6-SNAPSHOT" />
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+<title>Cystic Fibrosis Mutation Database: Statistics</title>
+<meta key="keywords" content="genet, cystic fibrosis mutation database, CFTR, CFMDB, chromosome 7, chromosome7, bioinformatics resources, bioinformatic, genetic, research, human, genome project, hospital sick children, sickkids" />
+<script type="text/javascript">djConfig = {"baseRelativePath":"/assets/static/dojo-0.4.3-custom-4.1.6/","parseWidgets":false,"locale":"en-us"} </script>
+
+<script type="text/javascript" src="/assets/static/dojo-0.4.3-custom-4.1.6/dojo.js"></script>
+<script type="text/javascript">
+dojo.registerModulePath("tapestry", "/assets/static/tapestry-4.1.6");
+</script>
+<script type="text/javascript" src="/assets/static/tapestry-4.1.6/core.js"></script>
+<script type="text/javascript">
+dojo.require("tapestry.namespace");
+tapestry.requestEncoding='UTF-8';
+</script>
+<link rel="stylesheet" type="text/css" href="/include/main.css" />
+<link rel="stylesheet" type="text/css" href="/include/mutationSearch.css" />
+<link rel="stylesheet" type="text/css" href="/include/forms.css" />
+<link rel="stylesheet" type="text/css" href="/include/phoenix.css" />
+<link rel="stylesheet" type="text/css" href="/include/institution.css" />
+<link rel="stylesheet" type="text/css" href="/include/mutationSubmission.css" />
+</head>
+
+<script language="JavaScript" type="text/javascript">
+    function DivSetVisible(divid, divshimid) {
+        if (document.all && (navigator.userAgent.indexOf("Opera") == -1)) {
+            var DivRef = document.getElementById(divid);
+            DivRef.style.display = "block";
+
+            var IfrRef = document.getElementById(divshimid); // co
+            IfrRef.style.width = DivRef.offsetWidth;
+            IfrRef.style.height = DivRef.offsetHeight;
+            IfrRef.style.top = DivRef.style.top;
+            IfrRef.style.left = DivRef.style.left;
+            IfrRef.style.zIndex = DivRef.style.zIndex - 1;
+            IfrRef.style.display = "block";
+        }
+    }
+    function DivSetInvisible(divid, divshimid) {
+        if (document.all && (navigator.userAgent.indexOf("Opera") == -1)) {
+            var DivRef = document.getElementById(divid);
+            DivRef.style.display = "none";
+            var IfrRef = document.getElementById(divshimid);
+            IfrRef.style.display = "none";
+        }
+    }
+	function setElemCoords(evnt, elem) {
+	// this function was changed to work for both Firefox and IE
+		var myposx = 0;
+		var posy = 0;
+		if (!evnt) var evnt = window.evnt;
+		if (evnt.pageX || evnt.pageY) 	{
+			myposx = evnt.pageX;
+			posy = evnt.pageY;
+		}
+		else if (evnt.clientX || evnt.clientY) 	{
+			myposx = evnt.clientX + document.body.scrollLeft
+			+ document.documentElement.scrollLeft;
+			posy = evnt.clientY + document.body.scrollTop
+			+ document.documentElement.scrollTop;
+		}
+		elem.style.left = myposx + 20 + "px";
+		elem.style.top = posy + 10 + "px";
+	}
+	function xCoord (e){
+
+	}
+	function hideElem(id) {
+		document.getElementById(id).style.display = "none";
+	}
+	function showElem(event, id) {
+		var elem = document.getElementById(id);
+		elem.style.position = "absolute";
+		setElemCoords(event, elem);
+		elem.style.display = "block";
+	}
+</script>
+<noscript>
+    <META HTTP-EQUIV="Refresh" CONTENT="0; URL=/">
+</noscript>
+
+
+
+
+<body marginwidth="0" topmargin="0" marginheight="0" leftmargin="0" id="Body">
+<script type="text/javascript"><!--
+dojo.require("tapestry.fx");
+// --></script>
+<table border="0" cellpadding="0" cellspacing="0" width="791" height="110">
+    <tr>
+        <td rowspan="1" colspan="3" width="691" height="58">
+        	<a id="PageLink" href="/Home.html"><img src="image/mutationlogo.gif" width="791" height="98" border="0"/></a>
+		</td>
+    </tr>
+    <tr><td>
+        <div class="container">
+            <div class="pageHeader">
+
+                <div class="clearBoth"></div>
+
+                <div class="mainMenu">
+                    <ul id="topnav">
+                        <li class="topnavhead"
+                            style="width: 80px;"><a href="Home.html" class="headnavref">Home</a>
+                        </li>
+                        <li class="topnavhead"
+                            onMouseOver="this.className='sfhover'; DivSetVisible('navitem1', 'ulShim1');"
+                            onMouseOut="this.className='topnavhead'; DivSetInvisible('navitem1', 'ulShim1');"
+                            style="width: 76px;"><a href="PicturePage.html" class="headnavref">Search</a>
+                            <ul id="navitem1" style="width: 14em; z-index: 100;">
+                                <li style="width: 14em;"><a href="PicturePage.html">Graphic Search</a></li>
+                                <li style="width: 14em;"><a href="SearchPage.html">Basic Text Search</a></li>
+                                <li style="width: 14em;"><a href="AdvancedSearchPage.html">Advanced Text Search</a></li>
+                                <!--
+                                <li style="width: 14em;"><a href="MutationSearch.html">Criteria Search</a></li>
+                                -->
+                            </ul>
+                            <!--
+                            <iframe id="ulShim1" src="include/iframe_blank.html" scrolling="no" frameborder="0" style="position:absolute; top:0px; left:0px; display:none;"></iframe>
+                            -->
+                        <li class="headdivide"></li>
+                        <li class="topnavhead"
+                            onMouseOver="this.className='sfhover'; DivSetVisible('navitem2', 'ulShim2');"
+                            onMouseOut="this.className='topnavhead'; DivSetInvisible('navitem2', 'ulShim2');"
+                            style="width: 96px;"><a href="GenomicDnaSequencePage.html" class="headnavref">CFTR&nbsp;Gene</a>
+                             <ul id="navitem2" style="width: 24em; z-index: 100;">
+                                <li style="width: 24em;"><a href="GenomicDnaSequencePage.html">Genomic DNA Sequence</a>
+                                </li>
+                                <li style="width: 24em;"><a href="MRnaPolypeptideSequencePage.html">mRNA(cDNA) and Polypeptide Sequence</a>
+                                </li>
+                                <li style="width: 24em;"><a href="CftrDomainPage.html">CFTR Domains</a></li>
+                                 <li style="width: 24em;"><a href="download/mouse_cftr_genomic.doc">Mouse CFTR Genomic Sequence</a></li>
+                            </ul>
+                            <!--
+                            <iframe id="ulShim2" src="include/iframe_blank.html" scrolling="no" frameborder="0" style="position:absolute; top:0px; left:0px; display:none;"></iframe>
+                            -->
+                        <li class="headdivide"></li>
+                        <li class="headdivide"></li>
+
+                        <li class="topnavhead"
+                            onMouseOver="this.className='sfhover'; DivSetVisible('navitem3', 'ulShim3');"
+                            onMouseOut="this.className='topnavhead'; DivSetInvisible('navitem3', 'ulShim3');"
+                            style="width: 70px;"><a href="ConsortiumBackgroundPage.html"  class="headnavref">History</a>
+                            <ul id="navitem3" style="width: 10em; z-index: 100;">
+                                <li style="width: 10em;"><a href="ConsortiumBackgroundPage.html">Background</a></li>
+                                <li style="width: 10em;"><a href="ConsortiumGuidelinesPage.html">Guidelines</a></li>
+                                <li style="width: 10em;"><a href="ConsortiumDataPage1.html">Data</a></li>
+                                <li style="width: 10em;"><a href="NewsLetters.html">News&nbsp;Letters</a></li>
+                            </ul>
+                            <!--
+                            <iframe id="ulShim3" src="include/iframe_blank.html" scrolling="no" frameborder="0" style="position:absolute; top:0px; left:0px; display:none;"></iframe>                        <li class="headdivide"></li>
+                            -->
+                        </li>
+
+                        <li class="headdivide"></li>
+                        <li class="topnavhead"
+                            style="width: 70px;"><a href="Team.html" class="headnavref">Team</a>
+                        </li>
+
+                        <li class="headdivide"></li>
+                        <li class="topnavhead"
+                            style="width: 80px;"><a href="StatisticsPage.html" class="headnavref">Statistics</a>
+                        </li>
+
+                        <li class="headdivide"></li>
+                        <li class="topnavhead"
+                            style="width: 70px;"><a href="LinkPage.html" class="headnavref">Links</a>
+                        </li>
+
+                        <li class="headdivide"></li>
+                        <li class="topnavhead"
+                            style="width: 70px;"><a href="SubmitPage.html" class="headnavref">Submit</a>
+                        </li>
+                        <li class="topnavhead"
+
+                            onMouseOver="this.className='sfhover'; DivSetVisible('navitem5', 'ulShim5');"
+                            onMouseOut="this.className='topnavhead'; DivSetInvisible('navitem5', 'ulShim5');"
+                            style="width: 58px;"><a href="HelpPage.html" class="headnavref">Help</a>
+                            <ul id="navitem5" style="width: 18em; z-index: 100;">
+                                <li style="width: 18em;"><a href="Contact.html">Contact Information</a></li>
+                                <li style="width: 18em;"><a href="HelpPage.html#term">Terminology</a></li>
+                                <li style="width: 18em;"><a href="HelpPage.html#faq">Frequently Asked Questions</a></li>
+                            </ul>
+                            <!--
+                            <iframe id="ulShim5" src="include/iframe_blank.html" scrolling="no" frameborder="0" style="position:absolute; top:0px; left:0px; display:none;"></iframe>                        <li class="headdivide"></li>
+                            -->
+                        </li>
+
+                    </ul>
+
+                </div>
+                <style type="text/css">
+                    ul#navitem1, ul#navitem2, ul#navitem3, ul#navitem4, ul#navitem5, {
+                        width: 10em;
+                    }
+
+                    ul#navitem1 li, ul#navitem2 li, ul#navitem3 li, ul#navitem4 li, ul#navitem5 li, {
+                        font-family: verdana, arial, helvetica, sans-serif;
+                        font-size: 11px;
+                        width: 10em;
+                        font-weight: normal;
+                        border-bottom: 1px solid #cccccc;
+                        background: #eEF3F7;
+                    }
+
+                    ul#navitem1 li a, ul#navitem2 li a, ul#navitem3 li a, ul#navitem4 li a, ul#navitem5 li a, {
+                        font-size: 11px;
+                    }
+                </style>
+                <script type="text/javascript" language="javascript">
+                    // remove menu flicker when useing overLIB  in IE.
+                    if (document.all && (navigator.userAgent.indexOf("Opera") == -1)) {
+                        sfHover = function() {
+                            var sfEls =document.getElementById("topnav").getElementsByTagName("li");
+                            for (var i = 0; i < sfEls.length; i++) {
+                                // **** use onmousemove instead of onmouseover ****
+                                sfEls[i].onmousemove = sfEls[i].onmouseover;
+                            }
+                        }
+                        if (window.attachEvent) window.attachEvent("onload", sfHover);
+                    }
+                </script>
+
+
+            </div>
+
+        </div>
+
+    </td></tr>
+    <tr><td>
+    	<div style="display:none;color:white;background:red;position:absolute;top:0;right:0" id="AjaxStatus">
+			Loading...
+		</div>
+	</td></tr>
+    <tr><td>
+
+        <br><br>
+        <table cellpadding="2" cellspacing="2" width="100%"><tr><td style="font-size:small; ">
+
+
+<p align="center" style="font-weight:bold;">CFMDB Statistics</p>
+<br>
+
+
+<div style="padding-left:8px">
+There are currently <b>2124</b> mutations listed in this CFTR
+mutation database.
+<br>
+<br>
+<p>Statistics by mutation type:</p>
+<table width="100%" cellpadding="2" border="1">
+    <tr align="center"><td>Mutation Type</td><td>Count</td><td>Frequency %</td></tr>
+    <!--<tr><td><span jwcid="@Insert" value="ognl:typeStatList[0].count">1448</span></td><td>two</td><td>three</td></tr>-->
+    <span id="For">
+    <tr>
+        <td class="statisticFieldName">
+            Missense
+        </td>
+        <td class="statisticCount">
+            816
+        </td>
+        <td class="statisticPercentage">
+            38.42
+        </td>
+    </tr>
+    </span><span id="For_0">
+    <tr>
+        <td class="statisticFieldName">
+            Frameshift
+        </td>
+        <td class="statisticCount">
+            343
+        </td>
+        <td class="statisticPercentage">
+            16.15
+        </td>
+    </tr>
+    </span><span id="For_1">
+    <tr>
+        <td class="statisticFieldName">
+            Splicing
+        </td>
+        <td class="statisticCount">
+            231
+        </td>
+        <td class="statisticPercentage">
+            10.88
+        </td>
+    </tr>
+    </span><span id="For_2">
+    <tr>
+        <td class="statisticFieldName">
+            Nonsense
+        </td>
+        <td class="statisticCount">
+            178
+        </td>
+        <td class="statisticPercentage">
+            8.38
+        </td>
+    </tr>
+    </span><span id="For_3">
+    <tr>
+        <td class="statisticFieldName">
+            In frame in/del
+        </td>
+        <td class="statisticCount">
+            43
+        </td>
+        <td class="statisticPercentage">
+            2.02
+        </td>
+    </tr>
+    </span><span id="For_4">
+    <tr>
+        <td class="statisticFieldName">
+            Large in/del
+        </td>
+        <td class="statisticCount">
+            59
+        </td>
+        <td class="statisticPercentage">
+            2.78
+        </td>
+    </tr>
+    </span><span id="For_5">
+    <tr>
+        <td class="statisticFieldName">
+            Promoter
+        </td>
+        <td class="statisticCount">
+            17
+        </td>
+        <td class="statisticPercentage">
+            0.80
+        </td>
+    </tr>
+    </span><span id="For_6">
+    <tr>
+        <td class="statisticFieldName">
+            Sequence variation
+        </td>
+        <td class="statisticCount">
+            269
+        </td>
+        <td class="statisticPercentage">
+            12.66
+        </td>
+    </tr>
+    </span><span id="For_7">
+    <tr>
+        <td class="statisticFieldName">
+            Unknown
+        </td>
+        <td class="statisticCount">
+            168
+        </td>
+        <td class="statisticPercentage">
+            7.91
+        </td>
+    </tr>
+    </span>
+</table>
+<br>
+<p>Statistics by region:</p>
+<table width="100%" cellpadding="2" border="1">
+    <tr  align="center"><td>Region Name</td><td>Legacy Region Name</td><td>Count</td><td>Distribution %</td><td>Density %</td></tr>
+    
+    <span id="For_9">
+    <tr>
+        <td class="statisticFieldName">
+            promoter
+        </td>
+        <td class="statisticFieldName">
+            promoter &amp; 5'UTR
+        </td>
+        <td class="statisticCount">
+            31
+        </td>
+        <td class="statisticPercentage">
+            1.46
+        </td>
+        <td class="statisticPercentage">
+            n/a
+        </td>
+    </tr>
+    </span><span id="For_10">
+    <tr>
+        <td class="statisticFieldName">
+            exon 1
+        </td>
+        <td class="statisticFieldName">
+            exon 1
+        </td>
+        <td class="statisticCount">
+            27
+        </td>
+        <td class="statisticPercentage">
+            1.27
+        </td>
+        <td class="statisticPercentage">
+            50.94
+        </td>
+    </tr>
+    </span><span id="For_11">
+    <tr>
+        <td class="statisticFieldName">
+            exon 2
+        </td>
+        <td class="statisticFieldName">
+            exon 2
+        </td>
+        <td class="statisticCount">
+            33
+        </td>
+        <td class="statisticPercentage">
+            1.55
+        </td>
+        <td class="statisticPercentage">
+            29.73
+        </td>
+    </tr>
+    </span><span id="For_12">
+    <tr>
+        <td class="statisticFieldName">
+            exon 3
+        </td>
+        <td class="statisticFieldName">
+            exon 3
+        </td>
+        <td class="statisticCount">
+            53
+        </td>
+        <td class="statisticPercentage">
+            2.50
+        </td>
+        <td class="statisticPercentage">
+            48.62
+        </td>
+    </tr>
+    </span><span id="For_13">
+    <tr>
+        <td class="statisticFieldName">
+            exon 4
+        </td>
+        <td class="statisticFieldName">
+            exon 4
+        </td>
+        <td class="statisticCount">
+            120
+        </td>
+        <td class="statisticPercentage">
+            5.65
+        </td>
+        <td class="statisticPercentage">
+            55.56
+        </td>
+    </tr>
+    </span><span id="For_14">
+    <tr>
+        <td class="statisticFieldName">
+            exon 5
+        </td>
+        <td class="statisticFieldName">
+            exon 5
+        </td>
+        <td class="statisticCount">
+            31
+        </td>
+        <td class="statisticPercentage">
+            1.46
+        </td>
+        <td class="statisticPercentage">
+            34.44
+        </td>
+    </tr>
+    </span><span id="For_15">
+    <tr>
+        <td class="statisticFieldName">
+            exon 6
+        </td>
+        <td class="statisticFieldName">
+            exon 6a
+        </td>
+        <td class="statisticCount">
+            51
+        </td>
+        <td class="statisticPercentage">
+            2.40
+        </td>
+        <td class="statisticPercentage">
+            31.10
+        </td>
+    </tr>
+    </span><span id="For_16">
+    <tr>
+        <td class="statisticFieldName">
+            exon 7
+        </td>
+        <td class="statisticFieldName">
+            exon 6b
+        </td>
+        <td class="statisticCount">
+            23
+        </td>
+        <td class="statisticPercentage">
+            1.08
+        </td>
+        <td class="statisticPercentage">
+            18.25
+        </td>
+    </tr>
+    </span><span id="For_17">
+    <tr>
+        <td class="statisticFieldName">
+            exon 8
+        </td>
+        <td class="statisticFieldName">
+            exon 7
+        </td>
+        <td class="statisticCount">
+            100
+        </td>
+        <td class="statisticPercentage">
+            4.71
+        </td>
+        <td class="statisticPercentage">
+            40.49
+        </td>
+    </tr>
+    </span><span id="For_18">
+    <tr>
+        <td class="statisticFieldName">
+            exon 9
+        </td>
+        <td class="statisticFieldName">
+            exon 8
+        </td>
+        <td class="statisticCount">
+            29
+        </td>
+        <td class="statisticPercentage">
+            1.37
+        </td>
+        <td class="statisticPercentage">
+            31.18
+        </td>
+    </tr>
+    </span><span id="For_19">
+    <tr>
+        <td class="statisticFieldName">
+            exon 10
+        </td>
+        <td class="statisticFieldName">
+            exon 9
+        </td>
+        <td class="statisticCount">
+            40
+        </td>
+        <td class="statisticPercentage">
+            1.88
+        </td>
+        <td class="statisticPercentage">
+            21.86
+        </td>
+    </tr>
+    </span><span id="For_20">
+    <tr>
+        <td class="statisticFieldName">
+            exon 11
+        </td>
+        <td class="statisticFieldName">
+            exon 10
+        </td>
+        <td class="statisticCount">
+            78
+        </td>
+        <td class="statisticPercentage">
+            3.67
+        </td>
+        <td class="statisticPercentage">
+            40.63
+        </td>
+    </tr>
+    </span><span id="For_21">
+    <tr>
+        <td class="statisticFieldName">
+            exon 12
+        </td>
+        <td class="statisticFieldName">
+            exon 11
+        </td>
+        <td class="statisticCount">
+            49
+        </td>
+        <td class="statisticPercentage">
+            2.31
+        </td>
+        <td class="statisticPercentage">
+            51.58
+        </td>
+    </tr>
+    </span><span id="For_22">
+    <tr>
+        <td class="statisticFieldName">
+            exon 13
+        </td>
+        <td class="statisticFieldName">
+            exon 12
+        </td>
+        <td class="statisticCount">
+            46
+        </td>
+        <td class="statisticPercentage">
+            2.17
+        </td>
+        <td class="statisticPercentage">
+            52.87
+        </td>
+    </tr>
+    </span><span id="For_23">
+    <tr>
+        <td class="statisticFieldName">
+            exon 14
+        </td>
+        <td class="statisticFieldName">
+            exon 13
+        </td>
+        <td class="statisticCount">
+            159
+        </td>
+        <td class="statisticPercentage">
+            7.49
+        </td>
+        <td class="statisticPercentage">
+            21.96
+        </td>
+    </tr>
+    </span><span id="For_24">
+    <tr>
+        <td class="statisticFieldName">
+            exon 15
+        </td>
+        <td class="statisticFieldName">
+            exon 14a
+        </td>
+        <td class="statisticCount">
+            35
+        </td>
+        <td class="statisticPercentage">
+            1.65
+        </td>
+        <td class="statisticPercentage">
+            27.13
+        </td>
+    </tr>
+    </span><span id="For_25">
+    <tr>
+        <td class="statisticFieldName">
+            exon 16
+        </td>
+        <td class="statisticFieldName">
+            exon 14b
+        </td>
+        <td class="statisticCount">
+            3
+        </td>
+        <td class="statisticPercentage">
+            0.14
+        </td>
+        <td class="statisticPercentage">
+            7.89
+        </td>
+    </tr>
+    </span><span id="For_26">
+    <tr>
+        <td class="statisticFieldName">
+            exon 17
+        </td>
+        <td class="statisticFieldName">
+            exon 15
+        </td>
+        <td class="statisticCount">
+            75
+        </td>
+        <td class="statisticPercentage">
+            3.53
+        </td>
+        <td class="statisticPercentage">
+            29.88
+        </td>
+    </tr>
+    </span><span id="For_27">
+    <tr>
+        <td class="statisticFieldName">
+            exon 18
+        </td>
+        <td class="statisticFieldName">
+            exon 16
+        </td>
+        <td class="statisticCount">
+            26
+        </td>
+        <td class="statisticPercentage">
+            1.22
+        </td>
+        <td class="statisticPercentage">
+            32.50
+        </td>
+    </tr>
+    </span><span id="For_28">
+    <tr>
+        <td class="statisticFieldName">
+            exon 19
+        </td>
+        <td class="statisticFieldName">
+            exon 17a
+        </td>
+        <td class="statisticCount">
+            45
+        </td>
+        <td class="statisticPercentage">
+            2.12
+        </td>
+        <td class="statisticPercentage">
+            29.80
+        </td>
+    </tr>
+    </span><span id="For_29">
+    <tr>
+        <td class="statisticFieldName">
+            exon 20
+        </td>
+        <td class="statisticFieldName">
+            exon 17b
+        </td>
+        <td class="statisticCount">
+            90
+        </td>
+        <td class="statisticPercentage">
+            4.24
+        </td>
+        <td class="statisticPercentage">
+            39.47
+        </td>
+    </tr>
+    </span><span id="For_30">
+    <tr>
+        <td class="statisticFieldName">
+            exon 21
+        </td>
+        <td class="statisticFieldName">
+            exon 18
+        </td>
+        <td class="statisticCount">
+            31
+        </td>
+        <td class="statisticPercentage">
+            1.46
+        </td>
+        <td class="statisticPercentage">
+            30.69
+        </td>
+    </tr>
+    </span><span id="For_31">
+    <tr>
+        <td class="statisticFieldName">
+            exon 22
+        </td>
+        <td class="statisticFieldName">
+            exon 19
+        </td>
+        <td class="statisticCount">
+            67
+        </td>
+        <td class="statisticPercentage">
+            3.15
+        </td>
+        <td class="statisticPercentage">
+            26.91
+        </td>
+    </tr>
+    </span><span id="For_32">
+    <tr>
+        <td class="statisticFieldName">
+            exon 23
+        </td>
+        <td class="statisticFieldName">
+            exon 20
+        </td>
+        <td class="statisticCount">
+            62
+        </td>
+        <td class="statisticPercentage">
+            2.92
+        </td>
+        <td class="statisticPercentage">
+            39.74
+        </td>
+    </tr>
+    </span><span id="For_33">
+    <tr>
+        <td class="statisticFieldName">
+            exon 24
+        </td>
+        <td class="statisticFieldName">
+            exon 21
+        </td>
+        <td class="statisticCount">
+            40
+        </td>
+        <td class="statisticPercentage">
+            1.88
+        </td>
+        <td class="statisticPercentage">
+            44.44
+        </td>
+    </tr>
+    </span><span id="For_34">
+    <tr>
+        <td class="statisticFieldName">
+            exon 25
+        </td>
+        <td class="statisticFieldName">
+            exon 22
+        </td>
+        <td class="statisticCount">
+            37
+        </td>
+        <td class="statisticPercentage">
+            1.74
+        </td>
+        <td class="statisticPercentage">
+            21.39
+        </td>
+    </tr>
+    </span><span id="For_35">
+    <tr>
+        <td class="statisticFieldName">
+            exon 26
+        </td>
+        <td class="statisticFieldName">
+            exon 23
+        </td>
+        <td class="statisticCount">
+            30
+        </td>
+        <td class="statisticPercentage">
+            1.41
+        </td>
+        <td class="statisticPercentage">
+            28.30
+        </td>
+    </tr>
+    </span><span id="For_36">
+    <tr>
+        <td class="statisticFieldName">
+            exon 27
+        </td>
+        <td class="statisticFieldName">
+            exon 24
+        </td>
+        <td class="statisticCount">
+            24
+        </td>
+        <td class="statisticPercentage">
+            1.13
+        </td>
+        <td class="statisticPercentage">
+            11.94
+        </td>
+    </tr>
+    </span><span id="For_37">
+    <tr>
+        <td class="statisticFieldName">
+            intron 1
+        </td>
+        <td class="statisticFieldName">
+            intron 1
+        </td>
+        <td class="statisticCount">
+            10
+        </td>
+        <td class="statisticPercentage">
+            0.47
+        </td>
+        <td class="statisticPercentage">
+            n/a
+        </td>
+    </tr>
+    </span><span id="For_38">
+    <tr>
+        <td class="statisticFieldName">
+            intron 2
+        </td>
+        <td class="statisticFieldName">
+            intron 2
+        </td>
+        <td class="statisticCount">
+            24
+        </td>
+        <td class="statisticPercentage">
+            1.13
+        </td>
+        <td class="statisticPercentage">
+            n/a
+        </td>
+    </tr>
+    </span><span id="For_39">
+    <tr>
+        <td class="statisticFieldName">
+            intron 3
+        </td>
+        <td class="statisticFieldName">
+            intron 3
+        </td>
+        <td class="statisticCount">
+            20
+        </td>
+        <td class="statisticPercentage">
+            0.94
+        </td>
+        <td class="statisticPercentage">
+            n/a
+        </td>
+    </tr>
+    </span><span id="For_40">
+    <tr>
+        <td class="statisticFieldName">
+            intron 4
+        </td>
+        <td class="statisticFieldName">
+            intron 4
+        </td>
+        <td class="statisticCount">
+            12
+        </td>
+        <td class="statisticPercentage">
+            0.56
+        </td>
+        <td class="statisticPercentage">
+            n/a
+        </td>
+    </tr>
+    </span><span id="For_41">
+    <tr>
+        <td class="statisticFieldName">
+            intron 5
+        </td>
+        <td class="statisticFieldName">
+            intron 5
+        </td>
+        <td class="statisticCount">
+            8
+        </td>
+        <td class="statisticPercentage">
+            0.38
+        </td>
+        <td class="statisticPercentage">
+            n/a
+        </td>
+    </tr>
+    </span><span id="For_42">
+    <tr>
+        <td class="statisticFieldName">
+            intron 6
+        </td>
+        <td class="statisticFieldName">
+            intron 6a
+        </td>
+        <td class="statisticCount">
+            11
+        </td>
+        <td class="statisticPercentage">
+            0.52
+        </td>
+        <td class="statisticPercentage">
+            n/a
+        </td>
+    </tr>
+    </span><span id="For_43">
+    <tr>
+        <td class="statisticFieldName">
+            intron 7
+        </td>
+        <td class="statisticFieldName">
+            intron 6b
+        </td>
+        <td class="statisticCount">
+            10
+        </td>
+        <td class="statisticPercentage">
+            0.47
+        </td>
+        <td class="statisticPercentage">
+            n/a
+        </td>
+    </tr>
+    </span><span id="For_44">
+    <tr>
+        <td class="statisticFieldName">
+            intron 8
+        </td>
+        <td class="statisticFieldName">
+            intron 7
+        </td>
+        <td class="statisticCount">
+            12
+        </td>
+        <td class="statisticPercentage">
+            0.56
+        </td>
+        <td class="statisticPercentage">
+            n/a
+        </td>
+    </tr>
+    </span><span id="For_45">
+    <tr>
+        <td class="statisticFieldName">
+            intron 9
+        </td>
+        <td class="statisticFieldName">
+            intron 8
+        </td>
+        <td class="statisticCount">
+            15
+        </td>
+        <td class="statisticPercentage">
+            0.71
+        </td>
+        <td class="statisticPercentage">
+            n/a
+        </td>
+    </tr>
+    </span><span id="For_46">
+    <tr>
+        <td class="statisticFieldName">
+            intron 10
+        </td>
+        <td class="statisticFieldName">
+            intron 9
+        </td>
+        <td class="statisticCount">
+            11
+        </td>
+        <td class="statisticPercentage">
+            0.52
+        </td>
+        <td class="statisticPercentage">
+            n/a
+        </td>
+    </tr>
+    </span><span id="For_47">
+    <tr>
+        <td class="statisticFieldName">
+            intron 11
+        </td>
+        <td class="statisticFieldName">
+            intron 10
+        </td>
+        <td class="statisticCount">
+            17
+        </td>
+        <td class="statisticPercentage">
+            0.80
+        </td>
+        <td class="statisticPercentage">
+            n/a
+        </td>
+    </tr>
+    </span><span id="For_48">
+    <tr>
+        <td class="statisticFieldName">
+            intron 12
+        </td>
+        <td class="statisticFieldName">
+            intron 11
+        </td>
+        <td class="statisticCount">
+            22
+        </td>
+        <td class="statisticPercentage">
+            1.04
+        </td>
+        <td class="statisticPercentage">
+            n/a
+        </td>
+    </tr>
+    </span><span id="For_49">
+    <tr>
+        <td class="statisticFieldName">
+            intron 13
+        </td>
+        <td class="statisticFieldName">
+            intron 12
+        </td>
+        <td class="statisticCount">
+            11
+        </td>
+        <td class="statisticPercentage">
+            0.52
+        </td>
+        <td class="statisticPercentage">
+            n/a
+        </td>
+    </tr>
+    </span><span id="For_50">
+    <tr>
+        <td class="statisticFieldName">
+            intron 14
+        </td>
+        <td class="statisticFieldName">
+            intron 13
+        </td>
+        <td class="statisticCount">
+            10
+        </td>
+        <td class="statisticPercentage">
+            0.47
+        </td>
+        <td class="statisticPercentage">
+            n/a
+        </td>
+    </tr>
+    </span><span id="For_51">
+    <tr>
+        <td class="statisticFieldName">
+            intron 15
+        </td>
+        <td class="statisticFieldName">
+            intron 14a
+        </td>
+        <td class="statisticCount">
+            15
+        </td>
+        <td class="statisticPercentage">
+            0.71
+        </td>
+        <td class="statisticPercentage">
+            n/a
+        </td>
+    </tr>
+    </span><span id="For_52">
+    <tr>
+        <td class="statisticFieldName">
+            intron 16
+        </td>
+        <td class="statisticFieldName">
+            intron 14b
+        </td>
+        <td class="statisticCount">
+            9
+        </td>
+        <td class="statisticPercentage">
+            0.42
+        </td>
+        <td class="statisticPercentage">
+            n/a
+        </td>
+    </tr>
+    </span><span id="For_53">
+    <tr>
+        <td class="statisticFieldName">
+            intron 17
+        </td>
+        <td class="statisticFieldName">
+            intron 15
+        </td>
+        <td class="statisticCount">
+            11
+        </td>
+        <td class="statisticPercentage">
+            0.52
+        </td>
+        <td class="statisticPercentage">
+            n/a
+        </td>
+    </tr>
+    </span><span id="For_54">
+    <tr>
+        <td class="statisticFieldName">
+            intron 18
+        </td>
+        <td class="statisticFieldName">
+            intron 16
+        </td>
+        <td class="statisticCount">
+            15
+        </td>
+        <td class="statisticPercentage">
+            0.71
+        </td>
+        <td class="statisticPercentage">
+            n/a
+        </td>
+    </tr>
+    </span><span id="For_55">
+    <tr>
+        <td class="statisticFieldName">
+            intron 19
+        </td>
+        <td class="statisticFieldName">
+            intron 17a
+        </td>
+        <td class="statisticCount">
+            17
+        </td>
+        <td class="statisticPercentage">
+            0.80
+        </td>
+        <td class="statisticPercentage">
+            n/a
+        </td>
+    </tr>
+    </span><span id="For_56">
+    <tr>
+        <td class="statisticFieldName">
+            intron 20
+        </td>
+        <td class="statisticFieldName">
+            intron 17b
+        </td>
+        <td class="statisticCount">
+            12
+        </td>
+        <td class="statisticPercentage">
+            0.56
+        </td>
+        <td class="statisticPercentage">
+            n/a
+        </td>
+    </tr>
+    </span><span id="For_57">
+    <tr>
+        <td class="statisticFieldName">
+            intron 21
+        </td>
+        <td class="statisticFieldName">
+            intron 18
+        </td>
+        <td class="statisticCount">
+            9
+        </td>
+        <td class="statisticPercentage">
+            0.42
+        </td>
+        <td class="statisticPercentage">
+            n/a
+        </td>
+    </tr>
+    </span><span id="For_58">
+    <tr>
+        <td class="statisticFieldName">
+            intron 22
+        </td>
+        <td class="statisticFieldName">
+            intron 19
+        </td>
+        <td class="statisticCount">
+            13
+        </td>
+        <td class="statisticPercentage">
+            0.61
+        </td>
+        <td class="statisticPercentage">
+            n/a
+        </td>
+    </tr>
+    </span><span id="For_59">
+    <tr>
+        <td class="statisticFieldName">
+            intron 23
+        </td>
+        <td class="statisticFieldName">
+            intron 20
+        </td>
+        <td class="statisticCount">
+            19
+        </td>
+        <td class="statisticPercentage">
+            0.89
+        </td>
+        <td class="statisticPercentage">
+            n/a
+        </td>
+    </tr>
+    </span><span id="For_60">
+    <tr>
+        <td class="statisticFieldName">
+            intron 24
+        </td>
+        <td class="statisticFieldName">
+            intron 21
+        </td>
+        <td class="statisticCount">
+            12
+        </td>
+        <td class="statisticPercentage">
+            0.56
+        </td>
+        <td class="statisticPercentage">
+            n/a
+        </td>
+    </tr>
+    </span><span id="For_61">
+    <tr>
+        <td class="statisticFieldName">
+            intron 25
+        </td>
+        <td class="statisticFieldName">
+            intron 22
+        </td>
+        <td class="statisticCount">
+            3
+        </td>
+        <td class="statisticPercentage">
+            0.14
+        </td>
+        <td class="statisticPercentage">
+            n/a
+        </td>
+    </tr>
+    </span><span id="For_62">
+    <tr>
+        <td class="statisticFieldName">
+            intron 26
+        </td>
+        <td class="statisticFieldName">
+            intron 23
+        </td>
+        <td class="statisticCount">
+            12
+        </td>
+        <td class="statisticPercentage">
+            0.56
+        </td>
+        <td class="statisticPercentage">
+            n/a
+        </td>
+    </tr>
+    </span><span id="For_63">
+    <tr>
+        <td class="statisticFieldName">
+            3'UTR
+        </td>
+        <td class="statisticFieldName">
+            3'UTR
+        </td>
+        <td class="statisticCount">
+            4
+        </td>
+        <td class="statisticPercentage">
+            0.19
+        </td>
+        <td class="statisticPercentage">
+            n/a
+        </td>
+    </tr>
+    </span><span id="For_64">
+    <tr>
+        <td class="statisticFieldName">
+            mutations that overlap multiple exons or introns
+        </td>
+        <td class="statisticFieldName">
+             
+        </td>
+        <td class="statisticCount">
+            40
+        </td>
+        <td class="statisticPercentage">
+            1.88
+        </td>
+        <td class="statisticPercentage">
+            n/a
+        </td>
+    </tr>
+    </span>
+	
+</table>
+<br>
+<!-- 
+* If you would like to get the mutation list for each type or each region, please choose the "Advanced Text Search" feature in "Search" menu.
+ -->
+
+ </div>
+
+        </td></tr></table>
+    </td></tr>
+    <!-- bottom part -->
+     <tr><td rowspan="1" colspan="3" width="691">
+         <br>
+         <br>
+         <br>
+         <br>
+
+         <img src="image/sumhorsa.gif" width="791" />
+        <p align="center">Comments or questions? Please email to <a href="mailto:cftr.admin@genet.sickkids.on.ca">cftr.admin</a>
+            <br>
+            The Database was last updated at Apr 25, 2011
+        </p>
+    </td></tr>
+</table>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-7453350-1");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+<script type="text/javascript"><!--
+tapestry.addOnLoad(function(e) {
+if(tapestry.fx) { tapestry.fx.attachAjaxStatus("AjaxStatus"); }});
+// --></script></body>
+</html>
+<!-- Render time: ~ 1 ms -->
+
+

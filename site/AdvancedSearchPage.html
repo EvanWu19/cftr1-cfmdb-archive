@@ -1,0 +1,777 @@
+
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!-- Application: penguin -->
+<!-- Page: AdvancedSearchPage -->
+<!-- Generated: Wed Jul 01 19:46:00 EDT 2026 -->
+<html>
+<head>
+<meta name="generator" content="Tapestry Application Framework, version 4.1.6-SNAPSHOT" />
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+<title>Cystic Fibrosis Mutation Database: Advanced Search Page</title>
+<meta key="keywords" content="genet, cystic fibrosis mutation database, CFTR, CFMDB, chromosome 7, chromosome7, bioinformatics resources, bioinformatic, genetic, research, human, genome project, hospital sick children, sickkids" />
+<script type="text/javascript">djConfig = {"baseRelativePath":"assets/static/dojo-0.4.3-custom-4.1.6/","preventBackButtonFix":false,"parseWidgets":false,"locale":"en-us"} </script>
+
+<script type="text/javascript" src="assets/static/dojo-0.4.3-custom-4.1.6/dojo.js"></script><script type="text/javascript" src="assets/static/dojo-0.4.3-custom-4.1.6/dojo2.js"></script>
+<script type="text/javascript">
+dojo.registerModulePath("tapestry", "assets/static/tapestry-4.1.6");
+</script>
+<script type="text/javascript" src="assets/static/tapestry-4.1.6/core.js"></script>
+<script type="text/javascript">
+dojo.require("tapestry.namespace");
+tapestry.requestEncoding='UTF-8';
+</script>
+<link rel="stylesheet" type="text/css" href="include/main.css" />
+<link rel="stylesheet" type="text/css" href="include/mutationSearch.css" />
+<link rel="stylesheet" type="text/css" href="include/forms.css" />
+<link rel="stylesheet" type="text/css" href="include/phoenix.css" />
+<link rel="stylesheet" type="text/css" href="include/institution.css" />
+<link rel="stylesheet" type="text/css" href="include/mutationSubmission.css" />
+</head>
+
+<script language="JavaScript" type="text/javascript">
+    function DivSetVisible(divid, divshimid) {
+        if (document.all && (navigator.userAgent.indexOf("Opera") == -1)) {
+            var DivRef = document.getElementById(divid);
+            DivRef.style.display = "block";
+
+            var IfrRef = document.getElementById(divshimid); // co
+            IfrRef.style.width = DivRef.offsetWidth;
+            IfrRef.style.height = DivRef.offsetHeight;
+            IfrRef.style.top = DivRef.style.top;
+            IfrRef.style.left = DivRef.style.left;
+            IfrRef.style.zIndex = DivRef.style.zIndex - 1;
+            IfrRef.style.display = "block";
+        }
+    }
+    function DivSetInvisible(divid, divshimid) {
+        if (document.all && (navigator.userAgent.indexOf("Opera") == -1)) {
+            var DivRef = document.getElementById(divid);
+            DivRef.style.display = "none";
+            var IfrRef = document.getElementById(divshimid);
+            IfrRef.style.display = "none";
+        }
+    }
+	function setElemCoords(evnt, elem) {
+	// this function was changed to work for both Firefox and IE
+		var myposx = 0;
+		var posy = 0;
+		if (!evnt) var evnt = window.evnt;
+		if (evnt.pageX || evnt.pageY) 	{
+			myposx = evnt.pageX;
+			posy = evnt.pageY;
+		}
+		else if (evnt.clientX || evnt.clientY) 	{
+			myposx = evnt.clientX + document.body.scrollLeft
+			+ document.documentElement.scrollLeft;
+			posy = evnt.clientY + document.body.scrollTop
+			+ document.documentElement.scrollTop;
+		}
+		elem.style.left = myposx + 20 + "px";
+		elem.style.top = posy + 10 + "px";
+	}
+	function xCoord (e){
+
+	}
+	function hideElem(id) {
+		document.getElementById(id).style.display = "none";
+	}
+	function showElem(event, id) {
+		var elem = document.getElementById(id);
+		elem.style.position = "absolute";
+		setElemCoords(event, elem);
+		elem.style.display = "block";
+	}
+</script>
+<noscript>
+    <META HTTP-EQUIV="Refresh" CONTENT="0; URL=/">
+</noscript>
+
+
+
+
+<body marginwidth="0" topmargin="0" marginheight="0" leftmargin="0" id="Body">
+<script type="text/javascript"><!--
+dojo.require("tapestry.fx");
+// --></script>
+<table border="0" cellpadding="0" cellspacing="0" width="791" height="110">
+    <tr>
+        <td rowspan="1" colspan="3" width="691" height="58">
+        	<a id="PageLink" href="Home.html"><img src="image/mutationlogo.gif" width="791" height="98" border="0"/></a>
+		</td>
+    </tr>
+    <tr><td>
+        <div class="container">
+            <div class="pageHeader">
+
+                <div class="clearBoth"></div>
+
+                <div class="mainMenu">
+                    <ul id="topnav">
+                        <li class="topnavhead"
+                            style="width: 80px;"><a href="Home.html" class="headnavref">Home</a>
+                        </li>
+                        <li class="topnavhead"
+                            onMouseOver="this.className='sfhover'; DivSetVisible('navitem1', 'ulShim1');"
+                            onMouseOut="this.className='topnavhead'; DivSetInvisible('navitem1', 'ulShim1');"
+                            style="width: 76px;"><a href="PicturePage.html" class="headnavref">Search</a>
+                            <ul id="navitem1" style="width: 14em; z-index: 100;">
+                                <li style="width: 14em;"><a href="PicturePage.html">Graphic Search</a></li>
+                                <li style="width: 14em;"><a href="SearchPage.html">Basic Text Search</a></li>
+                                <li style="width: 14em;"><a href="AdvancedSearchPage.html">Advanced Text Search</a></li>
+                                <!--
+                                <li style="width: 14em;"><a href="MutationSearch.html">Criteria Search</a></li>
+                                -->
+                            </ul>
+                            <!--
+                            <iframe id="ulShim1" src="include/iframe_blank.html" scrolling="no" frameborder="0" style="position:absolute; top:0px; left:0px; display:none;"></iframe>
+                            -->
+                        <li class="headdivide"></li>
+                        <li class="topnavhead"
+                            onMouseOver="this.className='sfhover'; DivSetVisible('navitem2', 'ulShim2');"
+                            onMouseOut="this.className='topnavhead'; DivSetInvisible('navitem2', 'ulShim2');"
+                            style="width: 96px;"><a href="GenomicDnaSequencePage.html" class="headnavref">CFTR&nbsp;Gene</a>
+                             <ul id="navitem2" style="width: 24em; z-index: 100;">
+                                <li style="width: 24em;"><a href="GenomicDnaSequencePage.html">Genomic DNA Sequence</a>
+                                </li>
+                                <li style="width: 24em;"><a href="MRnaPolypeptideSequencePage.html">mRNA(cDNA) and Polypeptide Sequence</a>
+                                </li>
+                                <li style="width: 24em;"><a href="CftrDomainPage.html">CFTR Domains</a></li>
+                                 <li style="width: 24em;"><a href="download/mouse_cftr_genomic.doc">Mouse CFTR Genomic Sequence</a></li>
+                            </ul>
+                            <!--
+                            <iframe id="ulShim2" src="include/iframe_blank.html" scrolling="no" frameborder="0" style="position:absolute; top:0px; left:0px; display:none;"></iframe>
+                            -->
+                        <li class="headdivide"></li>
+                        <li class="headdivide"></li>
+
+                        <li class="topnavhead"
+                            onMouseOver="this.className='sfhover'; DivSetVisible('navitem3', 'ulShim3');"
+                            onMouseOut="this.className='topnavhead'; DivSetInvisible('navitem3', 'ulShim3');"
+                            style="width: 70px;"><a href="ConsortiumBackgroundPage.html"  class="headnavref">History</a>
+                            <ul id="navitem3" style="width: 10em; z-index: 100;">
+                                <li style="width: 10em;"><a href="ConsortiumBackgroundPage.html">Background</a></li>
+                                <li style="width: 10em;"><a href="ConsortiumGuidelinesPage.html">Guidelines</a></li>
+                                <li style="width: 10em;"><a href="ConsortiumDataPage1.html">Data</a></li>
+                                <li style="width: 10em;"><a href="NewsLetters.html">News&nbsp;Letters</a></li>
+                            </ul>
+                            <!--
+                            <iframe id="ulShim3" src="include/iframe_blank.html" scrolling="no" frameborder="0" style="position:absolute; top:0px; left:0px; display:none;"></iframe>                        <li class="headdivide"></li>
+                            -->
+                        </li>
+
+                        <li class="headdivide"></li>
+                        <li class="topnavhead"
+                            style="width: 70px;"><a href="Team.html" class="headnavref">Team</a>
+                        </li>
+
+                        <li class="headdivide"></li>
+                        <li class="topnavhead"
+                            style="width: 80px;"><a href="StatisticsPage.html" class="headnavref">Statistics</a>
+                        </li>
+
+                        <li class="headdivide"></li>
+                        <li class="topnavhead"
+                            style="width: 70px;"><a href="LinkPage.html" class="headnavref">Links</a>
+                        </li>
+
+                        <li class="headdivide"></li>
+                        <li class="topnavhead"
+                            style="width: 70px;"><a href="SubmitPage.html" class="headnavref">Submit</a>
+                        </li>
+                        <li class="topnavhead"
+
+                            onMouseOver="this.className='sfhover'; DivSetVisible('navitem5', 'ulShim5');"
+                            onMouseOut="this.className='topnavhead'; DivSetInvisible('navitem5', 'ulShim5');"
+                            style="width: 58px;"><a href="HelpPage.html" class="headnavref">Help</a>
+                            <ul id="navitem5" style="width: 18em; z-index: 100;">
+                                <li style="width: 18em;"><a href="Contact.html">Contact Information</a></li>
+                                <li style="width: 18em;"><a href="HelpPage.html#term">Terminology</a></li>
+                                <li style="width: 18em;"><a href="HelpPage.html#faq">Frequently Asked Questions</a></li>
+                            </ul>
+                            <!--
+                            <iframe id="ulShim5" src="include/iframe_blank.html" scrolling="no" frameborder="0" style="position:absolute; top:0px; left:0px; display:none;"></iframe>                        <li class="headdivide"></li>
+                            -->
+                        </li>
+
+                    </ul>
+
+                </div>
+                <style type="text/css">
+                    ul#navitem1, ul#navitem2, ul#navitem3, ul#navitem4, ul#navitem5, {
+                        width: 10em;
+                    }
+
+                    ul#navitem1 li, ul#navitem2 li, ul#navitem3 li, ul#navitem4 li, ul#navitem5 li, {
+                        font-family: verdana, arial, helvetica, sans-serif;
+                        font-size: 11px;
+                        width: 10em;
+                        font-weight: normal;
+                        border-bottom: 1px solid #cccccc;
+                        background: #eEF3F7;
+                    }
+
+                    ul#navitem1 li a, ul#navitem2 li a, ul#navitem3 li a, ul#navitem4 li a, ul#navitem5 li a, {
+                        font-size: 11px;
+                    }
+                </style>
+                <script type="text/javascript" language="javascript">
+                    // remove menu flicker when useing overLIB  in IE.
+                    if (document.all && (navigator.userAgent.indexOf("Opera") == -1)) {
+                        sfHover = function() {
+                            var sfEls =document.getElementById("topnav").getElementsByTagName("li");
+                            for (var i = 0; i < sfEls.length; i++) {
+                                // **** use onmousemove instead of onmouseover ****
+                                sfEls[i].onmousemove = sfEls[i].onmouseover;
+                            }
+                        }
+                        if (window.attachEvent) window.attachEvent("onload", sfHover);
+                    }
+                </script>
+
+
+            </div>
+
+        </div>
+
+    </td></tr>
+    <tr><td>
+    	<div style="display:none;color:white;background:red;position:absolute;top:0;right:0" id="AjaxStatus">
+			Loading...
+		</div>
+	</td></tr>
+    <tr><td>
+
+        <br><br>
+        <table cellpadding="2" cellspacing="2" width="100%"><tr><td style="font-size:small; ">
+
+<div id="help_multiSelect" class="help">
+        You can select specific items from the list using Ctrl+mouse left-click<br>
+        On Mac, use the Command Key instead of Ctrl.
+</div>
+<h2><p align="center"> Advanced Text Search</p></h2>
+
+<form method="post" action="/AdvancedSearchPage,$Form.direct" id="Form">
+<div style="display:none;" id="Formhidden"><input type="hidden" name="formids" value="searchCriteria,cdnaname_ad,proteinname_ad,mutationName_ad,ncchange_ad,consequence_ad,original_node_ad,phenotype_ad,exonChooser,For_0,intronChooser,For_29,mutationChooser,For_59,institute_ad,contributor_ad,fromYearChooser,toYearChooser" />
+<input type="hidden" name="seedids" value="ZH4sIAAAAAAAAAFvzloG1vI6hRqc4tagsMzlVxUCnIDEdRCXn5xbk56XmlYDZeSWJmXmpRUB2cWpxcWZ+HohVACSc8otSwOLBGak5OWCBlEogFQA0xSczLxvIdMxKrAguSSwpLQZyglLzgOqhitzyi3JVDADDTn+1hAAAAA==" />
+<input type="hidden" name="submitmode" value="" />
+<input type="hidden" name="submitname" value="" />
+<input type="hidden" name="For_0" value="VSExon 1" />
+<input type="hidden" name="For_0" value="VSExon 2" />
+<input type="hidden" name="For_0" value="VSExon 3" />
+<input type="hidden" name="For_0" value="VSExon 4" />
+<input type="hidden" name="For_0" value="VSExon 5" />
+<input type="hidden" name="For_0" value="VSExon 6" />
+<input type="hidden" name="For_0" value="VSExon 7" />
+<input type="hidden" name="For_0" value="VSExon 8" />
+<input type="hidden" name="For_0" value="VSExon 9" />
+<input type="hidden" name="For_0" value="VSExon 10" />
+<input type="hidden" name="For_0" value="VSExon 11" />
+<input type="hidden" name="For_0" value="VSExon 12" />
+<input type="hidden" name="For_0" value="VSExon 13" />
+<input type="hidden" name="For_0" value="VSExon 14" />
+<input type="hidden" name="For_0" value="VSExon 15" />
+<input type="hidden" name="For_0" value="VSExon 16" />
+<input type="hidden" name="For_0" value="VSExon 17" />
+<input type="hidden" name="For_0" value="VSExon 18" />
+<input type="hidden" name="For_0" value="VSExon 19" />
+<input type="hidden" name="For_0" value="VSExon 20" />
+<input type="hidden" name="For_0" value="VSExon 21" />
+<input type="hidden" name="For_0" value="VSExon 22" />
+<input type="hidden" name="For_0" value="VSExon 23" />
+<input type="hidden" name="For_0" value="VSExon 24" />
+<input type="hidden" name="For_0" value="VSExon 25" />
+<input type="hidden" name="For_0" value="VSExon 26" />
+<input type="hidden" name="For_0" value="VSExon 27" />
+<input type="hidden" name="For_29" value="VSPromoter" />
+<input type="hidden" name="For_29" value="VSIntron 1" />
+<input type="hidden" name="For_29" value="VSIntron 2" />
+<input type="hidden" name="For_29" value="VSIntron 3" />
+<input type="hidden" name="For_29" value="VSIntron 4" />
+<input type="hidden" name="For_29" value="VSIntron 5" />
+<input type="hidden" name="For_29" value="VSIntron 6" />
+<input type="hidden" name="For_29" value="VSIntron 7" />
+<input type="hidden" name="For_29" value="VSIntron 8" />
+<input type="hidden" name="For_29" value="VSIntron 9" />
+<input type="hidden" name="For_29" value="VSIntron 10" />
+<input type="hidden" name="For_29" value="VSIntron 11" />
+<input type="hidden" name="For_29" value="VSIntron 12" />
+<input type="hidden" name="For_29" value="VSIntron 13" />
+<input type="hidden" name="For_29" value="VSIntron 14" />
+<input type="hidden" name="For_29" value="VSIntron 15" />
+<input type="hidden" name="For_29" value="VSIntron 16" />
+<input type="hidden" name="For_29" value="VSIntron 17" />
+<input type="hidden" name="For_29" value="VSIntron 18" />
+<input type="hidden" name="For_29" value="VSIntron 19" />
+<input type="hidden" name="For_29" value="VSIntron 20" />
+<input type="hidden" name="For_29" value="VSIntron 21" />
+<input type="hidden" name="For_29" value="VSIntron 22" />
+<input type="hidden" name="For_29" value="VSIntron 23" />
+<input type="hidden" name="For_29" value="VSIntron 24" />
+<input type="hidden" name="For_29" value="VSIntron 25" />
+<input type="hidden" name="For_29" value="VSIntron 26" />
+<input type="hidden" name="For_29" value="VS3'UTR" />
+<input type="hidden" name="For_59" value="VSSplicing" />
+<input type="hidden" name="For_59" value="VSIn frame" />
+<input type="hidden" name="For_59" value="VSFrame Shift" />
+<input type="hidden" name="For_59" value="VSSequence Variation" />
+<input type="hidden" name="For_59" value="VSLarge In/del" />
+<input type="hidden" name="For_59" value="VSMissense" />
+<input type="hidden" name="For_59" value="VSNonsense" />
+<input type="hidden" name="For_59" value="VSPromoter" />
+</div>
+    <table border="0" cellspacing="0" bgcolor="#ffffff" width="791">
+        <tr>
+            <td colspan=3>Select logical operator, then enter your search criteria in any of the categories: </td>
+        </tr>
+        <tr>
+            <td>Note:</td>
+            <td colspan=2>Selecting logical operator <b>AND</b> will search for records that meet <b>ALL</b> the criteria;</td>
+        </tr>
+        <tr>
+            <td>&nbsp;</td>
+            <td colspan=2>Selecting logical operator <b>OR</b> will search for records that meet <b>ANY</b> of the criteria.</td>
+        </tr>
+
+        <tr>
+            <td bgcolor="#ffffff" colspan="3" height="25"></td>
+        </tr>
+        <tr>
+            <td bgcolor="#5B7AB8" colspan="3"></td>
+        </tr>
+        <tr>
+            <td bgcolor="#ffffff" colspan="2" height="3"></td>
+            <td bgcolor="#E0E8FA"></td>
+        </tr>
+
+        <tr>
+            <td width="8%" rowspan="7">
+                <span id="searchCriteria">
+                    <input type="radio" name="searchCriteria" id="searchCriteria0" value="0" onclick="tapestry.byId('searchCriteria').onChange(0);" /><b> and</b>
+                    <br>
+                    <input type="radio" name="searchCriteria" id="searchCriteria1" checked="checked" value="1" onclick="tapestry.byId('searchCriteria').onChange(1);" /><b> or</b>
+                </span>
+            </td>
+            <td width="35%">cDNA Mutation Name</td>
+            <td width="55%" bgcolor="#E0E8FA">&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="cdnaname_ad" value="" id="cdnaname_ad" size="30" /></td>
+        </tr>
+
+        <tr>
+            <td>Protein Mutation Name</td>
+            <td bgcolor="#E0E8FA">&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="proteinname_ad" value="" id="proteinname_ad" size="30" /></td>
+        </tr>
+        <tr>
+            <td>Legacy Mutation Name</td>
+            <td bgcolor="#E0E8FA">&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="mutationName_ad" value="" id="mutationName_ad" size="30" /></td>
+        </tr>
+        <tr>
+            <td>Nucleotide Change</td>
+            <td bgcolor="#E0E8FA">&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="ncchange_ad" value="" id="ncchange_ad" size="30" /></td>
+        </tr>
+
+        <tr>
+            <td>Consequence</td>
+            <td bgcolor="#E0E8FA">&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="consequence_ad" value="" id="consequence_ad" size="30" /></td>
+        </tr>
+        <tr>
+            <td>Original Note</td>
+            <td bgcolor="#E0E8FA">&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="original_node_ad" value="" id="original_node_ad" size="30" /></td>
+        </tr>
+        <tr>
+            <td>Updated Phenotypical Details</td>
+            <td bgcolor="#E0E8FA">&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="phenotype_ad" value="" id="phenotype_ad" size="30" /></td>
+        </tr>
+
+        <tr>
+            <td bgcolor="#ffffff" colspan="2" height="15"></td>
+            <td bgcolor="#E0E8FA"></td>
+        </tr>
+        <tr>
+            <td bgcolor="#5B7AB8" colspan="3"></td>
+        </tr>
+        <tr>
+            <td bgcolor="#ffffff" colspan="3" height="3"></td>
+        </tr>
+
+        <tr>
+            <td width="8%" rowspan="5">
+                <b> and</b>
+            </td>
+            <td>
+                Exon / Intron
+            </td>
+            <td>
+                <select name="exonChooser" multiple="multiple" id="exonChooser" size="5">
+                    <span id="For_0">
+                        <option value="0">Exon 1</option>
+                    </span><span id="For_1">
+                        <option value="1">Exon 2</option>
+                    </span><span id="For_2">
+                        <option value="2">Exon 3</option>
+                    </span><span id="For_3">
+                        <option value="3">Exon 4</option>
+                    </span><span id="For_4">
+                        <option value="4">Exon 5</option>
+                    </span><span id="For_5">
+                        <option value="5">Exon 6</option>
+                    </span><span id="For_6">
+                        <option value="6">Exon 7</option>
+                    </span><span id="For_7">
+                        <option value="7">Exon 8</option>
+                    </span><span id="For_8">
+                        <option value="8">Exon 9</option>
+                    </span><span id="For_9">
+                        <option value="9">Exon 10</option>
+                    </span><span id="For_10">
+                        <option value="10">Exon 11</option>
+                    </span><span id="For_11">
+                        <option value="11">Exon 12</option>
+                    </span><span id="For_12">
+                        <option value="12">Exon 13</option>
+                    </span><span id="For_13">
+                        <option value="13">Exon 14</option>
+                    </span><span id="For_14">
+                        <option value="14">Exon 15</option>
+                    </span><span id="For_15">
+                        <option value="15">Exon 16</option>
+                    </span><span id="For_16">
+                        <option value="16">Exon 17</option>
+                    </span><span id="For_17">
+                        <option value="17">Exon 18</option>
+                    </span><span id="For_18">
+                        <option value="18">Exon 19</option>
+                    </span><span id="For_19">
+                        <option value="19">Exon 20</option>
+                    </span><span id="For_20">
+                        <option value="20">Exon 21</option>
+                    </span><span id="For_21">
+                        <option value="21">Exon 22</option>
+                    </span><span id="For_22">
+                        <option value="22">Exon 23</option>
+                    </span><span id="For_23">
+                        <option value="23">Exon 24</option>
+                    </span><span id="For_24">
+                        <option value="24">Exon 25</option>
+                    </span><span id="For_25">
+                        <option value="25">Exon 26</option>
+                    </span><span id="For_26">
+                        <option value="26">Exon 27</option>
+                    </span>
+                </select>
+                <b>or</b>
+                <select name="intronChooser" multiple="multiple" id="intronChooser" size="5">
+                    <span id="For_29">
+                        <option value="0">Promoter</option>
+                    </span><span id="For_30">
+                        <option value="1">Intron 1</option>
+                    </span><span id="For_31">
+                        <option value="2">Intron 2</option>
+                    </span><span id="For_32">
+                        <option value="3">Intron 3</option>
+                    </span><span id="For_33">
+                        <option value="4">Intron 4</option>
+                    </span><span id="For_34">
+                        <option value="5">Intron 5</option>
+                    </span><span id="For_35">
+                        <option value="6">Intron 6</option>
+                    </span><span id="For_36">
+                        <option value="7">Intron 7</option>
+                    </span><span id="For_37">
+                        <option value="8">Intron 8</option>
+                    </span><span id="For_38">
+                        <option value="9">Intron 9</option>
+                    </span><span id="For_39">
+                        <option value="10">Intron 10</option>
+                    </span><span id="For_40">
+                        <option value="11">Intron 11</option>
+                    </span><span id="For_41">
+                        <option value="12">Intron 12</option>
+                    </span><span id="For_42">
+                        <option value="13">Intron 13</option>
+                    </span><span id="For_43">
+                        <option value="14">Intron 14</option>
+                    </span><span id="For_44">
+                        <option value="15">Intron 15</option>
+                    </span><span id="For_45">
+                        <option value="16">Intron 16</option>
+                    </span><span id="For_46">
+                        <option value="17">Intron 17</option>
+                    </span><span id="For_47">
+                        <option value="18">Intron 18</option>
+                    </span><span id="For_48">
+                        <option value="19">Intron 19</option>
+                    </span><span id="For_49">
+                        <option value="20">Intron 20</option>
+                    </span><span id="For_50">
+                        <option value="21">Intron 21</option>
+                    </span><span id="For_51">
+                        <option value="22">Intron 22</option>
+                    </span><span id="For_52">
+                        <option value="23">Intron 23</option>
+                    </span><span id="For_53">
+                        <option value="24">Intron 24</option>
+                    </span><span id="For_54">
+                        <option value="25">Intron 25</option>
+                    </span><span id="For_55">
+                        <option value="26">Intron 26</option>
+                    </span><span id="For_56">
+                        <option value="27">3'UTR</option>
+                    </span>
+                </select>
+                <a class="help"
+                onmouseover="showElem(event, 'help_multiSelect'); return false;"
+                onmouseout="hideElem('help_multiSelect'); return false;"
+                href="#">?</a>
+            </td>
+        </tr>
+
+        <tr>
+            <td>Mutation Type:&nbsp;&nbsp;
+            </td>
+            <td>
+                <select name="mutationChooser" multiple="multiple" id="mutationChooser" size="5">
+                    <span id="For_59">
+                        <option value="0">Splicing</option>
+                    </span><span id="For_60">
+                        <option value="1">In frame</option>
+                    </span><span id="For_61">
+                        <option value="2">Frame Shift</option>
+                    </span><span id="For_62">
+                        <option value="3">Sequence Variation</option>
+                    </span><span id="For_63">
+                        <option value="4">Large In/del</option>
+                    </span><span id="For_64">
+                        <option value="5">Missense</option>
+                    </span><span id="For_65">
+                        <option value="6">Nonsense</option>
+                    </span><span id="For_66">
+                        <option value="7">Promoter</option>
+                    </span>
+                </select>
+                <a class="help"
+                onmouseover="showElem(event, 'help_multiSelect'); return false;"
+                onmouseout="hideElem('help_multiSelect'); return false;"
+                href="#">?</a>
+            </td>
+        </tr>
+        <tr>
+            <td width="25%">
+                <span class="thead">Institute:</span>
+            </td>
+            <td width="75%">
+                <input type="text" name="institute_ad" value="" id="institute_ad" size="30" />
+            </td>
+        </tr>
+
+        <tr>
+            <td width="25%">
+                <span class="thead">Contributors:</span>
+            </td>
+            <td width="75%">
+                <input type="text" name="contributor_ad" value="" id="contributor_ad" size="30" />
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                    Submission Date:
+            </td>
+            <td>
+            From &nbsp;&nbsp;
+                <select name="fromYearChooser" id="fromYearChooser">
+<option value="0">Choose Year</option>
+<option value="1">1989</option>
+<option value="2">1990</option>
+<option value="3">1991</option>
+<option value="4">1992</option>
+<option value="5">1993</option>
+<option value="6">1994</option>
+<option value="7">1995</option>
+<option value="8">1996</option>
+<option value="9">1997</option>
+<option value="10">1998</option>
+<option value="11">1999</option>
+<option value="12">2000</option>
+<option value="13">2001</option>
+<option value="14">2002</option>
+<option value="15">2003</option>
+<option value="16">2004</option>
+<option value="17">2005</option>
+<option value="18">2006</option>
+<option value="19">2007</option>
+<option value="20">2008</option>
+<option value="21">2009</option>
+<option value="22">2010</option>
+<option value="23">2011</option>
+<option value="24">2012</option>
+<option value="25">2013</option>
+<option value="26">2014</option>
+<option value="27">2015</option>
+<option value="28">2016</option>
+<option value="29">2017</option>
+<option value="30">2018</option>
+<option value="31">2019</option>
+<option value="32">2020</option>
+<option value="33">2021</option>
+<option value="34">2022</option>
+<option value="35">2023</option>
+<option value="36">2024</option>
+<option value="37">2025</option>
+<option value="38">2026</option>
+</select>
+            <!--<select jwcid="fromYearChooser@Select" multiple="ognl:false">-->
+                <!--<span jwcid="@Foreach" source="ognl:yearList" value="ognl:currentFromYear"-->
+                      <!--index="ognl:currentIndex">-->
+                      <!--<option jwcid="@Option" label="ognl:currentFromYear"-->
+                              <!--selected="ognl:fromYearSelectedList[currentIndex]"/>-->
+                <!--</span>-->
+            <!--</select>-->
+          &nbsp;&nbsp;To: &nbsp;&nbsp;
+                <select name="toYearChooser" id="toYearChooser">
+<option value="0">Choose Year</option>
+<option value="1">1989</option>
+<option value="2">1990</option>
+<option value="3">1991</option>
+<option value="4">1992</option>
+<option value="5">1993</option>
+<option value="6">1994</option>
+<option value="7">1995</option>
+<option value="8">1996</option>
+<option value="9">1997</option>
+<option value="10">1998</option>
+<option value="11">1999</option>
+<option value="12">2000</option>
+<option value="13">2001</option>
+<option value="14">2002</option>
+<option value="15">2003</option>
+<option value="16">2004</option>
+<option value="17">2005</option>
+<option value="18">2006</option>
+<option value="19">2007</option>
+<option value="20">2008</option>
+<option value="21">2009</option>
+<option value="22">2010</option>
+<option value="23">2011</option>
+<option value="24">2012</option>
+<option value="25">2013</option>
+<option value="26">2014</option>
+<option value="27">2015</option>
+<option value="28">2016</option>
+<option value="29">2017</option>
+<option value="30">2018</option>
+<option value="31">2019</option>
+<option value="32">2020</option>
+<option value="33">2021</option>
+<option value="34">2022</option>
+<option value="35">2023</option>
+<option value="36">2024</option>
+<option value="37">2025</option>
+<option value="38">2026</option>
+</select>
+            <!--<select jwcid="toYearChooser@Select" multiple="ognl:false">-->
+                <!--<span jwcid="@Foreach" source="ognl:yearList" value="ognl:currentToYear"-->
+                      <!--index="ognl:currentIndex">-->
+                    <!--<option jwcid="@Option" label="ognl:currentToYear"-->
+                            <!--selected="ognl:toYearSelectedList[currentIndex]"/>-->
+                <!--</span>-->
+            <!--</select>-->
+            </td>
+        </tr>
+
+        <tr>
+            <td bgcolor="#ffffff" colspan="3" height="15"></td>
+        </tr>
+        <tr>
+            <td bgcolor="#5B7AB8" colspan="3"></td>
+        </tr>
+        <tr>
+            <td bgcolor="#ffffff" colspan="2" height="3"></td>
+            <td bgcolor="#E0E8FA"></td>
+        </tr>
+<!--
+        <tr>
+            <td>&nbsp;
+            </td>
+            <td>Sort by :
+            </td>
+            <td bgcolor="#E0E8FA">
+                <select jwcid="sortByChooser@Select" mutiple="ognl:false">
+                    <span jwcid="@For" source="ognl:sortByList" value="ognl:currentSortBy"
+                          index="ognl:currentIndex">
+                        <option jwcid="@Option" label="ognl:currentSortBy"
+                                selected="ognl:sortBySelectedList[currentIndex]"/>
+                    </span>
+                </select>
+            </td>
+        </tr>
+-->
+        <tr>
+            <td bgcolor="#ffffff" colspan="2" height="15"></td>
+            <td bgcolor="#E0E8FA"></td>
+        </tr>
+        <tr>
+            <td bgcolor="#5B7AB8" colspan="3"></td>
+        </tr>
+
+        <tr>
+            <td bgcolor="#ffffff" colspan="3" height="3"></td>
+        </tr>
+        <tr>
+            <td colspan="2">&nbsp;</td>
+            <td>
+                <input type="submit"/>
+                <input type="reset" value="Reset"/>
+            </td>
+        </tr>
+    </table>
+</form>
+
+<br><br><br>
+
+<a name="resultTable"></a>
+
+
+
+
+        </td></tr></table>
+    </td></tr>
+    <!-- bottom part -->
+     <tr><td rowspan="1" colspan="3" width="691">
+         <br>
+         <br>
+         <br>
+         <br>
+
+         <img src="image/sumhorsa.gif" width="791" />
+        <p align="center">Comments or questions? Please email to <a href="mailto:cftr.admin@genet.sickkids.on.ca">cftr.admin</a>
+            <br>
+            The Database was last updated at Apr 25, 2011
+        </p>
+    </td></tr>
+</table>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-7453350-1");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+<script type="text/javascript"><!--
+tapestry.addOnLoad(function(e) {
+if(tapestry.fx) { tapestry.fx.attachAjaxStatus("AjaxStatus"); }
+dojo.require("tapestry.form");tapestry.form.registerForm("Form");
+var radioGroup_searchCriteria = tapestry.byId("searchCriteria");
+
+    if ( ! radioGroup_searchCriteria.onChange )
+    {
+        radioGroup_searchCriteria.onChange = function( value ) {/* do nothing */ };
+    }
+
+tapestry.form.focusField('searchCriteria0');});
+// --></script></body>
+</html>
+<!-- Render time: ~ 2 ms -->
+
+

@@ -1,0 +1,3 @@
+# Preserve every archived file byte-for-byte. No line-ending conversion,
+# no text normalization — this is an exact preservation archive.
+* -text

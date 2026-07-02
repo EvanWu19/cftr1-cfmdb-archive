@@ -1,0 +1,1095 @@
+/* if changing global font, change ul#navitem li at end also (for ns6 bug) */
+body {
+	font-family: verdana, arial, helvetica, sans-serif;
+	font-size: 11px;
+	color: #000;
+}
+
+h1 {
+	font-family: verdana, arial, helvetica, sans-serif;
+	font-size: 20px;
+	color: #003399;
+	font-weight: normal;
+	padding: 0;
+	margin: 0;
+}
+
+h2 {
+	font-family: verdana, arial, helvetica, sans-serif;
+	font-size: 14px;
+	color: #003399;
+	font-weight: bold;
+	padding: 0;
+	margin: 0;
+}
+
+
+h3 {
+	font-family: Verdana,Geneva,Arial,Helvetica,Sans Serif;
+	font-size: 12px;
+	color: #000000;
+}
+
+h4 {
+	font-family: verdana, arial, helvetica, sans-serif;
+	font-size: 14px;
+	color: #FF0000;
+	font-weight: bold;
+	padding: 0;
+	margin: 0;
+}
+
+.bar {
+   font-family: verdana, arial, helvetica, sans-serif;
+   font-weight: bold;
+   font-size: 12px;
+   color: #003399;
+   background-color: #f3f3f3;
+   border: 1px solid #d2d2d2;
+   padding: 4px;
+   margin: 0;
+}
+
+
+p {
+	margin-top: 11px;
+	margin-bottom: 11px;
+}
+
+
+
+
+.subheading_bar {
+   font-family: verdana, arial, helvetica, sans-serif;
+   font-weight: bold;
+   font-size: 12px;
+   color: #003399;
+   background-color: #f3f3f3;
+   border: 1px solid #d2d2d2;
+   padding: 4px;
+   margin: 0;
+}
+
+.subheading_dottedULine {
+	width: 100%;
+	background-image: url("/2005redesign/dottedline.gif");
+	margin : 0;
+	padding: 0 0 0 2px;
+	background-repeat : repeat-x;
+	background-position: bottom;
+
+	font-family: verdana, arial, helvetica, sans-serif;
+	font-size: 14px;
+	font-weight: bold;
+	color: #039;
+}
+
+.ltBlueHeading {
+	font-family: arial narrow, arial, helvetica, sans-serif;
+	font-size: 18px;
+	color: #36C;
+}
+
+
+.legalNotes {
+	font-size: 9px;
+	font-weight: normal;
+	color: #000;
+}
+
+
+/* Custom text styles */
+
+.greyText {
+	color: #666;
+}
+
+.greyText_small {
+	color: #666;
+	font-size: 10px;
+}
+
+/* Global class for product prices */
+
+.price {
+	font-weight: bold;
+	color: #000;
+}
+
+.ourPrice {
+	font-weight: bold;
+	color: #f00;
+}
+
+.regPrice {
+	text-decoration: line-through;
+}
+
+
+/*  Anchor Tag styles */
+
+
+/* Link for "browser default blue" text links */
+
+a.brightBlue:link {
+	color: #0000ff;
+}
+
+a.brightBlue:visited {
+	color: #0000ff;
+}
+
+
+
+/* Blue Text Links */
+
+A.bluehref:link {
+	color: #003399;
+	text-decoration: none;
+}
+
+A.bluehref:visited	{
+	color: #003399;
+	text-decoration: none;
+}
+
+A.bluehref:hover {
+	color: #666666;
+	text-decoration: underline;
+}
+
+A.bluehref_bold:link {
+	color: #003399;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+A.bluehref_bold:visited {
+	color: #003399;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+A.bluehref_bold:hover {
+	color: #666666;
+	font-weight: bold;
+	text-decoration: underline;
+}
+
+
+A.bluehref_underline:link {
+	color: #003399;
+	text-decoration: underline;
+}
+
+A.bluehref_underline:visited	{
+	color: #003399;
+    text-decoration: underline;
+}
+
+A.bluehref_underline:hover {
+	color: #666666;
+	text-decoration: underline;
+}
+
+
+A.reghref:link {
+	color: #003399;
+	text-decoration: underline;
+}
+
+A.reghref:visited	{
+	color: #003399;
+    text-decoration: underline;
+}
+
+A.reghref:hover {
+	color: #666666;
+	text-decoration: underline;
+}
+
+
+/* Black Text Links */
+
+a.blackhref:link {
+   color: #000;
+   text-decoration: none;
+}
+
+a.blackhref:visited {
+   color: #000;
+   text-decoration: none;
+}
+
+a.blackhref:hover {
+   color: #000;
+   text-decoration: underline;
+}
+
+
+a.blackhref_underline:link {
+   color: #000;
+   text-decoration: underline;
+}
+
+a.blackhref_underline:visited {
+   color: #000;
+   text-decoration: underline;
+}
+
+a.blackhref_underline:hover {
+   color: #666666;
+   text-decoration: underline;
+}
+
+
+a.blackhref_bold:link {
+   color: #000;
+   font-weight: bold;
+   text-decoration: none;
+}
+
+a.blackhref_bold:visited {
+   color: #000;
+   font-weight: bold;
+   text-decoration: none;
+}
+
+a.blackhref_bold:hover {
+   color: #666666;
+   font-weight: bold;
+   text-decoration: underline;
+}
+
+
+/* Red Text Links */
+
+a.redhref_bold:link {
+   color: #c00;
+   font-weight: bold;
+   text-decoration: none;
+}
+
+a.redhref_bold:visited {
+   color: #c00;
+   font-weight: bold;
+   text-decoration: none;
+}
+
+a.redhref_bold:hover {
+   color: #666666;
+   font-weight: bold;
+   text-decoration: underline;
+}
+
+
+/* Grey Text Links */
+
+a.greyhref {
+	color: #666;
+	text-decoration: none;
+}
+
+a.greyhref:visited {
+	color: #666;
+	text-decoration: none;
+}
+
+a.greyhref:hover {
+	color: #666;
+	text-decoration: underline;
+}
+
+
+a.greyhref_underline:link {
+   color: #666;
+   text-decoration: underline;
+}
+
+a.greyhref_underline:visited {
+   color: #666;
+   text-decoration: underline;
+}
+
+a.greyhref_underline:hover {
+   color: #999;
+   text-decoration: underline;
+}
+
+a.greyhref_bold {
+	color: #666;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+a.greyhref_bold:visited {
+	color: #666;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+a.greyhref_bold:hover {
+	color: #666;
+	font-weight: bold;
+	text-decoration: underline;
+}
+
+
+
+
+
+
+
+
+#landingNav, #landingNav ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+#landingNav li {
+	display: inline;
+	padding: 0;
+	margin: 0;
+}
+
+#landingNav li.divider {
+	padding: 0;
+	margin: 0 10px 0 10px;
+}
+
+
+
+
+
+
+/* Product Stock Styles */
+
+.inStock_text {
+   font-weight: bold;
+   color: #2a57a5;
+}
+
+.outStock_text {
+   font-weight: bold;
+   color: #f00;
+}
+
+
+
+/* Container Divs */
+
+.container {
+	margin : auto;
+	padding: 0;
+	width : 750px;
+}
+
+.pageTitle {
+	padding: 0;
+	margin: 0;
+	margin-left: 8px;
+	margin-top: 10px;
+}
+
+
+.mainMenu {
+	margin-top: 6px;
+	padding: 0;
+	text-align: left;
+	margin-bottom: 0px;
+	height: 22px;
+}
+
+
+.wholeColumn {
+	margin: 0;
+	float: left;
+	width : 750px;
+}
+
+.leftColumn {
+	margin: 0;
+	float : left;
+	width : 562px;
+}
+
+.paddedLeftColumn {
+	margin: 0;
+	padding: 10px;
+	float : left;
+	width : 542px;
+}
+
+
+* html .paddedLeftColumn {
+	width: 562px;
+	w\idth: 542px;
+}
+
+.paddedWholeColumn {
+	margin: 0;
+	padding: 10px;
+	float : left;
+	width : 730px;
+}
+
+
+* html .paddedWholeColumn {
+	width: 750px;
+	w\idth: 730px;
+}
+
+
+.clearBoth {
+	clear : both;
+}
+
+
+.contentArea {
+	margin: 0;
+	background-image: url("/2005redesign/contentbkg_750.gif");
+	width : 750px;
+}
+
+.contentAreaNoBG {
+	margin: 0;
+	width : 750px;
+}
+
+
+.rightColumn {
+	width : 182px;
+	float : right;
+}
+
+.contentShim {
+	width : 750px;
+}
+
+.greyColumn {
+	margin: 1px;
+	background-color: #F3F3F3;
+	padding: 10px;
+	width : 158px;
+}
+
+* html .greyColumn {
+	width: 178px;
+	w\idth: 158px;
+}
+
+.contentColumnTop {
+	border-bottom-color : #D2D2D2;
+	border-bottom-style : solid;
+	border-bottom-width : 1px;
+	background-color: #FFFFFF;
+	width : 182px;
+	height : 3px;
+	float : right;
+	margin : 0px;
+	font-size : 3px;
+}
+
+.contentColumnBottom {
+	border-top-color : #D2D2D2;
+	border-top-style : solid;
+	border-top-width : 1px;
+	background-color: #FFFFFF;
+	width : 182px;
+	height : 3px;
+	float : right;
+	margin : 0px;
+	font-size : 3px;
+	margin-top : -1px;
+}
+
+.contentTop {
+	border-bottom-color : #B2B2B2;
+	border-bottom-style : solid;
+	border-bottom-width : 1px;
+	border-left-color : #B2B2B2;
+	border-left-style : solid;
+	border-left-width : 1px;
+	border-right-color : #B2B2B2;
+	border-right-style : solid;
+	border-right-width : 1px;
+	width : 560px;
+	height : 3px;
+	float : left;
+	margin : 0px;
+	margin-right : 3px;
+	font-size : 3px;
+}
+
+.contentBottom {
+	width : 560px;
+	height : 3px;
+	float : left;
+	margin : 0px;
+	margin-right : 3px;
+	font-size : 3px;
+}
+
+.contentWholeTop {
+	border-bottom-color : #B2B2B2;
+	border-bottom-style : solid;
+	border-bottom-width : 1px;
+	border-left-color : #B2B2B2;
+	border-left-style : solid;
+	border-left-width : 1px;
+	border-right-color : #B2B2B2;
+	border-right-style : solid;
+	border-right-width : 1px;
+	width : 747px;
+	height : 3px;
+	float : left;
+	margin : 0px;
+	font-size : 3px;
+}
+
+
+
+/* Masthead styles */
+.pageHeader {
+	width: 750px;
+	padding: 0;
+}
+
+.masthead {
+	padding: 0;
+	margin: 0;
+	width : 750px;
+	height: 60px;
+}
+
+.epsonLogo {
+	width: 110px;
+	height: 60px;
+	float: left;
+}
+
+.mastheadGap {
+	width: 6px;
+	height: 60px;
+	background-color: #FFFFFF;
+	float: left;
+}
+
+.mastheadImage {
+	width: 446px;
+	height: 60px;
+	float: left;
+}
+
+
+/* Search Box Styles */
+.searchBox {
+	margin: 0;
+	width: 182px;
+	height: 60px;
+	float: right;
+}
+
+.searchHeader {
+	padding-top: 10px;
+	padding-left: 13px;
+	height: 13px;
+	font-family : Tahoma, sans-serif;
+	font-size : 11px;
+	color: #ffffff;
+}
+
+.searchFieldContainer {
+	margin-top: 6px;
+	margin-left: 12px;
+	width: 170px;
+}
+
+.searchFieldForm {
+	margin-top: 3px;
+	width: 97px;
+	float: left;
+}
+
+.searchFieldForm input {
+	border:solid 0 #fff;
+	width: 97px;
+}
+
+.searchFieldButton {
+	margin-left: 5px;
+	width: 65px;
+	float: left;
+}
+
+
+/* Miscellaneous Elements */
+
+.line {
+	width: 100%;
+	background-image: url("/2005redesign/dottedline.gif");
+	height : 3px;
+	float : left;
+	margin : 0px;
+	margin-right : 0px;
+	font-size : 1px;
+	margin-bottom : 6px;
+	padding: 0 0 0px 0;
+	background-repeat : repeat-x;
+}
+
+.error {
+	font-family: verdana, arial, helvetica, sans-serif;
+	font-size: 11px;
+	font-weight: bold;
+	color: #FF0000;
+}
+
+
+/* Right Nav Styles */
+
+.rightNavSeparator {
+	width: 182px;
+	margin: 0;
+	height: 1px;
+	padding: 0;
+	display : block;
+}
+
+.rightNav {
+	width: 182px;
+	background-color: #fff;
+	margin: 0;
+	padding: 0;
+	padding-bottom: 10px;
+	position: relative;
+	top: 0;
+	border-bottom: 1px solid #d2d2d2;
+}
+
+.rightNavHeading {
+	width: 172px;
+	background-color: #B4CCE6;
+	font-family: verdana, arial, helvetica, sans-serif;
+	font-size: 11px;
+	color: #003399;
+	margin: 0;
+	border-bottom: none;
+	padding-left : 10px;
+	padding-top : 3px;
+	padding-bottom : 3px;
+	position: relative;
+	display : block;
+	text-decoration : none;
+	font-weight : bold;
+}
+
+* html .rightNavHeading {
+	width: 182px;
+	w\idth: 172px;
+}
+
+.rightNavHeading a {
+	font-family: verdana, arial, helvetica, sans-serif;
+	font-size: 11px;
+	color: #003399;
+	text-decoration : none;
+}
+
+a.rightNav {
+	width: 172px;
+	background-color: #EDF3F9;
+	font-family: verdana, arial, helvetica, sans-serif;
+	font-size: 11px;
+	color: #003399;
+	padding-left : 10px;
+	padding-top : 3px;
+	padding-bottom : 3px;
+	position: relative;
+	display : block;
+	text-decoration : none;
+	border-bottom-width: 1px;
+	border-bottom-color: #B2B2B2;
+	border-bottom-style: none;
+}
+
+* html a.rightNav {
+	width: 182px;
+	w\idth: 172px;
+}
+
+a.rightNavHighlighted {
+	width: 172px;
+	background-color: #FFFFFF;
+	font-family: verdana, arial, helvetica, sans-serif;
+	font-size: 11px;
+	color: #003399;
+	padding-left : 10px;
+	padding-top : 3px;
+	padding-bottom : 3px;
+	position: relative;
+	display : block;
+	text-decoration : none;
+	border-bottom-width: 1px;
+	border-bottom-color: #B2B2B2;
+	border-bottom-style: none;
+	font-weight : bold;
+}
+
+* html a.rightNavHighlighted {
+	width: 182px;
+	w\idth: 172px;
+}
+
+a.rightNavHighlighted:hover {
+	text-decoration: underline;
+}
+
+a.rightNav:hover {
+	background-color: #B4CCE6;
+	text-decoration: underline;
+}
+
+
+.rightNavAd {
+	margin: 1px;
+	background-color: #F3F3F3;
+	padding-top: 10px;
+	padding-left: 10px;
+	padding-right: 10px;
+	width : 158px;
+}
+
+* html .rightNavAd {
+	width: 178px;
+	w\idth: 158px;
+}
+
+
+.rightNavLine {
+	width: 99%;
+	background-image: url("/2005redesign/dottedline.gif");
+	height : 1px;
+	margin : 0 0 0px 1px;
+	font-size : 1px;
+	padding: 0 0 0px 0;
+	background-repeat : repeat-x;
+}
+
+.rightNavAd p {
+	color: #333333;
+	font-family: verdana, arial, helvetica, sans-serif;
+	font-size: 11px;
+	margin-bottom: 10px;
+	margin-top: 10px;
+	line-height: 150%;
+}
+
+.bannerAdRightCol {
+	width: 180px;
+	margin-left: 1px;
+	margin-right: 1px;
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+
+.bannerAdRightCol img {
+	width: 180px;
+}
+
+
+/* Breadcrumb Styles */
+
+.breadcrumbs {
+	margin-top: 10px;
+}
+
+.breadcrumbs  ul {
+	font-size: 10px;
+	color: #039;
+	list-style: none;
+	display: inline;
+	padding: 0;
+	margin: 0;
+	margin-left: 8px;
+}
+
+.breadcrumbs li {
+	display: inline;
+	padding: 0;
+	margin: 0;
+}
+
+.breadcrumbs li a {
+	text-decoration: none;
+	color: #039;
+}
+
+
+/* Footer Styles */
+
+.footer {
+	font-size: 9px;
+	color: #000;
+	text-align: center;
+	width: 562px;
+	clear : both;
+}
+
+* html .footer {
+	width: 557px;
+	w\idth: 562px;
+}
+
+.wholeFooter {
+	font-size: 9px;
+	color: #000;
+	text-align: center;
+	width: 750px;
+	clear : both;
+}
+
+
+.footer a, .wholeFooter a {
+	color: #000;
+	text-decoration: none;
+}
+
+
+/*  List Styles  */
+
+
+
+/* bulletList - Standard list style for lists that are not links */
+ul.bulletList {
+	margin-left: 18px;
+	margin-top: 10px;
+	padding-left: 0;
+}
+
+ul.bulletList li {
+	font-family: verdana, arial, helvetica, sans-serif;
+	font-size: 11px;
+	padding-bottom: 4px;
+}
+
+
+/* doublearrowList - list style used when you have a list of links */
+ul.doublearrowList {
+	margin-left: 18px;
+	margin-top: 10px;
+	padding-left: 0px;
+}
+ul.doublearrowList li {
+	list-style-image: url("/images/arrows/blue_doublearrow.gif");
+	font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;
+	font-size : 11px;
+	padding-bottom: 4px;
+}
+
+
+/* pdfList - list style used for links that go to PDF files */
+
+ul.pdfList {
+	margin: 0;
+	padding: 0;
+	margin-left: 18px;
+}
+ul.pdfList li {
+	list-style-image: url("/images/icons/icon_pdf.gif");
+	margin: 0 0 0px 0;
+	padding: 0 0 0px 4px;
+}
+
+
+/*  Secondary Nav Styles */
+
+.secondaryMenu {
+	margin-top: 8px;
+	font-size: 10px;
+	text-align: right;
+	padding: 2px;
+	width: 744px;
+	border: 1px solid #d2d2d2;
+	background-color: #F3F3F3;
+	color: #333333;
+	font-family: verdana, arial, helvetica, sans-serif;
+}
+
+
+.secondaryMenu a {
+	color: #333333;
+	text-decoration: none;
+	padding-right : 7px;
+	padding-left : 7px;
+}
+
+.secondaryMenu img {
+	vertical-align:middle;
+}
+
+* html .secondaryMenu {
+	width: 748px;
+	w\idth: 744px;
+}
+
+
+/*  Dropdown Styles, Based on Suckerfish */
+/*  050218 : Modifications made by Innate Mak for cross-browser compatibility and iframe hacks */
+
+#topnav, #topnav ul {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+
+#topnav a {
+	display: block;
+	text-decoration: none;
+	padding: 4px 4px 4px 9px;
+	margin: 0;
+}
+
+#topnav a:hover {
+	background-color: #003399;
+	color: #ffffff;
+}
+
+#topnav li {
+	float: left;
+	padding: 0px;
+}
+
+#topnav li a {
+	color: #003399;
+}
+
+
+#topnav li:hover > a {
+	background-color: #003399;
+	color: #ffffff;
+}
+
+
+#topnav li.sfhover a.headnavref {
+	background-color: #003399;
+ 	color: #ffffff;
+	font-weight : bold;
+}
+
+
+
+#topnav li.topnavhead {
+	font-weight : bold;
+	font-size: 12px;
+}
+
+
+#topnav li.headdivide {
+	font-weight : bold;
+	width: 1px;
+	height: 11px;
+	background-image: url("/2005redesign/dot.gif");
+	float : left;
+	margin : 0px;
+	margin-right : 0px;
+	margin-top : 6px;
+	margin-bottom : 6px;
+	font-size : 3px;
+	padding: 0 0 0px 0;
+	background-repeat : repeat-y;
+}
+
+
+#topnav li ul {
+	position: absolute;
+	left: -999em;
+}
+
+
+#topnav li:hover ul, #topnav li.sfhover ul {
+	left: auto;
+	background: #EEF3F7;
+	border: 1px solid #000000;
+}
+
+#topnav li:hover ul {
+	margin-top: -1px;
+}
+
+ul#navitem1, ul#navitem2, ul#navitem3, ul#navitem4, ul#navitem5, ul#navitem6, ul#navitem7 {
+	font-family: verdana, arial, helvetica, sans-serif;
+	font-size: 11px;
+}
+
+ul#navitem1 li, ul#navitem2 li, ul#navitem3 li, ul#navitem4 li, ul#navitem5 li, ul#navitem6 li, ul#navitem7 li {
+	font-family: verdana, arial, helvetica, sans-serif;
+	font-size: 11px;
+	font-weight : normal;
+	border-bottom: 1px solid #cccccc;
+	background: #EEF3F7;
+}
+
+
+
+/* New Product Page Styles */
+
+.productHeader {
+	width: 100%;
+	margin: 0 0 10px 0;
+	padding: 0;
+}
+
+.productSummary {
+	width: 315px;
+	float: left;
+	padding: 0;
+	margin: 0;
+	text-align: center;
+	font-size: 10px;
+}
+
+.promoBugs {
+	width: 100px;
+	float: left;
+	margin: 0;
+	padding: 0;
+	text-align: center;
+}
+
+.productTitle {
+	font-weight: bold;
+}
+
+.ourPriceDisclaimer {
+	margin-top: 10px;
+	padding-top: 10px;
+	border-top: 1px solid #2a57a5;
+}
+
+.purchaseButtons {
+	width: 100%;
+	margin: auto;
+}
+
+
+/* Wide Format Product Page Styles for pricing and purchasing buttons */
+
+.wideFormatPricing {
+	width: 100%;
+}
+
+.wfProductInfo {
+	width: 50%;
+	font-weight: bold;
+}
+
+.wfPurchaseBtns {
+	width: 50%;
+	text-align: right;
+}
+
+.wfPurchaseBtns img {
+	margin-left: 4px;
+}

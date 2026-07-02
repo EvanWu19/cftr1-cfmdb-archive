@@ -1,0 +1,326 @@
+
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!-- Application: penguin -->
+<!-- Page: ConsortiumGuidelinesPage -->
+<!-- Generated: Wed Jul 01 19:46:01 EDT 2026 -->
+<html>
+<head>
+<meta name="generator" content="Tapestry Application Framework, version 4.1.6-SNAPSHOT" />
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+<title>Cystic Fibrosis Mutation Database: Consortium Guidelines</title>
+<meta key="keywords" content="genet, cystic fibrosis mutation database, CFTR, CFMDB, chromosome 7, chromosome7, bioinformatics resources, bioinformatic, genetic, research, human, genome project, hospital sick children, sickkids" />
+<script type="text/javascript">djConfig = {"baseRelativePath":"/assets/static/dojo-0.4.3-custom-4.1.6/","parseWidgets":false,"locale":"en-us"} </script>
+
+<script type="text/javascript" src="/assets/static/dojo-0.4.3-custom-4.1.6/dojo.js"></script>
+<script type="text/javascript">
+dojo.registerModulePath("tapestry", "/assets/static/tapestry-4.1.6");
+</script>
+<script type="text/javascript" src="/assets/static/tapestry-4.1.6/core.js"></script>
+<script type="text/javascript">
+dojo.require("tapestry.namespace");
+tapestry.requestEncoding='UTF-8';
+</script>
+<link rel="stylesheet" type="text/css" href="/include/main.css" />
+<link rel="stylesheet" type="text/css" href="/include/mutationSearch.css" />
+<link rel="stylesheet" type="text/css" href="/include/forms.css" />
+<link rel="stylesheet" type="text/css" href="/include/phoenix.css" />
+<link rel="stylesheet" type="text/css" href="/include/institution.css" />
+<link rel="stylesheet" type="text/css" href="/include/mutationSubmission.css" />
+</head>
+
+<script language="JavaScript" type="text/javascript">
+    function DivSetVisible(divid, divshimid) {
+        if (document.all && (navigator.userAgent.indexOf("Opera") == -1)) {
+            var DivRef = document.getElementById(divid);
+            DivRef.style.display = "block";
+
+            var IfrRef = document.getElementById(divshimid); // co
+            IfrRef.style.width = DivRef.offsetWidth;
+            IfrRef.style.height = DivRef.offsetHeight;
+            IfrRef.style.top = DivRef.style.top;
+            IfrRef.style.left = DivRef.style.left;
+            IfrRef.style.zIndex = DivRef.style.zIndex - 1;
+            IfrRef.style.display = "block";
+        }
+    }
+    function DivSetInvisible(divid, divshimid) {
+        if (document.all && (navigator.userAgent.indexOf("Opera") == -1)) {
+            var DivRef = document.getElementById(divid);
+            DivRef.style.display = "none";
+            var IfrRef = document.getElementById(divshimid);
+            IfrRef.style.display = "none";
+        }
+    }
+	function setElemCoords(evnt, elem) {
+	// this function was changed to work for both Firefox and IE
+		var myposx = 0;
+		var posy = 0;
+		if (!evnt) var evnt = window.evnt;
+		if (evnt.pageX || evnt.pageY) 	{
+			myposx = evnt.pageX;
+			posy = evnt.pageY;
+		}
+		else if (evnt.clientX || evnt.clientY) 	{
+			myposx = evnt.clientX + document.body.scrollLeft
+			+ document.documentElement.scrollLeft;
+			posy = evnt.clientY + document.body.scrollTop
+			+ document.documentElement.scrollTop;
+		}
+		elem.style.left = myposx + 20 + "px";
+		elem.style.top = posy + 10 + "px";
+	}
+	function xCoord (e){
+
+	}
+	function hideElem(id) {
+		document.getElementById(id).style.display = "none";
+	}
+	function showElem(event, id) {
+		var elem = document.getElementById(id);
+		elem.style.position = "absolute";
+		setElemCoords(event, elem);
+		elem.style.display = "block";
+	}
+</script>
+<noscript>
+    <META HTTP-EQUIV="Refresh" CONTENT="0; URL=/">
+</noscript>
+
+
+
+
+<body marginwidth="0" topmargin="0" marginheight="0" leftmargin="0" id="Body">
+<script type="text/javascript"><!--
+dojo.require("tapestry.fx");
+// --></script>
+<table border="0" cellpadding="0" cellspacing="0" width="791" height="110">
+    <tr>
+        <td rowspan="1" colspan="3" width="691" height="58">
+        	<a id="PageLink" href="/Home.html"><img src="image/mutationlogo.gif" width="791" height="98" border="0"/></a>
+		</td>
+    </tr>
+    <tr><td>
+        <div class="container">
+            <div class="pageHeader">
+
+                <div class="clearBoth"></div>
+
+                <div class="mainMenu">
+                    <ul id="topnav">
+                        <li class="topnavhead"
+                            style="width: 80px;"><a href="Home.html" class="headnavref">Home</a>
+                        </li>
+                        <li class="topnavhead"
+                            onMouseOver="this.className='sfhover'; DivSetVisible('navitem1', 'ulShim1');"
+                            onMouseOut="this.className='topnavhead'; DivSetInvisible('navitem1', 'ulShim1');"
+                            style="width: 76px;"><a href="PicturePage.html" class="headnavref">Search</a>
+                            <ul id="navitem1" style="width: 14em; z-index: 100;">
+                                <li style="width: 14em;"><a href="PicturePage.html">Graphic Search</a></li>
+                                <li style="width: 14em;"><a href="SearchPage.html">Basic Text Search</a></li>
+                                <li style="width: 14em;"><a href="AdvancedSearchPage.html">Advanced Text Search</a></li>
+                                <!--
+                                <li style="width: 14em;"><a href="MutationSearch.html">Criteria Search</a></li>
+                                -->
+                            </ul>
+                            <!--
+                            <iframe id="ulShim1" src="include/iframe_blank.html" scrolling="no" frameborder="0" style="position:absolute; top:0px; left:0px; display:none;"></iframe>
+                            -->
+                        <li class="headdivide"></li>
+                        <li class="topnavhead"
+                            onMouseOver="this.className='sfhover'; DivSetVisible('navitem2', 'ulShim2');"
+                            onMouseOut="this.className='topnavhead'; DivSetInvisible('navitem2', 'ulShim2');"
+                            style="width: 96px;"><a href="GenomicDnaSequencePage.html" class="headnavref">CFTR&nbsp;Gene</a>
+                             <ul id="navitem2" style="width: 24em; z-index: 100;">
+                                <li style="width: 24em;"><a href="GenomicDnaSequencePage.html">Genomic DNA Sequence</a>
+                                </li>
+                                <li style="width: 24em;"><a href="MRnaPolypeptideSequencePage.html">mRNA(cDNA) and Polypeptide Sequence</a>
+                                </li>
+                                <li style="width: 24em;"><a href="CftrDomainPage.html">CFTR Domains</a></li>
+                                 <li style="width: 24em;"><a href="download/mouse_cftr_genomic.doc">Mouse CFTR Genomic Sequence</a></li>
+                            </ul>
+                            <!--
+                            <iframe id="ulShim2" src="include/iframe_blank.html" scrolling="no" frameborder="0" style="position:absolute; top:0px; left:0px; display:none;"></iframe>
+                            -->
+                        <li class="headdivide"></li>
+                        <li class="headdivide"></li>
+
+                        <li class="topnavhead"
+                            onMouseOver="this.className='sfhover'; DivSetVisible('navitem3', 'ulShim3');"
+                            onMouseOut="this.className='topnavhead'; DivSetInvisible('navitem3', 'ulShim3');"
+                            style="width: 70px;"><a href="ConsortiumBackgroundPage.html"  class="headnavref">History</a>
+                            <ul id="navitem3" style="width: 10em; z-index: 100;">
+                                <li style="width: 10em;"><a href="ConsortiumBackgroundPage.html">Background</a></li>
+                                <li style="width: 10em;"><a href="ConsortiumGuidelinesPage.html">Guidelines</a></li>
+                                <li style="width: 10em;"><a href="ConsortiumDataPage1.html">Data</a></li>
+                                <li style="width: 10em;"><a href="NewsLetters.html">News&nbsp;Letters</a></li>
+                            </ul>
+                            <!--
+                            <iframe id="ulShim3" src="include/iframe_blank.html" scrolling="no" frameborder="0" style="position:absolute; top:0px; left:0px; display:none;"></iframe>                        <li class="headdivide"></li>
+                            -->
+                        </li>
+
+                        <li class="headdivide"></li>
+                        <li class="topnavhead"
+                            style="width: 70px;"><a href="Team.html" class="headnavref">Team</a>
+                        </li>
+
+                        <li class="headdivide"></li>
+                        <li class="topnavhead"
+                            style="width: 80px;"><a href="StatisticsPage.html" class="headnavref">Statistics</a>
+                        </li>
+
+                        <li class="headdivide"></li>
+                        <li class="topnavhead"
+                            style="width: 70px;"><a href="LinkPage.html" class="headnavref">Links</a>
+                        </li>
+
+                        <li class="headdivide"></li>
+                        <li class="topnavhead"
+                            style="width: 70px;"><a href="SubmitPage.html" class="headnavref">Submit</a>
+                        </li>
+                        <li class="topnavhead"
+
+                            onMouseOver="this.className='sfhover'; DivSetVisible('navitem5', 'ulShim5');"
+                            onMouseOut="this.className='topnavhead'; DivSetInvisible('navitem5', 'ulShim5');"
+                            style="width: 58px;"><a href="HelpPage.html" class="headnavref">Help</a>
+                            <ul id="navitem5" style="width: 18em; z-index: 100;">
+                                <li style="width: 18em;"><a href="Contact.html">Contact Information</a></li>
+                                <li style="width: 18em;"><a href="HelpPage.html#term">Terminology</a></li>
+                                <li style="width: 18em;"><a href="HelpPage.html#faq">Frequently Asked Questions</a></li>
+                            </ul>
+                            <!--
+                            <iframe id="ulShim5" src="include/iframe_blank.html" scrolling="no" frameborder="0" style="position:absolute; top:0px; left:0px; display:none;"></iframe>                        <li class="headdivide"></li>
+                            -->
+                        </li>
+
+                    </ul>
+
+                </div>
+                <style type="text/css">
+                    ul#navitem1, ul#navitem2, ul#navitem3, ul#navitem4, ul#navitem5, {
+                        width: 10em;
+                    }
+
+                    ul#navitem1 li, ul#navitem2 li, ul#navitem3 li, ul#navitem4 li, ul#navitem5 li, {
+                        font-family: verdana, arial, helvetica, sans-serif;
+                        font-size: 11px;
+                        width: 10em;
+                        font-weight: normal;
+                        border-bottom: 1px solid #cccccc;
+                        background: #eEF3F7;
+                    }
+
+                    ul#navitem1 li a, ul#navitem2 li a, ul#navitem3 li a, ul#navitem4 li a, ul#navitem5 li a, {
+                        font-size: 11px;
+                    }
+                </style>
+                <script type="text/javascript" language="javascript">
+                    // remove menu flicker when useing overLIB  in IE.
+                    if (document.all && (navigator.userAgent.indexOf("Opera") == -1)) {
+                        sfHover = function() {
+                            var sfEls =document.getElementById("topnav").getElementsByTagName("li");
+                            for (var i = 0; i < sfEls.length; i++) {
+                                // **** use onmousemove instead of onmouseover ****
+                                sfEls[i].onmousemove = sfEls[i].onmouseover;
+                            }
+                        }
+                        if (window.attachEvent) window.attachEvent("onload", sfHover);
+                    }
+                </script>
+
+
+            </div>
+
+        </div>
+
+    </td></tr>
+    <tr><td>
+    	<div style="display:none;color:white;background:red;position:absolute;top:0;right:0" id="AjaxStatus">
+			Loading...
+		</div>
+	</td></tr>
+    <tr><td>
+
+        <br><br>
+        <table cellpadding="2" cellspacing="2" width="100%"><tr><td style="font-size:small; ">
+
+<p align="center" style="font-weight:bold;">Guidelines of Cystic Fibrosis Consortium</p>
+<p class="introduceParagraph">
+               <br>
+               The following is a summary of the general agreement that was originally reached at the North American CF Conference in Florida on October 13, 1989, it has been revised in May 1990, November 1990, November 1991, September 1992, October 1994.
+
+               <br><br>
+
+               1. Any research group who is interested in CFTR mutation analysis may participate in this Consortium. A member of the Consortium is identified by a Principal Investigator who holds an official position at a legitimate research organization, such as a laboratory at a university, research institute or hospital. In order to identify all the members properly, each participant is requested to provide a list of information (see below).
+
+               <br><br>
+
+
+               2. Reports of mutations and polymorphisms should be submitted using standard formats to Lap-Chee Tsui, preferably by facsimile: 1 (country code)416 (area code) 813-4931 or by electronic mail: cfdata@sickkids.on.ca. New information on CFTR gene mutations and polymorphisms would be broadcasted periodically in the form of a newsletter to all members by mail and posted on the electronic bulletin board (CF Mutation Data Base, or CFMDB). The group who reports the information holds the priority to publish the primary data. Other members of the Consortium may use the information for their own research before the publication of the original report, but may not publish any secondary observation without the consent of the original group.
+
+               <br><br>
+
+               3. Participants are encouraged to report data to the Consortium before submission for publication. Since it usually takes more than 3 months for any publication to come to print, early communication within the group will allow other members to utilize the information and screen their respective populations in a coordinated and concerted effort. The Consortium will also appreciate information and ideas about novel methods and technical tips that would improve genetic testing, etc. To reduce the cost of FAX transmission, members are encouraged to submit their mutation reports by e-mail. Members also encouraged to share Newsletters by forming regional networks whenever possible.
+
+               <br><br>
+
+               4. Any groups who submit the same observations within the same Newsletter period would be recognized as INDEPENDENT reports. The involved groups should seek ways to resolve amongst themselves, such as publishing jointly. Should arbitration be required, opinions from members of the steering committee may be sought.
+
+               <br><br>
+
+               5. Any data obtained through the Consortium (including CFMDB), if not yet published in a periodic journal, should be treated as privileged information. The information may be used, however, by investigators whose main interest is not in the area of mutation identification or screening but rather in related fields that hold promise to provide useful insight into the structure and function of CFTR. Upon using the information, these investigators agree to respect the general guidelines of the Consortium and agree to report any interesting findings to the consortium before publication. Publication of mutation information is strictly prohibited without the consent of the principal group(s) who reported the mutation.
+
+               <br><br>
+
+               6. Members should treat the reported mutations with extreme caution for diagnostic or population screening purpose, as some of them may not be true mutations. In addition, there may be inaccuracy of the proposed methods of detection, eg. diagnosis based on the destruction of restriction sites may not recognize the exact alteration, even oligonucleotide hybridization may have unexpected results. Members should therefore use the information published in the newsletter for research purposes only. It would be self-evident when a mutation is worth testing in the clinic.
+
+               <br><br>
+
+               7. A general meeting is held each year each year, the meeting generally coincide with one of the international CF conferences. The time and location will be announced in the Newsletters.
+
+               <br><br>
+
+
+               8. The Newsletter also serves to broadcast any services volunteered by consortium members. For example, members who are willing to provide mutant and control oligonucleotides to others should submit their lists to the Newsletter. The consortium will also assist any member who wishes to conduct any large scale studies. Although genotype-phenotype correlation is not a formal activity of the consortium, members are encouraged to provide information about their special patients any time. NOTE: A genotype-phenotype analysis consortium has been initiated by Garry Cutting at Johns Hopkins,please contact Garry for specific details, his fax number is +1 (410) 955-0484.
+
+               <br><br>
+
+               9. Reminders will be sent to members who have been inactive for an extensive period of time (6 months). If for any reason the interest of a member has changed, the group should no longer receive Newsletter from the consortium.
+
+               <br><br>
+</p>
+
+        </td></tr></table>
+    </td></tr>
+    <!-- bottom part -->
+     <tr><td rowspan="1" colspan="3" width="691">
+         <br>
+         <br>
+         <br>
+         <br>
+
+         <img src="image/sumhorsa.gif" width="791" />
+        <p align="center">Comments or questions? Please email to <a href="mailto:cftr.admin@genet.sickkids.on.ca">cftr.admin</a>
+            <br>
+            The Database was last updated at Apr 25, 2011
+        </p>
+    </td></tr>
+</table>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-7453350-1");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+<script type="text/javascript"><!--
+tapestry.addOnLoad(function(e) {
+if(tapestry.fx) { tapestry.fx.attachAjaxStatus("AjaxStatus"); }});
+// --></script></body>
+</html>
+<!-- Render time: ~ 0 ms -->
+
+

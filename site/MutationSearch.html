@@ -1,0 +1,793 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!-- Application: penguin -->
+<!-- Page: MutationSearch -->
+<!-- Generated: Wed Jul 01 19:46:03 EDT 2026 -->
+<html>
+<head>
+<meta name="generator" content="Tapestry Application Framework, version 4.1.6-SNAPSHOT" />
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+<title>Cystic Fibrosis Mutation Database: Mutation Search</title>
+<meta key="keywords" content="genet, cystic fibrosis mutation database, CFTR, CFMDB, chromosome 7, chromosome7, bioinformatics resources, bioinformatic, genetic, research, human, genome project, hospital sick children, sickkids" />
+<script type="text/javascript">djConfig = {"baseRelativePath":"assets/static/dojo-0.4.3-custom-4.1.6/","preventBackButtonFix":false,"parseWidgets":false,"locale":"en-us"} </script>
+
+<script type="text/javascript" src="assets/static/dojo-0.4.3-custom-4.1.6/dojo.js"></script><script type="text/javascript" src="assets/static/dojo-0.4.3-custom-4.1.6/dojo2.js"></script>
+<script type="text/javascript">
+dojo.registerModulePath("tapestry", "assets/static/tapestry-4.1.6");
+</script>
+<script type="text/javascript" src="assets/static/tapestry-4.1.6/core.js"></script>
+<script type="text/javascript">
+dojo.require("tapestry.namespace");
+tapestry.requestEncoding='UTF-8';
+</script>
+<link rel="stylesheet" type="text/css" href="include/main.css" />
+<link rel="stylesheet" type="text/css" href="include/mutationSearch.css" />
+<link rel="stylesheet" type="text/css" href="include/forms.css" />
+<link rel="stylesheet" type="text/css" href="include/phoenix.css" />
+<link rel="stylesheet" type="text/css" href="include/institution.css" />
+<link rel="stylesheet" type="text/css" href="include/mutationSubmission.css" />
+</head>
+
+<script language="JavaScript" type="text/javascript">
+    function DivSetVisible(divid, divshimid) {
+        if (document.all && (navigator.userAgent.indexOf("Opera") == -1)) {
+            var DivRef = document.getElementById(divid);
+            DivRef.style.display = "block";
+
+            var IfrRef = document.getElementById(divshimid); // co
+            IfrRef.style.width = DivRef.offsetWidth;
+            IfrRef.style.height = DivRef.offsetHeight;
+            IfrRef.style.top = DivRef.style.top;
+            IfrRef.style.left = DivRef.style.left;
+            IfrRef.style.zIndex = DivRef.style.zIndex - 1;
+            IfrRef.style.display = "block";
+        }
+    }
+    function DivSetInvisible(divid, divshimid) {
+        if (document.all && (navigator.userAgent.indexOf("Opera") == -1)) {
+            var DivRef = document.getElementById(divid);
+            DivRef.style.display = "none";
+            var IfrRef = document.getElementById(divshimid);
+            IfrRef.style.display = "none";
+        }
+    }
+	function setElemCoords(evnt, elem) {
+	// this function was changed to work for both Firefox and IE
+		var myposx = 0;
+		var posy = 0;
+		if (!evnt) var evnt = window.evnt;
+		if (evnt.pageX || evnt.pageY) 	{
+			myposx = evnt.pageX;
+			posy = evnt.pageY;
+		}
+		else if (evnt.clientX || evnt.clientY) 	{
+			myposx = evnt.clientX + document.body.scrollLeft
+			+ document.documentElement.scrollLeft;
+			posy = evnt.clientY + document.body.scrollTop
+			+ document.documentElement.scrollTop;
+		}
+		elem.style.left = myposx + 20 + "px";
+		elem.style.top = posy + 10 + "px";
+	}
+	function xCoord (e){
+
+	}
+	function hideElem(id) {
+		document.getElementById(id).style.display = "none";
+	}
+	function showElem(event, id) {
+		var elem = document.getElementById(id);
+		elem.style.position = "absolute";
+		setElemCoords(event, elem);
+		elem.style.display = "block";
+	}
+</script>
+<noscript>
+    <META HTTP-EQUIV="Refresh" CONTENT="0; URL=/">
+</noscript>
+
+
+
+
+<body marginwidth="0" topmargin="0" marginheight="0" leftmargin="0" id="Body">
+<script type="text/javascript" src="assets/static/org/apache/tapestry/form/DatePicker.js"></script>
+<script type="text/javascript"><!--
+dojo.require("tapestry.fx");
+dojo.require("tapestry.event");
+var calendar_DatePicker;
+// --></script>
+<table border="0" cellpadding="0" cellspacing="0" width="791" height="110">
+    <tr>
+        <td rowspan="1" colspan="3" width="691" height="58">
+        	<a id="PageLink" href="/Home.html;jsessionid=6CA30594BFCD25259E308E0609F3BFF9"><img src="image/mutationlogo.gif" width="791" height="98" border="0"/></a>
+		</td>
+    </tr>
+    <tr><td>
+        <div class="container">
+            <div class="pageHeader">
+
+                <div class="clearBoth"></div>
+
+                <div class="mainMenu">
+                    <ul id="topnav">
+                        <li class="topnavhead"
+                            style="width: 80px;"><a href="Home.html" class="headnavref">Home</a>
+                        </li>
+                        <li class="topnavhead"
+                            onMouseOver="this.className='sfhover'; DivSetVisible('navitem1', 'ulShim1');"
+                            onMouseOut="this.className='topnavhead'; DivSetInvisible('navitem1', 'ulShim1');"
+                            style="width: 76px;"><a href="PicturePage.html" class="headnavref">Search</a>
+                            <ul id="navitem1" style="width: 14em; z-index: 100;">
+                                <li style="width: 14em;"><a href="PicturePage.html">Graphic Search</a></li>
+                                <li style="width: 14em;"><a href="SearchPage.html">Basic Text Search</a></li>
+                                <li style="width: 14em;"><a href="AdvancedSearchPage.html">Advanced Text Search</a></li>
+                                <!--
+                                <li style="width: 14em;"><a href="MutationSearch.html">Criteria Search</a></li>
+                                -->
+                            </ul>
+                            <!--
+                            <iframe id="ulShim1" src="include/iframe_blank.html" scrolling="no" frameborder="0" style="position:absolute; top:0px; left:0px; display:none;"></iframe>
+                            -->
+                        <li class="headdivide"></li>
+                        <li class="topnavhead"
+                            onMouseOver="this.className='sfhover'; DivSetVisible('navitem2', 'ulShim2');"
+                            onMouseOut="this.className='topnavhead'; DivSetInvisible('navitem2', 'ulShim2');"
+                            style="width: 96px;"><a href="GenomicDnaSequencePage.html" class="headnavref">CFTR&nbsp;Gene</a>
+                             <ul id="navitem2" style="width: 24em; z-index: 100;">
+                                <li style="width: 24em;"><a href="GenomicDnaSequencePage.html">Genomic DNA Sequence</a>
+                                </li>
+                                <li style="width: 24em;"><a href="MRnaPolypeptideSequencePage.html">mRNA(cDNA) and Polypeptide Sequence</a>
+                                </li>
+                                <li style="width: 24em;"><a href="CftrDomainPage.html">CFTR Domains</a></li>
+                                 <li style="width: 24em;"><a href="download/mouse_cftr_genomic.doc">Mouse CFTR Genomic Sequence</a></li>
+                            </ul>
+                            <!--
+                            <iframe id="ulShim2" src="include/iframe_blank.html" scrolling="no" frameborder="0" style="position:absolute; top:0px; left:0px; display:none;"></iframe>
+                            -->
+                        <li class="headdivide"></li>
+                        <li class="headdivide"></li>
+
+                        <li class="topnavhead"
+                            onMouseOver="this.className='sfhover'; DivSetVisible('navitem3', 'ulShim3');"
+                            onMouseOut="this.className='topnavhead'; DivSetInvisible('navitem3', 'ulShim3');"
+                            style="width: 70px;"><a href="ConsortiumBackgroundPage.html"  class="headnavref">History</a>
+                            <ul id="navitem3" style="width: 10em; z-index: 100;">
+                                <li style="width: 10em;"><a href="ConsortiumBackgroundPage.html">Background</a></li>
+                                <li style="width: 10em;"><a href="ConsortiumGuidelinesPage.html">Guidelines</a></li>
+                                <li style="width: 10em;"><a href="ConsortiumDataPage1.html">Data</a></li>
+                                <li style="width: 10em;"><a href="NewsLetters.html">News&nbsp;Letters</a></li>
+                            </ul>
+                            <!--
+                            <iframe id="ulShim3" src="include/iframe_blank.html" scrolling="no" frameborder="0" style="position:absolute; top:0px; left:0px; display:none;"></iframe>                        <li class="headdivide"></li>
+                            -->
+                        </li>
+
+                        <li class="headdivide"></li>
+                        <li class="topnavhead"
+                            style="width: 70px;"><a href="Team.html" class="headnavref">Team</a>
+                        </li>
+
+                        <li class="headdivide"></li>
+                        <li class="topnavhead"
+                            style="width: 80px;"><a href="StatisticsPage.html" class="headnavref">Statistics</a>
+                        </li>
+
+                        <li class="headdivide"></li>
+                        <li class="topnavhead"
+                            style="width: 70px;"><a href="LinkPage.html" class="headnavref">Links</a>
+                        </li>
+
+                        <li class="headdivide"></li>
+                        <li class="topnavhead"
+                            style="width: 70px;"><a href="SubmitPage.html" class="headnavref">Submit</a>
+                        </li>
+                        <li class="topnavhead"
+
+                            onMouseOver="this.className='sfhover'; DivSetVisible('navitem5', 'ulShim5');"
+                            onMouseOut="this.className='topnavhead'; DivSetInvisible('navitem5', 'ulShim5');"
+                            style="width: 58px;"><a href="HelpPage.html" class="headnavref">Help</a>
+                            <ul id="navitem5" style="width: 18em; z-index: 100;">
+                                <li style="width: 18em;"><a href="Contact.html">Contact Information</a></li>
+                                <li style="width: 18em;"><a href="HelpPage.html#term">Terminology</a></li>
+                                <li style="width: 18em;"><a href="HelpPage.html#faq">Frequently Asked Questions</a></li>
+                            </ul>
+                            <!--
+                            <iframe id="ulShim5" src="include/iframe_blank.html" scrolling="no" frameborder="0" style="position:absolute; top:0px; left:0px; display:none;"></iframe>                        <li class="headdivide"></li>
+                            -->
+                        </li>
+
+                    </ul>
+
+                </div>
+                <style type="text/css">
+                    ul#navitem1, ul#navitem2, ul#navitem3, ul#navitem4, ul#navitem5, {
+                        width: 10em;
+                    }
+
+                    ul#navitem1 li, ul#navitem2 li, ul#navitem3 li, ul#navitem4 li, ul#navitem5 li, {
+                        font-family: verdana, arial, helvetica, sans-serif;
+                        font-size: 11px;
+                        width: 10em;
+                        font-weight: normal;
+                        border-bottom: 1px solid #cccccc;
+                        background: #eEF3F7;
+                    }
+
+                    ul#navitem1 li a, ul#navitem2 li a, ul#navitem3 li a, ul#navitem4 li a, ul#navitem5 li a, {
+                        font-size: 11px;
+                    }
+                </style>
+                <script type="text/javascript" language="javascript">
+                    // remove menu flicker when useing overLIB  in IE.
+                    if (document.all && (navigator.userAgent.indexOf("Opera") == -1)) {
+                        sfHover = function() {
+                            var sfEls =document.getElementById("topnav").getElementsByTagName("li");
+                            for (var i = 0; i < sfEls.length; i++) {
+                                // **** use onmousemove instead of onmouseover ****
+                                sfEls[i].onmousemove = sfEls[i].onmouseover;
+                            }
+                        }
+                        if (window.attachEvent) window.attachEvent("onload", sfHover);
+                    }
+                </script>
+
+
+            </div>
+
+        </div>
+
+    </td></tr>
+    <tr><td>
+    	<div style="display:none;color:white;background:red;position:absolute;top:0;right:0" id="AjaxStatus">
+			Loading...
+		</div>
+	</td></tr>
+    <tr><td>
+
+        <br><br>
+        <table cellpadding="2" cellspacing="2" width="100%"><tr><td style="font-size:small; ">
+
+<script type="text/javascript">
+	function toggleDisplay(id) {
+		if (document.getElementById(id).style.display == "none") {
+			document.getElementById(id).style.display = "block";
+		} else {
+			document.getElementById(id).style.display = "none";
+		}
+	}
+</script>
+
+<div align="center">
+
+<!-- PRECISION SEARCH -->
+<div class="mutationSearchSection" id="precisionSearch">
+<div class="mutationSearchHeader" onclick="toggleDisplay('precisionContent');">Precision Search</div>
+	
+	<div id="precisionContent" class="mutationSearchContent">
+		
+		
+		
+		<form method="post" action="/MutationSearch,precisionSearchForm.sdirect;jsessionid=6CA30594BFCD25259E308E0609F3BFF9" id="precisionSearchForm" class="mutationSearchForm">
+<div style="display:none;" id="precisionSearchFormhidden"><input type="hidden" name="formids" value="TextField,TextField_0,TextField_1,PropertySelection,PropertySelection_0,precisionSearchButton" />
+<input type="hidden" name="seedids" value="ZH4sIAAAAAAAAAFvzloG1fAnDIp3i1KKyzORUFQOdgsR0EJWcn1uQn5eaVwJm55UkZualFgHZxanFxZn5eSBWAZBwyi9KAYsHZ6Tm5IAFUiqBVADQFJ/MvGwg0zErsSK4JLGktBjICUrNA6qHKiooSk3OBJkWnJpYlJwBFPFMwxR2yy/KVTEAAOJ1AIKqAAAA" />
+<input type="hidden" name="submitmode" value="" />
+<input type="hidden" name="submitname" value="" />
+</div>
+			<div class="mutationSearchSubSection">
+				<table class="mutationSearchTable">
+					<tr>
+						<td class="mutationSearchTitle">HGVS cDNA Level Name:</td>
+						<td class="mutationSearchField"><input type="text" name="TextField" value="" id="TextField" /></td>
+					</tr>
+					<tr>
+						<td class="mutationSearchTitle">HGVS gDNA Level Name:</td>
+						<td class="mutationSearchField"><input type="text" name="TextField_0" value="" id="TextField_0" /></td>
+					</tr>
+					<tr>
+						<td class="mutationSearchTitle">HGVS Protein Level Name:</td>
+						<td class="mutationSearchField"><input type="text" name="TextField_1" value="" id="TextField_1" /></td>
+					</tr>
+				</table>
+			</div>
+			<div class="mutationSearchFooter">
+				<table style="width: 100%;">
+					<tr>
+						<td style="text-align: left;">
+							Order by: <select name="PropertySelection" id="PropertySelection">
+<option value="0">Nucleotide Position</option>
+<option value="1">Date</option>
+<option value="2">Domain</option>
+<option value="3">Mutation Type</option>
+<option value="4">Institution</option>
+<option value="5">Contributor</option>
+</select>
+							<select name="PropertySelection_0" id="PropertySelection_0">
+<option value="0">Descending</option>
+<option value="1" selected="selected">Ascending</option>
+</select>
+						</td>
+						<td style="text-align: right;">
+							<input type="submit" name="precisionSearchButton" id="precisionSearchButton" class="mutationSearchButton" value="Search" />
+						</td>
+					</tr>
+				</table>
+			</div>
+		</form>
+		
+	</div>
+	
+</div>
+
+<!-- CRITERIA SEARCH -->
+<div class="mutationSearchSection" id="criteriaSearch">
+<div class="mutationSearchHeader" onclick="toggleDisplay('criteriaContent');">Criteria Search</div>
+
+	<div id="criteriaContent" class="mutationSearchContent">
+
+		
+	
+		<form method="post" action="/MutationSearch,criteriaSearchForm.sdirect;jsessionid=6CA30594BFCD25259E308E0609F3BFF9" id="criteriaSearchForm" class="mutationSearchForm">
+<div style="display:none;" id="criteriaSearchFormhidden"><input type="hidden" name="formids" value="mutationTypeSelector,mutationSiteSelector,If_3_0,codingChooser,For_1_0,nonCodingChooser,For_2_0,dateIntervalSelector,DatePicker,If_4_0,TextField_4,TextField_5,PropertySelection_1,PropertySelection_2,criteriaSearchButton" />
+<input type="hidden" name="seedids" value="ZH4sIAAAAAAAAAGWOMQ7CMAxF24GbMHYoI2KiQyUkBkTYUZQaGihJ5Lio5UxcjTvgpAwtXeLvp5/v//4ki1eSpJt0nXnAp1awzDMnr2Eo+3DWgKGoDUltAFl78F5bE5Tjp7BYRS5qaJoIqp7HgVP22txZbm+yEySp9bwcwbD/Z3IISoc0ARJVzWR3mePS4oPpCToqNTTVWJ/zybYKl9E6QOoFNKBoqDpj8d/fnaIlim6FmgC1HLWKyVM+1PoC5GzgNkQBAAA=" />
+<input type="hidden" name="submitmode" value="" />
+<input type="hidden" name="submitname" value="" />
+<input type="hidden" name="If_3_0" value="T" />
+<input type="hidden" name="For_1_0" value="VSExon 1" />
+<input type="hidden" name="For_1_0" value="VSExon 2" />
+<input type="hidden" name="For_1_0" value="VSExon 3" />
+<input type="hidden" name="For_1_0" value="VSExon 4" />
+<input type="hidden" name="For_1_0" value="VSExon 5" />
+<input type="hidden" name="For_1_0" value="VSExon 6" />
+<input type="hidden" name="For_1_0" value="VSExon 7" />
+<input type="hidden" name="For_1_0" value="VSExon 8" />
+<input type="hidden" name="For_1_0" value="VSExon 9" />
+<input type="hidden" name="For_1_0" value="VSExon 10" />
+<input type="hidden" name="For_1_0" value="VSExon 11" />
+<input type="hidden" name="For_1_0" value="VSExon 12" />
+<input type="hidden" name="For_1_0" value="VSExon 13" />
+<input type="hidden" name="For_1_0" value="VSExon 14" />
+<input type="hidden" name="For_1_0" value="VSExon 15" />
+<input type="hidden" name="For_1_0" value="VSExon 16" />
+<input type="hidden" name="For_1_0" value="VSExon 17" />
+<input type="hidden" name="For_1_0" value="VSExon 18" />
+<input type="hidden" name="For_1_0" value="VSExon 19" />
+<input type="hidden" name="For_1_0" value="VSExon 20" />
+<input type="hidden" name="For_1_0" value="VSExon 21" />
+<input type="hidden" name="For_1_0" value="VSExon 22" />
+<input type="hidden" name="For_1_0" value="VSExon 23" />
+<input type="hidden" name="For_1_0" value="VSExon 24" />
+<input type="hidden" name="For_1_0" value="VSExon 25" />
+<input type="hidden" name="For_1_0" value="VSExon 26" />
+<input type="hidden" name="For_1_0" value="VSExon 27" />
+<input type="hidden" name="For_2_0" value="VS5' UTR" />
+<input type="hidden" name="For_2_0" value="VSIntron 1" />
+<input type="hidden" name="For_2_0" value="VSIntron 2" />
+<input type="hidden" name="For_2_0" value="VSIntron 3" />
+<input type="hidden" name="For_2_0" value="VSIntron 4" />
+<input type="hidden" name="For_2_0" value="VSIntron 5" />
+<input type="hidden" name="For_2_0" value="VSIntron 6" />
+<input type="hidden" name="For_2_0" value="VSIntron 7" />
+<input type="hidden" name="For_2_0" value="VSIntron 8" />
+<input type="hidden" name="For_2_0" value="VSIntron 9" />
+<input type="hidden" name="For_2_0" value="VSIntron 10" />
+<input type="hidden" name="For_2_0" value="VSIntron 11" />
+<input type="hidden" name="For_2_0" value="VSIntron 12" />
+<input type="hidden" name="For_2_0" value="VSIntron 13" />
+<input type="hidden" name="For_2_0" value="VSIntron 14" />
+<input type="hidden" name="For_2_0" value="VSIntron 15" />
+<input type="hidden" name="For_2_0" value="VSIntron 16" />
+<input type="hidden" name="For_2_0" value="VSIntron 17" />
+<input type="hidden" name="For_2_0" value="VSIntron 18" />
+<input type="hidden" name="For_2_0" value="VSIntron 19" />
+<input type="hidden" name="For_2_0" value="VSIntron 20" />
+<input type="hidden" name="For_2_0" value="VSIntron 21" />
+<input type="hidden" name="For_2_0" value="VSIntron 22" />
+<input type="hidden" name="For_2_0" value="VSIntron 23" />
+<input type="hidden" name="For_2_0" value="VSIntron 24" />
+<input type="hidden" name="For_2_0" value="VSIntron 25" />
+<input type="hidden" name="For_2_0" value="VSIntron 26" />
+<input type="hidden" name="For_2_0" value="VS3' UTR" />
+<input type="hidden" name="If_4_0" value="F" />
+</div>
+			<div class="mutationSearchSubHeader">Mutation Criteria</div>	
+			<div class="mutationSearchSubSection" id="mutationCriteria">
+		
+				<table class="mutationSearchTable">
+					<tr>
+						<td class="mutationSearchTitle">
+							Mutation Type:
+						</td>
+		 				<td class="mutationSearchField">
+							<select name="mutationTypeSelector" id="mutationTypeSelector">
+<option value="0"></option>
+<option value="1">Substitution</option>
+<option value="2">Deletion</option>
+<option value="3">Insertion</option>
+<option value="4">Insertion/deletion</option>
+<option value="5">Inversion</option>
+<option value="6">Microsatellite</option>
+<option value="7">Duplication</option>
+</select>
+						</td>
+					</tr>
+					<tr>
+						<td class="mutationSearchTitle">
+							Mutation Site:
+						</td>
+						<td class="mutationSearchField">
+							<select name="mutationSiteSelector" id="mutationSiteSelector">
+<option value="0" selected="selected">Domain</option>
+<option value="1">Coding Nucleotide Range</option>
+<option value="2">Genomic Nucleotide Range</option>
+</select>
+						</td>
+					</tr>
+					
+						<tr>
+							<td class="mutationSearchTitle">
+								Domain:
+							</td>
+							<td class="mutationSearchField">
+								<table class="mutationSearchDomain">
+									<tr>
+										<td style="text-align: center;">Coding</td>
+										<td style="text-align: center;">Non-Coding</td>
+									</tr>
+									<tr>
+										<td>
+											<select name="codingChooser" multiple="multiple" id="codingChooser" size="5">
+											    <span id="For_1_0">
+											        <option value="0">Exon 1</option>
+											    </span><span id="For_1_1">
+											        <option value="1">Exon 2</option>
+											    </span><span id="For_1_2">
+											        <option value="2">Exon 3</option>
+											    </span><span id="For_1_3">
+											        <option value="3">Exon 4</option>
+											    </span><span id="For_1_4">
+											        <option value="4">Exon 5</option>
+											    </span><span id="For_1_5">
+											        <option value="5">Exon 6</option>
+											    </span><span id="For_1_6">
+											        <option value="6">Exon 7</option>
+											    </span><span id="For_1_7">
+											        <option value="7">Exon 8</option>
+											    </span><span id="For_1_8">
+											        <option value="8">Exon 9</option>
+											    </span><span id="For_1_9">
+											        <option value="9">Exon 10</option>
+											    </span><span id="For_1_10">
+											        <option value="10">Exon 11</option>
+											    </span><span id="For_1_11">
+											        <option value="11">Exon 12</option>
+											    </span><span id="For_1_12">
+											        <option value="12">Exon 13</option>
+											    </span><span id="For_1_13">
+											        <option value="13">Exon 14</option>
+											    </span><span id="For_1_14">
+											        <option value="14">Exon 15</option>
+											    </span><span id="For_1_15">
+											        <option value="15">Exon 16</option>
+											    </span><span id="For_1_16">
+											        <option value="16">Exon 17</option>
+											    </span><span id="For_1_17">
+											        <option value="17">Exon 18</option>
+											    </span><span id="For_1_18">
+											        <option value="18">Exon 19</option>
+											    </span><span id="For_1_19">
+											        <option value="19">Exon 20</option>
+											    </span><span id="For_1_20">
+											        <option value="20">Exon 21</option>
+											    </span><span id="For_1_21">
+											        <option value="21">Exon 22</option>
+											    </span><span id="For_1_22">
+											        <option value="22">Exon 23</option>
+											    </span><span id="For_1_23">
+											        <option value="23">Exon 24</option>
+											    </span><span id="For_1_24">
+											        <option value="24">Exon 25</option>
+											    </span><span id="For_1_25">
+											        <option value="25">Exon 26</option>
+											    </span><span id="For_1_26">
+											        <option value="26">Exon 27</option>
+											    </span>
+											</select>
+										</td>
+										<td>
+											<select name="nonCodingChooser" multiple="multiple" id="nonCodingChooser" size="5">
+											    <span id="For_2_0">
+											        <option value="0">5' UTR</option>
+											    </span><span id="For_2_1">
+											        <option value="1">Intron 1</option>
+											    </span><span id="For_2_2">
+											        <option value="2">Intron 2</option>
+											    </span><span id="For_2_3">
+											        <option value="3">Intron 3</option>
+											    </span><span id="For_2_4">
+											        <option value="4">Intron 4</option>
+											    </span><span id="For_2_5">
+											        <option value="5">Intron 5</option>
+											    </span><span id="For_2_6">
+											        <option value="6">Intron 6</option>
+											    </span><span id="For_2_7">
+											        <option value="7">Intron 7</option>
+											    </span><span id="For_2_8">
+											        <option value="8">Intron 8</option>
+											    </span><span id="For_2_9">
+											        <option value="9">Intron 9</option>
+											    </span><span id="For_2_10">
+											        <option value="10">Intron 10</option>
+											    </span><span id="For_2_11">
+											        <option value="11">Intron 11</option>
+											    </span><span id="For_2_12">
+											        <option value="12">Intron 12</option>
+											    </span><span id="For_2_13">
+											        <option value="13">Intron 13</option>
+											    </span><span id="For_2_14">
+											        <option value="14">Intron 14</option>
+											    </span><span id="For_2_15">
+											        <option value="15">Intron 15</option>
+											    </span><span id="For_2_16">
+											        <option value="16">Intron 16</option>
+											    </span><span id="For_2_17">
+											        <option value="17">Intron 17</option>
+											    </span><span id="For_2_18">
+											        <option value="18">Intron 18</option>
+											    </span><span id="For_2_19">
+											        <option value="19">Intron 19</option>
+											    </span><span id="For_2_20">
+											        <option value="20">Intron 20</option>
+											    </span><span id="For_2_21">
+											        <option value="21">Intron 21</option>
+											    </span><span id="For_2_22">
+											        <option value="22">Intron 22</option>
+											    </span><span id="For_2_23">
+											        <option value="23">Intron 23</option>
+											    </span><span id="For_2_24">
+											        <option value="24">Intron 24</option>
+											    </span><span id="For_2_25">
+											        <option value="25">Intron 25</option>
+											    </span><span id="For_2_26">
+											        <option value="26">Intron 26</option>
+											    </span><span id="For_2_27">
+											        <option value="27">3' UTR</option>
+											    </span>
+											</select>
+										</td>
+									</tr>
+								</table>
+							</td>
+						</tr>
+					
+					
+					
+				</table>
+				
+			</div>
+	
+			<div class="mutationSearchSubHeader">Submission Criteria</div>		
+			<div class="mutationSearchSubSection" id="submissionCriteria">
+		
+				<table class="mutationSearchTable">
+					<tr>
+						<td class="mutationSearchTitle">Date:</td>
+						<td class="mutationSearchField">
+							<select name="dateIntervalSelector" id="dateIntervalSelector">
+<option value="0">before</option>
+<option value="1">after</option>
+<option value="2">between</option>
+<option value="3">on</option>
+</select>
+							<input type="text" name="DatePicker" value="" title="dd MMM yyyy" id="DatePicker" style="width: 35%;" />&nbsp;<a href="javascript:calendar_DatePicker.toggle(tapestry.byId(&quot;DatePicker&quot;));"><img src="assets/static/org/apache/tapestry/form/DatePickerIcon.png" alt="Click on icon to choose a date/time value." border="0" class="datePickerImg" /></a>
+							
+						</td>
+					</tr>
+					<tr>
+						<td class="mutationSearchTitle">Institution:</td>
+						<td class="mutationSearchField"><input type="text" name="TextField_4" value="" id="TextField_4" /></td>
+					</tr>
+					<tr>
+						<td class="mutationSearchTitle">Contributor:</td>
+						<td class="mutationSearchField"><input type="text" name="TextField_5" value="" id="TextField_5" /></td>
+					</tr>
+				</table>
+				
+			</div>
+			<div class="mutationSearchFooter">
+				<table style="width: 100%;">
+					<tr>
+						<td style="text-align: left;">
+							Order by: <select name="PropertySelection_1" id="PropertySelection_1">
+<option value="0">Nucleotide Position</option>
+<option value="1">Date</option>
+<option value="2">Domain</option>
+<option value="3">Mutation Type</option>
+<option value="4">Institution</option>
+<option value="5">Contributor</option>
+</select>
+							<select name="PropertySelection_2" id="PropertySelection_2">
+<option value="0">Descending</option>
+<option value="1" selected="selected">Ascending</option>
+</select>
+						</td>
+						<td style="text-align: right;">
+							<input type="submit" name="criteriaSearchButton" id="criteriaSearchButton" class="mutationSearchButton" value="Search" />
+						</td>
+					</tr>
+				</table>
+			</div>
+		</form>
+	
+	</div>
+	
+</div>
+
+<!-- RESULTS -->
+<div class="mutationSearchSection" id="results">
+<div class="mutationSearchHeader" onclick="toggleDisplay('resultForm');">
+	<table style="width: 100%;">
+		<tr>
+			<td class="mutationSearchHeaderFont" style="text-align: left;">Results</td>
+			<td class="mutationSearchResultCount">
+				<span id="If_5">0</span>
+				
+				 hits
+			</td>
+		</tr>
+	</table>
+</div>
+
+	<form method="post" action="/MutationSearch,resultForm.sdirect;jsessionid=6CA30594BFCD25259E308E0609F3BFF9" id="resultForm" class="mutationSearchForm">
+<div style="display:none;" id="resultFormhidden"><input type="hidden" name="formids" value="If_6_0" />
+<input type="hidden" name="seedids" value="ZH4sIAAAAAAAAAG1RQU7DMBCMKvGTHHNoQyrBkRYqVUKiIr0j4yyNqWNba6dq+APiI3yNP7B2InDaXuLd8WZmPPv9k1x9JMnka/KZWcCD4JBOM8N2/uC6MVqBcqFWjgkFSLUFa4VWvjL0WWisAl7WIGUAqo6ODbE8CrWn8u6dHUvHXGupeQZF88OQQeDCs5XAkNeErN/O4ZXGhtAtHN1KgKzi+mU66mZeGbUBdF0JErjrrZ5h4b8TnUXrXJjmKBygYJGrwDzGB1tNS08jjuVwGUHbzkCvqDGCSxqMYCK/TmeUcSXUbllrbUOeRE+i+U32ZMIj5kWmSOXCVJ7mt9mDtH5rtn1tRFhQ5KdiDtaKugOTkfA9wRvB9zC4KMjFf5TFKNj5xRAvxk1+TqP6SxbBttLZXs9zetthF/1Nn+kv8O4ClpgCAAA=" />
+<input type="hidden" name="submitmode" value="" />
+<input type="hidden" name="submitname" value="" />
+<input type="hidden" name="If_6_0" value="F" />
+</div>
+		
+	</form>
+	
+</div>
+
+
+
+        </td></tr></table>
+    </td></tr>
+    <!-- bottom part -->
+     <tr><td rowspan="1" colspan="3" width="691">
+         <br>
+         <br>
+         <br>
+         <br>
+
+         <img src="image/sumhorsa.gif" width="791" />
+        <p align="center">Comments or questions? Please email to <a href="mailto:cftr.admin@genet.sickkids.on.ca">cftr.admin</a>
+            <br>
+            The Database was last updated at Apr 25, 2011
+        </p>
+    </td></tr>
+</table>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-7453350-1");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+<script type="text/javascript"><!--
+tapestry.addOnLoad(function(e) {
+if(tapestry.fx) { tapestry.fx.attachAjaxStatus("AjaxStatus"); }
+dojo.require("tapestry.form");tapestry.form.registerForm("precisionSearchForm");
+
+tapestry.cleanConnect("precisionSearchButton", "onsubmit", "formEvent1940518922");
+                tapestry.formEvent1940518922=function(e){
+                    var content={beventname:"onsubmit", bcomponentidpath:"MutationSearch/precisionSearchButton", bcomponentid:"precisionSearchButton"};
+                    tapestry.event.buildEventProperties(e, content, arguments);
+                    if (!content["beventtarget.id"]){
+                    	content["beventtarget.id"]="precisionSearchButton";
+                    }
+                    
+                   var validateState=tapestry.form.forms["precisionSearchForm"].validateForm;
+                   var validateForm=false;
+                   tapestry.form.setFormValidating("precisionSearchForm", validateForm);
+                   
+                    
+                    tapestry.form.submitAsync("precisionSearchForm", content);
+                    
+                    
+                    
+                    tapestry.form.setFormValidating("precisionSearchForm", validateState);
+                    
+                };
+                tapestry.connect("precisionSearchButton", "onsubmit", "formEvent1940518922");
+tapestry.form.registerForm("criteriaSearchForm");
+calendar_DatePicker = new Calendar();
+
+	
+calendar_DatePicker.initialize(["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
+  ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+  ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+  ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"],
+  "dd MMM yyyy", 0, false, 1, "Clear");
+calendar_DatePicker.onchange = function() {
+  var field = tapestry.byId("criteriaSearchForm").DatePicker;
+  var value = calendar_DatePicker.formatDate();
+	if (field.value != value) {
+    field.value = value;
+    if (field.onchange) { field.onchange();}
+  }
+}
+
+tapestry.cleanConnect("mutationSiteSelector", "onchange", "formEvent2075056840");
+                tapestry.formEvent2075056840=function(e){
+                    var content={beventname:"onchange", bcomponentidpath:"MutationSearch/mutationSiteSelector", bcomponentid:"mutationSiteSelector"};
+                    tapestry.event.buildEventProperties(e, content, arguments);
+                    if (!content["beventtarget.id"]){
+                    	content["beventtarget.id"]="mutationSiteSelector";
+                    }
+                    
+                   var validateState=tapestry.form.forms["criteriaSearchForm"].validateForm;
+                   var validateForm=false;
+                   tapestry.form.setFormValidating("criteriaSearchForm", validateForm);
+                   
+                    
+                    tapestry.form.submitAsync("criteriaSearchForm", content);
+                    
+                    
+                    
+                    tapestry.form.setFormValidating("criteriaSearchForm", validateState);
+                    
+                };
+                tapestry.connect("mutationSiteSelector", "onchange", "formEvent2075056840");
+tapestry.cleanConnect("dateIntervalSelector", "onchange", "formEvent1878545228");
+                tapestry.formEvent1878545228=function(e){
+                    var content={beventname:"onchange", bcomponentidpath:"MutationSearch/dateIntervalSelector", bcomponentid:"dateIntervalSelector"};
+                    tapestry.event.buildEventProperties(e, content, arguments);
+                    if (!content["beventtarget.id"]){
+                    	content["beventtarget.id"]="dateIntervalSelector";
+                    }
+                    
+                   var validateState=tapestry.form.forms["criteriaSearchForm"].validateForm;
+                   var validateForm=false;
+                   tapestry.form.setFormValidating("criteriaSearchForm", validateForm);
+                   
+                    
+                    tapestry.form.submitAsync("criteriaSearchForm", content);
+                    
+                    
+                    
+                    tapestry.form.setFormValidating("criteriaSearchForm", validateState);
+                    
+                };
+                tapestry.connect("dateIntervalSelector", "onchange", "formEvent1878545228");
+tapestry.cleanConnect("criteriaSearchButton", "onsubmit", "formEvent193413461");
+                tapestry.formEvent193413461=function(e){
+                    var content={beventname:"onsubmit", bcomponentidpath:"MutationSearch/criteriaSearchButton", bcomponentid:"criteriaSearchButton"};
+                    tapestry.event.buildEventProperties(e, content, arguments);
+                    if (!content["beventtarget.id"]){
+                    	content["beventtarget.id"]="criteriaSearchButton";
+                    }
+                    
+                   var validateState=tapestry.form.forms["criteriaSearchForm"].validateForm;
+                   var validateForm=false;
+                   tapestry.form.setFormValidating("criteriaSearchForm", validateForm);
+                   
+                    
+                    tapestry.form.submitAsync("criteriaSearchForm", content);
+                    
+                    
+                    
+                    tapestry.form.setFormValidating("criteriaSearchForm", validateState);
+                    
+                };
+                tapestry.connect("criteriaSearchButton", "onsubmit", "formEvent193413461");
+tapestry.form.registerForm("resultForm");
+
+tapestry.form.focusField('TextField');});
+// --></script></body>
+</html>
+<!-- Render time: ~ 2 ms -->
+
+

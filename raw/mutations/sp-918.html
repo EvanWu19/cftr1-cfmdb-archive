@@ -1,0 +1,2896 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!-- Application: penguin -->
+<!-- Page: MutationDetailPage -->
+<!-- Generated: Wed Jul 01 19:51:40 EDT 2026 -->
+<html>
+<head>
+<meta name="generator" content="Tapestry Application Framework, version 4.1.6-SNAPSHOT" />
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+<title>Cystic Fibrosis Mutation Database: Mutation Detail</title>
+<meta key="keywords" content="genet, cystic fibrosis mutation database, CFTR, CFMDB, chromosome 7, chromosome7, bioinformatics resources, bioinformatic, genetic, research, human, genome project, hospital sick children, sickkids" />
+<script type="text/javascript">djConfig = {"baseRelativePath":"/assets/static/dojo-0.4.3-custom-4.1.6/","preventBackButtonFix":false,"parseWidgets":false,"locale":"en-us"} </script>
+
+<script type="text/javascript" src="/assets/static/dojo-0.4.3-custom-4.1.6/dojo.js"></script><script type="text/javascript" src="/assets/static/dojo-0.4.3-custom-4.1.6/dojo2.js"></script>
+<script type="text/javascript">
+dojo.registerModulePath("tapestry", "/assets/static/tapestry-4.1.6");
+</script>
+<script type="text/javascript" src="/assets/static/tapestry-4.1.6/core.js"></script>
+<script type="text/javascript">
+dojo.require("tapestry.namespace");
+tapestry.requestEncoding='UTF-8';
+</script>
+<link rel="stylesheet" type="text/css" href="/include/main.css" />
+<link rel="stylesheet" type="text/css" href="/include/mutationSearch.css" />
+<link rel="stylesheet" type="text/css" href="/include/forms.css" />
+<link rel="stylesheet" type="text/css" href="/include/phoenix.css" />
+<link rel="stylesheet" type="text/css" href="/include/institution.css" />
+<link rel="stylesheet" type="text/css" href="/include/mutationSubmission.css" />
+</head>
+
+<script language="JavaScript" type="text/javascript">
+    function DivSetVisible(divid, divshimid) {
+        if (document.all && (navigator.userAgent.indexOf("Opera") == -1)) {
+            var DivRef = document.getElementById(divid);
+            DivRef.style.display = "block";
+
+            var IfrRef = document.getElementById(divshimid); // co
+            IfrRef.style.width = DivRef.offsetWidth;
+            IfrRef.style.height = DivRef.offsetHeight;
+            IfrRef.style.top = DivRef.style.top;
+            IfrRef.style.left = DivRef.style.left;
+            IfrRef.style.zIndex = DivRef.style.zIndex - 1;
+            IfrRef.style.display = "block";
+        }
+    }
+    function DivSetInvisible(divid, divshimid) {
+        if (document.all && (navigator.userAgent.indexOf("Opera") == -1)) {
+            var DivRef = document.getElementById(divid);
+            DivRef.style.display = "none";
+            var IfrRef = document.getElementById(divshimid);
+            IfrRef.style.display = "none";
+        }
+    }
+	function setElemCoords(evnt, elem) {
+	// this function was changed to work for both Firefox and IE
+		var myposx = 0;
+		var posy = 0;
+		if (!evnt) var evnt = window.evnt;
+		if (evnt.pageX || evnt.pageY) 	{
+			myposx = evnt.pageX;
+			posy = evnt.pageY;
+		}
+		else if (evnt.clientX || evnt.clientY) 	{
+			myposx = evnt.clientX + document.body.scrollLeft
+			+ document.documentElement.scrollLeft;
+			posy = evnt.clientY + document.body.scrollTop
+			+ document.documentElement.scrollTop;
+		}
+		elem.style.left = myposx + 20 + "px";
+		elem.style.top = posy + 10 + "px";
+	}
+	function xCoord (e){
+
+	}
+	function hideElem(id) {
+		document.getElementById(id).style.display = "none";
+	}
+	function showElem(event, id) {
+		var elem = document.getElementById(id);
+		elem.style.position = "absolute";
+		setElemCoords(event, elem);
+		elem.style.display = "block";
+	}
+</script>
+<noscript>
+    <META HTTP-EQUIV="Refresh" CONTENT="0; URL=/">
+</noscript>
+
+
+
+
+<body marginwidth="0" topmargin="0" marginheight="0" leftmargin="0" id="Body">
+<script type="text/javascript"><!--
+dojo.require("tapestry.fx");
+// --></script>
+<table border="0" cellpadding="0" cellspacing="0" width="791" height="110">
+    <tr>
+        <td rowspan="1" colspan="3" width="691" height="58">
+        	<a id="PageLink" href="/Home.html"><img src="image/mutationlogo.gif" width="791" height="98" border="0"/></a>
+		</td>
+    </tr>
+    <tr><td>
+        <div class="container">
+            <div class="pageHeader">
+
+                <div class="clearBoth"></div>
+
+                <div class="mainMenu">
+                    <ul id="topnav">
+                        <li class="topnavhead"
+                            style="width: 80px;"><a href="Home.html" class="headnavref">Home</a>
+                        </li>
+                        <li class="topnavhead"
+                            onMouseOver="this.className='sfhover'; DivSetVisible('navitem1', 'ulShim1');"
+                            onMouseOut="this.className='topnavhead'; DivSetInvisible('navitem1', 'ulShim1');"
+                            style="width: 76px;"><a href="PicturePage.html" class="headnavref">Search</a>
+                            <ul id="navitem1" style="width: 14em; z-index: 100;">
+                                <li style="width: 14em;"><a href="PicturePage.html">Graphic Search</a></li>
+                                <li style="width: 14em;"><a href="SearchPage.html">Basic Text Search</a></li>
+                                <li style="width: 14em;"><a href="AdvancedSearchPage.html">Advanced Text Search</a></li>
+                                <!--
+                                <li style="width: 14em;"><a href="MutationSearch.html">Criteria Search</a></li>
+                                -->
+                            </ul>
+                            <!--
+                            <iframe id="ulShim1" src="include/iframe_blank.html" scrolling="no" frameborder="0" style="position:absolute; top:0px; left:0px; display:none;"></iframe>
+                            -->
+                        <li class="headdivide"></li>
+                        <li class="topnavhead"
+                            onMouseOver="this.className='sfhover'; DivSetVisible('navitem2', 'ulShim2');"
+                            onMouseOut="this.className='topnavhead'; DivSetInvisible('navitem2', 'ulShim2');"
+                            style="width: 96px;"><a href="GenomicDnaSequencePage.html" class="headnavref">CFTR&nbsp;Gene</a>
+                             <ul id="navitem2" style="width: 24em; z-index: 100;">
+                                <li style="width: 24em;"><a href="GenomicDnaSequencePage.html">Genomic DNA Sequence</a>
+                                </li>
+                                <li style="width: 24em;"><a href="MRnaPolypeptideSequencePage.html">mRNA(cDNA) and Polypeptide Sequence</a>
+                                </li>
+                                <li style="width: 24em;"><a href="CftrDomainPage.html">CFTR Domains</a></li>
+                                 <li style="width: 24em;"><a href="download/mouse_cftr_genomic.doc">Mouse CFTR Genomic Sequence</a></li>
+                            </ul>
+                            <!--
+                            <iframe id="ulShim2" src="include/iframe_blank.html" scrolling="no" frameborder="0" style="position:absolute; top:0px; left:0px; display:none;"></iframe>
+                            -->
+                        <li class="headdivide"></li>
+                        <li class="headdivide"></li>
+
+                        <li class="topnavhead"
+                            onMouseOver="this.className='sfhover'; DivSetVisible('navitem3', 'ulShim3');"
+                            onMouseOut="this.className='topnavhead'; DivSetInvisible('navitem3', 'ulShim3');"
+                            style="width: 70px;"><a href="ConsortiumBackgroundPage.html"  class="headnavref">History</a>
+                            <ul id="navitem3" style="width: 10em; z-index: 100;">
+                                <li style="width: 10em;"><a href="ConsortiumBackgroundPage.html">Background</a></li>
+                                <li style="width: 10em;"><a href="ConsortiumGuidelinesPage.html">Guidelines</a></li>
+                                <li style="width: 10em;"><a href="ConsortiumDataPage1.html">Data</a></li>
+                                <li style="width: 10em;"><a href="NewsLetters.html">News&nbsp;Letters</a></li>
+                            </ul>
+                            <!--
+                            <iframe id="ulShim3" src="include/iframe_blank.html" scrolling="no" frameborder="0" style="position:absolute; top:0px; left:0px; display:none;"></iframe>                        <li class="headdivide"></li>
+                            -->
+                        </li>
+
+                        <li class="headdivide"></li>
+                        <li class="topnavhead"
+                            style="width: 70px;"><a href="Team.html" class="headnavref">Team</a>
+                        </li>
+
+                        <li class="headdivide"></li>
+                        <li class="topnavhead"
+                            style="width: 80px;"><a href="StatisticsPage.html" class="headnavref">Statistics</a>
+                        </li>
+
+                        <li class="headdivide"></li>
+                        <li class="topnavhead"
+                            style="width: 70px;"><a href="LinkPage.html" class="headnavref">Links</a>
+                        </li>
+
+                        <li class="headdivide"></li>
+                        <li class="topnavhead"
+                            style="width: 70px;"><a href="SubmitPage.html" class="headnavref">Submit</a>
+                        </li>
+                        <li class="topnavhead"
+
+                            onMouseOver="this.className='sfhover'; DivSetVisible('navitem5', 'ulShim5');"
+                            onMouseOut="this.className='topnavhead'; DivSetInvisible('navitem5', 'ulShim5');"
+                            style="width: 58px;"><a href="HelpPage.html" class="headnavref">Help</a>
+                            <ul id="navitem5" style="width: 18em; z-index: 100;">
+                                <li style="width: 18em;"><a href="Contact.html">Contact Information</a></li>
+                                <li style="width: 18em;"><a href="HelpPage.html#term">Terminology</a></li>
+                                <li style="width: 18em;"><a href="HelpPage.html#faq">Frequently Asked Questions</a></li>
+                            </ul>
+                            <!--
+                            <iframe id="ulShim5" src="include/iframe_blank.html" scrolling="no" frameborder="0" style="position:absolute; top:0px; left:0px; display:none;"></iframe>                        <li class="headdivide"></li>
+                            -->
+                        </li>
+
+                    </ul>
+
+                </div>
+                <style type="text/css">
+                    ul#navitem1, ul#navitem2, ul#navitem3, ul#navitem4, ul#navitem5, {
+                        width: 10em;
+                    }
+
+                    ul#navitem1 li, ul#navitem2 li, ul#navitem3 li, ul#navitem4 li, ul#navitem5 li, {
+                        font-family: verdana, arial, helvetica, sans-serif;
+                        font-size: 11px;
+                        width: 10em;
+                        font-weight: normal;
+                        border-bottom: 1px solid #cccccc;
+                        background: #eEF3F7;
+                    }
+
+                    ul#navitem1 li a, ul#navitem2 li a, ul#navitem3 li a, ul#navitem4 li a, ul#navitem5 li a, {
+                        font-size: 11px;
+                    }
+                </style>
+                <script type="text/javascript" language="javascript">
+                    // remove menu flicker when useing overLIB  in IE.
+                    if (document.all && (navigator.userAgent.indexOf("Opera") == -1)) {
+                        sfHover = function() {
+                            var sfEls =document.getElementById("topnav").getElementsByTagName("li");
+                            for (var i = 0; i < sfEls.length; i++) {
+                                // **** use onmousemove instead of onmouseover ****
+                                sfEls[i].onmousemove = sfEls[i].onmouseover;
+                            }
+                        }
+                        if (window.attachEvent) window.attachEvent("onload", sfHover);
+                    }
+                </script>
+
+
+            </div>
+
+        </div>
+
+    </td></tr>
+    <tr><td>
+    	<div style="display:none;color:white;background:red;position:absolute;top:0;right:0" id="AjaxStatus">
+			Loading...
+		</div>
+	</td></tr>
+    <tr><td>
+
+        <br><br>
+        <table cellpadding="2" cellspacing="2" width="100%"><tr><td style="font-size:small; ">
+
+<table border="0" style="width:780px">
+	<tr>
+	<td  align="center" >
+	    <h3>Mutation Details for c.1242-35_1242-12GT[8_10] </h3>
+	</td>
+	</tr>
+	
+	<tr><td>
+	<table border="1" cellpadding="4" cellspacing="3" style="table-layout:fixed;">
+	    <tr>
+	        <td width="15%">
+	            <span class="thead">cDNA Name</span>
+	        </td>
+	        <td width="85%">
+	            <!-- <span jwcid="@Insert" value="ognl:mutation.description"></span>&nbsp; -->         
+	            c.1242-35_1242-12GT[8_10]&nbsp;
+	        </td>
+	    </tr>
+	    
+	    <tr>
+	        <td width="15%">
+	            <span class="thead">Exon or Intron</span>
+	        </td>
+	        <td width="85%">
+	            intron 9&nbsp;
+	        </td>
+	    </tr>
+            
+            <tr>
+	        <td width="15%">
+	            <span class="thead">Legacy Exon or Intron</span>
+	        </td>
+	        <td width="85%">
+	            intron 8&nbsp;
+	        </td>
+	    </tr>
+	    <tr>
+	        <td width="15%">
+	            <span class="header">Legacy Name</span>
+	        </td>
+	        <td width="85%">
+	            <span class="row" id="Insert_4">1342-12(GT)n</span>&nbsp;
+	        </td>
+	    </tr>
+	    
+	    <tr>
+	        <td width="15%">
+	            <span class="notification">Other Details</span>
+	        </td>
+	        <td width="85%">
+				The polymorphism was reported in the literature directly.  There was no corresponding newsletter.&nbsp;
+	        </td>
+	    </tr>
+	    
+		<span>
+		    <tr>
+		        <td width="15%">
+		            <span class="thead">Contributors</span>
+		        </td>
+		        <td width="85%">
+					&nbsp;&nbsp;
+					1991-12-30
+		        </td>
+		    </tr>
+		    <tr>
+		        <td width="15%">
+		            <span class="thead">Institute</span>
+		        </td>
+		        <td width="85%">
+					&nbsp;
+		        </td>
+		
+		    </tr>
+	    </span>
+	    <tr>
+	    
+		<span>
+	        <td width="15%">
+	            <span class="thead">Submitted Phenotype Details</span>
+	        </td>
+	        <td width="85%">
+				&nbsp;
+	        </td>
+		</span>
+	    </tr>
+	    <tr>
+	        <td width="15%" valign="top">
+	            <span class="thead">Reference</span>
+	        </td>
+	        <td width="85%">
+	            Chu et al. 1991&nbsp;
+	        </td>
+	    </tr>
+	</table>
+
+	
+	<br>
+	To check if there are any papers published about this mutation/variant on PubMed, please <a href="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?cmd=Search&amp;db=PubMed&amp;term=1342-12(GT)n" id="Any">click here.</a>
+	<br>
+	</td></tr>
+	
+	<tr><td width="100%">
+	<span id="If_5">
+	    <form method="post" action="/MutationDetailPage,$Form.direct" id="Form">
+<div style="display:none;" id="Formhidden"><input type="hidden" name="formids" value="Hidden,PropertySelection" />
+<input type="hidden" name="seedids" value="ZH4sIAAAAAAAAAE2NSw6CMBRFYeBOGDKgoonGOMBEExIHRhZgGqhahVfSViOuya25B18/sUx4515uej7faPKOongdr1LF5JPXLMnSnl7MqUXXC2CgLYOmHJhEVkwpLsBQj5+NkI3tqytrW1s0A54DvrLncEcsbvRVaaofCsORAe79qATUGkF5/qdTZrM7rpm6hoQmDzgLOHc7M9+2ioUfi4DLgMSbcr8fK8lIRrzfmAoYXDCunZBdkv0AUpKkaUYBAAA=" />
+<input type="hidden" name="submitmode" value="" />
+<input type="hidden" name="submitname" value="" />
+<input type="hidden" name="Hidden" id="Hidden" value="918" />
+</div>
+	        
+	
+	        <b>Literature referencing this mutation.  Sort by:&nbsp;</b><select name="PropertySelection" id="PropertySelection">
+<option value="0">Author</option>
+<option value="1">Publish Date</option>
+</select>
+	        <input type="submit"/>
+	        <br>
+	        Note: This reference list is not up-to-date at this stage, but may be searched for some rare variants without pubmed hits.
+	            <br>
+	            <br>
+	        <ul>
+	        <span id="For">
+	            <li type="disc">
+	            
+	              Abe T, Ouyang H, Migita T, Kato Y, Kimura M, Shiiba K, Sunamura M, Matsuno S, Horii A &nbsp;
+	              The somatic mutation frequency of the transforming growth factor beta receptor type II gene varies widely among different cancers with microsatellite instability. &nbsp;
+	              1996 010;22(5):474-7
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_0">
+	            <li type="disc">
+	            
+	              Adam RD, Aggarwal A, Lal AA, de La Cruz VF, McCutchan T, Nash TE &nbsp;
+	              Antigenic variation of a cysteine-rich protein in Giardia lamblia. &nbsp;
+	              1988 001 1;167(1):109-18
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_1">
+	            <li type="disc">
+	            
+	              Aharoni A, Baran N, Manor H &nbsp;
+	              Characterization of a multisubunit human protein which selectively binds single stranded d(GA)n and d(GT)n sequence repeats in DNA. &nbsp;
+	              1993 011 11;21(22):5221-8
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_2">
+	            <li type="disc">
+	            
+	              Ahearn JM, Bartolomei MS, West ML, Cisek LJ, Corden JL &nbsp;
+	              Cloning and sequence analysis of the mouse genomic locus encoding the largest subunit of RNA polymerase II. &nbsp;
+	              1987 008 5;262(22):10695-705
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_3">
+	            <li type="disc">
+	            
+	              Aline R, MacDonald G, Brown E, Allison J, Myler P, Rothwell V, Stuart K &nbsp;
+	              (TAA)n within sequences flanking several intrachromosomal variant surface glycoprotein genes in Trypanosoma brucei. &nbsp;
+	              1985 005 10;13(9):3161-77
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_4">
+	            <li type="disc">
+	            
+	              Ambady S, Mendiola JR, Louis CF, Janzen MA, Schook LB, Buoen L, Lunney JK, Grimm DR, Ponce de Leon FA &nbsp;
+	              Development and use of a microdissected swine chromosome 6 DNA library. &nbsp;
+	              1997;76(1-2):27-33
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_5">
+	            <li type="disc">
+	            <a id="GenericLink_0_5" href="http://www.molbiolevol.org/cgi/pmidlookup?view=full&amp;pmid=11110909">
+	              Angers B, Estoup A, Jarne P &nbsp;
+	              Microsatellite size homoplasy, SSCP, and population structure: a case study in the freshwater snail Bulinus truncatus. &nbsp;
+	              2000 012;17(12):1926-32
+	            </a>
+	            <br>
+	            </li>
+	        </span><span id="For_6">
+	            <li type="disc">
+	            
+	              Antonarakis SE, Blouin JL, Maher J, Avramopoulos D, Thomas G, Talbot CC &nbsp;
+	              Maternal uniparental disomy for human chromosome 14, due to loss of a chromosome 14 from somatic cells with t(13;14) trisomy 14. &nbsp;
+	              1993 006;52(6):1145-52
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_7">
+	            <li type="disc">
+	            
+	              Areshchenkova T, Ganal MW &nbsp;
+	              Long tomato microsatellites are predominantly associated with centromeric regions. &nbsp;
+	              1999 006;42(3):536-44
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_8">
+	            <li type="disc">
+	            <a id="GenericLink_0_8" href="http://www.genome.org/cgi/pmidlookup?view=full&amp;pmid=10958629">
+	              Arnold R, Maueler W, Bassili G, Lutz M, Burke L, Epplen TJ, Renkawitz R &nbsp;
+	              The insulator protein CTCF represses transcription on binding to the (gt)(22)(ga)(15) microsatellite in intron 2 of the HLA-DRB1(*)0401 gene. &nbsp;
+	              2000 008 8;253(2):209-14
+	            </a>
+	            <br>
+	            </li>
+	        </span><span id="For_9">
+	            <li type="disc">
+	            <a id="GenericLink_0_9" href="http://link.springer-ny.com/link/service/journals/00415/bibs/0247001/02470052.htm">
+	              Arrufat FJ, Diaz R, Queralt R, Navarro V, Marcos T, Massana G, Massana J, Ballesta F, Oliva R &nbsp;
+	              Analysis of the polymorphic (GT)(n) repeat at the dopamine beta-hydroxylase gene in Spanish patients affected by schizophrenia. &nbsp;
+	              2000 002 7;96(1):88-92
+	            </a>
+	            <br>
+	            </li>
+	        </span><span id="For_10">
+	            <li type="disc">
+	            <a id="GenericLink_0_10" href="http://hyper.ahajournals.org/cgi/pmidlookup?view=full&amp;pmid=9314412">
+	              Atwood LD, Kammerer CM, Samollow PB, Hixson JE, Shade RE, MacCluer JW &nbsp;
+	              Linkage of essential hypertension to the angiotensinogen locus in Mexican Americans. &nbsp;
+	              1997 009;30(3 Pt 1):326-30
+	            </a>
+	            <br>
+	            </li>
+	        </span><span id="For_11">
+	            <li type="disc">
+	            <a id="GenericLink_0_11" href="http://www.molbiolevol.org/cgi/pmidlookup?view=full&amp;pmid=10958844">
+	              Bachtrog D, Agis M, Imhof M, Schlotterer C &nbsp;
+	              Microsatellite variability differs between dinucleotide repeat motifs-evidence from Drosophila melanogaster. &nbsp;
+	              2000 009;17(9):1277-85
+	            </a>
+	            <br>
+	            </li>
+	        </span><span id="For_12">
+	            <li type="disc">
+	            
+	              Baiborodin SI, Baricheva EM, Bogachev SS, Borisevich IV, Strotz OV, Filippova MA, Sharakhov IV, Shilov AG &nbsp;
+	              A molecular and cytogenetic analysis of lambda 20p7 fragment DNA from the proximal beta-heterochromatin of Drosophila melanogaster. &nbsp;
+	              1993 012 8;134(2):175-81
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_13">
+	            <li type="disc">
+	            
+	              Ball AO, Leonard S, Chapman RW &nbsp;
+	              Charaterization of (GT)n microsatellites from native white shrimp (Penaeus setiferus). &nbsp;
+	              1998 009;7(9):1251-3
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_14">
+	            <li type="disc">
+	            
+	              Bell GI &nbsp;
+	              Evolution of simple sequence repeats. &nbsp;
+	              1996 003;20(1):41-8
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_15">
+	            <li type="disc">
+	            <a id="GenericLink_0_15" href="http://www.idealibrary.com/links/citation/0003-2697/251/251">
+	              Belotserkovskii BP, Johnston BH &nbsp;
+	              Denaturation and association of DNA sequences by certain polypropylene surfaces. &nbsp;
+	              1997 009 5;251(2):251-62
+	            </a>
+	            <br>
+	            </li>
+	        </span><span id="For_16">
+	            <li type="disc">
+	            
+	              Bergstrom TF, Engkvist H, Erlandsson R, Josefsson A, Mack SJ, Erlich HA, Gyllensten U &nbsp;
+	              Tracing the origin of HLA-DRB1 alleles by microsatellite polymorphism. &nbsp;
+	              1999 006;64(6):1709-18
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_17">
+	            <li type="disc">
+	            
+	              Bhattacharyya D, Kundu S, Thakur AR, Majumdar R &nbsp;
+	              Sequence directed flexibility of DNA and the role of cross-strand hydrogen bonds. &nbsp;
+	              1999 010;17(2):289-300
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_18">
+	            <li type="disc">
+	            <a id="GenericLink_0_18" href="http://nar.oupjournals.org/cgi/pmidlookup?view=full&amp;pmid=9862985">
+	              Biet E, Sun J, Dutreix M &nbsp;
+	              Conserved sequence preference in DNA binding among recombination proteins: an effect of ssDNA secondary structure. &nbsp;
+	              1999 001 15;27(2):596-600
+	            </a>
+	            <br>
+	            </li>
+	        </span><span id="For_19">
+	            <li type="disc">
+	            
+	              Bishop DF, Kornreich R, Desnick RJ &nbsp;
+	              Structural organization of the human alpha-galactosidase A gene: further evidence for the absence of a 3' untranslated region. &nbsp;
+	              1988 006;85(11):3903-7
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_20">
+	            <li type="disc">
+	            <a id="GenericLink_0_20" href="http://www.jbc.org/cgi/pmidlookup?view=full&amp;pmid=8626607">
+	              Bouziane M, Cherny DI, Mouscadet JF, Auclair C &nbsp;
+	              Alternate strand DNA triple helix-mediated inhibition of HIV-1 U5 long terminal repeat integration in vitro. &nbsp;
+	              1996 004 26;271(17):10359-64
+	            </a>
+	            <br>
+	            </li>
+	        </span><span id="For_21">
+	            <li type="disc">
+	            
+	              Bozhenok LN, Vlasov VV, Chernolovskaia EL, Ivanova EM, Kobets ND &nbsp;
+	              [Chemical modification of eukaryotic cell chromatin, directed at d(GT)n-repeats of DNA]. &nbsp;
+	              1998 012;24(12):916-9
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_22">
+	            <li type="disc">
+	            <a id="GenericLink_0_22" href="http://www.pnas.org/cgi/pmidlookup?view=full&amp;pmid=9927657">
+	              Breckenridge DG, Watanabe Y, Greenwood SJ, Gray MW, Schnare MN &nbsp;
+	              U1 small nuclear RNA and spliceosomal introns in Euglena gracilis. &nbsp;
+	              1999 002 2;96(3):852-6
+	            </a>
+	            <br>
+	            </li>
+	        </span><span id="For_23">
+	            <li type="disc">
+	            
+	              Burk CD, Newman PJ, Lyman S, Gill J, Coller BS, Poncz M &nbsp;
+	              A deletion in the gene for glycoprotein IIb associated with Glanzmann's thrombasthenia. &nbsp;
+	              1991 001;87(1):270-6
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_24">
+	            <li type="disc">
+	            <a id="GenericLink_0_24" href="http://www.blackwell-synergy.com/rd.asp?abbrev=Insect%20Mol%20Biol&amp;vol=9&amp;page=375&amp;goto=abstract">
+	              Butcher RD, Hubbard SF, Whitfield WG &nbsp;
+	              Microsatellite frequency and size variation in the parthenogenetic parasitic wasp Venturia canescens (Gravenhorst) (Hymenoptera: Ichneumonidae). &nbsp;
+	              2000 008;9(4):375-84
+	            </a>
+	            <br>
+	            </li>
+	        </span><span id="For_25">
+	            <li type="disc">
+	            
+	              Caumont A, Jamieson G, de Soultrait VR, Parissi V, Fournier M, Zakharova OD, Bayandin R, Litvak S, Tarrago-Litvak L, Nevinsky GA &nbsp;
+	              High affinity interaction of HIV-1 integrase with specific and non-specific single-stranded short oligonucleotides. &nbsp;
+	              1999 007 16;455(1-2):154-8
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_26">
+	            <li type="disc">
+	            
+	              Cazeneuve C, Beldjord C, Kaplan JC, Bienvenu T &nbsp;
+	              Diagnostic usefulness of the polymorphism of the GT dinucleotide and the polythymidine tract in intron 8 of the cystic fibrosis transmembrane conductance regulator (CFTR) gene. &nbsp;
+	              1995;38(4):202-5
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_27">
+	            <li type="disc">
+	            
+	              Charmley P, Concannon P &nbsp;
+	              Polymorphism and phylogeny of dinucleotide repeats in human T-cell receptor Vb6 genes. &nbsp;
+	              1993;38(2):92-7
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_28">
+	            <li type="disc">
+	            <a id="GenericLink_0_28" href="http://www.idealibrary.com/links/citation/0888-7543/41/193">
+	              Chen H, Rossier C, Nakamura Y, Lynn A, Chakravarti A, Antonarakis SE &nbsp;
+	              Cloning of a novel homeobox-containing gene, PKNOX1, and mapping to human chromosome 21q22.3. &nbsp;
+	              1997 004 15;41(2):193-200
+	            </a>
+	            <br>
+	            </li>
+	        </span><span id="For_29">
+	            <li type="disc">
+	            
+	              Chiou CS, Chen HT, Chang WC &nbsp;
+	              The complete nucleotide sequence of the growth-hormone gene from the common carp (Cyprinus carpio). &nbsp;
+	              1990 009 10;1087(1):91-4
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_30">
+	            <li type="disc">
+	            
+	              Choi IY, Chung IK, Muller MT &nbsp;
+	              Eukaryotic topoisomerase II cleavage is independent of duplex DNA conformation. &nbsp;
+	              1995 011 7;1264(2):209-14
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_31">
+	            <li type="disc">
+	            
+	              Cobianchi F, SenGupta DN, Zmudzka BZ, Wilson SH &nbsp;
+	              Structure of rodent helix-destabilizing protein revealed by cDNA cloning. &nbsp;
+	              1986 003 15;261(8):3536-43
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_32">
+	            <li type="disc">
+	            <a id="GenericLink_0_32" href="http://www.idealibrary.com/links/citation/0888-7543/29/390">
+	              Comings DE, Muhleman D, Dietz G, Sherman M, Forest GL &nbsp;
+	              Sequence of human tryptophan 2,3-dioxygenase (TDO2): presence of a glucocorticoid response-like element composed of a GTT repeat and an intronic CCCCT repeat. &nbsp;
+	              1995 009 20;29(2):390-6
+	            </a>
+	            <br>
+	            </li>
+	        </span><span id="For_33">
+	            <li type="disc">
+	            
+	              Condit R, Hubbell SP &nbsp;
+	              Abundance and DNA sequence of two-base repeat regions in tropical tree genomes. &nbsp;
+	              1991 002;34(1):66-71
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_34">
+	            <li type="disc">
+	            
+	              Crouau-Roy B &nbsp;
+	              Trans-speciation maintenance in the MHC region of a polymorphism which includes a polymorphic dinucleotide locus, and the de novo arisal of a polymorphic tetranucleotide microsatellite. &nbsp;
+	              1999 012;54(6):560-4
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_35">
+	            <li type="disc">
+	            <a id="GenericLink_0_35" href="http://www.cell.com/cgi/content/abstract/54/7/931">
+	              Davidson I, Xiao JH, Rosales R, Staub A, Chambon P &nbsp;
+	              The HeLa cell protein TEF-1 binds specifically and cooperatively to two SV40 enhancer motifs of unrelated sequence. &nbsp;
+	              1988 009 23;54(7):931-42
+	            </a>
+	            <br>
+	            </li>
+	        </span><span id="For_36">
+	            <li type="disc">
+	            <a id="GenericLink_0_36" href="http://www.cell.com/cgi/content/abstract/25/2/399">
+	              Dawid IB, Long EO, DiNocera PP, Pardue ML &nbsp;
+	              Ribosomal insertion-like elements in Drosophila melanogaster are interspersed with mobile sequences. &nbsp;
+	              1981 008;25(2):399-408
+	            </a>
+	            <br>
+	            </li>
+	        </span><span id="For_37">
+	            <li type="disc">
+	            
+	              Degen SJ, Davie EW &nbsp;
+	              Nucleotide sequence of the gene for human prothrombin. &nbsp;
+	              1987 009 22;26(19):6165-77
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_38">
+	            <li type="disc">
+	            
+	              Dhawan P, Yang E, Kumar A, Mehta KD &nbsp;
+	              Genetic complexity of the human geranylgeranyltransferase I beta-subunit gene: a multigene family of pseudogenes derived from mis-spliced transcripts. &nbsp;
+	              1998 003 27;210(1):9-15
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_39">
+	            <li type="disc">
+	            <a id="GenericLink_0_39" href="http://www.nature.com/uidfinder/10.1038/83660">
+	              Di Palma F, Holme RH, Bryda EC, Belyantseva IA, Pellegrino R, Kachar B, Steel KP, Noben-Trauth K &nbsp;
+	              Mutations in Cdh23, encoding a new type of cadherin, cause stereocilia disorganization in waltzer, the mouse model for Usher syndrome type 1D. &nbsp;
+	              2001 001;27(1):103-7
+	            </a>
+	            <br>
+	            </li>
+	        </span><span id="For_40">
+	            <li type="disc">
+	            
+	              Dierick HA, Ambrosini L, Spencer J, Glover TW, Mercer JF &nbsp;
+	              Molecular structure of the Menkes disease gene (ATP7A). &nbsp;
+	              1995 008 10;28(3):462-9
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_41">
+	            <li type="disc">
+	            <a id="GenericLink_0_41" href="http://www.idealibrary.com/links/citation/0888-7543/46/240">
+	              Domingo-Roura X, Lopez-Giraldez T, Shinohara M, Takenaka O &nbsp;
+	              Hypervariable microsatellite loci in the Japanese macaque (Macaca fuscata) conserved in related species. &nbsp;
+	              1997;43(4):357-60
+	            </a>
+	            <br>
+	            </li>
+	        </span><span id="For_42">
+	            <li type="disc">
+	            <a id="GenericLink_0_42" href="http://www.portlandpress.co.uk/bj/293/0329/bj2930329.htm">
+	              Dufosse J, Porchet N, Audie JP, Guyonnet Duperat V, Laine A, Van-Seuningen I, Marrakchi S, Degand P, Aubert JP &nbsp;
+	              Degenerate 87-base-pair tandem repeats create hydrophilic/hydrophobic alternating domains in human mucin peptides mapped to 11p15. &nbsp;
+	              1993 007 15;293 ( Pt 2):329-37
+	            </a>
+	            <br>
+	            </li>
+	        </span><span id="For_43">
+	            <li type="disc">
+	            <a id="GenericLink_0_43" href="http://www.idealibrary.com/links/citation/0022-2836/273/105">
+	              Dutreix M &nbsp;
+	              (GT)n repetitive tracts affect several stages of RecA-promoted recombination. &nbsp;
+	              1997 010 17;273(1):105-13
+	            </a>
+	            <br>
+	            </li>
+	        </span><span id="For_44">
+	            <li type="disc">
+	            <a id="GenericLink_0_44" href="http://nar.oupjournals.org/cgi/pmidlookup?view=full&amp;pmid=10908342">
+	              Eckert KA, Yan G &nbsp;
+	              Mutational analyses of dinucleotide and tetranucleotide microsatellites in Escherichia coli: influence of sequence on expansion mutagenesis. &nbsp;
+	              2000 007 15;28(14):2831-8
+	            </a>
+	            <br>
+	            </li>
+	        </span><span id="For_45">
+	            <li type="disc">
+	            
+	              Ellegren H &nbsp;
+	              Abundant (A)n.(T)n mononucleotide repeats in the pig genome: linkage mapping of the porcine APOB, FSA, ALOX12, PEPN and RLN loci. &nbsp;
+	              1993 010;24(5):367-72
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_46">
+	            <li type="disc">
+	            
+	              Ender A, Schwenk K, Stadler T, Streit B, Schierwater B &nbsp;
+	              RAPD identification of microsatellites in Daphnia. &nbsp;
+	              1996 006;5(3):437-41
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_47">
+	            <li type="disc">
+	            
+	              Epp TA, Dixon IM, Wang HY, Sole MJ, Liew CC &nbsp;
+	              Structural organization of the human cardiac alpha-myosin heavy chain gene (MYH6). &nbsp;
+	              1993 012;18(3):505-9
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_48">
+	            <li type="disc">
+	            
+	              Epplen C, Melmer G, Siedlaczck I, Schwaiger FW, Maueler W, Epplen JT &nbsp;
+	              On the essence of "meaningless" simple repetitive DNA in eukaryote genomes. &nbsp;
+	              1993;67:29-45
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_49">
+	            <li type="disc">
+	            <a id="GenericLink_0_49" href="http://chemse.oupjournals.org/cgi/pmidlookup?view=reprint&amp;pmid=7495783">
+	              Epplen C, Rumpf H, Albert E, Haas P, Truckenbrodt H, Epplen JT &nbsp;
+	              Immunoprinting excludes many potential susceptibility genes as predisposing to early onset pauciarticular juvenile chronic arthritis except HLA class II and TNF. &nbsp;
+	              1995 008;22(4):311-22
+	            </a>
+	            <br>
+	            </li>
+	        </span><span id="For_50">
+	            <li type="disc">
+	            <a id="GenericLink_0_50" href="http://link.springer-ny.com/link/service/journals/00439/bibs/7099003/70990399.htm">
+	              Epplen C, Santos EJ, Guerreiro JF, van Helden P, Epplen JT &nbsp;
+	              Coding versus intron variability: extremely polymorphic HLA-DRB1 exons are flanked by specific composite microsatellites, even in distant populations. &nbsp;
+	              1997 003;99(3):399-406
+	            </a>
+	            <br>
+	            </li>
+	        </span><span id="For_51">
+	            <li type="disc">
+	            
+	              Epplen C, Santos EJ, Maueler W, van Helden P, Epplen JT &nbsp;
+	              On simple repetitive DNA sequences and complex diseases. &nbsp;
+	              1997 008;18(9):1577-85
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_52">
+	            <li type="disc">
+	            
+	              Epplen JT, Ammer H, Epplen C, Kammerbauer C, Mitreiter R, Roewer L, Schwaiger W, Steimle V, Zischler H, Albert E, et al &nbsp;
+	              Oligonucleotide fingerprinting using simple repeat motifs: a convenient, ubiquitously applicable method to detect hypervariability for multiple purposes. &nbsp;
+	              1991;58:50-69
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_53">
+	            <li type="disc">
+	            
+	              Epplen JT, Kyas A, Maueler W &nbsp;
+	              Genomic simple repetitive DNAs are targets for differential binding of nuclear proteins. &nbsp;
+	              1996 006 24;389(1):92-5
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_54">
+	            <li type="disc">
+	            
+	              Estoup A, Solignac M, Harry M, Cornuet JM &nbsp;
+	              Characterization of (GT)n and (CT)n microsatellites in two insect species: Apis mellifera and Bombus terrestris. &nbsp;
+	              1993 003 25;21(6):1427-31
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_55">
+	            <li type="disc">
+	            
+	              Farber RA, Petes TD, Dominska M, Hudgens SS, Liskay RM &nbsp;
+	              Instability of simple sequence repeats in a mammalian cell line. &nbsp;
+	              1994 002;3(2):253-6
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_56">
+	            <li type="disc">
+	            
+	              Fields CA, Grady DL, Moyzis RK &nbsp;
+	              The human THE-LTR(O) and MstII interspersed repeats are subfamilies of a single widely distributed highly variable repeat family. &nbsp;
+	              1992 006;13(2):431-6
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_57">
+	            <li type="disc">
+	            <a id="GenericLink_0_57" href="http://link.springer-ny.com/link/service/journals/00335/bibs/7n1p37.html">
+	              Fischer PE, Holmes NG, Dickens HF, Thomas R, Binns MM, Nacheva EP &nbsp;
+	              The application of FISH techniques for physical mapping in the dog (Canis familiaris). &nbsp;
+	              1996 001;7(1):37-41
+	            </a>
+	            <br>
+	            </li>
+	        </span><span id="For_58">
+	            <li type="disc">
+	            
+	              Flavin N, Heriz A, Monteagudo LV, Ennis S, Martin F, Barendse W, Arruga MV, Rogers M &nbsp;
+	              Cloning of the bovine activin receptor type II gene (ACVR2) and mapping to chromosome 2 (BTA2). &nbsp;
+	              1996;75(1):25-9
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_59">
+	            <li type="disc">
+	            
+	              Fries R, Eggen A, Stranzinger G &nbsp;
+	              The bovine genome contains polymorphic microsatellites. &nbsp;
+	              1990 010;8(2):403-6
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_60">
+	            <li type="disc">
+	            <a id="GenericLink_0_60" href="http://www.cell.com/cgi/content/abstract/54/7/943">
+	              Fromental C, Kanno M, Nomiyama H, Chambon P &nbsp;
+	              Cooperativity and hierarchical levels of functional organization in the SV40 enhancer. &nbsp;
+	              1988 009 23;54(7):943-53
+	            </a>
+	            <br>
+	            </li>
+	        </span><span id="For_61">
+	            <li type="disc">
+	            
+	              Fujiwara Y, Hoon DS &nbsp;
+	              Microsatellite analysis of melanoma lesions using (CA)13 oligonucleotides as an internal probe. &nbsp;
+	              2000 010;17(4):783-7
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_62">
+	            <li type="disc">
+	            
+	              Fung WP, Thomas T, Dickson PW, Aldred AR, Milland J, Dziadek M, Power B, Hudson P, Schreiber G &nbsp;
+	              Structure and expression of the rat transthyretin (prealbumin) gene. &nbsp;
+	              1988 001 5;263(1):480-8
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_63">
+	            <li type="disc">
+	            <a id="GenericLink_0_63" href="http://journals.bmn.com/search/site?search_action=resolve&amp;uid_type=elecref&amp;uid=ivp_13601385_4_210_iam_fulltext">
+	              Furuta K, Misao S, Takahashi K, Tagaya T, Fukuzawa Y, Ishikawa T, Yoshioka K, Kakumu S &nbsp;
+	              Gene mutation of transforming growth factor beta1 type II receptor in hepatocellular carcinoma. &nbsp;
+	              1999 006 11;81(6):851-3
+	            </a>
+	            <br>
+	            </li>
+	        </span><span id="For_64">
+	            <li type="disc">
+	            
+	              Gambari R, Volinia S, Nesti C, Scapoli C, Barrai I &nbsp;
+	              A set of Alu-free frequent decamers from mammalian genomes enriched in transcription factor signals. &nbsp;
+	              1994 009;10(5):501-8
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_65">
+	            <li type="disc">
+	            
+	              Gao JZ, Erickson P, Patterson D, Jones C, Drabkin H &nbsp;
+	              Isolation and regional mapping of NotI and EagI clones from human chromosome 21. &nbsp;
+	              1991 005;10(1):166-72
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_66">
+	            <li type="disc">
+	            <a id="GenericLink_0_66" href="http://www.pnas.org/cgi/pmidlookup?view=reprint&amp;pmid=7910962">
+	              Garchon HJ, Djabiri F, Viard JP, Gajdos P, Bach JF &nbsp;
+	              Involvement of human muscle acetylcholine receptor alpha-subunit gene (CHRNA) in susceptibility to myasthenia gravis. &nbsp;
+	              1994 005 24;91(11):4668-72
+	            </a>
+	            <br>
+	            </li>
+	        </span><span id="For_67">
+	            <li type="disc">
+	            <a id="GenericLink_0_67" href="http://www.genesdev.org/cgi/pmidlookup?view=full&amp;pmid=10817760">
+	              Gendrel CG, Boulet A, Dutreix M &nbsp;
+	              (CA/GT)(n) microsatellites affect homologous recombination during yeast meiosis. &nbsp;
+	              2000 005 15;14(10):1261-8
+	            </a>
+	            <br>
+	            </li>
+	        </span><span id="For_68">
+	            <li type="disc">
+	            
+	              Giraldo R, Rhodes D &nbsp;
+	              The yeast telomere-binding protein RAP1 binds to and promotes the formation of DNA quadruplexes in telomeric DNA. &nbsp;
+	              1994 005 15;13(10):2411-20
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_69">
+	            <li type="disc">
+	            
+	              Gomolka M, Hundrieser J, Nurnberg P, Roewer L, Epplen JT, Epplen C &nbsp;
+	              Selected di- and tetranucleotide microsatellites from chromosomes 7, 12, 14, and Y in various Eurasian populations. &nbsp;
+	              1994 005;93(5):592-6
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_70">
+	            <li type="disc">
+	            
+	              Gonzalez-Zulueta M, Ruppert JM, Tokino K, Tsai YC, Spruck CH, Miyao N, Nichols PW, Hermann GG, Horn T, Steven K, et al &nbsp;
+	              Microsatellite instability in bladder cancer. &nbsp;
+	              1993 012 1;53(23):5620-3
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_71">
+	            <li type="disc">
+	            
+	              Gorlin JB &nbsp;
+	              Identification of (CA/GT)n polymorphisms within the X-linked chronic granulomatous disease (X-CGD) gene: utility for prenatal diagnosis. &nbsp;
+	              1998 003-004;20(2):112-9
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_72">
+	            <li type="disc">
+	            <a id="GenericLink_0_72" href="http://cdli.asm.org/cgi/pmidlookup?view=reprint&amp;pmid=9008286">
+	              Greenberg SJ, Fujihara K, Selkirk SM, Yu F, Du TL, Glenister N, Hohmann P, Rickert MH, Spence PO, Miller CE, Jacobs LD &nbsp;
+	              Novel compound tetra-, dinucleotide microsatellite polymorphism in the tumor necrosis factor/lymphotoxin locus. &nbsp;
+	              1997 001;4(1):79-84
+	            </a>
+	            <br>
+	            </li>
+	        </span><span id="For_73">
+	            <li type="disc">
+	            
+	              Grossman GL, Cornel AJ, Rafferty CS, Robertson HM, Collins FH &nbsp;
+	              Tsessebe, Topi and Tiang: three distinct Tc1-like transposable elements in the malaria vector, Anopheles gambiae. &nbsp;
+	              1999;105(1):69-80
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_74">
+	            <li type="disc">
+	            
+	              Gullberg A, Tegelstrom H, Olsson M &nbsp;
+	              Microsatellites in the sand lizard (Lacerta agilis): description, variation, inheritance, and applicability. &nbsp;
+	              1997 008;35(7-8):281-95
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_75">
+	            <li type="disc">
+	            <a id="GenericLink_0_75" href="http://biophys.annualreviews.org/cgi/pmidlookup?view=full&amp;pmid=7774040">
+	              Guzzetta V, Santoro L, Gasparo-Rippa P, Ragno M, Vita G, Caruso G, Andria G &nbsp;
+	              Charcot-Marie-Tooth disease: molecular characterization of patients from central and southern Italy. &nbsp;
+	              1995 001;47(1):27-32
+	            </a>
+	            <br>
+	            </li>
+	        </span><span id="For_76">
+	            <li type="disc">
+	            
+	              Haas MW, Ramanujam P, Chandrasekharappa SC, Subramanian KN &nbsp;
+	              Sequence requirements for activation of replication by the SV40 transcriptional promoter or enhancer elements. &nbsp;
+	              1991 001;180(1):41-8
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_77">
+	            <li type="disc">
+	            <a id="GenericLink_0_77" href="http://link.springer-ny.com/link/service/journals/00294/bibs/8034002/80340088.htm">
+	              Hamann A, Osiewacz HD &nbsp;
+	              Genome analysis of filamentous fungi: identification and characterization of an unusual GT-rich minisatellite in the ascomycete Podospora anserina. &nbsp;
+	              1998 008;34(2):88-92
+	            </a>
+	            <br>
+	            </li>
+	        </span><span id="For_78">
+	            <li type="disc">
+	            
+	              Harbitz I, Chowdhary BP, Kran S, Davies W &nbsp;
+	              Characterization of a porcine glucosephosphate isomerase-processed pseudogene at chromosome 1q1.6-1.7. &nbsp;
+	              1993;4(10):589-92
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_79">
+	            <li type="disc">
+	            <a id="GenericLink_0_79" href="http://www.idealibrary.com/links/citation/0006-291X/272/36">
+	              Hata R, Akai J, Kimura A, Ishikawa O, Kuwana M, Shinkai H &nbsp;
+	              Association of functional microsatellites in the human type I collagen alpha2 chain (COL1A2) gene with systemic sclerosis. &nbsp;
+	              2000 005 27;272(1):36-40
+	            </a>
+	            <br>
+	            </li>
+	        </span><span id="For_80">
+	            <li type="disc">
+	            <a id="GenericLink_0_80" href="http://www.cell.com/cgi/content/abstract/83/4/539">
+	              Heale SM, Petes TD &nbsp;
+	              The stabilization of repetitive tracts of DNA by variant repeats requires a functional DNA mismatch repair system. &nbsp;
+	              1995 011 17;83(4):539-45
+	            </a>
+	            <br>
+	            </li>
+	        </span><span id="For_81">
+	            <li type="disc">
+	            <a id="GenericLink_0_81" href="http://www.idealibrary.com/links/citation/0006-291X/272/36">
+	              Heide E, Heide KG, Rodewald A &nbsp;
+	              Maternal uniparental disomy (UPD) for chromosome 2 discovered by exclusion of paternity. &nbsp;
+	              2000 006 5;92(4):260-3
+	            </a>
+	            <br>
+	            </li>
+	        </span><span id="For_82">
+	            <li type="disc">
+	            
+	              Heidenreich R, Eisman R, Surrey S, Delgrosso K, Bennett JS, Schwartz E, Poncz M &nbsp;
+	              Organization of the gene for platelet glycoprotein IIb. &nbsp;
+	              1990 002 6;29(5):1232-44
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_83">
+	            <li type="disc">
+	            
+	              Henderson ST, Petes TD &nbsp;
+	              Instability of simple sequence DNA in Saccharomyces cerevisiae. &nbsp;
+	              1992 006;12(6):2749-57
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_84">
+	            <li type="disc">
+	            <a id="GenericLink_0_84" href="http://www.pnas.org/cgi/pmidlookup?view=reprint&amp;pmid=7568085">
+	              Henze K, Badr A, Wettern M, Cerff R, Martin W &nbsp;
+	              A nuclear gene of eubacterial origin in Euglena gracilis reflects cryptic endosymbioses during protist evolution. &nbsp;
+	              1995 009 26;92(20):9122-6
+	            </a>
+	            <br>
+	            </li>
+	        </span><span id="For_85">
+	            <li type="disc">
+	            
+	              Hermans PW, van Soolingen D, van Embden JD &nbsp;
+	              Characterization of a major polymorphic tandem repeat in Mycobacterium tuberculosis and its potential use in the epidemiology of Mycobacterium kansasii and Mycobacterium gordonae. &nbsp;
+	              1992 006;174(12):4157-65
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_86">
+	            <li type="disc">
+	            
+	              Heyer B, Schmidtke J, Stuhrmann M &nbsp;
+	              Analysis of microsatellite DNA using a non-radioactive method: blotting from polyacrylamide gel to nylon membrane using a gel dryer with subsequent hybridization to digoxigenin-labelled (dCdA)8 oligonucleotide probes. &nbsp;
+	              1994 004;8(2):181-3
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_87">
+	            <li type="disc">
+	            <a id="GenericLink_0_87" href="http://link.springer-ny.com/link/service/journals/00335/bibs/0011012/00111053.html">
+	              Higashi M, Kobayashi K, Iijima M, Wakana S, Horiuchi M, Yasuda T, Yoshida G, Kanmura Y, Saheki T &nbsp;
+	              Genomic organization and mapping of mouse CDV (carnitine deficiency-associated gene expressed in ventricle)-1 and its related CDV-1R gene. &nbsp;
+	              2000 012;11(12):1053-7
+	            </a>
+	            <br>
+	            </li>
+	        </span><span id="For_88">
+	            <li type="disc">
+	            
+	              Hile SE, Yan G, Eckert KA &nbsp;
+	              Somatic mutation rates and specificities at TC/AG and GT/CA microsatellite sequences in nontumorigenic human lymphoblastoid cells. &nbsp;
+	              2000 003 15;60(6):1698-703
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_89">
+	            <li type="disc">
+	            
+	              Hinds HL, Hendriks RW, Craig IW, Chen ZY &nbsp;
+	              Characterization of a highly polymorphic region near the first exon of the human MAOA gene containing a GT dinucleotide and a novel VNTR motif. &nbsp;
+	              1992 007;13(3):896-7
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_90">
+	            <li type="disc">
+	            
+	              Hirano T, Nakane S, Mizoshita K, Yamakuchi H, Inoue-Murayama M, Watanabe T, Barendse W, Sugimoto Y &nbsp;
+	              Characterization of 42 highly polymorphic bovine microsatellite markers. &nbsp;
+	              1996 010;27(5):365-8
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_91">
+	            <li type="disc">
+	            
+	              Hoekstra R, Criado-Fornelio A, Fakkeldij J, Bergman J, Roos MH &nbsp;
+	              Microsatellites of the parasitic nematode Haemonchus contortus: polymorphism and linkage with a direct repeat. &nbsp;
+	              1997 010;89(1):97-107
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_92">
+	            <li type="disc">
+	            
+	              Hofmann A, Korge G &nbsp;
+	              Upstream sequences of dosage-compensated and non-compensated alleles of the larval secretion protein gene Sgs-4 in Drosophila. &nbsp;
+	              1987;96(1):1-7
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_93">
+	            <li type="disc">
+	            
+	              Honchel R, McDonnell S, Schaid DJ, Thibodeau SN &nbsp;
+	              Tumor necrosis factor-alpha allelic frequency and chromosome 6 allelic imbalance in patients with colorectal cancer. &nbsp;
+	              1996 001 1;56(1):145-9
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_94">
+	            <li type="disc">
+	            
+	              Hong SB, Kim SJ, Noh MJ, Lee YM, Kim Y, Yoo OJ &nbsp;
+	              Identification of the transcription termination site of the mouse nkx-1.2 gene: involvement of sequence-specific factors. &nbsp;
+	              1997 010 1;198(1-2):373-8
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_95">
+	            <li type="disc">
+	            
+	              Hradetzky D, Strebhardt K, Rubsamen-Waigmann H &nbsp;
+	              The genomic locus of the human hemopoietic-specific cell protein tyrosine kinase (PTK)-encoding gene (HCK) confirms conservation of exon-intron structure among human PTKs of the src family. &nbsp;
+	              1992 004 15;113(2):275-80
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_96">
+	            <li type="disc">
+	            
+	              Hudson DL, Weiland KL, Dooley TP, Simon M, Watt FM &nbsp;
+	              Characterisation of eight monoclonal antibodies to involucrin. &nbsp;
+	              1992 006;11(3):367-79
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_97">
+	            <li type="disc">
+	            
+	              Huttel B, Winter P, Weising K, Choumane W, Weigand F, Kahl G &nbsp;
+	              Sequence-tagged microsatellite site markers for chickpea (Cicer arietinum L.). &nbsp;
+	              1999 004;42(2):210-7
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_98">
+	            <li type="disc">
+	            <a id="GenericLink_0_98" href="http://www.pnas.org/cgi/pmidlookup?view=reprint&amp;pmid=1608945">
+	              Igarashi M, Nagata A, Toh H, Urade Y, Hayaishi O &nbsp;
+	              Structural organization of the gene for prostaglandin D synthase in the rat brain. &nbsp;
+	              1992 006 15;89(12):5376-80
+	            </a>
+	            <br>
+	            </li>
+	        </span><span id="For_99">
+	            <li type="disc">
+	            
+	              Imgrund J, Groth D, Wetherall J &nbsp;
+	              Genetic analysis of the freshwater crayfish Cherax tenuimanus. &nbsp;
+	              1997 008;18(9):1660-5
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_100">
+	            <li type="disc">
+	            
+	              Ishii Y, Zhu ZB, Macon KJ, Volanakis JE &nbsp;
+	              Structure of the human C2 gene. &nbsp;
+	              1993 007 1;151(1):170-4
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_101">
+	            <li type="disc">
+	            
+	              Izumoto S, Arita N, Ohnishi T, Hiraga S, Taki T, Tomita N, Ohue M, Hayakawa T &nbsp;
+	              Microsatellite instability and mutated type II transforming growth factor-beta receptor gene in gliomas. &nbsp;
+	              1997 001 30;112(2):251-6
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_102">
+	            <li type="disc">
+	            
+	              Jacobson DP, Schmeling P, Sommer SS &nbsp;
+	              Characterization of the patterns of polymorphism in a "cryptic repeat" reveals a novel type of hypervariable sequence. &nbsp;
+	              1993 008;53(2):443-50
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_103">
+	            <li type="disc">
+	            
+	              Janecek LL, Longmire JL, Wichman HA, Baker RJ &nbsp;
+	              Genome organization of repetitive elements in the rodent, Peromyscus leucopus. &nbsp;
+	              1993;4(7):374-81
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_104">
+	            <li type="disc">
+	            
+	              Janel N, Schwachtgen JL, Bakhshi MR, Barek L, Meyer D, Kerbiriou-Nabias D &nbsp;
+	              Comparison of the 5'-flanking sequences of the human and bovine von Willebrand factor-encoding genes reveals alternation of highly homologous domains with species-specific Alu-type repeats. &nbsp;
+	              1995 012 29;167(1-2):291-5
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_105">
+	            <li type="disc">
+	            
+	              Jhiang SM, Riggs AF &nbsp;
+	              The structure of the gene encoding chain c of the hemoglobin of the earthworm, Lumbricus terrestris. &nbsp;
+	              1989 011 15;264(32):19003-8
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_106">
+	            <li type="disc">
+	            <a id="GenericLink_0_106" href="http://www.catchword.com/rpsv/cgi-bin/cgi?body=linker&amp;ini=nlm&amp;reqidx=issn=1044-5498vl=19is=8yr=2000mn=Janpg=507">
+	              Jiang SW, Desai D, Khan S, Eberhardt NL &nbsp;
+	              Cooperative binding of TEF-1 to repeated GGAATG-related consensus elements with restricted spatial separation and orientation. &nbsp;
+	              2000 008;19(8):507-14
+	            </a>
+	            <br>
+	            </li>
+	        </span><span id="For_107">
+	            <li type="disc">
+	            
+	              Johannesen J, Karlsen AE, Nerup J, Pociot F &nbsp;
+	              No association or linkage to IDDM of an interferon regulatory factor-1 gene polymorphism in a Danish population. The Danish Study Group for Diabetes in Childhood. &nbsp;
+	              1997 010;24(5):377-83
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_108">
+	            <li type="disc">
+	            
+	              Kang TJ, Fawley MW &nbsp;
+	              Variable (CA/GT)n simple sequence repeat DNA in the alga Chlamydomonas. &nbsp;
+	              1997 012;35(6):943-8
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_109">
+	            <li type="disc">
+	            
+	              Kayang BB, Inoue-Murayama M, Nomura A, Kimura K, Takahashi H, Mizutani M, Ito S &nbsp;
+	              Fifty microsatellite markers for Japanese quail. &nbsp;
+	              2000 011-012;91(6):502-5
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_110">
+	            <li type="disc">
+	            <a id="GenericLink_0_110" href="http://fampract.oupjournals.org/cgi/pmidlookup?view=reprint&amp;pmid=7665162">
+	              Kershaw EE, Chua SC, Williams JA, Murphy EM, Leibel RL &nbsp;
+	              Molecular mapping of SSRs for Pgm1 and C8b in the vicinity of the rat fatty locus. &nbsp;
+	              1995 005 1;27(1):149-54
+	            </a>
+	            <br>
+	            </li>
+	        </span><span id="For_111">
+	            <li type="disc">
+	            <a id="GenericLink_0_111" href="http://link.springer-ny.com/link/service/journals/00439/bibs/7100001/71000145.htm">
+	              Kimpara T, Takeda A, Watanabe K, Itoyama Y, Ikawa S, Watanabe M, Arai H, Sasaki H, Higuchi S, Okita N, Takase S, Saito H, Takahashi K, Shibahara S &nbsp;
+	              Microsatellite polymorphism in the human heme oxygenase-1 gene promoter and its application in association studies with Alzheimer and Parkinson disease. &nbsp;
+	              1997 007;100(1):145-7
+	            </a>
+	            <br>
+	            </li>
+	        </span><span id="For_112">
+	            <li type="disc">
+	            
+	              Kinashi H, Shimaji-Murayama M, Hanafusa T &nbsp;
+	              Nucleotide sequence analysis of the unusually long terminal inverted repeats of a giant linear plasmid, SCP1. &nbsp;
+	              1991 009;26(2):123-30
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_113">
+	            <li type="disc">
+	            
+	              Kiss I, Deak F, Holloway RG, Delius H, Mebust KA, Frimberger E, Argraves WS, Tsonis PA, Winterbottom N, Goetinck PF &nbsp;
+	              Structure of the gene for cartilage matrix protein, a modular protein of the extracellular matrix. Exon/intron organization, unusual splice sites, and relation to alpha chains of beta 2 integrins, von Willebrand factor, complement factors B and C2, and epidermal growth factor. &nbsp;
+	              1989 005 15;264(14):8126-34
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_114">
+	            <li type="disc">
+	            
+	              Knorre dg, Bozhenok LN, Chernolovskaia EL, Shishkina IG, Godovikova TS, Zarytova VF, Kobets ND &nbsp;
+	              [Affinity separation of HeLa chromatin proteins and their selective modification in the regions of GT repeats]. &nbsp;
+	              2000 001-002;34(1):55-9
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_115">
+	            <li type="disc">
+	            
+	              Koff A, Tegtmeyer P &nbsp;
+	              Characterization of major recognition sequences for a herpes simplex virus type 1 origin-binding protein. &nbsp;
+	              1988 011;62(11):4096-103
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_116">
+	            <li type="disc">
+	            
+	              Koide T, Foster D, Yoshitake S, Davie EW &nbsp;
+	              Amino acid sequence of human histidine-rich glycoprotein derived from the nucleotide sequence of its cDNA. &nbsp;
+	              1986 004 22;25(8):2220-5
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_117">
+	            <li type="disc">
+	            
+	              Koike K, Urata Y, Goto S &nbsp;
+	              Molecular genetic aspects of human pyruvate dehydrogenase and its defect. &nbsp;
+	              1992;Spec No:397-400
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_118">
+	            <li type="disc">
+	            
+	              Koike K, Urata Y, Matsuo S, Koike M &nbsp;
+	              Characterization and nucleotide sequence of the gene encoding the human pyruvate dehydrogenase alpha-subunit. &nbsp;
+	              1990 009 14;93(2):307-11
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_119">
+	            <li type="disc">
+	            
+	              Kostia S, Varvio SL, Vakkari P, Pulkkinen P &nbsp;
+	              Microsatellite sequences in a conifer, Pinus sylvestris. &nbsp;
+	              1995 012;38(6):1244-8
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_120">
+	            <li type="disc">
+	            <a id="GenericLink_0_120" href="http://www.idealibrary.com/links/citation/0006-291X/242/396">
+	              Kubota R, Kudoh J, Mashima Y, Asakawa S, Minoshima S, Hejtmancik JF, Oguchi Y, Shimizu N &nbsp;
+	              Genomic organization of the human myocilin gene (MYOC) responsible for primary open angle glaucoma (GLC1A). &nbsp;
+	              1998 001 14;242(2):396-400
+	            </a>
+	            <br>
+	            </li>
+	        </span><span id="For_121">
+	            <li type="disc">
+	            
+	              Kwon HB, Park SC, Peng HP, Goodman HM, Dewdney J, Shih MC &nbsp;
+	              Identification of a light-responsive region of the nuclear gene encoding the B subunit of chloroplast glyceraldehyde 3-phosphate dehydrogenase from Arabidopsis thaliana. &nbsp;
+	              1994 005;105(1):357-67
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_122">
+	            <li type="disc">
+	            
+	              Lagercrantz U, Ellegren H, Andersson L &nbsp;
+	              The abundance of various polymorphic microsatellite motifs differs between plants and vertebrates. &nbsp;
+	              1993 003 11;21(5):1111-5
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_123">
+	            <li type="disc">
+	            
+	              Lalloz MR, Schwaab R, McVey JH, Michaelides K, Tuddenham EG &nbsp;
+	              Haemophilia A diagnosis by simultaneous analysis of two variable dinucleotide tandem repeats within the factor VIII gene. &nbsp;
+	              1994 004;86(4):804-9
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_124">
+	            <li type="disc">
+	            
+	              Lambert S, Saintigny Y, Delacote F, Amiot F, Chaput B, Lecomte M, Huck S, Bertrand P, Lopez BS &nbsp;
+	              Analysis of intrachromosomal homologous recombination in mammalian cell, using tandem repeat sequences. &nbsp;
+	              1999 004 9;433(3):159-68
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_125">
+	            <li type="disc">
+	            
+	              Lanceras JC, Huang ZL, Naivikul O, Vanavichit A, Ruanjaichon V, Tragoonrung S &nbsp;
+	              Mapping of genes for cooking and eating qualities in Thai jasmine rice (KDML105). &nbsp;
+	              2000 004 28;7(2):93-101
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_126">
+	            <li type="disc">
+	            
+	              Lau KS, Herring WJ, Chuang JL, McKean M, Danner DJ, Cox RP, Chuang DT &nbsp;
+	              Structure of the gene encoding dihydrolipoyl transacylase (E2) component of human branched chain alpha-keto acid dehydrogenase complex and characterization of an E2 pseudogene. &nbsp;
+	              1992 011 25;267(33):24090-6
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_127">
+	            <li type="disc">
+	            
+	              Lazaro C, Gaona A, Estivill X &nbsp;
+	              Two CA/GT repeat polymorphisms in intron 27 of the human neurofibromatosis (NF1) gene. &nbsp;
+	              1994 003;93(3):351-2
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_128">
+	            <li type="disc">
+	            
+	              Leclerc GM, Diaz M, Ely B &nbsp;
+	              Use of PCR-RFLP assays to detect genetic variation at single-copy nuclear loci in striped bass (Morone saxatilis). &nbsp;
+	              1996 006;5(2):138-44
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_129">
+	            <li type="disc">
+	            <a id="GenericLink_0_129" href="http://www.pnas.org/cgi/pmidlookup?view=reprint&amp;pmid=7568024">
+	              Lee-Huang S, Huang PL, Huang PL, Bourinbaiar AS, Chen HC, Kung HF &nbsp;
+	              Inhibition of the integrase of human immunodeficiency virus (HIV) type 1 by anti-HIV plant proteins MAP30 and GAP31. &nbsp;
+	              1995 009 12;92(19):8818-22
+	            </a>
+	            <br>
+	            </li>
+	        </span><span id="For_130">
+	            <li type="disc">
+	            <a id="GenericLink_0_130" href="http://www.molbiolevol.org/cgi/pmidlookup?view=full&amp;pmid=11110894">
+	              Leung YF, Tam PO, Baum L, Lam DS, Pang CC &nbsp;
+	              TIGR/MYOC proximal promoter GT-repeat polymorphism is not associated with myopia. &nbsp;
+	              2000 012;16(6):533
+	            </a>
+	            <br>
+	            </li>
+	        </span><span id="For_131">
+	            <li type="disc">
+	            
+	              Levy N, Bernard-Bronsard R, Lossi AM, Colleaux L, Cardoso C, Villard L, Fontes M &nbsp;
+	              A polymorphic microsatellite XNP-GT in the XNP/ATRX gene's promotor allows familial indirect diagnosis. &nbsp;
+	              1999 011;14(5):448
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_132">
+	            <li type="disc">
+	            <a id="GenericLink_0_132" href="http://link.springer-ny.com/link/service/journals/00439/bibs/7099005/70990573.htm">
+	              Li J, Iwamoto S, Sugimoto N, Okuda H, Kajii E &nbsp;
+	              Dinucleotide repeat in the 3' flanking region provides a clue to the molecular evolution of the Duffy gene. &nbsp;
+	              1997 005;99(5):573-7
+	            </a>
+	            <br>
+	            </li>
+	        </span><span id="For_133">
+	            <li type="disc">
+	            <a id="GenericLink_0_133" href="http://www.pnas.org/cgi/pmidlookup?view=full&amp;pmid=9560248">
+	              Liang F, Han M, Romanienko PJ, Jasin M &nbsp;
+	              Homology-directed repair is a major double-strand break repair pathway in mammalian cells. &nbsp;
+	              1998 004 28;95(9):5172-7
+	            </a>
+	            <br>
+	            </li>
+	        </span><span id="For_134">
+	            <li type="disc">
+	            
+	              Lin CP &nbsp;
+	              Nucleotide sequence analysis of cellular flanking regions of intracisternal A-particle gene 81. &nbsp;
+	              1987 004;11(2):107-14
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_135">
+	            <li type="disc">
+	            <a id="GenericLink_0_135" href="http://link.springer-ny.com/link/service/journals/00415/bibs/0247001/02470052.htm">
+	              Lin S, Jiang S, Wu X, Qian Y, Wang D, Tang G, Gu N &nbsp;
+	              Association analysis between mood disorder and monoamine oxidase gene. &nbsp;
+	              2000 002 7;96(1):12-4
+	            </a>
+	            <br>
+	            </li>
+	        </span><span id="For_136">
+	            <li type="disc">
+	            
+	              Liu Z, Li P, Dunham RA &nbsp;
+	              Characterization of an A/T-rich family of sequences from channel catfish (Ictalurus punctatus). &nbsp;
+	              1998 009;7(3):232-9
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_137">
+	            <li type="disc">
+	            
+	              Livak KJ, Little WA, Stack SL, Patterson TA &nbsp;
+	              Polymorphisms in the human DNA ligase I gene (LIG1) including a complex GT repeat. &nbsp;
+	              1998 011;406(1):1-8
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_138">
+	            <li type="disc">
+	            <a id="GenericLink_0_138" href="http://www.molbiolevol.org/cgi/pmidlookup?view=full&amp;pmid=11110894">
+	              Long M, Rosenberg C &nbsp;
+	              Testing the "proto-splice sites" model of intron origin: evidence from analysis of intron phase correlations. &nbsp;
+	              2000 012;17(12):1789-96
+	            </a>
+	            <br>
+	            </li>
+	        </span><span id="For_139">
+	            <li type="disc">
+	            
+	              Love JM, Knight AM, McAleer MA, Todd JA &nbsp;
+	              Towards construction of a high resolution map of the mouse genome using PCR-analysed microsatellites. &nbsp;
+	              1990 007 25;18(14):4123-30
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_140">
+	            <li type="disc">
+	            
+	              Lucy MC, Johnson GS, Shibuya H, Boyd CK, Herring WO &nbsp;
+	              Rapid communication: polymorphic (GT)n microsatellite in the bovine somatotropin receptor gene promoter. &nbsp;
+	              1998 008;76(8):2209-10
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_141">
+	            <li type="disc">
+	            <a id="GenericLink_0_141" href="http://www.cob.org.uk/Development/121/06/dev3180.html">
+	              Macina RA, Barr FG, Galili N, Riethman HC &nbsp;
+	              Genomic organization of the human PAX3 gene: DNA sequence analysis of the region disrupted in alveolar rhabdomyosarcoma. &nbsp;
+	              1995 003 1;26(1):1-8
+	            </a>
+	            <br>
+	            </li>
+	        </span><span id="For_142">
+	            <li type="disc">
+	            
+	              Magnani C, Cremonesi L, Belloni E, Ferrari M, Seia M, Russo MP, Devoto M, Ronchetto P, Romeo G &nbsp;
+	              Informativity of intragenic microsatellites for carrier detection and prenatal diagnosis of cystic fibrosis in the Italian population. &nbsp;
+	              1994 003;45(3):135-9
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_143">
+	            <li type="disc">
+	            <a id="GenericLink_0_143" href="http://www.genome.org/cgi/pmidlookup?view=full&amp;pmid=10958629">
+	              Majewski J, Ott J &nbsp;
+	              GT repeats are associated with recombination on human chromosome 22. &nbsp;
+	              2000 008;10(8):1108-14
+	            </a>
+	            <br>
+	            </li>
+	        </span><span id="For_144">
+	            <li type="disc">
+	            
+	              Makunin IV, Zakharkin SO, Kokoza EV, Pokholkova GV, Kholodilov NG, Zhimulev IF &nbsp;
+	              [An analysis of the DNA sequence in the region of the breakpoint of the T(1;2)dor(var7) translocation inducing the mosaic-type position effect in Drosophila melanogaster]. &nbsp;
+	              1996 001-002;30(1):8-14
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_145">
+	            <li type="disc">
+	            
+	              Maragos C, Hutchison WM, Hayasaka K, Brown GK, Dahl HH &nbsp;
+	              Structural organization of the gene for the E1 alpha subunit of the human pyruvate dehydrogenase complex. &nbsp;
+	              1989 007 25;264(21):12294-8
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_146">
+	            <li type="disc">
+	            
+	              Marshall DG, Coleman DC, Sullivan DJ, Xia H, O'Morain CA, Smyth CJ &nbsp;
+	              Genomic DNA fingerprinting of clinical isolates of Helicobacter pylori using short oligonucleotide probes containing repetitive sequences. &nbsp;
+	              1996 011;81(5):509-17
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_147">
+	            <li type="disc">
+	            <a id="GenericLink_0_147" href="http://www.blackwell-synergy.com/rd.asp?abbrev=Anim%20Genet&amp;vol=30&amp;page=399&amp;goto=abstract">
+	              Martinez JL, Moran P, Pendas AM, Taggart JB, Garcia-Vazquez E &nbsp;
+	              Genetic characterization and chromosomal location of a single locus GT microsatellite from Atlantic salmon. &nbsp;
+	              1999 010;30(5):399-400
+	            </a>
+	            <br>
+	            </li>
+	        </span><span id="For_148">
+	            <li type="disc">
+	            
+	              Maueler W, Bassili G, Arnold R, Renkawitz R, Epplen JT &nbsp;
+	              The (gt)n(ga)m containing intron 2 of HLA-DRB alleles binds a zinc-dependent protein and forms non B-DNA structures. &nbsp;
+	              1999 001 8;226(1):9-23
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_149">
+	            <li type="disc">
+	            
+	              Maueler W, Bassili G, Epplen C, Keyl HG, Epplen JT &nbsp;
+	              Protein binding to simple repetitive sequences depends on DNA secondary structure(s). &nbsp;
+	              1999;7(3):163-6
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_150">
+	            <li type="disc">
+	            
+	              Maueler W, Kyas A, Keyl HG, Epplen JT &nbsp;
+	              A genome-derived (gaa.ttc)24 trinucleotide block binds nuclear protein(s) specifically and forms triple helices. &nbsp;
+	              1998 007 30;215(2):389-403
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_151">
+	            <li type="disc">
+	            
+	              Medof ME, Lublin DM, Holers VM, Ayers DJ, Getty RR, Leykam JF, Atkinson JP, Tykocinski ML &nbsp;
+	              Cloning and characterization of cDNAs encoding the complete sequence of decay-accelerating factor of human complement. &nbsp;
+	              1987 004;84(7):2007-11
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_152">
+	            <li type="disc">
+	            
+	              Mellick GD, Buchanan DD, McCann SJ, James KM, Johnson AG, Davis DR, Liyou N, Chan D, Le Couteur DG &nbsp;
+	              Variations in the monoamine oxidase B (MAOB) gene are associated with Parkinson's disease. &nbsp;
+	              1999 003;14(2):219-24
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_153">
+	            <li type="disc">
+	            <a id="GenericLink_0_153" href="http://link.springer-ny.com/link/service/journals/00415/bibs/0247001/02470052.htm">
+	              Mellick GD, Buchanan DD, Silburn PA, Chan DK, Le Couteur DG, Law LK, Woo J, Pang CP &nbsp;
+	              The monoamine oxidase B gene GT repeat polymorphism and Parkinson's disease in a Chinese population. &nbsp;
+	              2000 001;247(1):52-5
+	            </a>
+	            <br>
+	            </li>
+	        </span><span id="For_154">
+	            <li type="disc">
+	            <a id="GenericLink_0_154" href="http://www.blackwell-synergy.com/rd.asp?abbrev=Anim%20Genet&amp;vol=30&amp;page=72&amp;goto=abstract">
+	              Meyer L, Brockmann G, Schwerin M, Seyfert HM &nbsp;
+	              A highly polymorphic GT-repeat in the bovine STAT5B encoding gene on BTA19. &nbsp;
+	              1999 002;30(1):72
+	            </a>
+	            <br>
+	            </li>
+	        </span><span id="For_155">
+	            <li type="disc">
+	            <a id="GenericLink_0_155" href="http://link.springer-ny.com/link/service/journals/00439/bibs/9105005/91050410.htm">
+	              Michalik A, Del-Favero J, Mauger C, Lofgren A, Van Broeckhoven C &nbsp;
+	              Genomic organisation of the spinocerebellar ataxia type 7 (SCA7) gene responsible for autosomal dominant cerebellar ataxia with retinal degeneration. &nbsp;
+	              1999 011;105(5):410-7
+	            </a>
+	            <br>
+	            </li>
+	        </span><span id="For_156">
+	            <li type="disc">
+	            <a id="GenericLink_0_156" href="http://www.jbc.org/cgi/pmidlookup?view=full&amp;pmid=10984482">
+	              Mikitani K, Sugasaki T, Shimada T, Kobayashi M, Gustafsson JA &nbsp;
+	              The chitinase gene of the silkworm, Bombyx mori, contains a novel Tc-like transposable element. &nbsp;
+	              2000 012 1;275(48):37725-32
+	            </a>
+	            <br>
+	            </li>
+	        </span><span id="For_157">
+	            <li type="disc">
+	            
+	              Miyao A, Zhong HS, Monna L, Yano M, Yamamoto K, Havukkala I, Minobe Y, Sasaki T &nbsp;
+	              Characterization and genetic mapping of simple sequence repeats in the rice genome. &nbsp;
+	              1996 008 31;3(4):233-8
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_158">
+	            <li type="disc">
+	            
+	              Mohan S, Yathindra N &nbsp;
+	              Sequence effects on the propeller twist of base pairs in DNA helices. &nbsp;
+	              1992 006;9(6):1195-211
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_159">
+	            <li type="disc">
+	            
+	              Monson JM, Friedman J, McCarthy BJ &nbsp;
+	              DNA sequence analysis of a mouse pro alpha 1 (I) procollagen gene: evidence for a mouse B1 element within the gene. &nbsp;
+	              1982 011;2(11):1362-71
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_160">
+	            <li type="disc">
+	            
+	              Moran C &nbsp;
+	              Microsatellite repeats in pig (Sus domestica) and chicken (Gallus domesticus) genomes. &nbsp;
+	              1993 007-008;84(4):274-80
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_161">
+	            <li type="disc">
+	            
+	              Morral N, Nunes V, Casals T, Estivill X &nbsp;
+	              CA/GT microsatellite alleles within the cystic fibrosis transmembrane conductance regulator (CFTR) gene are not generated by unequal crossingover. &nbsp;
+	              1991 007;10(3):692-8
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_162">
+	            <li type="disc">
+	            <a id="GenericLink_0_162" href="http://www.idealibrary.com/links/citation/0888-7543/42/161">
+	              Murakami T, Reiter LT, Lupski JR &nbsp;
+	              Genomic structure and expression of the human heme A:farnesyltransferase (COX10) gene. &nbsp;
+	              1997 005 15;42(1):161-4
+	            </a>
+	            <br>
+	            </li>
+	        </span><span id="For_163">
+	            <li type="disc">
+	            
+	              Murphy KE, Stringer JR &nbsp;
+	              RecA independent recombination of poly[d(GT)-d(CA)] in pBR322. &nbsp;
+	              1986 009 25;14(18):7325-40
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_164">
+	            <li type="disc">
+	            
+	              Murray AW, Claus TE, Szostak JW &nbsp;
+	              Characterization of two telomeric DNA processing reactions in Saccharomyces cerevisiae. &nbsp;
+	              1988 011;8(11):4642-50
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_165">
+	            <li type="disc">
+	            
+	              Musso M, Nelson LD, Van Dyke MW &nbsp;
+	              Characterization of purine-motif triplex DNA-binding proteins in HeLa extracts. &nbsp;
+	              1998 003 3;37(9):3086-95
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_166">
+	            <li type="disc">
+	            
+	              Naciri Y, Vigouroux Y, Dallas J, Desmarais E, Delsert C, Bonhomme F &nbsp;
+	              Identification and inheritance of (GA/TC)n and (AC/GT)n repeats in the European flat oyster Ostrea edulis (L.). &nbsp;
+	              1995 003;4(1):83-9
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_167">
+	            <li type="disc">
+	            
+	              Nedospasov SA, Udalova IA, Kuprash DV, Turetskaya RL &nbsp;
+	              DNA sequence polymorphism at the human tumor necrosis factor (TNF) locus. Numerous TNF/lymphotoxin alleles tagged by two closely linked microsatellites in the upstream region of the lymphotoxin (TNF-beta) gene. &nbsp;
+	              1991 008 1;147(3):1053-9
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_168">
+	            <li type="disc">
+	            <a id="GenericLink_0_168" href="http://hyper.ahajournals.org/cgi/pmidlookup?view=full&amp;pmid=10373211">
+	              Niu T, Xu X, Cordell HJ, Rogus J, Zhou Y, Fang Z, Lindpaintner K &nbsp;
+	              Linkage analysis of candidate genes and gene-gene interactions in chinese hypertensive sib pairs. &nbsp;
+	              1999 006;33(6):1332-7
+	            </a>
+	            <br>
+	            </li>
+	        </span><span id="For_169">
+	            <li type="disc">
+	            <a id="GenericLink_0_169" href="http://www.cob.org.uk/Development/121/06/dev9377.html">
+	              Noonberg SB, Francois JC, Garestier T, Helene C &nbsp;
+	              Effect of competing self-structure on triplex formation with purine-rich oligodeoxynucleotides containing GA repeats. &nbsp;
+	              1995 006 11;23(11):1956-63
+	            </a>
+	            <br>
+	            </li>
+	        </span><span id="For_170">
+	            <li type="disc">
+	            
+	              Ohtake A, Takiguchi M, Shigeto Y, Amaya Y, Kawamoto S, Mori M &nbsp;
+	              Structural organization of the gene for rat liver-type arginase. &nbsp;
+	              1988 002 15;263(5):2245-9
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_171">
+	            <li type="disc">
+	            
+	              Oka S, Itoh N, Kawasaki T, Yamashina I &nbsp;
+	              Primary structure of rat liver mannan-binding protein deduced from its cDNA sequence. &nbsp;
+	              1987 001;101(1):135-44
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_172">
+	            <li type="disc">
+	            
+	              Oliva R, Dixon GH &nbsp;
+	              Chicken protamine genes are intronless. The complete genomic sequence and organization of the two loci. &nbsp;
+	              1989 007 25;264(21):12472-81
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_173">
+	            <li type="disc">
+	            
+	              Otsen M, Plas ME, Lenstra JA, Roos MH, Hoekstra R &nbsp;
+	              Microsatellite diversity of isolates of the parasitic nematode Haemonchus contortus. &nbsp;
+	              2000 009;110(1):69-77
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_174">
+	            <li type="disc">
+	            <a id="GenericLink_0_174" href="http://www.genome.org/cgi/pmidlookup?view=full&amp;pmid=10523529">
+	              Palsson B, Palsson F, Perlin M, Gudbjartsson H, Stefansson K, Gulcher J &nbsp;
+	              Using quality measures to facilitate allele calling in high-throughput genotyping. &nbsp;
+	              1999 010;9(10):1002-12
+	            </a>
+	            <br>
+	            </li>
+	        </span><span id="For_175">
+	            <li type="disc">
+	            
+	              Pan J, McEver RP &nbsp;
+	              Characterization of the promoter for the human P-selectin gene. &nbsp;
+	              1993 010 25;268(30):22600-8
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_176">
+	            <li type="disc">
+	            
+	              Panaud O, Chen X, McCouch SR &nbsp;
+	              Frequency of microsatellite sequences in rice (Oryza sativa L.). &nbsp;
+	              1995 012;38(6):1170-6
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_177">
+	            <li type="disc">
+	            
+	              Pandolfo M &nbsp;
+	              A rapid method to isolate (GT)n repeats from yeast artificial chromosomes. &nbsp;
+	              1992 003 11;20(5):1154
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_178">
+	            <li type="disc">
+	            
+	              Park YM, Choi JY, Bae SH, Byun BH, Ahn BM, Kim BS, Shin DY &nbsp;
+	              Microsatellite instability and mutations of E2F-4 in hepatocellular carcinoma from Korea. &nbsp;
+	              2000 005;17(2):102-111
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_179">
+	            <li type="disc">
+	            
+	              Pearlman RE, Tsao N, Moens PB &nbsp;
+	              Synaptonemal complexes from DNase-treated rat pachytene chromosomes contain (GT)n and LINE/SINE sequences. &nbsp;
+	              1992 004;130(4):865-72
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_180">
+	            <li type="disc">
+	            
+	              Pestsova E, Ganal MW, Roder MS &nbsp;
+	              Isolation and mapping of microsatellite markers specific for the D genome of bread wheat. &nbsp;
+	              2000 008;43(4):689-97
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_181">
+	            <li type="disc">
+	            
+	              Petersen MB, Schinzel AA, Binkert F, Tranebjaerg L, Mikkelsen M, Collins FA, Economou EP, Antonarakis SE &nbsp;
+	              Use of short sequence repeat DNA polymorphisms after PCR amplification to detect the parental origin of the additional chromosome 21 in Down syndrome. &nbsp;
+	              1991 001;48(1):65-71
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_182">
+	            <li type="disc">
+	            
+	              Petersen MB, Slaugenhaupt SA, Lewis JG, Warren AC, Chakravarti A, Antonarakis SE &nbsp;
+	              A genetic linkage map of 27 markers on human chromosome 21. &nbsp;
+	              1991 003;9(3):407-19
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_183">
+	            <li type="disc">
+	            
+	              Petes TD, Greenwell PW, Dominska M &nbsp;
+	              Stabilization of microsatellite sequences by variant repeats in the yeast Saccharomyces cerevisiae. &nbsp;
+	              1997 006;146(2):491-8
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_184">
+	            <li type="disc">
+	            
+	              Pfeiffer A, Olivieri AM, Morgante M &nbsp;
+	              Identification and characterization of microsatellites in Norway spruce (Picea abies K.). &nbsp;
+	              1997 008;40(4):411-9
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_185">
+	            <li type="disc">
+	            
+	              Playford MP, Butler RJ, Wang XC, Katso RM, Cooke IE, Ganesan TS &nbsp;
+	              The genomic structure of discoidin receptor tyrosine kinase. &nbsp;
+	              1996 007;6(7):620-7
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_186">
+	            <li type="disc">
+	            
+	              Prolla TA, Christie DM, Liskay RM &nbsp;
+	              Dual requirement in yeast DNA mismatch repair for MLH1 and PMS1, two homologs of the bacterial mutL gene. &nbsp;
+	              1994 001;14(1):407-15
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_187">
+	            <li type="disc">
+	            
+	              Puers C, Hammond HA, Caskey CT, Lins AM, Sprecher CJ, Brinkmann B, Schumm JW &nbsp;
+	              Allelic ladder characterization of the short tandem repeat polymorphism located in the 5' flanking region to the human coagulation factor XIII A subunit gene. &nbsp;
+	              1994 009 1;23(1):260-4
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_188">
+	            <li type="disc">
+	            
+	              Refseth UH, Fangan BM, Jakobsen KS &nbsp;
+	              Hybridization capture of microsatellites directly from genomic DNA. &nbsp;
+	              1997 008;18(9):1519-23
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_189">
+	            <li type="disc">
+	            <a id="GenericLink_0_189" href="http://circres.ahajournals.org/cgi/pmidlookup?view=full&amp;pmid=10082481">
+	              Rehemudula D, Nakayama T, Soma M, Takahashi Y, Uwabo J, Sato M, Izumi Y, Kanmatsuse K, Ozawa Y &nbsp;
+	              Structure of the type B human natriuretic peptide receptor gene and association of a novel microsatellite polymorphism with essential hypertension. &nbsp;
+	              1999 003 19;84(5):605-10
+	            </a>
+	            <br>
+	            </li>
+	        </span><span id="For_190">
+	            <li type="disc">
+	            
+	              Restagno G, Garnerone S, Gennaro C, Ferrone M, Carbonara A &nbsp;
+	              Analysis of CA/GT microsatellite polymorphism in IVS8 of the cystic fibrosis transmembrane conductance regulator (CFTR) gene: a study of Italian CF families. &nbsp;
+	              1992 012;42(6):309-13
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_191">
+	            <li type="disc">
+	            
+	              Riess O, Kammerbauer C, Roewer L, Steimle V, Andreas A, Albert E, Nagai T, Epplen JT &nbsp;
+	              Hypervariability of intronic simple (gt)n(ga)m repeats in HLA-DRB genes. &nbsp;
+	              1990;32(2):110-6
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_192">
+	            <li type="disc">
+	            
+	              Riess O, Thies U, Siedlaczck I, Potisek S, Graham R, Theilmann J, Grimm T, Epplen JT, Hayden MR &nbsp;
+	              Precise mapping of the brain alpha 2-adrenergic receptor gene within chromosome 4p16. &nbsp;
+	              1994 001 15;19(2):298-302
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_193">
+	            <li type="disc">
+	            
+	              Riley DE &nbsp;
+	              A family of homologous X chromosomal sequences with some members showing evidence of enhancer activity. &nbsp;
+	              1990 012;9(10):763-70
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_194">
+	            <li type="disc">
+	            
+	              Rivera R, Edwards KJ, Barker JH, Arnold GM, Ayad G, Hodgkin T, Karp A &nbsp;
+	              Isolation and characterization of polymorphic microsatellites in Cocos nucifera L. &nbsp;
+	              1999 008;42(4):668-75
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_195">
+	            <li type="disc">
+	            
+	              Roder MS, Plaschke J, Konig SU, Borner A, Sorrells ME, Tanksley SD, Ganal MW &nbsp;
+	              Abundance, variability and chromosomal location of microsatellites in wheat. &nbsp;
+	              1995 002 6;246(3):327-33
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_196">
+	            <li type="disc">
+	            
+	              Rongnoparut P, Yaicharoen S, Sirichotpakorn N, Rattanarithikul R, Lanzaro GC, Linthicum KJ &nbsp;
+	              Microsatellite polymorphism in Anopheles maculatus, a malaria vector in Thailand. &nbsp;
+	              1996 012;55(6):589-94
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_197">
+	            <li type="disc">
+	            
+	              Rosby O, Alestrom P, Berg K &nbsp;
+	              High-degree sequence conservation in LPA kringle IV-type 2 exons and introns. &nbsp;
+	              1997 011;52(5):293-302
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_198">
+	            <li type="disc">
+	            <a id="GenericLink_0_198" href="http://www.cob.org.uk/Development/121/06/dev3180.html">
+	              Rotman G, Vanagaite L, Collins FS, Shiloh Y &nbsp;
+	              Rapid identification of polymorphic CA-repeats in YAC clones. &nbsp;
+	              1995 004;3(2):85-92
+	            </a>
+	            <br>
+	            </li>
+	        </span><span id="For_199">
+	            <li type="disc">
+	            <a id="GenericLink_0_199" href="http://www.idealibrary.com/links/citation/0888-7543/46/240">
+	              Royaux I, Lambert de Rouvroit C, D'Arcangelo G, Demirov D, Goffinet AM &nbsp;
+	              Genomic organization of the mouse reelin gene. &nbsp;
+	              1997 012 1;46(2):240-50
+	            </a>
+	            <br>
+	            </li>
+	        </span><span id="For_200">
+	            <li type="disc">
+	            
+	              Rugg EL, Rachet-Prehu MO, Rochat A, Barrandon Y, Goossens M, Lane EB, Hovnanian A &nbsp;
+	              Donor splice site mutation in keratin 5 causes in-frame removal of 22 amino acids of H1 and 1A rod domains in Dowling-Meara epidermolysis bullosa simplex. &nbsp;
+	              1999 004;7(3):293-300
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_201">
+	            <li type="disc">
+	            
+	              Ryan MC, Sieraski M, Sandell LJ &nbsp;
+	              The human type II procollagen gene: identification of an additional protein-coding domain and location of potential regulatory sequences in the promoter and first intron. &nbsp;
+	              1990 009;8(1):41-8
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_202">
+	            <li type="disc">
+	            
+	              Saal B, Wricke G &nbsp;
+	              Development of simple sequence repeat markers in rye (Secale cereale L.). &nbsp;
+	              1999 010;42(5):964-72
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_203">
+	            <li type="disc">
+	            <a id="GenericLink_0_203" href="http://www.idealibrary.com/links/citation/0888-7543/47/359">
+	              Sahba S, Nechiporuk A, Figueroa KP, Nechiporuk T, Pulst SM &nbsp;
+	              Genomic structure of the human gene for spinocerebellar ataxia type 2 (SCA2) on chromosome 12q24.1. &nbsp;
+	              1998 002 1;47(3):359-64
+	            </a>
+	            <br>
+	            </li>
+	        </span><span id="For_204">
+	            <li type="disc">
+	            
+	              Saitoh H, Ueda S, Kurosaki K, Kiuchi M &nbsp;
+	              The different mobility of complementary strands depends on the proportion AC/GT. &nbsp;
+	              1998 001 30;91(2):81-90
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_205">
+	            <li type="disc">
+	            
+	              Sakai M, Morinaga T, Urano Y, Watanabe K, Wegmann TG, Tamaoki T &nbsp;
+	              The human alpha-fetoprotein gene. Sequence organization and the 5' flanking region. &nbsp;
+	              1985 004 25;260(8):5055-60
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_206">
+	            <li type="disc">
+	            
+	              Sakamoto A, Tanaka A, Watanabe H, Tano S &nbsp;
+	              Molecular cloning of Arabidopsis photolyase gene (PHR1) and characterization of its promoter region. &nbsp;
+	              1998;9(5-6):335-40
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_207">
+	            <li type="disc">
+	            
+	              Sakimura K, Kushiya E, Takahashi Y, Suzuki Y &nbsp;
+	              The structure and expression of neuron-specific enolase gene. &nbsp;
+	              1987;60(1):103-13
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_208">
+	            <li type="disc">
+	            
+	              Salvucci M, Lemoine A, Saffroy R, Azoulay D, Lepere B, Gaillard S, Bismuth H, Reynes M, Debuire B &nbsp;
+	              Microsatellite instability in European hepatocellular carcinoma. &nbsp;
+	              1999 001 7;18(1):181-7
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_209">
+	            <li type="disc">
+	            
+	              Sanchez de la Hoz MP, Davila JA, Loarce Y, Ferrer E &nbsp;
+	              Simple sequence repeat primers used in polymerase chain reaction amplifications to study genetic diversity in barley. &nbsp;
+	              1996 002;39(1):112-7
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_210">
+	            <li type="disc">
+	            <a id="GenericLink_0_210" href="http://nar.oupjournals.org/cgi/pmidlookup?view=full&amp;pmid=8604319">
+	              Sargent RG, Merrihew RV, Nairn R, Adair G, Meuth M, Wilson JH &nbsp;
+	              The influence of a (GT)29 microsatellite sequence on homologous recombination in the hamster adenine phosphoribosyltransferase gene. &nbsp;
+	              1996 002 15;24(4):746-53
+	            </a>
+	            <br>
+	            </li>
+	        </span><span id="For_211">
+	            <li type="disc">
+	            
+	              Sarkar G, Paynton C, Sommer SS &nbsp;
+	              Segments containing alternating purine and pyrimidine dinucleotides: patterns of polymorphism in humans and prevalence throughout phylogeny. &nbsp;
+	              1991 002 11;19(3):631-6
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_212">
+	            <li type="disc">
+	            
+	              Sato M, Mori Y, Sakurada A, Fujimura S, Horii A &nbsp;
+	              A GT dinucleotide repeat polymorphism in intron 1 of the H-cadherin (CDH13) gene. &nbsp;
+	              1998;43(4):285-6
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_213">
+	            <li type="disc">
+	            
+	              Schuitevoerder K, Ansved T, Solders G, Borg K &nbsp;
+	              Proximal myotonic myopathy. Analysis of 3 Swedish cases. &nbsp;
+	              1997 010;96(4):266-70
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_214">
+	            <li type="disc">
+	            
+	              Schwaiger FW, Gomolka M, Geldermann H, Zischler H, Buitkamp J, Epplen JT, Ammer H &nbsp;
+	              Oligonucleotide fingerprinting to individualize ungulates. &nbsp;
+	              1992;2(6):193-200
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_215">
+	            <li type="disc">
+	            
+	              Schwaiger FW, Weyers E, Epplen C, Brun J, Ruff G, Crawford A, Epplen JT &nbsp;
+	              The paradox of MHC-DRB exon/intron evolution: alpha-helix and beta-sheet encoding regions diverge while hypervariable intronic simple repeats coevolve with beta-sheet codons. &nbsp;
+	              1993 009;37(3):260-72
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_216">
+	            <li type="disc">
+	            
+	              Shampay J, Schmitt M, Bassham S &nbsp;
+	              A novel minisatellite at a cloned hamster telomere. &nbsp;
+	              1995 010;104(1):29-38
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_217">
+	            <li type="disc">
+	            
+	              Sharkhov IV, Filippova MA, Strots OV, Borisevich IV, Bogachev SS, Baricheva EM, Shilov AG &nbsp;
+	              [Drosophila beta-heterochromatin: molecular organization and function. Characteristics of the DNA sequences from proximal beta-heterochromatin, associated with the nuclear envelope of Drosophila melanogaster]. &nbsp;
+	              1993 003;29(3):393-402
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_218">
+	            <li type="disc">
+	            
+	              Shelley CS, Baralle FE &nbsp;
+	              Deletion analysis of a unique 3' splice site indicates that alternating guanine and thymine residues represent an efficient splicing signal. &nbsp;
+	              1987 005 11;15(9):3787-99
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_219">
+	            <li type="disc">
+	            
+	              Shinmura K, Tani M, Isogaki J, Wang Y, Sugimura H, Yokota J &nbsp;
+	              RER phenotype and its associated mutations in familial gastric cancer. &nbsp;
+	              1998 002;19(2):247-51
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_220">
+	            <li type="disc">
+	            <a id="GenericLink_0_220" href="http://www.pnas.org/cgi/pmidlookup?view=full&amp;pmid=10618404">
+	              Sia EA, Butler CA, Dominska M, Greenwell P, Fox TD, Petes TD &nbsp;
+	              Analysis of microsatellite mutations in the mitochondrial DNA of Saccharomyces cerevisiae. &nbsp;
+	              2000 001 4;97(1):250-5
+	            </a>
+	            <br>
+	            </li>
+	        </span><span id="For_221">
+	            <li type="disc">
+	            
+	              Sillen A, Wadelius C, Sundvall M, Ahlsten G, Gustavson KH &nbsp;
+	              Hyperkalemic periodic paralysis caused by recurring mutation in the adult muscle sodium channel alpha-subunit gene. &nbsp;
+	              1996;7(4):267-75
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_222">
+	            <li type="disc">
+	            <a id="GenericLink_0_222" href="http://jvi.asm.org/cgi/pmidlookup?view=reprint&amp;pmid=8523525">
+	              Sjottem E, Anderssen S, Johansen T &nbsp;
+	              The promoter activity of long terminal repeats of the HERV-H family of human retrovirus-like elements is critically dependent on Sp1 family proteins interacting with a GC/GT box located immediately 3' to the TATA box. &nbsp;
+	              1996 001;70(1):188-98
+	            </a>
+	            <br>
+	            </li>
+	        </span><span id="For_223">
+	            <li type="disc">
+	            <a id="GenericLink_0_223" href="http://www.pnas.org/cgi/pmidlookup?view=full&amp;pmid=9636220">
+	              Spillantini MG, Murrell JR, Goedert M, Farlow MR, Klug A, Ghetti B &nbsp;
+	              Mutation in the tau gene in familial multiple system tauopathy with presenile dementia. &nbsp;
+	              1998 006 23;95(13):7737-41
+	            </a>
+	            <br>
+	            </li>
+	        </span><span id="For_224">
+	            <li type="disc">
+	            
+	              Spitzner JR, Chung IK, Muller MT &nbsp;
+	              Eukaryotic topoisomerase II preferentially cleaves alternating purine-pyrimidine repeats. &nbsp;
+	              1990 001 11;18(1):1-11
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_225">
+	            <li type="disc">
+	            
+	              Stallings RL, Ford AF, Nelson D, Torney DC, Hildebrand CE, Moyzis RK &nbsp;
+	              Evolution and distribution of (GT)n repetitive sequences in mammalian genomes. &nbsp;
+	              1991 007;10(3):807-15
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_226">
+	            <li type="disc">
+	            <a id="GenericLink_0_226" href="http://www.pnas.org/cgi/pmidlookup?view=reprint&amp;pmid=2385591">
+	              Stallings RL, Torney DC, Hildebrand CE, Longmire JL, Deaven LL, Jett JH, Doggett NA, Moyzis RK &nbsp;
+	              Physical mapping of human chromosomes by repetitive sequence fingerprinting. &nbsp;
+	              1990 008;87(16):6218-22
+	            </a>
+	            <br>
+	            </li>
+	        </span><span id="For_227">
+	            <li type="disc">
+	            
+	              Stone RT, Pulido JC, Duyk GM, Kappes SM, Keele JW, Beattie CW &nbsp;
+	              A small-insert bovine genomic library highly enriched for microsatellite repeat sequences. &nbsp;
+	              1995 010;6(10):714-24
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_228">
+	            <li type="disc">
+	            
+	              Su TS, Lin LH &nbsp;
+	              Analysis of a splice acceptor site mutation which produces multiple splicing abnormalities in the human argininosuccinate synthetase locus. &nbsp;
+	              1990 011 15;265(32):19716-20
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_229">
+	            <li type="disc">
+	            
+	              Sun GL, Salomon B, von Bothmer R &nbsp;
+	              Characterization of microsatellite loci from Elymus alaskanus and length polymorphism in several Elymus species (Triticeae: Poaceae). &nbsp;
+	              1998 006;41(3):455-63
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_230">
+	            <li type="disc">
+	            
+	              Takayanagi K, Mishima Y, Kominami R &nbsp;
+	              Difference in HMG1-induced DNA bending among microsatellites. &nbsp;
+	              1997 006 30;4(3):241-7
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_231">
+	            <li type="disc">
+	            
+	              Tam YC, Hassan M, Chopra A, Thirion JP &nbsp;
+	              Cloning, nucleotide sequence and molecular evolution of a rabbit processed metallothionein MT-2 pseudogene. &nbsp;
+	              1988 011 15;156(3):1403-10
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_232">
+	            <li type="disc">
+	            
+	              Tarr CL, Fleischer RC &nbsp;
+	              Primers for polymorphic GT microsatellites isolated from the Mariana crow, Corvus kubaryi. &nbsp;
+	              1998 002;7(2):253-5
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_233">
+	            <li type="disc">
+	            
+	              Tavianini MA, Hayes TE, Magazin MD, Minth CD, Dixon JE &nbsp;
+	              Isolation, characterization, and DNA sequence of the rat somatostatin gene. &nbsp;
+	              1984 010 10;259(19):11798-803
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_234">
+	            <li type="disc">
+	            
+	              Taylor GR, Haward S, Noble JS, Murday V &nbsp;
+	              Isolation and sequencing of CA/GT repeat microsatellites from chromosomal libraries without subcloning. &nbsp;
+	              1992 001;200(1):125-9
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_235">
+	            <li type="disc">
+	            
+	              Terauchi R &nbsp;
+	              A polymorphic microsatellite marker from the tropical tree Dryobalanops lanceolata (Dipterocarpaceae). &nbsp;
+	              1994 010;69(5):567-76
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_236">
+	            <li type="disc">
+	            
+	              Testolin R, Marrazzo T, Cipriani G, Quarta R, Verde I, Dettori MT, Pancaldi M, Sansavini S &nbsp;
+	              Microsatellite DNA in peach (Prunus persica L. Batsch) and its use in fingerprinting and testing the genetic origin of cultivars. &nbsp;
+	              2000 006;43(3):512-20
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_237">
+	            <li type="disc">
+	            <a id="GenericLink_0_237" href="http://www.idealibrary.com/links/citation/0022-2828/32/557">
+	              Thibonnier M, Graves MK, Wagner MS, Chatelain N, Soubrier F, Corvol P, Willard HF, Jeunemaitre X &nbsp;
+	              Study of V(1)-vascular vasopressin receptor gene microsatellite polymorphisms in human essential hypertension. &nbsp;
+	              2000 004;32(4):557-64
+	            </a>
+	            <br>
+	            </li>
+	        </span><span id="For_238">
+	            <li type="disc">
+	            
+	              Thoren PA, Paxton RJ, Estoup A &nbsp;
+	              Unusually high frequency of (CT)n and (GT)n microsatellite loci in a yellowjacket wasp, Vespula rufa (L.) (Hymenoptera: Vespidae). &nbsp;
+	              1995 008;4(3):141-8
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_239">
+	            <li type="disc">
+	            
+	              Toda H, Takeuchi T, Hori N, Ito K, Sato K &nbsp;
+	              Inverted repeats in the TATA-less promoter of the rat catalase gene. &nbsp;
+	              1997 006;121(6):1035-40
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_240">
+	            <li type="disc">
+	            <a id="GenericLink_0_240" href="http://www.catchword.com/rpsv/cgi-bin/cgi?body=linker&amp;ini=nlm&amp;reqidx=issn=1044-5498vl=19is=11yr=2000mn=Janpg=647">
+	              Tolstonog GV, Wang X, Shoeman R, Traub P &nbsp;
+	              Intermediate filaments reconstituted from vimentin, desmin, and glial fibrillary acidic protein selectively bind repetitive and mobile DNA sequences from a mixture of mouse genomic DNA fragments. &nbsp;
+	              2000 011;19(11):647-77
+	            </a>
+	            <br>
+	            </li>
+	        </span><span id="For_241">
+	            <li type="disc">
+	            <a id="GenericLink_0_241" href="http://www.molvis.org/molvis/v2/tink">
+	              Tombran-Tink J, Mazuruk K, Rodriguez IR, Chung D, Linker T, Englander E, Chader GJ &nbsp;
+	              Organization, evolutionary conservation, expression and unusual Alu density of the human gene for pigment epithelium-derived factor, a unique neurotrophic serpin. &nbsp;
+	              1996 011 4;2:11
+	            </a>
+	            <br>
+	            </li>
+	        </span><span id="For_242">
+	            <li type="disc">
+	            
+	              Tracy RB, Kowalczykowski SC &nbsp;
+	              In vitro selection of preferred DNA pairing sequences by the Escherichia coli RecA protein. &nbsp;
+	              1996 008 1;10(15):1890-903
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_243">
+	            <li type="disc">
+	            
+	              Truedsson L, Alper CA, Awdeh ZL, Johansen P, Sjoholm AG, Sturfelt G &nbsp;
+	              Characterization of type I complement C2 deficiency MHC haplotypes. Strong conservation of the complotype/HLA-B-region and absence of disease association due to linked class II genes. &nbsp;
+	              1993 011 15;151(10):5856-63
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_244">
+	            <li type="disc">
+	            
+	              Uchida T, Wada C, Wang C, Egawa S, Ohtani H, Koshiba K &nbsp;
+	              Genomic instability of microsatellite repeats and mutations of H-, K-, and N-ras, and p53 genes in renal cell carcinoma. &nbsp;
+	              1994 007 15;54(14):3682-5
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_245">
+	            <li type="disc">
+	            
+	              Udalova IA, Nedospasov SA, Webb GC, Chaplin DD, Turetskaya RL &nbsp;
+	              Highly informative typing of the human TNF locus using six adjacent polymorphic markers. &nbsp;
+	              1993 004;16(1):180-6
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_246">
+	            <li type="disc">
+	            
+	              Umene K, Enquist LW &nbsp;
+	              A deletion analysis of hybrid phage carrying the US region of Herpes simplex virus type 1 (Patton). I. Isolation of deletion derivatives and identification of chi-likes sequences. &nbsp;
+	              1981 004;13(3):251-68
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_247">
+	            <li type="disc">
+	            <a id="GenericLink_0_247" href="http://www.idealibrary.com/links/citation/0888-7543/30/521">
+	              Unfried I, Entler B, Prohaska R &nbsp;
+	              The organization of the gene (EPB72) encoding the human erythrocyte band 7 integral membrane protein (protein 7.2b). &nbsp;
+	              1995 012 10;30(3):521-8
+	            </a>
+	            <br>
+	            </li>
+	        </span><span id="For_248">
+	            <li type="disc">
+	            
+	              Velasco E, Valero C, Garcia E, de la Puente A, Cruces J, San Millan JL, del Castillo I, Coloma A, Moreno F, Hernandez-Chico C &nbsp;
+	              Isolation of microsatellites from the spinal muscular atrophy (SMA) candidate region on chromosome 5q and linkage analysis in Spanish SMA families. &nbsp;
+	              1995;3(2):96-101
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_249">
+	            <li type="disc">
+	            <a id="GenericLink_0_249" href="http://www.idealibrary.com/links/citation/0006-291X/260/357">
+	              Vignier N, Moghadaszadeh B, Gary F, Beckmann J, Mayer U, Guicheney P &nbsp;
+	              Structure, genetic localization, and identification of the cardiac and skeletal muscle transcripts of the human integrin alpha7 gene (ITGA7). &nbsp;
+	              1999 007 5;260(2):357-64
+	            </a>
+	            <br>
+	            </li>
+	        </span><span id="For_250">
+	            <li type="disc">
+	            
+	              Wan Q, Schuchman EH &nbsp;
+	              A novel polymorphism in the human acid sphingomyelinase gene due to size variation of the signal peptide region. &nbsp;
+	              1995 004 24;1270(2-3):207-10
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_251">
+	            <li type="disc">
+	            
+	              Wang YJ, Oba SM, Yoshii S, Song JP, Wang Y, Kanamori M, Ota S, Tanaka M, Sugimura H &nbsp;
+	              Genomic structure of human alpha-pix, and variable deletions in a poly (T) tract in gastric cancer tissue. &nbsp;
+	              2001 003 10;164(1):69-75
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_252">
+	            <li type="disc">
+	            
+	              Ward SB, Morrison SL &nbsp;
+	              Sequence of the gamma 2b membrane 3' untranslated region: polya site determination and comparison to the gamma 2a membrane 3' untranslated region. &nbsp;
+	              1992 002;29(2):279-85
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_253">
+	            <li type="disc">
+	            
+	              Weber JL &nbsp;
+	              Informativeness of human (dC-dA)n.(dG-dT)n polymorphisms. &nbsp;
+	              1990 008;7(4):524-30
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_254">
+	            <li type="disc">
+	            <a id="GenericLink_0_254" href="http://link.springer-ny.com/link/service/journals/00439/bibs/6099001/60990052.htm">
+	              Wei J, Ramchand CN, Hemmings GP &nbsp;
+	              Possible control of dopamine beta-hydroxylase via a codominant mechanism associated with the polymorphic (GT)n repeat at its gene locus in healthy individuals. &nbsp;
+	              1997 001;99(1):52-5
+	            </a>
+	            <br>
+	            </li>
+	        </span><span id="For_255">
+	            <li type="disc">
+	            
+	              Wei J, Xu HM, Ramchand CN, Hemmings GP &nbsp;
+	              Is the polymorphic microsatellite repeat of the dopamine beta-hydroxylase gene associated with biochemical variability of the catecholamine pathway in schizophrenia? &nbsp;
+	              1997 004 1;41(7):762-7
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_256">
+	            <li type="disc">
+	            
+	              Weinmayr G, Vautrin D, Solignac M &nbsp;
+	              Isolation and Characterization of Highly Polymorphic Microsatellites from the Polychaete Pectinaria koreni. &nbsp;
+	              2000 001;2(1):92-99
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_257">
+	            <li type="disc">
+	            <a id="GenericLink_0_257" href="http://nar.oupjournals.org/cgi/pmidlookup?view=full&amp;pmid=10325432">
+	              Wells DJ &nbsp;
+	              Tdd-4, a DNA transposon of Dictyostelium that encodes proteins similar to LTR retroelement integrases. &nbsp;
+	              1999 006 1;27(11):2408-15
+	            </a>
+	            <br>
+	            </li>
+	        </span><span id="For_258">
+	            <li type="disc">
+	            <a id="GenericLink_0_258" href="http://www.idealibrary.com/links/citation/0003-9861/343/207">
+	              White JA, Wilson JE &nbsp;
+	              Structure of the gene for type I hexokinase from rat. &nbsp;
+	              1997 007 15;343(2):207-14
+	            </a>
+	            <br>
+	            </li>
+	        </span><span id="For_259">
+	            <li type="disc">
+	            
+	              Wierdl M, Dominska M, Petes TD &nbsp;
+	              Microsatellite instability in yeast: dependence on the length of the microsatellite. &nbsp;
+	              1997 007;146(3):769-79
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_260">
+	            <li type="disc">
+	            
+	              Wierdl M, Greene CN, Datta A, Jinks-Robertson S, Petes TD &nbsp;
+	              Destabilization of simple repetitive DNA sequences by transcription in yeast. &nbsp;
+	              1996 006;143(2):713-21
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_261">
+	            <li type="disc">
+	            
+	              Wilke K, Jung M, Chen Y, Geldermann H &nbsp;
+	              Porcine (GT)n sequences: structure and association with dispersed and tandem repeats. &nbsp;
+	              1994 005 1;21(1):63-70
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_262">
+	            <li type="disc">
+	            
+	              Wirkner U, Voss H, Lichter P, Ansorge W, Pyerin W &nbsp;
+	              The human gene (CSNK2A1) coding for the casein kinase II subunit alpha is located on chromosome 20 and contains tandemly arranged Alu repeats. &nbsp;
+	              1994 001 15;19(2):257-65
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_263">
+	            <li type="disc">
+	            
+	              Wise CA, Garcia CA, Davis SN, Heju Z, Pentao L, Patel PI, Lupski JR &nbsp;
+	              Molecular analyses of unrelated Charcot-Marie-Tooth (CMT) disease patients suggest a high frequency of the CMTIA duplication. &nbsp;
+	              1993 010;53(4):853-63
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_264">
+	            <li type="disc">
+	            
+	              Wu KS, Tanksley SD &nbsp;
+	              Abundance, polymorphism and genetic mapping of microsatellites in rice. &nbsp;
+	              1993 010;241(1-2):225-35
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_265">
+	            <li type="disc">
+	            <a id="GenericLink_0_265" href="http://www.blackwell-synergy.com/rd.asp?abbrev=Anim%20Genet&amp;vol=30&amp;page=150&amp;goto=abstract">
+	              Xu Z, Dhar AK, Wyrzykowski J, Alcivar-Warren A &nbsp;
+	              Identification of abundant and informative microsatellites from shrimp (Penaeus monodon) genome. &nbsp;
+	              1999 004;30(2):150-6
+	            </a>
+	            <br>
+	            </li>
+	        </span><span id="For_266">
+	            <li type="disc">
+	            
+	              Yamada N, Yamaya M, Okinaga S, Nakayama K, Sekizawa K, Shibahara S, Sasaki H &nbsp;
+	              Microsatellite polymorphism in the heme oxygenase-1 gene promoter is associated with susceptibility to emphysema. &nbsp;
+	              2000 001;66(1):187-95
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_267">
+	            <li type="disc">
+	            <a id="GenericLink_0_267" href="http://link.springer-ny.com/link/service/journals/00125/bibs/0043003/00430373.htm">
+	              Yuan X, Yamada K, Ishiyama-Shigemoto S, Koyama W, Nonaka K &nbsp;
+	              Identification of polymorphic loci in the promoter region of the serotonin 5-HT2C receptor gene and their association with obesity and type II diabetes. &nbsp;
+	              2000 003;43(3):373-6
+	            </a>
+	            <br>
+	            </li>
+	        </span><span id="For_268">
+	            <li type="disc">
+	            <a id="GenericLink_0_268" href="http://www.cob.org.uk/Development/121/06/dev3180.html">
+	              Zahn LM, Kwiatkowski DJ &nbsp;
+	              A 37-marker PCR-based genetic linkage map of human chromosome 9: observations on mutations and positive interference. &nbsp;
+	              1995 007 20;28(2):140-6
+	            </a>
+	            <br>
+	            </li>
+	        </span><span id="For_269">
+	            <li type="disc">
+	            
+	              Zha H, Wilder RL, Goldmuntz EA, Cash JM, Crofford LJ, Mathern P, Remmers EF &nbsp;
+	              Linkage map of 10 polymorphic markers on rat chromosome 2. &nbsp;
+	              1993;63(2):117-23
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_270">
+	            <li type="disc">
+	            <a id="GenericLink_0_270" href="http://journals.bmn.com/search/site?search_action=resolve&amp;uid_type=elecref&amp;uid=ivp_13601385_4_210_iam_fulltext">
+	              Zhou DX &nbsp;
+	              Regulatory mechanism of plant gene transcription by GT-elements and GT-factors. &nbsp;
+	              1999 006;4(6):210-214
+	            </a>
+	            <br>
+	            </li>
+	        </span><span id="For_271">
+	            <li type="disc">
+	            
+	              Zielenski J, Rozmahel R, Bozon D, Kerem B, Grzelczak Z, Riordan JR, Rommens J, Tsui LC &nbsp;
+	              Genomic DNA sequence of the cystic fibrosis transmembrane conductance regulator (CFTR) gene. &nbsp;
+	              1991 005;10(1):214-28
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_272">
+	            <li type="disc">
+	            <a id="GenericLink_0_272" href="http://www.blackwell-synergy.com/rd.asp?abbrev=Insect%20Mol%20Biol&amp;vol=9&amp;page=375&amp;goto=abstract">
+	              Zoraqi GK, Paradisi S, Falbo V, Taruscio D &nbsp;
+	              Genomic organization and assignment of VAMP2 to 17p12 by FISH. &nbsp;
+	              2000;89(3-4):199-203
+	            </a>
+	            <br>
+	            </li>
+	        </span><span id="For_273">
+	            <li type="disc">
+	            
+	              de Groen PC, Eggen BJ, Gispen WH, Schotman P, Schrama LH &nbsp;
+	              Cloning and promoter analysis of the human B-50/GAP-43 gene. &nbsp;
+	              1995;6(2):109-19
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_274">
+	            <li type="disc">
+	            
+	              van Belkum A, Ramesar J, Trommelen G, Uitterlinden AG &nbsp;
+	              Mini- and micro-satellites in the genome of rodent malaria parasites. &nbsp;
+	              1992 009 1;118(1):81-6
+	            
+	            <br>
+	            </li>
+	        </span>
+	        </ul>
+	    </form>
+	</span>
+	</td></tr>
+</table>
+
+
+        </td></tr></table>
+    </td></tr>
+    <!-- bottom part -->
+     <tr><td rowspan="1" colspan="3" width="691">
+         <br>
+         <br>
+         <br>
+         <br>
+
+         <img src="image/sumhorsa.gif" width="791" />
+        <p align="center">Comments or questions? Please email to <a href="mailto:cftr.admin@genet.sickkids.on.ca">cftr.admin</a>
+            <br>
+            The Database was last updated at Apr 25, 2011
+        </p>
+    </td></tr>
+</table>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-7453350-1");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+<script type="text/javascript"><!--
+tapestry.addOnLoad(function(e) {
+if(tapestry.fx) { tapestry.fx.attachAjaxStatus("AjaxStatus"); }
+dojo.require("tapestry.form");tapestry.form.registerForm("Form");
+
+tapestry.form.focusField('PropertySelection');});
+// --></script></body>
+</html>
+<!-- Render time: ~ 5 ms -->
+
+

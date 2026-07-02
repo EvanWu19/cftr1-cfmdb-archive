@@ -1,0 +1,1719 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!-- Application: penguin -->
+<!-- Page: MutationDetailPage -->
+<!-- Generated: Wed Jul 01 19:47:41 EDT 2026 -->
+<html>
+<head>
+<meta name="generator" content="Tapestry Application Framework, version 4.1.6-SNAPSHOT" />
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+<title>Cystic Fibrosis Mutation Database: Mutation Detail</title>
+<meta key="keywords" content="genet, cystic fibrosis mutation database, CFTR, CFMDB, chromosome 7, chromosome7, bioinformatics resources, bioinformatic, genetic, research, human, genome project, hospital sick children, sickkids" />
+<script type="text/javascript">djConfig = {"baseRelativePath":"../assets/static/dojo-0.4.3-custom-4.1.6/","preventBackButtonFix":false,"parseWidgets":false,"locale":"en-us"} </script>
+
+<script type="text/javascript" src="../assets/static/dojo-0.4.3-custom-4.1.6/dojo.js"></script><script type="text/javascript" src="../assets/static/dojo-0.4.3-custom-4.1.6/dojo2.js"></script>
+<script type="text/javascript">
+dojo.registerModulePath("tapestry", "../assets/static/tapestry-4.1.6");
+</script>
+<script type="text/javascript" src="../assets/static/tapestry-4.1.6/core.js"></script>
+<script type="text/javascript">
+dojo.require("tapestry.namespace");
+tapestry.requestEncoding='UTF-8';
+</script>
+<link rel="stylesheet" type="text/css" href="../include/main.css" />
+<link rel="stylesheet" type="text/css" href="../include/mutationSearch.css" />
+<link rel="stylesheet" type="text/css" href="../include/forms.css" />
+<link rel="stylesheet" type="text/css" href="../include/phoenix.css" />
+<link rel="stylesheet" type="text/css" href="../include/institution.css" />
+<link rel="stylesheet" type="text/css" href="../include/mutationSubmission.css" />
+</head>
+
+<script language="JavaScript" type="text/javascript">
+    function DivSetVisible(divid, divshimid) {
+        if (document.all && (navigator.userAgent.indexOf("Opera") == -1)) {
+            var DivRef = document.getElementById(divid);
+            DivRef.style.display = "block";
+
+            var IfrRef = document.getElementById(divshimid); // co
+            IfrRef.style.width = DivRef.offsetWidth;
+            IfrRef.style.height = DivRef.offsetHeight;
+            IfrRef.style.top = DivRef.style.top;
+            IfrRef.style.left = DivRef.style.left;
+            IfrRef.style.zIndex = DivRef.style.zIndex - 1;
+            IfrRef.style.display = "block";
+        }
+    }
+    function DivSetInvisible(divid, divshimid) {
+        if (document.all && (navigator.userAgent.indexOf("Opera") == -1)) {
+            var DivRef = document.getElementById(divid);
+            DivRef.style.display = "none";
+            var IfrRef = document.getElementById(divshimid);
+            IfrRef.style.display = "none";
+        }
+    }
+	function setElemCoords(evnt, elem) {
+	// this function was changed to work for both Firefox and IE
+		var myposx = 0;
+		var posy = 0;
+		if (!evnt) var evnt = window.evnt;
+		if (evnt.pageX || evnt.pageY) 	{
+			myposx = evnt.pageX;
+			posy = evnt.pageY;
+		}
+		else if (evnt.clientX || evnt.clientY) 	{
+			myposx = evnt.clientX + document.body.scrollLeft
+			+ document.documentElement.scrollLeft;
+			posy = evnt.clientY + document.body.scrollTop
+			+ document.documentElement.scrollTop;
+		}
+		elem.style.left = myposx + 20 + "px";
+		elem.style.top = posy + 10 + "px";
+	}
+	function xCoord (e){
+
+	}
+	function hideElem(id) {
+		document.getElementById(id).style.display = "none";
+	}
+	function showElem(event, id) {
+		var elem = document.getElementById(id);
+		elem.style.position = "absolute";
+		setElemCoords(event, elem);
+		elem.style.display = "block";
+	}
+</script>
+<noscript>
+    <META HTTP-EQUIV="Refresh" CONTENT="0; URL=/">
+</noscript>
+
+
+
+
+<body marginwidth="0" topmargin="0" marginheight="0" leftmargin="0" id="Body">
+<script type="text/javascript"><!--
+dojo.require("tapestry.fx");
+// --></script>
+<table border="0" cellpadding="0" cellspacing="0" width="791" height="110">
+    <tr>
+        <td rowspan="1" colspan="3" width="691" height="58">
+        	<a id="PageLink" href="../Home.html"><img src="image/mutationlogo.gif" width="791" height="98" border="0"/></a>
+		</td>
+    </tr>
+    <tr><td>
+        <div class="container">
+            <div class="pageHeader">
+
+                <div class="clearBoth"></div>
+
+                <div class="mainMenu">
+                    <ul id="topnav">
+                        <li class="topnavhead"
+                            style="width: 80px;"><a href="Home.html" class="headnavref">Home</a>
+                        </li>
+                        <li class="topnavhead"
+                            onMouseOver="this.className='sfhover'; DivSetVisible('navitem1', 'ulShim1');"
+                            onMouseOut="this.className='topnavhead'; DivSetInvisible('navitem1', 'ulShim1');"
+                            style="width: 76px;"><a href="PicturePage.html" class="headnavref">Search</a>
+                            <ul id="navitem1" style="width: 14em; z-index: 100;">
+                                <li style="width: 14em;"><a href="PicturePage.html">Graphic Search</a></li>
+                                <li style="width: 14em;"><a href="SearchPage.html">Basic Text Search</a></li>
+                                <li style="width: 14em;"><a href="AdvancedSearchPage.html">Advanced Text Search</a></li>
+                                <!--
+                                <li style="width: 14em;"><a href="MutationSearch.html">Criteria Search</a></li>
+                                -->
+                            </ul>
+                            <!--
+                            <iframe id="ulShim1" src="include/iframe_blank.html" scrolling="no" frameborder="0" style="position:absolute; top:0px; left:0px; display:none;"></iframe>
+                            -->
+                        <li class="headdivide"></li>
+                        <li class="topnavhead"
+                            onMouseOver="this.className='sfhover'; DivSetVisible('navitem2', 'ulShim2');"
+                            onMouseOut="this.className='topnavhead'; DivSetInvisible('navitem2', 'ulShim2');"
+                            style="width: 96px;"><a href="GenomicDnaSequencePage.html" class="headnavref">CFTR&nbsp;Gene</a>
+                             <ul id="navitem2" style="width: 24em; z-index: 100;">
+                                <li style="width: 24em;"><a href="GenomicDnaSequencePage.html">Genomic DNA Sequence</a>
+                                </li>
+                                <li style="width: 24em;"><a href="MRnaPolypeptideSequencePage.html">mRNA(cDNA) and Polypeptide Sequence</a>
+                                </li>
+                                <li style="width: 24em;"><a href="CftrDomainPage.html">CFTR Domains</a></li>
+                                 <li style="width: 24em;"><a href="../download/mouse_cftr_genomic.doc">Mouse CFTR Genomic Sequence</a></li>
+                            </ul>
+                            <!--
+                            <iframe id="ulShim2" src="include/iframe_blank.html" scrolling="no" frameborder="0" style="position:absolute; top:0px; left:0px; display:none;"></iframe>
+                            -->
+                        <li class="headdivide"></li>
+                        <li class="headdivide"></li>
+
+                        <li class="topnavhead"
+                            onMouseOver="this.className='sfhover'; DivSetVisible('navitem3', 'ulShim3');"
+                            onMouseOut="this.className='topnavhead'; DivSetInvisible('navitem3', 'ulShim3');"
+                            style="width: 70px;"><a href="ConsortiumBackgroundPage.html"  class="headnavref">History</a>
+                            <ul id="navitem3" style="width: 10em; z-index: 100;">
+                                <li style="width: 10em;"><a href="ConsortiumBackgroundPage.html">Background</a></li>
+                                <li style="width: 10em;"><a href="ConsortiumGuidelinesPage.html">Guidelines</a></li>
+                                <li style="width: 10em;"><a href="ConsortiumDataPage1.html">Data</a></li>
+                                <li style="width: 10em;"><a href="NewsLetters.html">News&nbsp;Letters</a></li>
+                            </ul>
+                            <!--
+                            <iframe id="ulShim3" src="include/iframe_blank.html" scrolling="no" frameborder="0" style="position:absolute; top:0px; left:0px; display:none;"></iframe>                        <li class="headdivide"></li>
+                            -->
+                        </li>
+
+                        <li class="headdivide"></li>
+                        <li class="topnavhead"
+                            style="width: 70px;"><a href="Team.html" class="headnavref">Team</a>
+                        </li>
+
+                        <li class="headdivide"></li>
+                        <li class="topnavhead"
+                            style="width: 80px;"><a href="StatisticsPage.html" class="headnavref">Statistics</a>
+                        </li>
+
+                        <li class="headdivide"></li>
+                        <li class="topnavhead"
+                            style="width: 70px;"><a href="LinkPage.html" class="headnavref">Links</a>
+                        </li>
+
+                        <li class="headdivide"></li>
+                        <li class="topnavhead"
+                            style="width: 70px;"><a href="SubmitPage.html" class="headnavref">Submit</a>
+                        </li>
+                        <li class="topnavhead"
+
+                            onMouseOver="this.className='sfhover'; DivSetVisible('navitem5', 'ulShim5');"
+                            onMouseOut="this.className='topnavhead'; DivSetInvisible('navitem5', 'ulShim5');"
+                            style="width: 58px;"><a href="HelpPage.html" class="headnavref">Help</a>
+                            <ul id="navitem5" style="width: 18em; z-index: 100;">
+                                <li style="width: 18em;"><a href="Contact.html">Contact Information</a></li>
+                                <li style="width: 18em;"><a href="HelpPage.html#term">Terminology</a></li>
+                                <li style="width: 18em;"><a href="HelpPage.html#faq">Frequently Asked Questions</a></li>
+                            </ul>
+                            <!--
+                            <iframe id="ulShim5" src="include/iframe_blank.html" scrolling="no" frameborder="0" style="position:absolute; top:0px; left:0px; display:none;"></iframe>                        <li class="headdivide"></li>
+                            -->
+                        </li>
+
+                    </ul>
+
+                </div>
+                <style type="text/css">
+                    ul#navitem1, ul#navitem2, ul#navitem3, ul#navitem4, ul#navitem5, {
+                        width: 10em;
+                    }
+
+                    ul#navitem1 li, ul#navitem2 li, ul#navitem3 li, ul#navitem4 li, ul#navitem5 li, {
+                        font-family: verdana, arial, helvetica, sans-serif;
+                        font-size: 11px;
+                        width: 10em;
+                        font-weight: normal;
+                        border-bottom: 1px solid #cccccc;
+                        background: #eEF3F7;
+                    }
+
+                    ul#navitem1 li a, ul#navitem2 li a, ul#navitem3 li a, ul#navitem4 li a, ul#navitem5 li a, {
+                        font-size: 11px;
+                    }
+                </style>
+                <script type="text/javascript" language="javascript">
+                    // remove menu flicker when useing overLIB  in IE.
+                    if (document.all && (navigator.userAgent.indexOf("Opera") == -1)) {
+                        sfHover = function() {
+                            var sfEls =document.getElementById("topnav").getElementsByTagName("li");
+                            for (var i = 0; i < sfEls.length; i++) {
+                                // **** use onmousemove instead of onmouseover ****
+                                sfEls[i].onmousemove = sfEls[i].onmouseover;
+                            }
+                        }
+                        if (window.attachEvent) window.attachEvent("onload", sfHover);
+                    }
+                </script>
+
+
+            </div>
+
+        </div>
+
+    </td></tr>
+    <tr><td>
+    	<div style="display:none;color:white;background:red;position:absolute;top:0;right:0" id="AjaxStatus">
+			Loading...
+		</div>
+	</td></tr>
+    <tr><td>
+
+        <br><br>
+        <table cellpadding="2" cellspacing="2" width="100%"><tr><td style="font-size:small; ">
+
+<table border="0" style="width:780px">
+	<tr>
+	<td  align="center" >
+	    <h3>Mutation Details for c.1624G&gt;T </h3>
+	</td>
+	</tr>
+	
+	<tr><td>
+	<table border="1" cellpadding="4" cellspacing="3" style="table-layout:fixed;">
+	    <tr>
+	        <td width="15%">
+	            <span class="thead">cDNA Name</span>
+	        </td>
+	        <td width="85%">
+	            <!-- <span jwcid="@Insert" value="ognl:mutation.description"></span>&nbsp; -->         
+	            c.1624G&gt;T&nbsp;
+	        </td>
+	    </tr>
+	    	    
+	    <tr>
+	        <td width="15%">
+	            <span class="thead">Protein Name</span>
+	        </td>
+	        <td width="85%">
+	            p.Gly542X&nbsp;
+	        </td>
+	    </tr>
+	    
+	    <tr>
+	        <td width="15%">
+	            <span class="thead">Exon or Intron</span>
+	        </td>
+	        <td width="85%">
+	            exon 12&nbsp;
+	        </td>
+	    </tr>
+            
+            <tr>
+	        <td width="15%">
+	            <span class="thead">Legacy Exon or Intron</span>
+	        </td>
+	        <td width="85%">
+	            exon 11&nbsp;
+	        </td>
+	    </tr>
+	    <tr>
+	        <td width="15%">
+	            <span class="header">Legacy Name</span>
+	        </td>
+	        <td width="85%">
+	            <span class="row" id="Insert_4">G542X</span>&nbsp;
+	        </td>
+	    </tr>
+	    
+	    <tr>
+	        <td width="15%">
+	            <span class="notification">Other Details</span>
+	        </td>
+	        <td width="85%">
+				The single chromosome carrying this mutation is of Ashkenazic Jewish origin and has the B haplotype.  The mutant sequence can be detected by hybridization analysis with allele-specific oligonucleotides on genomic DNA amplified by PCR with the 11i-5 and 11i-3 oligonucleotide primers.  The mutation is not detected in 52 other non-[delta]F508 CF chromosomes, 11 of which are of Jewish origin, nor in 13 normal chromosomes.&nbsp;
+	        </td>
+	    </tr>
+	    
+		<span>
+		    <tr>
+		        <td width="15%">
+		            <span class="thead">Contributors</span>
+		        </td>
+		        <td width="85%">
+					Kerem B,
+Tsui LC&nbsp;&nbsp;
+					1990-02-09
+		        </td>
+		    </tr>
+		    <tr>
+		        <td width="15%">
+		            <span class="thead">Institute</span>
+		        </td>
+		        <td width="85%">
+					The Hospital for Sick Children
+Toronto, ON, Canada&nbsp;
+		        </td>
+		
+		    </tr>
+	    </span>
+	    <tr>
+	    <span id="If_3">
+	        <td width="15%">
+	            <span class="thead">Phenotype Information</span>
+	        </td>
+	        <td width="85%">
+	            <a id="GenericLink" href="http://www.cftr2.org/">CFTR2</a>
+	        </td>
+	    </span>
+		
+	    </tr>
+	    <tr>
+	        <td width="15%" valign="top">
+	            <span class="thead">Reference</span>
+	        </td>
+	        <td width="85%">
+	            Kerem et al. 1990&nbsp;
+	        </td>
+	    </tr>
+	</table>
+
+	
+	<br>
+	To check if there are any papers published about this mutation/variant on PubMed, please <a href="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?cmd=Search&amp;db=PubMed&amp;term=G542X" id="Any">click here.</a>
+	<br>
+	</td></tr>
+	
+	<tr><td width="100%">
+	<span id="If_5">
+	    <form method="post" action="/MutationDetailPage,$Form.direct" id="Form">
+<div style="display:none;" id="Formhidden"><input type="hidden" name="formids" value="Hidden,PropertySelection" />
+<input type="hidden" name="seedids" value="ZH4sIAAAAAAAAAFWPTQ6CMBCFYeFNWLLAv0SXmPiDcWHkAKaBUaswJW014pm8mndwShuLm873pq/zpu9PMHgFQbgNN7EC+eAFREncsLMphagbgYC6Y9SMI0hiBUpxgYYaOhZCll0/v0BVdY2ypbKnKTuON8L0yp65ZvquSBwAye9MGVKsCchOP3VMOm2L7Qw9juxlrzP2OPE4tT5jX1YK/MXM47yX4ELNsDXQR3nhljev/3ZxG5isFFsrTNpKyDpKvjNdyblTAQAA" />
+<input type="hidden" name="submitmode" value="" />
+<input type="hidden" name="submitname" value="" />
+<input type="hidden" name="Hidden" id="Hidden" value="258" />
+</div>
+	        
+	
+	        <b>Literature referencing this mutation.  Sort by:&nbsp;</b><select name="PropertySelection" id="PropertySelection">
+<option value="0">Author</option>
+<option value="1">Publish Date</option>
+</select>
+	        <input type="submit"/>
+	        <br>
+	        Note: This reference list is not up-to-date at this stage, but may be searched for some rare variants without pubmed hits.
+	            <br>
+	            <br>
+	        <ul>
+	        <span id="For">
+	            <li type="disc">
+	            <a id="GenericLink_0" href="http://www.nejm.org/content/scripts/search/page.asp?volume=329&amp;page=1308">
+	               &nbsp;
+	              Correlation between genotype and phenotype in patients with cystic fibrosis. The Cystic Fibrosis Genotype-Phenotype Consortium. &nbsp;
+	              1993 010 28;329(18):1308-13
+	            </a>
+	            <br>
+	            </li>
+	        </span><span id="For_0">
+	            <li type="disc">
+	            
+	              Abeliovich D, Lavon IP, Lerer I, Cohen T, Springer C, Avital A, Cutting GR &nbsp;
+	              Screening for five mutations detects 97% of cystic fibrosis (CF) chromosomes and predicts a carrier frequency of 1:29 in the Jewish Ashkenazi population. &nbsp;
+	              1992 011;51(5):951-6
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_1">
+	            <li type="disc">
+	            
+	              Abeliovich D, Quint A, Weinberg N, Verchezon G, Lerer I, Ekstein J, Rubinstein E &nbsp;
+	              Cystic fibrosis heterozygote screening in the Orthodox Community of Ashkenazi Jews: the Dor Yesharim approach and heterozygote frequency. &nbsp;
+	              1996;4(6):338-41
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_2">
+	            <li type="disc">
+	            
+	              Amosenko FA, Trubnikova IS, Zakhar'ev VM, Bannikov VM, Sazonova MA, Petrova NV, Kapranov NI, Kaplinin VN &nbsp;
+	              [TUB9 polymorphism in the CFTR gene of cystic fibrosis patients, carriers, and healthy donors from the Moscow region. SSCP and restriction analyses]. &nbsp;
+	              1997 002;33(2):257-61
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_3">
+	            <li type="disc">
+	            <a id="GenericLink_0_3" href="http://link.springer-ny.com/link/service/journals/00439/bibs/7099004/70990513.htm">
+	              Angelicheva D, Calafell F, Savov A, Jordanova A, Kufardjieva A, Galeva I, Nedkova V, Ivanova T, Yankova P, Konstantinova D, Genev E, Kalaydjieva L &nbsp;
+	              Cystic fibrosis mutations and associated haplotypes in Bulgaria - a comparative population genetic study. &nbsp;
+	              1997 004;99(4):513-20
+	            </a>
+	            <br>
+	            </li>
+	        </span><span id="For_4">
+	            <li type="disc">
+	            
+	              Anvret M, Dahl N &nbsp;
+	              [Diagnosis of cystic fibrosis with DNA techniques]. &nbsp;
+	              1991 001 30;88(5):316-7
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_5">
+	            <li type="disc">
+	            
+	              Artlich A, Boysen A, Bunge S, Entzian P, Schlaak M, Schwinger E &nbsp;
+	              Common CFTR mutations are not likely to predispose to chronic bronchitis in northern Germany. &nbsp;
+	              1995 002;95(2):226-8
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_6">
+	            <li type="disc">
+	            
+	              Augarten A, Hacham S, Kerem E, Sheva Kerem B, Szeinberg A, Laufer J, Doolman R, Altshuler R, Blau H, Bentur L, et al &nbsp;
+	              The significance of sweat Cl/Na ratio in patients with borderline sweat test. &nbsp;
+	              1995 012;20(6):369-71
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_7">
+	            <li type="disc">
+	            <a id="GenericLink_0_7" href="http://link.springer-ny.com/link/service/journals/00599/bibs/8028004/80280226.htm">
+	              Augarten A, Katznelson D, Dubenbaum L, Doolman R, Sela BA, Lusky A, Szeinberg A, Kerem BS, Paret G, Gazit E, Sack J, Yahav Y &nbsp;
+	              Serum lipase levels pre and post Lundh meal: evaluation of exocrine pancreatic status in cystic fibrosis. &nbsp;
+	              1998;28(4):226-9
+	            </a>
+	            <br>
+	            </li>
+	        </span><span id="For_8">
+	            <li type="disc">
+	            
+	              Augarten A, Shmilovich H, Doolman R, Aviram M, Akons H, Ben Tur L, Blau H, Kerem E, Rivlin J, Sela BA, Szeinberg A, Yahav Y &nbsp;
+	              Serum lipase levels as a diagnostic marker in cystic fibrosis patients with normal or borderline sweat tests. &nbsp;
+	              2000 010;30(4):320-3
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_9">
+	            <li type="disc">
+	            
+	              Axton RA, Brock DJ &nbsp;
+	              Use of stable dye-DNA intercalating complexes to detect cystic fibrosis mutations. &nbsp;
+	              1994 006;8(3):245-50
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_10">
+	            <li type="disc">
+	            
+	              Axton RA, Brock DJ &nbsp;
+	              A single-tube multiplex system for the simultaneous detection of 10 common cystic fibrosis mutations. &nbsp;
+	              1995;5(3):260-2
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_11">
+	            <li type="disc">
+	            <a id="GenericLink_0_11" href="http://link.springer-ny.com/link/service/journals/00439/bibs/6098002/60980207.htm">
+	              Bayleran JK, Yan H, Hopper CA, Simpson EM &nbsp;
+	              Frequencies of cystic fibrosis mutations in the Maine population: high proportion of unknown alleles in individuals of French-Canadian ancestry. &nbsp;
+	              1996 008;98(2):207-9
+	            </a>
+	            <br>
+	            </li>
+	        </span><span id="For_12">
+	            <li type="disc">
+	            
+	              Bedwell DM, Kaenjak A, Benos DJ, Bebok Z, Bubien JK, Hong J, Tousson A, Clancy JP, Sorscher EJ &nbsp;
+	              Suppression of a CFTR premature stop mutation in a bronchial epithelial cell line. &nbsp;
+	              1997 011;3(11):1280-4
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_13">
+	            <li type="disc">
+	            <a id="GenericLink_0_13" href="http://www.catchword.com/rpsv/cgi-bin/cgi?body=linker&amp;ini=nlm&amp;reqidx=issn=1090-6576vl=4is=1yr=2000mn=Janpg=69">
+	              Bernardino AL, Ferri A, Passos-Bueno MR, Kim CE, Nakaie CM, Gomes CE, Damaceno N, Zatz M &nbsp;
+	              Molecular analysis in Brazilian cystic fibrosis patients reveals five novel mutations. &nbsp;
+	              2000;4(1):69-74
+	            </a>
+	            <br>
+	            </li>
+	        </span><span id="For_14">
+	            <li type="disc">
+	            
+	              Borrego S, Casals T, Dapena J, Fernandez E, Gimenez J, Cabeza JC, Sanchez J, Antinolo G &nbsp;
+	              Molecular and clinical analyses of cystic fibrosis in the south of Spain. &nbsp;
+	              1994 010;46(4):287-90
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_15">
+	            <li type="disc">
+	            <a id="GenericLink_0_15" href="http://www.blackwell-synergy.com/rd.asp?abbrev=Clin%20Genet&amp;vol=53&amp;page=47&amp;goto=abstract">
+	              Brock DJ, Gilfillan A, Holloway S &nbsp;
+	              The incidence of cystic fibrosis in Scotland calculated from heterozygote frequencies. &nbsp;
+	              1998 001;53(1):47-9
+	            </a>
+	            <br>
+	            </li>
+	        </span><span id="For_16">
+	            <li type="disc">
+	            
+	              Cabello GM, Moreira AF, Horovitz D, Correia P, Santa Rosa A, Llerena J, Greg J, Grody WW, Degrave WM, Fernandes O, Cabello PH &nbsp;
+	              Cystic fibrosis: low frequency of DF508 mutation in 2 population samples from Rio de Janeiro, Brazil. &nbsp;
+	              1999 004;71(2):189-96
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_17">
+	            <li type="disc">
+	            
+	              Casals T, Gimenez J, Ramos MD, Nunes V, Estivill X &nbsp;
+	              Prenatal diagnosis of cystic fibrosis in a highly heterogeneous population. &nbsp;
+	              1996 003;16(3):215-22
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_18">
+	            <li type="disc">
+	            
+	              Casals T, Nunes V, Palacio A, Gimenez J, Gaona A, Ibanez N, Morral N, Estivill X &nbsp;
+	              Cystic fibrosis in Spain: high frequency of mutation G542X in the Mediterranean coastal area. &nbsp;
+	              1993 003;91(1):66-70
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_19">
+	            <li type="disc">
+	            <a id="GenericLink_0_19" href="http://www.clinchem.org/cgi/pmidlookup?view=full&amp;pmid=10388469">
+	              Castaldo G, Fuccio A, Cazeneuve C, Picci L, Salvatore D, Raia V, Scarpa M, Goossens M, Salvatore F &nbsp;
+	              Detection of five rare cystic fibrosis mutations peculiar to Southern Italy: implications in screening for the disease and phenotype characterization for patients with homozygote mutations. &nbsp;
+	              1999 007;45(7):957-62
+	            </a>
+	            <br>
+	            </li>
+	        </span><span id="For_20">
+	            <li type="disc">
+	            <a id="GenericLink_0_20" href="http://link.springer-ny.com/link/service/journals/00439/bibs/7099004/70990513.htm">
+	              Castaldo G, Rippa E, Salvatore D, Sibillo R, Raia V, de Ritis G, Salvatore F &nbsp;
+	              Severe liver impairment in a cystic fibrosis-affected child homozygous for the G542X mutation. &nbsp;
+	              1997 003 17;69(2):155-8
+	            </a>
+	            <br>
+	            </li>
+	        </span><span id="For_21">
+	            <li type="disc">
+	            
+	              Castaldo G, Rippa E, Sebastio G, Raia V, Ercolini P, de Ritis G, Salvatore D, Salvatore F &nbsp;
+	              Molecular epidemiology of cystic fibrosis mutations and haplotypes in southern Italy evaluated with an improved semiautomated robotic procedure. &nbsp;
+	              1996 006;33(6):475-9
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_22">
+	            <li type="disc">
+	            
+	              Cheadle J, Myring J, al-Jader L, Meredith L &nbsp;
+	              Mutation analysis of 184 cystic fibrosis families in Wales. &nbsp;
+	              1992 009;29(9):642-6
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_23">
+	            <li type="disc">
+	            
+	              Chehab FF, Wall J &nbsp;
+	              Detection of multiple cystic fibrosis mutations by reverse dot blot hybridization: a technology for carrier screening. &nbsp;
+	              1992 005;89(2):163-8
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_24">
+	            <li type="disc">
+	            
+	              Chertkoff L, Visich A, Bienvenu T, Grenoville M, Segal E, Carniglia L, Kaplan JC, Barreiro C &nbsp;
+	              Spectrum of CFTR mutations in Argentine cystic fibrosis patients. &nbsp;
+	              1997 001;51(1):43-7
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_25">
+	            <li type="disc">
+	            
+	              Chevalier-Porst F, Bonardot AM, Gilly R, Chazalette JP, Mathieu M, Bozon D &nbsp;
+	              Mutation analysis in 600 French cystic fibrosis patients. &nbsp;
+	              1994 007;31(7):541-4
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_26">
+	            <li type="disc">
+	            
+	              Chillon M, Casals T, Gimenez J, Nunes V, Estivill X &nbsp;
+	              Analysis of the CFTR gene in the Spanish population: SSCP-screening for 60 known mutations and identification of four new mutations (Q30X, A120T, 1812-1 G--&gt;A, and 3667del4). &nbsp;
+	              1994;3(3):223-30
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_27">
+	            <li type="disc">
+	            
+	              Chillon M, Casals T, Gimenez J, Ramos MD, Palacio A, Morral N, Estivill X, Nunes V &nbsp;
+	              Analysis of the CFTR gene confirms the high genetic heterogeneity of the Spanish population: 43 mutations account for only 78% of CF chromosomes. &nbsp;
+	              1994 004;93(4):447-51
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_28">
+	            <li type="disc">
+	            <a id="GenericLink_0_28" href="http://nar.oupjournals.org/cgi/pmidlookup?view=full&amp;pmid=9837986">
+	              Clancy JP, Hong JS, Bebok Z, King SA, Demolombe S, Bedwell DM, Sorscher EJ &nbsp;
+	              Cystic fibrosis transmembrane conductance regulator (CFTR) nucleotide-binding domain 1 (NBD-1) and CFTR truncated within NBD-1 target to the epithelial plasma membrane and increase anion permeability. &nbsp;
+	              1998 010 27;37(43):15222-30
+	            </a>
+	            <br>
+	            </li>
+	        </span><span id="For_29">
+	            <li type="disc">
+	            
+	              Claustres M, Desgeorges M, Kjellberg P, Tissot C, Demaille J &nbsp;
+	              Analysis of 30 known cystic fibrosis mutations: 10 mutations account for 27% of non-delta F508 chromosomes in southern France. &nbsp;
+	              1992 012;90(4):464-6
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_30">
+	            <li type="disc">
+	            <a id="GenericLink_0_30" href="http://link.springer-ny.com/link/service/journals/00439/bibs/6098003/60980336.htm">
+	              Claustres M, Desgeorges M, Moine P, Morral N, Estivill X &nbsp;
+	              CFTR haplotypic variability for normal and mutant genes in cystic fibrosis families from southern France. &nbsp;
+	              1996 009;98(3):336-44
+	            </a>
+	            <br>
+	            </li>
+	        </span><span id="For_31">
+	            <li type="disc">
+	            <a id="GenericLink_0_31" href="http://link.springer-ny.com/link/service/journals/00431/bibs/0159007/01590496.htm">
+	              Claustres M, Guittard C, Bozon D, Chevalier F, Verlingue C, Ferec C, Girodon E, Cazeneuve C, Bienvenu T, Lalau G, Dumur V, Feldmann D, Bieth E, Blayau M, Clavel C, Creveaux I, Malinge MC, Monnier N, Malzac P, Mittre H, Chomel JC, Bonnefont JP, Iron A, Chery M, Georges MD &nbsp;
+	              Spectrum of CFTR mutations in cystic fibrosis and in congenital absence of the vas deferens in France. &nbsp;
+	              2000;16(2):143-56
+	            </a>
+	            <br>
+	            </li>
+	        </span><span id="For_32">
+	            <li type="disc">
+	            <a id="GenericLink_0_32" href="http://link.springer-ny.com/link/service/journals/00439/bibs/8102005/81020587.htm">
+	              Collee JM, de Vries HG, Scheffer H, Halley DJ, ten Kate LP &nbsp;
+	              Relative frequencies of cystic fibrosis mutations in The Netherlands as an illustration of significant regional variation in a small country. &nbsp;
+	              1998 005;102(5):587-90
+	            </a>
+	            <br>
+	            </li>
+	        </span><span id="For_33">
+	            <li type="disc">
+	            
+	              Colombo C, Apostolo MG, Ferrari M, Seia M, Genoni S, Giunta A, Sereni LP &nbsp;
+	              Analysis of risk factors for the development of liver disease associated with cystic fibrosis. &nbsp;
+	              1994 003;124(3):393-9
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_34">
+	            <li type="disc">
+	            
+	              Coto E, Bousono C, Menendez MJ, Cue R, Toral JF, Benavides A, Hernando I, Plasencia A, Lopez-Larrea C &nbsp;
+	              [Cystic fibrosis in Asturias: an elevated frequency of the delta F508 mutation]. &nbsp;
+	              1994 011 26;103(18):681-3
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_35">
+	            <li type="disc">
+	            
+	              Coutelle C, Bruckner R, Grade K, Behrens F, Gedschold J, Hein J, Szibor R, Bauer I, Brock J, Graupner I, et al &nbsp;
+	              Prevalence of cystic fibrosis mutations in the East German population. &nbsp;
+	              1992;1(2):109-12
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_36">
+	            <li type="disc">
+	            
+	              Cuppens H, Teng H, Raeymaekers P, De Boeck C, Cassiman JJ &nbsp;
+	              CFTR haplotype backgrounds on normal and mutant CFTR genes. &nbsp;
+	              1994 004;3(4):607-14
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_37">
+	            <li type="disc">
+	            
+	              Dabovic BB, Radojkovic D, Minic P, Savic J, Savic A &nbsp;
+	              Frequency of the delta F508 deletion and G551D, R553X and G542X mutations in Yugoslav CF patients. &nbsp;
+	              1992 003;88(6):699-700
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_38">
+	            <li type="disc">
+	            <a id="GenericLink_0_38" href="http://link.springer-ny.com/link/service/journals/00431/bibs/0159007/01590496.htm">
+	              Dawson KP, Frossard PM &nbsp;
+	              The geographic distribution of cystic fibrosis mutations gives clues about population origins. &nbsp;
+	              2000 007;159(7):496-9
+	            </a>
+	            <br>
+	            </li>
+	        </span><span id="For_39">
+	            <li type="disc">
+	            
+	              Desgeorges M, Laussel M, Rollin B, Demaille J, Claustres M &nbsp;
+	              Severe pulmonary and digestive disease in a cystic fibrosis child homozygous for G542X. &nbsp;
+	              1994 001;31(1):84-5
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_40">
+	            <li type="disc">
+	            
+	              Deufel T, Rabe H, Wieser T, Meitinger T, Rosenecker J, Bertele-Harms R, Harms K, Hadorn HB, Roscher AA &nbsp;
+	              Mutation analysis in the diagnosis of cystic fibrosis. &nbsp;
+	              1993 011;152(11):909-11
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_41">
+	            <li type="disc">
+	            
+	              Endreffy E, Laszlo , Szabo A, Roman F, Kurti K, Kalman M, Rasko I &nbsp;
+	              Molecular genetic studies in monogenic and polygenic human diseases. &nbsp;
+	              1997;48(1):121-8
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_42">
+	            <li type="disc">
+	            
+	              Entzian P, Muller E, Boysen A, Artlich A, Schwinger E, Schlaak M &nbsp;
+	              Frequency of common cystic fibrosis gene mutations in chronic bronchitis patients. &nbsp;
+	              1995 005;55(3):263-6
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_43">
+	            <li type="disc">
+	            
+	              Estivill X, Bancells C, Ramos C &nbsp;
+	              Geographic distribution and regional origin of 272 cystic fibrosis mutations in European populations. The Biomed CF Mutation Analysis Consortium. &nbsp;
+	              1997;10(2):135-54
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_44">
+	            <li type="disc">
+	            
+	              Feingold J, Guilloud-Bataille M &nbsp;
+	              Genetic comparisons of patients with cystic fibrosis with or without meconium ileus. Clinical Centers of the French CF Registry. &nbsp;
+	              1999;42(3):147-50
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_45">
+	            <li type="disc">
+	            
+	              Ferec C, Verlingue C, Guillermit H, Quere I, Raguenes O, Feigelson J, Audrezet MP, Moullier P, Mercier B &nbsp;
+	              Genotype analysis of adult cystic fibrosis patients. &nbsp;
+	              1993 010;2(10):1557-60
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_46">
+	            <li type="disc">
+	            
+	              Ferrie RM, Schwarz MJ, Robertson NH, Vaudin S, Super M, Malone G, Little S &nbsp;
+	              Development, multiplexing, and application of ARMS tests for common mutations in the CFTR gene. &nbsp;
+	              1992 008;51(2):251-62
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_47">
+	            <li type="disc">
+	            
+	              Flores-Martinez SE, Dean M, Saiki RK, Gallegos-Arreola MP, Moran-Moguel MC, Sanchez-Corona J &nbsp;
+	              Molecular analysis of northwestern Mexican patients with cystic fibrosis: screening of 10 known mutations. Mutations in brief no. 185. Online. &nbsp;
+	              1998;12(3):217-8
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_48">
+	            <li type="disc">
+	            
+	              Fortina P, Conant R, Monokian G, Dotti G, Parrella T, Hitchcock W, Kant J, Scanlin T, Rappaport E, Schwartz E, et al &nbsp;
+	              Non-radioactive detection of the most common mutations in the cystic fibrosis transmembrane conductance regulator gene by multiplex allele-specific polymerase chain reaction. &nbsp;
+	              1992 012;90(4):375-8
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_49">
+	            <li type="disc">
+	            
+	              Fugger EF, Maddalena A, Schulman JD &nbsp;
+	              Results of retroactive testing of human semen donors for cystic fibrosis and human immunodeficiency virus by polymerase chain reaction. &nbsp;
+	              1993 009;8(9):1435-7
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_50">
+	            <li type="disc">
+	            
+	              Gaillard DA, Carre-Pigeon F, Lallemand A &nbsp;
+	              Normal vas deferens in fetuses with cystic fibrosis. &nbsp;
+	              1997 010;158(4):1549-52
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_51">
+	            <li type="disc">
+	            
+	              Gasparini P, Arbustini E, Restagno G, Zelante L, Stanziale P, Gatta L, Sbaiz L, Sedita AM, Banchieri N, Sapone L, Fiorucci GC, Brinson E, Shulse E, Rappaport E, Fortina P &nbsp;
+	              Analysis of 31 CFTR mutations by polymerase chain reaction/oligonucleotide ligation assay in a pilot screening of 4476 newborns for cystic fibrosis. &nbsp;
+	              1999;6(2):67-9
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_52">
+	            <li type="disc">
+	            
+	              Gasparini P, Bonizzato A, Dognini M, Pignatti PF &nbsp;
+	              Restriction site generating-polymerase chain reaction (RG-PCR) for the probeless detection of hidden genetic variation: application to the study of some common cystic fibrosis mutations. &nbsp;
+	              1992 002;6(1):1-7
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_53">
+	            <li type="disc">
+	            
+	              Gelfi C, Righetti PG, Magnani C, Cremonesi L, Ferrari M &nbsp;
+	              Simultaneous detection of delta F508, G542X, N1303K and 1717-1G--&gt;A mutations in cystic fibrosis by capillary electrophoresis in polymer networks. &nbsp;
+	              1994 009;229(1-2):181-9
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_54">
+	            <li type="disc">
+	            
+	              Goldman A, Jenkins T, Ramsay M &nbsp;
+	              Analysis of 40 known cystic fibrosis mutations in South African patients. &nbsp;
+	              1994 012;46(6):398-400
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_55">
+	            <li type="disc">
+	            <a id="GenericLink_0_55" href="http://www.blackwell-synergy.com/rd.asp?abbrev=Clin%20Genet&amp;vol=59&amp;page=37&amp;goto=abstract">
+	              Goldman A, Labrum R, Claustres M, Desgeorges M, Guittard C, Wallace A, Ramsay M &nbsp;
+	              The molecular basis of cystic fibrosis in South Africa. &nbsp;
+	              2001 001;59(1):37-41
+	            </a>
+	            <br>
+	            </li>
+	        </span><span id="For_56">
+	            <li type="disc">
+	            
+	              Grebe TA, Doane WW, Richter SF, Clericuzio C, Norman RA, Seltzer WK, Rhodes SN, Goldberg BE, Hernried LS, McClure M, et al &nbsp;
+	              Mutation analysis of the cystic fibrosis transmembrane regulator gene in Native American populations of the southwest. &nbsp;
+	              1992 010;51(4):736-40
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_57">
+	            <li type="disc">
+	            
+	              Grebe TA, Seltzer WK, DeMarchi J, Silva DK, Doane WW, Gozal D, Richter SF, Bowman CM, Norman RA, Rhodes SN, et al &nbsp;
+	              Genetic analysis of Hispanic individuals with cystic fibrosis. &nbsp;
+	              1994 003;54(3):443-6
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_58">
+	            <li type="disc">
+	            
+	              Greil I, Wagner K, Eber E, Zach M, Rosenkranz W &nbsp;
+	              Molecular and clinical findings in Austrian cystic fibrosis patients with mutations in exon 11 of the CFTR gene. &nbsp;
+	              1995;107(15):464-9
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_59">
+	            <li type="disc">
+	            <a id="GenericLink_0_59" href="http://link.springer-ny.com/link/service/journals/00431/bibs/0159007/01590496.htm">
+	              Guilloud-Bataille M, De Crozes D, Rault G, Degioanni A, Feingold J &nbsp;
+	              Cystic fibrosis mutations: report from the French Registry. The Clinical Centers of the CF. &nbsp;
+	              2000 003-004;50(2):142-5
+	            </a>
+	            <br>
+	            </li>
+	        </span><span id="For_60">
+	            <li type="disc">
+	            
+	              Guzman Martinez-Valls PL, Tomas Ros M, Glover Lopez G, Ferrero Doria R, Morga Egea JP, Navas Pastor J, Rico Galiano JL, Sempere Gutierrez A, Fontana Compiano LO &nbsp;
+	              [Congenital bilateral agenesis of the vas deferens associated with cystic fibrosis. A molecular genetic study]. &nbsp;
+	              1998 006;51(5):451-5
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_61">
+	            <li type="disc">
+	            <a id="GenericLink_0_61" href="http://nar.oupjournals.org/cgi/pmidlookup?view=full&amp;pmid=9837986">
+	              Hakala H, Virta P, Salo H, Lonnberg H &nbsp;
+	              Simultaneous detection of several oligonucleotides by time-resolved fluorometry: the use of a mixture of categorized microparticles in a sandwich type mixed-phase hybridization assay. &nbsp;
+	              1998 012 15;26(24):5581-8
+	            </a>
+	            <br>
+	            </li>
+	        </span><span id="For_62">
+	            <li type="disc">
+	            
+	              Hamosh A, Rosenstein BJ, Cutting GR &nbsp;
+	              CFTR nonsense mutations G542X and W1282X associated with severe reduction of CFTR mRNA in nasal epithelial cells. &nbsp;
+	              1992 010;1(7):542-4
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_63">
+	            <li type="disc">
+	            <a id="GenericLink_0_63" href="http://www.clinchem.org/cgi/pmidlookup?view=full&amp;pmid=9216449">
+	              Heinonen P, Iitia A, Torresani T, Lovgren T &nbsp;
+	              Simple triple-label detection of seven cystic fibrosis mutations by time-resolved fluorometry. &nbsp;
+	              1997 007;43(7):1142-50
+	            </a>
+	            <br>
+	            </li>
+	        </span><span id="For_64">
+	            <li type="disc">
+	            
+	              Hoffman RA, Floyd ME, Whetsell LH, Kramer JC, Schaefer FV &nbsp;
+	              Cystic fibrosis in the southern Midwest United States: molecular characterization of the common mutations. &nbsp;
+	              1994 002;307(2):82-5
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_65">
+	            <li type="disc">
+	            
+	              Hughes D, Wallace A, Taylor J, Tassabehji M, McMahon R, Hill A, Nevin N, Graham C &nbsp;
+	              Fluorescent multiplex microsatellites used to define haplotypes associated with 75 CFTR mutations from the UK on 437 CF chromosomes. &nbsp;
+	              1996;8(3):229-35
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_66">
+	            <li type="disc">
+	            
+	              Jalanko A, Kere J, Savilahti E, Schwartz M, Syvanen AC, Ranki M, Soderlund H &nbsp;
+	              Screening for defined cystic fibrosis mutations by solid-phase minisequencing. &nbsp;
+	              1992 001;38(1):39-43
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_67">
+	            <li type="disc">
+	            
+	              Kadasi L, Polakova H, Zatkova A, Kayserova H &nbsp;
+	              Distribution of 9 common mutations in the CFTR gene in Slovak cystic fibrosis patients. &nbsp;
+	              1997 004;11(1):51-6
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_68">
+	            <li type="disc">
+	            
+	              Kadasi L, Polakova H, Zatkova A, Kayserova H, Hruskovic I &nbsp;
+	              [The spectrum of mutations in the CFTR gene in patients with cystic fibrosis in Slovakia]. &nbsp;
+	              1998 001;99(1):33-6
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_69">
+	            <li type="disc">
+	            
+	              Kanavakis E, Tzetis M, Antoniadi T, Traeger-Synodinos J, Doudounakis S, Adam G, Matsaniotis N, Kattamis C &nbsp;
+	              Mutation analysis of ten exons of the CFTR gene in Greek cystic fibrosis patients: characterization of 74.5% of CF alleles including one novel mutation. &nbsp;
+	              1995 009;96(3):364-6
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_70">
+	            <li type="disc">
+	            
+	              Kere J, Estivill X, Chillon M, Morral N, Nunes V, Norio R, Savilahti E, de la Chapelle A &nbsp;
+	              Cystic fibrosis in a low-incidence population: two major mutations in Finland. &nbsp;
+	              1994 002;93(2):162-6
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_71">
+	            <li type="disc">
+	            
+	              Kostuch M, Semczuk A, Szarewicz-Adamczyk W, Gasowska-Giszczak U, Wojcierowski J, Kulczycki L &nbsp;
+	              Detection of CFTR gene mutations in patients suffering from chronic bronchitis. &nbsp;
+	              2000 001-002;31(1):97-100
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_72">
+	            <li type="disc">
+	            
+	              Kristidis P, Bozon D, Corey M, Markiewicz D, Rommens J, Tsui LC, Durie P &nbsp;
+	              Genetic determination of exocrine pancreatic function in cystic fibrosis. &nbsp;
+	              1992 006;50(6):1178-84
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_73">
+	            <li type="disc">
+	            
+	              Lamy S, da Silva LP, Lopes B, Pacheco P, Lavinha J, Amaral JM, Marques JM &nbsp;
+	              [Mucoviscidosis with respiratory symptomatology in the neonatal period]. &nbsp;
+	              1997 002-003;10(2-3):209-12
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_74">
+	            <li type="disc">
+	            <a id="GenericLink_0_74" href="http://link.springer-ny.com/link/service/journals/00424/bibs/04393%20Suppl/04390R63.htm">
+	              Laufer-Cahana A, Lerer I, Sagi M, Rachmilewitz-Minei T, Zamir C, Rivlin JR, Abeliovich D &nbsp;
+	              Cystic fibrosis mutations in Israeli Arab patients. &nbsp;
+	              1999 012;14(6):543
+	            </a>
+	            <br>
+	            </li>
+	        </span><span id="For_75">
+	            <li type="disc">
+	            
+	              Lerer I, Sagi M, Cutting GR, Abeliovich D &nbsp;
+	              Cystic fibrosis mutations delta F508 and G542X in Jewish patients. &nbsp;
+	              1992 002;29(2):131-3
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_76">
+	            <li type="disc">
+	            
+	              Lindner M, Wolf A, Moh B, Steinbach P, Kleihauer E, Bartram CR, Kulozik AE &nbsp;
+	              The spectrum of CFTR mutations in south-west German cystic fibrosis patients. &nbsp;
+	              1992 011;90(3):267-9
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_77">
+	            <li type="disc">
+	            
+	              Loirat F, Hazout S, Lucotte G &nbsp;
+	              G542X as a probable Phoenician cystic fibrosis mutation. &nbsp;
+	              1997 006;69(3):419-25
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_78">
+	            <li type="disc">
+	            
+	              Lucidi V, Novelli G, Castro M, Sangiuolo F, Papadatou B, Ferretti F, Orru M, Dallapiccola B &nbsp;
+	              [The correlation between the genotype and the clinical expression of cystic fibrosis]. &nbsp;
+	              1992 009-010;14(5):513-5
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_79">
+	            <li type="disc">
+	            
+	              Lucotte G, Hazout S &nbsp;
+	              Geographic and ethnic distributions of the more frequent cystic fibrosis mutations in Europe show that a founder effect is apparent for several mutant alleles. &nbsp;
+	              1995 008;67(4):562-76
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_80">
+	            <li type="disc">
+	            <a id="GenericLink_0_80" href="http://www.chestjournal.org/cgi/pmidlookup?view=full&amp;pmid=11243954">
+	              Marchand E, Verellen-Dumoulin C, Mairesse M, Delaunois L, Brancaleone P, Rahier JF, Vandenplas O &nbsp;
+	              Frequency of Cystic Fibrosis Transmembrane Conductance Regulator Gene Mutations and 5T Allele in Patients With Allergic Bronchopulmonary Aspergillosis. &nbsp;
+	              2001 003;119(3):762-767
+	            </a>
+	            <br>
+	            </li>
+	        </span><span id="For_81">
+	            <li type="disc">
+	            
+	              Mastella G, Rainisio M, Harms HK, Hodson ME, Koch C, Navarro J, Strandvik B, McKenzie SG &nbsp;
+	              Allergic bronchopulmonary aspergillosis in cystic fibrosis. A European epidemiological study. Epidemiologic Registry of Cystic Fibrosis. &nbsp;
+	              2000 009;16(3):464-71
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_82">
+	            <li type="disc">
+	            
+	              Mercier B, Lissens W, Audrezet MP, Bonduelle M, Liebaers I, Ferec C &nbsp;
+	              Detection of more than 94% cystic fibrosis mutations in a sample of Belgian population and identification of four novel mutations. &nbsp;
+	              1993;2(1):16-20
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_83">
+	            <li type="disc">
+	            
+	              Mercier B, Raguenes O, Estivill X, Morral N, Kaplan GC, McClure M, Grebe TA, Kessler D, Pignatti PF, Marigo C, et al &nbsp;
+	              Complete detection of mutations in cystic fibrosis patients of Native American origin. &nbsp;
+	              1994 012;94(6):629-32
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_84">
+	            <li type="disc">
+	            
+	              Mitchell J, Scriver CR, Clow CL, Kaplan F &nbsp;
+	              What young people think and do when the option for cystic fibrosis carrier testing is available. &nbsp;
+	              1993 007;30(7):538-42
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_85">
+	            <li type="disc">
+	            
+	              Morral N, Dork T, Llevadot R, Dziadek V, Mercier B, Ferec C, Costes B, Girodon E, Zielenski J, Tsui LC, Tummler B, Estivill X &nbsp;
+	              Haplotype analysis of 94 cystic fibrosis mutations with seven polymorphic CFTR DNA markers. &nbsp;
+	              1996;8(2):149-59
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_86">
+	            <li type="disc">
+	            
+	              Morral N, Nunes V, Casals T, Chillon M, Gimenez J, Bertranpetit J, Estivill X &nbsp;
+	              Microsatellite haplotypes for cystic fibrosis: mutation frameworks and evolutionary tracers. &nbsp;
+	              1993 007;2(7):1015-22
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_87">
+	            <li type="disc">
+	            
+	              Muller F, Dommergues M, Simon-Bouy B, Ferec C, Oury JF, Aubry MC, Bessis R, Vuillard E, Denamur E, Bienvenu T, Serre JL &nbsp;
+	              Cystic fibrosis screening: a fetus with hyperechogenic bowel may be the index case. &nbsp;
+	              1998 008;35(8):657-60
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_88">
+	            <li type="disc">
+	            <a id="GenericLink_0_88" href="http://link.springer-ny.com/link/service/journals/00424/bibs/04393%20Suppl/04390R63.htm">
+	              Mussaffi H, Greif J, Kornreich L, Ashkenazi S, Levy Y, Schonfeld T, Blau H &nbsp;
+	              Severe allergic bronchopulmonary aspergillosis in an infant with cystic fibrosis and her asthmatic father. &nbsp;
+	              2000 002;29(2):155-9
+	            </a>
+	            <br>
+	            </li>
+	        </span><span id="For_89">
+	            <li type="disc">
+	            
+	              Nemeth K, Holics K, Ujhelyi R, Varadi A, Fekete G &nbsp;
+	              [Analysis of five mutations of cystic fibrosis occurring in the Hungarian population]. &nbsp;
+	              1996 004 28;137(17):899-903
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_90">
+	            <li type="disc">
+	            
+	              Nemeti M, Johnson JP, Papp Z, Louie E &nbsp;
+	              The occurrence of various non-delta F508 CFTR gene mutations among Hungarian cystic fibrosis patients. &nbsp;
+	              1992 005;89(2):245-6
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_91">
+	            <li type="disc">
+	            
+	              Ng IS, Pace R, Richard MV, Kobayashi K, Kerem B, Tsui LC, Beaudet AL &nbsp;
+	              Methods for analysis of multiple cystic fibrosis mutations. &nbsp;
+	              1991 009;87(5):613-7
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_92">
+	            <li type="disc">
+	            
+	              Nunes V, Gasparini P, Novelli G, Gaona A, Bonizzato A, Sangiuolo F, Balassopoulou A, Gimenez FJ, Dognini M, Ravnik-Glavac M, et al &nbsp;
+	              Analysis of 14 cystic fibrosis mutations in five south European populations. &nbsp;
+	              1991 010;87(6):737-8
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_93">
+	            <li type="disc">
+	            
+	              Ober C, Lester LA, Mott C, Billstrand C, Lemke A, van der Ven K, Marcus S, Kraut J, Lloyd-Still J, Booth C &nbsp;
+	              Ethnic heterogeneity and cystic fibrosis transmembrane regulator (CFTR) mutation frequencies in Chicago-area CF families. &nbsp;
+	              1992 012;51(6):1344-8
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_94">
+	            <li type="disc">
+	            <a id="GenericLink_0_94" href="http://link.springer-ny.com/link/service/journals/00439/bibs/8102002/81020224.htm">
+	              Onay T, Topaloglu O, Zielenski J, Gokgoz N, Kayserili H, Camcioglu Y, Cokugras H, Akcakaya N, Apak M, Tsui LC, Kirdar B &nbsp;
+	              Analysis of the CFTR gene in Turkish cystic fibrosis patients: identification of three novel mutations (3172delAC, P1013L and M1028I). &nbsp;
+	              1998 002;102(2):224-30
+	            </a>
+	            <br>
+	            </li>
+	        </span><span id="For_95">
+	            <li type="disc">
+	            
+	              Petrova NV, Ginter EK, Kapranov NI, El'chinova GI &nbsp;
+	              [Portion of certain cystic fibrosis gene mutations and linkage dysequilibrium between the CFTR-gene locus and two DNA marker loci in Russian populations]. &nbsp;
+	              1994 007;30(7):974-7
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_96">
+	            <li type="disc">
+	            
+	              Petrova NV, Kapranov NI, Ginter EK &nbsp;
+	              [Detection of frequent mutations of the CFTR gene in cystic fibrosis patients from Central Russia]. &nbsp;
+	              1997 001;33(1):106-9
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_97">
+	            <li type="disc">
+	            
+	              Phillips OP, Bishop C, Woods D, Elias S &nbsp;
+	              Cystic fibrosis mutations among African Americans in the southeastern United States. &nbsp;
+	              1995 006;87(6):433-5
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_98">
+	            <li type="disc">
+	            
+	              Phillips OP, Elias S, Woods D, Hanissian AS, Schoumacher RA, Bishop C &nbsp;
+	              Cystic fibrosis mutations in white and black Americans: an approach to identification of unknown mutations with implications for cystic fibrosis screening. &nbsp;
+	              1993 004;168(4):1076-82
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_99">
+	            <li type="disc">
+	            
+	              Potapova OYu , Voronina OV, Gaitskhoki VS, Bogacheva EV, Uembitskaya TE, Kuprina EA, Kapranov NI, Berlin YuA , Schwartz EI &nbsp;
+	              Identification of the linkage of mutations causing cystic fibrosis to different alleles of a tetranucleotide repeat in intron 6a of the CFTR gene. &nbsp;
+	              1994 004;51(2):185-7
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_100">
+	            <li type="disc">
+	            <a id="GenericLink_0_100" href="http://www.blackwell-synergy.com/rd.asp?abbrev=Clin%20Genet&amp;vol=53&amp;page=47&amp;goto=abstract">
+	              Rabbi-Bortolini E, Bernardino AL, Lopes AL, Ferri AS, Passos-Bueno MR, Zatz M &nbsp;
+	              Sweat electrolyte and cystic fibrosis mutation analysis allows early diagnosis in Brazilian children with clinical signs compatible with cystic fibrosis. &nbsp;
+	              1998 004 1;76(4):288-90
+	            </a>
+	            <br>
+	            </li>
+	        </span><span id="For_101">
+	            <li type="disc">
+	            
+	              Ranieri E, Lewis BD, Gerace RL, Ryall RG, Morris CP, Nelson PV, Carey WF, Robertson EF &nbsp;
+	              Neonatal screening for cystic fibrosis using immunoreactive trypsinogen and direct gene analysis: four years' experience. &nbsp;
+	              1994 006 4;308(6942):1469-72
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_102">
+	            <li type="disc">
+	            
+	              Raskin S, Phillips JA, Kaplan G, McClure M, Vnencak-Jones C &nbsp;
+	              Cystic fibrosis genotyping by direct PCR analysis of Guthrie blood spots. &nbsp;
+	              1992 011;2(2):154-6
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_103">
+	            <li type="disc">
+	            
+	              Raskin S, Phillips JA, Kaplan G, McClure M, Vnencak-Jones C, Rozov T, Cardieri JM, Marostica P, Abreu F, Giugliani R, Reis F, Rosario NA, Ludwig N, Pereira L, Faucz F, Gabardo J, Culpi L &nbsp;
+	              Geographic heterogeneity of 4 common worldwide cystic fibrosis non-DF508 mutations in Brazil. &nbsp;
+	              1999 002;71(1):111-21
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_104">
+	            <li type="disc">
+	            
+	              Reiss J, Ellermeyer U, Schloesser M, Fuhrmann W, Drews D, Posselt HG &nbsp;
+	              Two cystic fibrosis patients with the genotype G542X/G551D. &nbsp;
+	              1993 003;91(1):78-9
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_105">
+	            <li type="disc">
+	            
+	              Rendine S, Calafell F, Cappello N, Gagliardini R, Caramia G, Rigillo N, Silvetti M, Zanda M, Miano A, Battistini F, Marianelli L, Taccetti G, Diana MC, Romano L, Romano C, Giunta A, Padoan R, Pianaroli A, Raia V, De Ritis G, Battistini A, Grzincich G, Japichino L, Pardo F, Piazza A, et al &nbsp;
+	              Genetic history of cystic fibrosis mutations in Italy. I. Regional distribution. &nbsp;
+	              1997 009;61 ( Pt 5):411-24
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_106">
+	            <li type="disc">
+	            
+	              Restrepo CM, Pineda L, Rojas-Martinez A, Gutierrez CA, Morales A, Gomez Y, Villalobos MC, Borjas L, Delgado W, Myers A, Barrera-Saldana HA &nbsp;
+	              CFTR mutations in three Latin American countries. &nbsp;
+	              2000 004 10;91(4):277-9
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_107">
+	            <li type="disc">
+	            
+	              Rich DP, Gregory RJ, Cheng SH, Smith AE, Welsh MJ &nbsp;
+	              Effect of deletion mutations on the function of CFTR chloride channels. &nbsp;
+	              1993;1(3):221-32
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_108">
+	            <li type="disc">
+	            
+	              Rolfini R, Cabrini G &nbsp;
+	              Nonsense mutation R1162X of the cystic fibrosis transmembrane conductance regulator gene does not reduce messenger RNA expression in nasal epithelial tissue. &nbsp;
+	              1993 012;92(6):2683-7
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_109">
+	            <li type="disc">
+	            
+	              Russo MP, Romeo G, Devoto M, Barbujani G, Cabrini G, Giunta A, D'Alcamo E, Leoni G, Sangiuolo F, Magnani C, et al &nbsp;
+	              Analysis of linkage disequilibrium between different cystic fibrosis mutations and three intragenic microsatellites in the Italian population. &nbsp;
+	              1995;5(1):23-7
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_110">
+	            <li type="disc">
+	            
+	              Saleh MC, Botelli A, Melano de Botelli M, Rezzonico CA, Argarana CE &nbsp;
+	              Cystic fibrosis: frequency of delta f508 and g542x mutations in Cordoba, Argentina. &nbsp;
+	              1996;56(1):14-6
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_111">
+	            <li type="disc">
+	            
+	              Sangiuolo F, Maceratesi P, Mesoraca A, Botta A, Cavicchini A, Novelli G, Dallapiccola B &nbsp;
+	              Simultaneous detection of delta F508, G542X, N1303K, G551D, and 1717-1G--&gt;A cystic fibrosis alleles by a multiplex DNA enzyme immunoassay. &nbsp;
+	              1995;25(3):142-5
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_112">
+	            <li type="disc">
+	            
+	              Sazonova MA, Amosenko FA, Kapranov NI, Kalinin VN &nbsp;
+	              [Molecular genetic analysis of TUB18 and TUB20 intragenic polymorphism and various mutations of the CFTR gene in the Moscow region]. &nbsp;
+	              1997 009;33(9):1303-7
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_113">
+	            <li type="disc">
+	            
+	              Schloesser M, Arleth S, Lenz U, Bertele RM, Reiss J &nbsp;
+	              A cystic fibrosis patient with the nonsense mutation G542X and the splice site mutation 1717-1. &nbsp;
+	              1991 012;28(12):878-80
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_114">
+	            <li type="disc">
+	            
+	              Schwarz MJ, Malone GM, Haworth A, Cheadle JP, Meredith AL, Gardner A, Sawyer IH, Connarty M, Dennis N, Seller A, et al &nbsp;
+	              Cystic fibrosis mutation analysis: report from 22 U.K. regional genetics laboratories. &nbsp;
+	              1995;6(4):326-33
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_115">
+	            <li type="disc">
+	            
+	              Scobie G, Woodroffe B, Fishel S, Kalsheker N &nbsp;
+	              Identification of the five most common cystic fibrosis mutations in single cells using a rapid and specific differential amplification system. &nbsp;
+	              1996 003;2(3):203-7
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_116">
+	            <li type="disc">
+	            
+	              Semczuk M, Kostuch M, Krzyzanowski A, Kwasniewska A, Wojcierowski J &nbsp;
+	              [The detection of CFTR gene mutation in patients with azoospermia]. &nbsp;
+	              1998 006;69(6):506-11
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_117">
+	            <li type="disc">
+	            
+	              Sepulveda W, Leung KY, Robertson ME, Kay E, Mayall ES, Fisk NM &nbsp;
+	              Prevalence of cystic fibrosis mutations in pregnancies with fetal echogenic bowel. &nbsp;
+	              1996 001;87(1):103-6
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_118">
+	            <li type="disc">
+	            
+	              Sereth H, Shoshani T, Bashan N, Kerem BS &nbsp;
+	              Extended haplotype analysis of cystic fibrosis mutations and its implications for the selective advantage hypothesis. &nbsp;
+	              1993 010 1;92(3):289-95
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_119">
+	            <li type="disc">
+	            
+	              Serre JL, Taillandier A, Mornet E, Simon-Bouy B, Boue J, Boue A &nbsp;
+	              Nearly 80% of cystic fibrosis heterozygotes and 64% of couples at risk may be detected through a unique screening of four mutations by ASO reverse dot blot. &nbsp;
+	              1991 012;11(4):1149-51
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_120">
+	            <li type="disc">
+	            
+	              Shoshani T, Augarten A, Gazit E, Bashan N, Yahav Y, Rivlin Y, Tal A, Seret H, Yaar L, Kerem E, et al &nbsp;
+	              Association of a nonsense mutation (W1282X), the most common mutation in the Ashkenazi Jewish cystic fibrosis patients in Israel, with presentation of severe disease. &nbsp;
+	              1992 001;50(1):222-8
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_121">
+	            <li type="disc">
+	            
+	              Shrimpton AE, McIntosh I, Brock DJ &nbsp;
+	              The incidence of different cystic fibrosis mutations in the Scottish population: effects on prenatal diagnosis and genetic counselling. &nbsp;
+	              1991 005;28(5):317-21
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_122">
+	            <li type="disc">
+	            
+	              Simon-Bouy B, Mornet E, Serre JL, Taillandier A, Boue J, Boue A &nbsp;
+	              Nine mutations in the cystic fibrosis (CF) gene account for 80% of the CF chromosomes in French patients. &nbsp;
+	              1991 009;40(3):218-24
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_123">
+	            <li type="disc">
+	            
+	              Slatkin M, Rannala B &nbsp;
+	              Estimating the age of alleles by use of intraallelic variability. &nbsp;
+	              1997 002;60(2):447-58
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_124">
+	            <li type="disc">
+	            
+	              Sobczynska-Tomaszewska A, Wolski JK, Bal J &nbsp;
+	               &nbsp;
+	              2000;53(11-12):644-51
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_125">
+	            <li type="disc">
+	            
+	              Stuhrmann M, Dork T, Fruhwirth M, Golla A, Skawran B, Antonin W, Ebhardt M, Loos A, Ellemunter H, Schmidtke J &nbsp;
+	              Detection of 100% of the CFTR mutations in 63 CF families from Tyrol. &nbsp;
+	              1997 010;52(4):240-6
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_126">
+	            <li type="disc">
+	            
+	              Traystman MD, Schulte N, Colombo JL, Sammut PH, Reilly P, Patel C, Acquazzino D, Simanek B, Anderson R, Kimberling WJ, et al &nbsp;
+	              Mutation analysis and haplotype correlation for 139 cystic fibrosis patients from the Nebraska Regional Cystic Fibrosis Center. &nbsp;
+	              1993;2(1):7-15
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_127">
+	            <li type="disc">
+	            
+	              Traystman MD, Schulte NA, MacDonald M, Anderson JR, Sanger WG &nbsp;
+	              Mutation analysis for cystic fibrosis to determine carrier status in 167 sperm donors from the Nebraska Genetic Semen Bank. &nbsp;
+	              1994;4(4):271-5
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_128">
+	            <li type="disc">
+	            
+	              Tuerlings JH, Mol B, Kremer JA, Looman M, Meuleman EJ, te Meerman GJ, Buys CH, Merkus HM, Scheffer H &nbsp;
+	              Mutation frequency of cystic fibrosis transmembrane regulator is not increased in oligozoospermic male candidates for intracytoplasmic sperm injection. &nbsp;
+	              1998 005;69(5):899-903
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_129">
+	            <li type="disc">
+	            <a id="GenericLink_0_129" href="http://link.springer-ny.com/link/service/journals/00439/bibs/6097006/60970727.htm">
+	              Tummler B, Storrs T, Dziadek V, Dork T, Meitinger T, Golla A, Bertele-Harms RM, Harms HK, Schroder E, Claass A, Rutjes J, Schneppenheim R, Bauer I, Breuel K, Stuhrmann M, Schmidtke J, Lindner M, Eigel A, Horst J, Kaiser R, Lentze MJ, Schmidt K, von der Hardt H, Estivill X &nbsp;
+	              Geographic distribution and origin of CFTR mutations in Germany. &nbsp;
+	              1996 006;97(6):727-31
+	            </a>
+	            <br>
+	            </li>
+	        </span><span id="For_130">
+	            <li type="disc">
+	            
+	              Venuta A, Bertolani P, Casarini R, Ferrari F, Guaraldi N, Garetti E &nbsp;
+	              [Coexistence of cystic fibrosis and celiac disease. Description of a clinical case and review of the literature]. &nbsp;
+	              1999 009-010;21(5 Suppl):223-6
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_131">
+	            <li type="disc">
+	            
+	              Villalobos-Torres C, Rojas-Martinez A, Villareal-Castellanos E, Cantu JM, Sanchez-Anzaldo FJ, Saiki RK, Barrera-Saldana HA &nbsp;
+	              Analysis of 16 cystic fibrosis mutations in Mexican patients. &nbsp;
+	              1997 004 14;69(4):380-2
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_132">
+	            <li type="disc">
+	            
+	              Villarreal MT, Chavez M, Lezana JL, Cuevas F, Carnevale A, Codova E, del Angel RM, Orozco L &nbsp;
+	              G542X mutation in Mexican cystic fibrosis patients. &nbsp;
+	              1996 001;49(1):54-6
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_133">
+	            <li type="disc">
+	            <a id="GenericLink_0_133" href="http://link.springer-ny.com/link/service/journals/00424/bibs/04393%20Suppl/04390R63.htm">
+	              Vouk K, Strmecki L, Liovic M, Kopriva S, Micetic-Turk D, Komel R &nbsp;
+	              Mutational analysis of 30 Slovenian cystic fibrosis patients compared to known Slovenian and European CF mutation spectra. &nbsp;
+	              2000;439(3 Suppl):R63-5
+	            </a>
+	            <br>
+	            </li>
+	        </span><span id="For_134">
+	            <li type="disc">
+	            
+	              Wagner K, Greil I, Schneditz P, Pommer M, Rosenkranz W &nbsp;
+	              A cystic fibrosis patient with delta F508, G542X and a deletion at the D7S8 locus. &nbsp;
+	              1994;3(3):327-9
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_135">
+	            <li type="disc">
+	            
+	              Walker LC, Venglarik CJ, Aubin G, Weatherly MR, McCarty NA, Lesnick B, Ruiz F, Clancy JP, Sorscher EJ &nbsp;
+	              Relationship between airway ion transport and a mild pulmonary disease mutation in CFTR. &nbsp;
+	              1997 005;155(5):1684-9
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_136">
+	            <li type="disc">
+	            
+	              Wang X, Moylan B, Leopold DA, Kim J, Rubenstein RC, Togias A, Proud D, Zeitlin PL, Cutting GR &nbsp;
+	              Mutation in the gene responsible for cystic fibrosis and predisposition to chronic rhinosinusitis in the general population. &nbsp;
+	              2000 010 11;284(14):1814-9
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_137">
+	            <li type="disc">
+	            
+	              Will K, Dork T, Stuhrmann M, von der Hardt H, Ellemunter H, Tummler B, Schmidtke J &nbsp;
+	              Transcript analysis of CFTR nonsense mutations in lymphocytes and nasal epithelial cells from cystic fibrosis patients. &nbsp;
+	              1995;5(3):210-20
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_138">
+	            <li type="disc">
+	            <a id="GenericLink_0_138" href="http://www.pediatrics.org/cgi/pmidlookup?view=full&amp;pmid=11158459">
+	              Wine JJ, Kuo E, Hurlock G, Moss RB &nbsp;
+	              Comprehensive Mutation Screening in a Cystic Fibrosis Center. &nbsp;
+	              2001 002;107(2):280-286
+	            </a>
+	            <br>
+	            </li>
+	        </span><span id="For_139">
+	            <li type="disc">
+	            
+	              Witt M, Pogorzelski A, Bal J, Rutkiewicz E, Majka L, Sobczynska A &nbsp;
+	              [Frequency of mutations and genotypes of the CFTR gene in cystic fibrosis adults in Poland]. &nbsp;
+	              1999;67(3-4):137-41
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_140">
+	            <li type="disc">
+	            <a id="GenericLink_0_140" href="http://db.doyma.es/cgi-bin/wdbcgi.exe/doyma/mrevista.pubmed_full?rev=2&amp;vol=111&amp;num=13&amp;pag=485">
+	              Yeste D, Linan S, Cobos N, Gussinye M, del Rio L, Carrascosa A &nbsp;
+	              [Bone mass in patients with cystic fibrosis of the pancreas. Relationship with anthropometric parameters and genotype]. &nbsp;
+	              1998 010 24;111(13):485-8
+	            </a>
+	            <br>
+	            </li>
+	        </span><span id="For_141">
+	            <li type="disc">
+	            
+	              Yilmaz E, Erdem H, Ozguc M, Coskun T, Ozcelik U, Gocmen A, Ozalp I &nbsp;
+	              Study of 12 mutations in Turkish cystic fibrosis patients. &nbsp;
+	              1995 005-006;45(3):175-7
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_142">
+	            <li type="disc">
+	            
+	              al-Jader LN, Meredith AL, Ryley HC, Cheadle JP, Maguire S, Owen G, Goodchild MC, Harper PS &nbsp;
+	              Severity of chest disease in cystic fibrosis patients in relation to their genotypes. &nbsp;
+	              1992 012;29(12):883-7
+	            
+	            <br>
+	            </li>
+	        </span>
+	        </ul>
+	    </form>
+	</span>
+	</td></tr>
+</table>
+
+
+        </td></tr></table>
+    </td></tr>
+    <!-- bottom part -->
+     <tr><td rowspan="1" colspan="3" width="691">
+         <br>
+         <br>
+         <br>
+         <br>
+
+         <img src="image/sumhorsa.gif" width="791" />
+        <p align="center">Comments or questions? Please email to <a href="mailto:cftr.admin@genet.sickkids.on.ca">cftr.admin</a>
+            <br>
+            The Database was last updated at Apr 25, 2011
+        </p>
+    </td></tr>
+</table>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-7453350-1");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+<script type="text/javascript"><!--
+tapestry.addOnLoad(function(e) {
+if(tapestry.fx) { tapestry.fx.attachAjaxStatus("AjaxStatus"); }
+dojo.require("tapestry.form");tapestry.form.registerForm("Form");
+
+tapestry.form.focusField('PropertySelection');});
+// --></script></body>
+</html>
+<!-- Render time: ~ 5 ms -->
+
+

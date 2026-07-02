@@ -1,0 +1,697 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!-- Application: penguin -->
+<!-- Page: NewsLetters -->
+<!-- Generated: Wed Jul 01 19:46:03 EDT 2026 -->
+<html>
+<head>
+<meta name="generator" content="Tapestry Application Framework, version 4.1.6-SNAPSHOT" />
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+<title>Cystic Fibrosis Mutation Database: News Letters</title>
+<meta key="keywords" content="genet, cystic fibrosis mutation database, CFTR, CFMDB, chromosome 7, chromosome7, bioinformatics resources, bioinformatic, genetic, research, human, genome project, hospital sick children, sickkids" />
+<script type="text/javascript">djConfig = {"baseRelativePath":"/assets/static/dojo-0.4.3-custom-4.1.6/","parseWidgets":false,"locale":"en-us"} </script>
+
+<script type="text/javascript" src="/assets/static/dojo-0.4.3-custom-4.1.6/dojo.js"></script>
+<script type="text/javascript">
+dojo.registerModulePath("tapestry", "/assets/static/tapestry-4.1.6");
+</script>
+<script type="text/javascript" src="/assets/static/tapestry-4.1.6/core.js"></script>
+<script type="text/javascript">
+dojo.require("tapestry.namespace");
+tapestry.requestEncoding='UTF-8';
+</script>
+<link rel="stylesheet" type="text/css" href="/include/main.css" />
+<link rel="stylesheet" type="text/css" href="/include/mutationSearch.css" />
+<link rel="stylesheet" type="text/css" href="/include/forms.css" />
+<link rel="stylesheet" type="text/css" href="/include/phoenix.css" />
+<link rel="stylesheet" type="text/css" href="/include/institution.css" />
+<link rel="stylesheet" type="text/css" href="/include/mutationSubmission.css" />
+</head>
+
+<script language="JavaScript" type="text/javascript">
+    function DivSetVisible(divid, divshimid) {
+        if (document.all && (navigator.userAgent.indexOf("Opera") == -1)) {
+            var DivRef = document.getElementById(divid);
+            DivRef.style.display = "block";
+
+            var IfrRef = document.getElementById(divshimid); // co
+            IfrRef.style.width = DivRef.offsetWidth;
+            IfrRef.style.height = DivRef.offsetHeight;
+            IfrRef.style.top = DivRef.style.top;
+            IfrRef.style.left = DivRef.style.left;
+            IfrRef.style.zIndex = DivRef.style.zIndex - 1;
+            IfrRef.style.display = "block";
+        }
+    }
+    function DivSetInvisible(divid, divshimid) {
+        if (document.all && (navigator.userAgent.indexOf("Opera") == -1)) {
+            var DivRef = document.getElementById(divid);
+            DivRef.style.display = "none";
+            var IfrRef = document.getElementById(divshimid);
+            IfrRef.style.display = "none";
+        }
+    }
+	function setElemCoords(evnt, elem) {
+	// this function was changed to work for both Firefox and IE
+		var myposx = 0;
+		var posy = 0;
+		if (!evnt) var evnt = window.evnt;
+		if (evnt.pageX || evnt.pageY) 	{
+			myposx = evnt.pageX;
+			posy = evnt.pageY;
+		}
+		else if (evnt.clientX || evnt.clientY) 	{
+			myposx = evnt.clientX + document.body.scrollLeft
+			+ document.documentElement.scrollLeft;
+			posy = evnt.clientY + document.body.scrollTop
+			+ document.documentElement.scrollTop;
+		}
+		elem.style.left = myposx + 20 + "px";
+		elem.style.top = posy + 10 + "px";
+	}
+	function xCoord (e){
+
+	}
+	function hideElem(id) {
+		document.getElementById(id).style.display = "none";
+	}
+	function showElem(event, id) {
+		var elem = document.getElementById(id);
+		elem.style.position = "absolute";
+		setElemCoords(event, elem);
+		elem.style.display = "block";
+	}
+</script>
+<noscript>
+    <META HTTP-EQUIV="Refresh" CONTENT="0; URL=/">
+</noscript>
+
+
+
+
+<body marginwidth="0" topmargin="0" marginheight="0" leftmargin="0" id="Body">
+<script type="text/javascript"><!--
+dojo.require("tapestry.fx");
+// --></script>
+<table border="0" cellpadding="0" cellspacing="0" width="791" height="110">
+    <tr>
+        <td rowspan="1" colspan="3" width="691" height="58">
+        	<a id="PageLink" href="/Home.html"><img src="image/mutationlogo.gif" width="791" height="98" border="0"/></a>
+		</td>
+    </tr>
+    <tr><td>
+        <div class="container">
+            <div class="pageHeader">
+
+                <div class="clearBoth"></div>
+
+                <div class="mainMenu">
+                    <ul id="topnav">
+                        <li class="topnavhead"
+                            style="width: 80px;"><a href="Home.html" class="headnavref">Home</a>
+                        </li>
+                        <li class="topnavhead"
+                            onMouseOver="this.className='sfhover'; DivSetVisible('navitem1', 'ulShim1');"
+                            onMouseOut="this.className='topnavhead'; DivSetInvisible('navitem1', 'ulShim1');"
+                            style="width: 76px;"><a href="PicturePage.html" class="headnavref">Search</a>
+                            <ul id="navitem1" style="width: 14em; z-index: 100;">
+                                <li style="width: 14em;"><a href="PicturePage.html">Graphic Search</a></li>
+                                <li style="width: 14em;"><a href="SearchPage.html">Basic Text Search</a></li>
+                                <li style="width: 14em;"><a href="AdvancedSearchPage.html">Advanced Text Search</a></li>
+                                <!--
+                                <li style="width: 14em;"><a href="MutationSearch.html">Criteria Search</a></li>
+                                -->
+                            </ul>
+                            <!--
+                            <iframe id="ulShim1" src="include/iframe_blank.html" scrolling="no" frameborder="0" style="position:absolute; top:0px; left:0px; display:none;"></iframe>
+                            -->
+                        <li class="headdivide"></li>
+                        <li class="topnavhead"
+                            onMouseOver="this.className='sfhover'; DivSetVisible('navitem2', 'ulShim2');"
+                            onMouseOut="this.className='topnavhead'; DivSetInvisible('navitem2', 'ulShim2');"
+                            style="width: 96px;"><a href="GenomicDnaSequencePage.html" class="headnavref">CFTR&nbsp;Gene</a>
+                             <ul id="navitem2" style="width: 24em; z-index: 100;">
+                                <li style="width: 24em;"><a href="GenomicDnaSequencePage.html">Genomic DNA Sequence</a>
+                                </li>
+                                <li style="width: 24em;"><a href="MRnaPolypeptideSequencePage.html">mRNA(cDNA) and Polypeptide Sequence</a>
+                                </li>
+                                <li style="width: 24em;"><a href="CftrDomainPage.html">CFTR Domains</a></li>
+                                 <li style="width: 24em;"><a href="download/mouse_cftr_genomic.doc">Mouse CFTR Genomic Sequence</a></li>
+                            </ul>
+                            <!--
+                            <iframe id="ulShim2" src="include/iframe_blank.html" scrolling="no" frameborder="0" style="position:absolute; top:0px; left:0px; display:none;"></iframe>
+                            -->
+                        <li class="headdivide"></li>
+                        <li class="headdivide"></li>
+
+                        <li class="topnavhead"
+                            onMouseOver="this.className='sfhover'; DivSetVisible('navitem3', 'ulShim3');"
+                            onMouseOut="this.className='topnavhead'; DivSetInvisible('navitem3', 'ulShim3');"
+                            style="width: 70px;"><a href="ConsortiumBackgroundPage.html"  class="headnavref">History</a>
+                            <ul id="navitem3" style="width: 10em; z-index: 100;">
+                                <li style="width: 10em;"><a href="ConsortiumBackgroundPage.html">Background</a></li>
+                                <li style="width: 10em;"><a href="ConsortiumGuidelinesPage.html">Guidelines</a></li>
+                                <li style="width: 10em;"><a href="ConsortiumDataPage1.html">Data</a></li>
+                                <li style="width: 10em;"><a href="NewsLetters.html">News&nbsp;Letters</a></li>
+                            </ul>
+                            <!--
+                            <iframe id="ulShim3" src="include/iframe_blank.html" scrolling="no" frameborder="0" style="position:absolute; top:0px; left:0px; display:none;"></iframe>                        <li class="headdivide"></li>
+                            -->
+                        </li>
+
+                        <li class="headdivide"></li>
+                        <li class="topnavhead"
+                            style="width: 70px;"><a href="Team.html" class="headnavref">Team</a>
+                        </li>
+
+                        <li class="headdivide"></li>
+                        <li class="topnavhead"
+                            style="width: 80px;"><a href="StatisticsPage.html" class="headnavref">Statistics</a>
+                        </li>
+
+                        <li class="headdivide"></li>
+                        <li class="topnavhead"
+                            style="width: 70px;"><a href="LinkPage.html" class="headnavref">Links</a>
+                        </li>
+
+                        <li class="headdivide"></li>
+                        <li class="topnavhead"
+                            style="width: 70px;"><a href="SubmitPage.html" class="headnavref">Submit</a>
+                        </li>
+                        <li class="topnavhead"
+
+                            onMouseOver="this.className='sfhover'; DivSetVisible('navitem5', 'ulShim5');"
+                            onMouseOut="this.className='topnavhead'; DivSetInvisible('navitem5', 'ulShim5');"
+                            style="width: 58px;"><a href="HelpPage.html" class="headnavref">Help</a>
+                            <ul id="navitem5" style="width: 18em; z-index: 100;">
+                                <li style="width: 18em;"><a href="Contact.html">Contact Information</a></li>
+                                <li style="width: 18em;"><a href="HelpPage.html#term">Terminology</a></li>
+                                <li style="width: 18em;"><a href="HelpPage.html#faq">Frequently Asked Questions</a></li>
+                            </ul>
+                            <!--
+                            <iframe id="ulShim5" src="include/iframe_blank.html" scrolling="no" frameborder="0" style="position:absolute; top:0px; left:0px; display:none;"></iframe>                        <li class="headdivide"></li>
+                            -->
+                        </li>
+
+                    </ul>
+
+                </div>
+                <style type="text/css">
+                    ul#navitem1, ul#navitem2, ul#navitem3, ul#navitem4, ul#navitem5, {
+                        width: 10em;
+                    }
+
+                    ul#navitem1 li, ul#navitem2 li, ul#navitem3 li, ul#navitem4 li, ul#navitem5 li, {
+                        font-family: verdana, arial, helvetica, sans-serif;
+                        font-size: 11px;
+                        width: 10em;
+                        font-weight: normal;
+                        border-bottom: 1px solid #cccccc;
+                        background: #eEF3F7;
+                    }
+
+                    ul#navitem1 li a, ul#navitem2 li a, ul#navitem3 li a, ul#navitem4 li a, ul#navitem5 li a, {
+                        font-size: 11px;
+                    }
+                </style>
+                <script type="text/javascript" language="javascript">
+                    // remove menu flicker when useing overLIB  in IE.
+                    if (document.all && (navigator.userAgent.indexOf("Opera") == -1)) {
+                        sfHover = function() {
+                            var sfEls =document.getElementById("topnav").getElementsByTagName("li");
+                            for (var i = 0; i < sfEls.length; i++) {
+                                // **** use onmousemove instead of onmouseover ****
+                                sfEls[i].onmousemove = sfEls[i].onmouseover;
+                            }
+                        }
+                        if (window.attachEvent) window.attachEvent("onload", sfHover);
+                    }
+                </script>
+
+
+            </div>
+
+        </div>
+
+    </td></tr>
+    <tr><td>
+    	<div style="display:none;color:white;background:red;position:absolute;top:0;right:0" id="AjaxStatus">
+			Loading...
+		</div>
+	</td></tr>
+    <tr><td>
+
+        <br><br>
+        <table cellpadding="2" cellspacing="2" width="100%"><tr><td style="font-size:small; ">
+
+<style type="text/css" >
+    .title {
+        font-size: 14px;
+        font-weight: bold;
+    }
+</style>
+<div style="padding-left:8px">
+
+<p align="center" class="title">
+    Cystic Fibrosis Genetic Analysis Consortium newsletters
+</p>
+   <br>
+
+    <span id="For">
+        <ul >
+            <li><b><a id="GenericLink" href="resource/nl/CFnewslet.2.html">
+                Newsletter 2   1989-12-22
+            </a></b></li>
+        </ul>
+    </span><span id="For_0">
+        <ul >
+            <li><b><a id="GenericLink_0" href="resource/nl/CFnewslet.3.html">
+                Newsletter 3   1990-01-19
+            </a></b></li>
+        </ul>
+    </span><span id="For_1">
+        <ul >
+            <li><b><a id="GenericLink_1" href="resource/nl/CFnewslet.4.html">
+                Newsletter 4   1990-01-26
+            </a></b></li>
+        </ul>
+    </span><span id="For_2">
+        <ul >
+            <li><b><a id="GenericLink_2" href="resource/nl/CFnewslet.5.html">
+                Newsletter 5   1990-02-09
+            </a></b></li>
+        </ul>
+    </span><span id="For_3">
+        <ul >
+            <li><b><a id="GenericLink_3" href="resource/nl/CFnewslet.6.html">
+                Newsletter 6   1990-02-18
+            </a></b></li>
+        </ul>
+    </span><span id="For_4">
+        <ul >
+            <li><b><a id="GenericLink_4" href="resource/nl/CFnewslet.7.html">
+                Newsletter 7   1990-02-23
+            </a></b></li>
+        </ul>
+    </span><span id="For_5">
+        <ul >
+            <li><b><a id="GenericLink_5" href="resource/nl/CFnewslet.8.html">
+                Newsletter 8   1990-03-04
+            </a></b></li>
+        </ul>
+    </span><span id="For_6">
+        <ul >
+            <li><b><a id="GenericLink_6" href="resource/nl/CFnewslet.9.html">
+                Newsletter 9   1990-03-12
+            </a></b></li>
+        </ul>
+    </span><span id="For_7">
+        <ul >
+            <li><b><a id="GenericLink_7" href="resource/nl/CFnewslet.10.html">
+                Newsletter 10   1990-03-26
+            </a></b></li>
+        </ul>
+    </span><span id="For_8">
+        <ul >
+            <li><b><a id="GenericLink_8" href="resource/nl/CFnewslet.11.html">
+                Newsletter 11   1990-03-30
+            </a></b></li>
+        </ul>
+    </span><span id="For_9">
+        <ul >
+            <li><b><a id="GenericLink_9" href="resource/nl/CFnewslet.12.html">
+                Newsletter 12   1990-04-02
+            </a></b></li>
+        </ul>
+    </span><span id="For_10">
+        <ul >
+            <li><b><a id="GenericLink_10" href="resource/nl/CFnewslet.13.html">
+                Newsletter 13   1990-04-05
+            </a></b></li>
+        </ul>
+    </span><span id="For_11">
+        <ul >
+            <li><b><a id="GenericLink_11" href="resource/nl/CFnewslet.15.html">
+                Newsletter 15   1990-04-29
+            </a></b></li>
+        </ul>
+    </span><span id="For_12">
+        <ul >
+            <li><b><a id="GenericLink_12" href="resource/nl/CFnewslet.14.html">
+                Newsletter 14   1990-04-17
+            </a></b></li>
+        </ul>
+    </span><span id="For_13">
+        <ul >
+            <li><b><a id="GenericLink_13" href="resource/nl/CFnewslet.16.html">
+                Newsletter 16   1990-05-04
+            </a></b></li>
+        </ul>
+    </span><span id="For_14">
+        <ul >
+            <li><b><a id="GenericLink_14" href="resource/nl/CFnewslet.17.html">
+                Newsletter 17   1990-05-11
+            </a></b></li>
+        </ul>
+    </span><span id="For_15">
+        <ul >
+            <li><b><a id="GenericLink_15" href="resource/nl/CFnewslet.18.html">
+                Newsletter 18   1990-05-19
+            </a></b></li>
+        </ul>
+    </span><span id="For_16">
+        <ul >
+            <li><b><a id="GenericLink_16" href="resource/nl/CFnewslet.19.html">
+                Newsletter 19   1990-06-18
+            </a></b></li>
+        </ul>
+    </span><span id="For_17">
+        <ul >
+            <li><b><a id="GenericLink_17" href="resource/nl/CFnewslet.20.html">
+                Newsletter 20   1990-06-26
+            </a></b></li>
+        </ul>
+    </span><span id="For_18">
+        <ul >
+            <li><b><a id="GenericLink_18" href="resource/nl/CFnewslet.21.html">
+                Newsletter 21   1990-07-18
+            </a></b></li>
+        </ul>
+    </span><span id="For_19">
+        <ul >
+            <li><b><a id="GenericLink_19" href="resource/nl/CFnewslet.22.html">
+                Newsletter 22   1990-07-30
+            </a></b></li>
+        </ul>
+    </span><span id="For_20">
+        <ul >
+            <li><b><a id="GenericLink_20" href="resource/nl/CFnewslet.23.html">
+                Newsletter 23   1990-08-09
+            </a></b></li>
+        </ul>
+    </span><span id="For_21">
+        <ul >
+            <li><b><a id="GenericLink_21" href="resource/nl/CFnewslet.24.html">
+                Newsletter 24   1990-08-20
+            </a></b></li>
+        </ul>
+    </span><span id="For_22">
+        <ul >
+            <li><b><a id="GenericLink_22" href="resource/nl/CFnewslet.25.html">
+                Newsletter 25   1990-08-30
+            </a></b></li>
+        </ul>
+    </span><span id="For_23">
+        <ul >
+            <li><b><a id="GenericLink_23" href="resource/nl/CFnewslet.26.html">
+                Newsletter 26   1990-09-14
+            </a></b></li>
+        </ul>
+    </span><span id="For_24">
+        <ul >
+            <li><b><a id="GenericLink_24" href="resource/nl/CFnewslet.27.html">
+                Newsletter 27   1990-10-02
+            </a></b></li>
+        </ul>
+    </span><span id="For_25">
+        <ul >
+            <li><b><a id="GenericLink_25" href="resource/nl/CFnewslet.28.html">
+                Newsletter 28   1990-11-05
+            </a></b></li>
+        </ul>
+    </span><span id="For_26">
+        <ul >
+            <li><b><a id="GenericLink_26" href="resource/nl/CFnewslet.29.html">
+                Newsletter 29   1990-12-10
+            </a></b></li>
+        </ul>
+    </span><span id="For_27">
+        <ul >
+            <li><b><a id="GenericLink_27" href="resource/nl/CFnewslet.30.html">
+                Newsletter 30   1991-01-09
+            </a></b></li>
+        </ul>
+    </span><span id="For_28">
+        <ul >
+            <li><b><a id="GenericLink_28" href="resource/nl/CFnewslet.32.html">
+                Newsletter 32   1991-03-10
+            </a></b></li>
+        </ul>
+    </span><span id="For_29">
+        <ul >
+            <li><b><a id="GenericLink_29" href="resource/nl/CFnewslet.33.html">
+                Newsletter 33   1991-04-11
+            </a></b></li>
+        </ul>
+    </span><span id="For_30">
+        <ul >
+            <li><b><a id="GenericLink_30" href="resource/nl/CFnewslet.34.html">
+                Newsletter 34   1991-05-10
+            </a></b></li>
+        </ul>
+    </span><span id="For_31">
+        <ul >
+            <li><b><a id="GenericLink_31" href="resource/nl/CFnewslet.35.html">
+                Newsletter 35   1991-06-14
+            </a></b></li>
+        </ul>
+    </span><span id="For_32">
+        <ul >
+            <li><b><a id="GenericLink_32" href="resource/nl/CFnewslet.36.html">
+                Newsletter 36   1991-07-10
+            </a></b></li>
+        </ul>
+    </span><span id="For_33">
+        <ul >
+            <li><b><a id="GenericLink_33" href="resource/nl/CFnewslet.37.html">
+                Newsletter 37   1991-08-13
+            </a></b></li>
+        </ul>
+    </span><span id="For_34">
+        <ul >
+            <li><b><a id="GenericLink_34" href="resource/nl/CFnewslet.38.html">
+                Newsletter 38   1991-09-10
+            </a></b></li>
+        </ul>
+    </span><span id="For_35">
+        <ul >
+            <li><b><a id="GenericLink_35" href="resource/nl/CFnewslet.39.html">
+                Newsletter 39   1991-11-12
+            </a></b></li>
+        </ul>
+    </span><span id="For_36">
+        <ul >
+            <li><b><a id="GenericLink_36" href="resource/nl/CFnewslet.40.html">
+                Newsletter 40   1991-12-09
+            </a></b></li>
+        </ul>
+    </span><span id="For_37">
+        <ul >
+            <li><b><a id="GenericLink_37" href="resource/nl/CFnewslet.41.html">
+                Newsletter 41   1992-01-17
+            </a></b></li>
+        </ul>
+    </span><span id="For_38">
+        <ul >
+            <li><b><a id="GenericLink_38" href="resource/nl/CFnewslet.42.html">
+                Newsletter 42   1992-02-18
+            </a></b></li>
+        </ul>
+    </span><span id="For_39">
+        <ul >
+            <li><b><a id="GenericLink_39" href="resource/nl/CFnewslet.43.html">
+                Newsletter 43   1992-03-19
+            </a></b></li>
+        </ul>
+    </span><span id="For_40">
+        <ul >
+            <li><b><a id="GenericLink_40" href="resource/nl/CFnewslet.44.html">
+                Newsletter 44   1992-04-16
+            </a></b></li>
+        </ul>
+    </span><span id="For_41">
+        <ul >
+            <li><b><a id="GenericLink_41" href="resource/nl/CFnewslet.45.html">
+                Newsletter 45   1992-05-18
+            </a></b></li>
+        </ul>
+    </span><span id="For_42">
+        <ul >
+            <li><b><a id="GenericLink_42" href="resource/nl/CFnewslet.46.html">
+                Newsletter 46   1992-06-23
+            </a></b></li>
+        </ul>
+    </span><span id="For_43">
+        <ul >
+            <li><b><a id="GenericLink_43" href="resource/nl/CFnewslet.47.html">
+                Newsletter 47   1992-07-20
+            </a></b></li>
+        </ul>
+    </span><span id="For_44">
+        <ul >
+            <li><b><a id="GenericLink_44" href="resource/nl/CFnewslet.48.html">
+                Newsletter 48   1992-08-19
+            </a></b></li>
+        </ul>
+    </span><span id="For_45">
+        <ul >
+            <li><b><a id="GenericLink_45" href="resource/nl/CFnewslet.49.html">
+                Newsletter 49   1992-09-29
+            </a></b></li>
+        </ul>
+    </span><span id="For_46">
+        <ul >
+            <li><b><a id="GenericLink_46" href="resource/nl/CFnewslet.50.html">
+                Newsletter 50   1992-11-20
+            </a></b></li>
+        </ul>
+    </span><span id="For_47">
+        <ul >
+            <li><b><a id="GenericLink_47" href="resource/nl/CFnewslet.51.html">
+                Newsletter 51   1992-12-23
+            </a></b></li>
+        </ul>
+    </span><span id="For_48">
+        <ul >
+            <li><b><a id="GenericLink_48" href="resource/nl/CFnewslet.53.html">
+                Newsletter 53   1993-02-26
+            </a></b></li>
+        </ul>
+    </span><span id="For_49">
+        <ul >
+            <li><b><a id="GenericLink_49" href="resource/nl/CFnewslet.54.html">
+                Newsletter 54   1993-04-04
+            </a></b></li>
+        </ul>
+    </span><span id="For_50">
+        <ul >
+            <li><b><a id="GenericLink_50" href="resource/nl/CFnewslet.55.html">
+                Newsletter 55   1993-06-05
+            </a></b></li>
+        </ul>
+    </span><span id="For_51">
+        <ul >
+            <li><b><a id="GenericLink_51" href="resource/nl/CFnewslet.56.html">
+                Newsletter 56   1993-07-23
+            </a></b></li>
+        </ul>
+    </span><span id="For_52">
+        <ul >
+            <li><b><a id="GenericLink_52" href="resource/nl/CFnewslet.57.html">
+                Newsletter 57   1993-08-31
+            </a></b></li>
+        </ul>
+    </span><span id="For_53">
+        <ul >
+            <li><b><a id="GenericLink_53" href="resource/nl/CFnewslet.58.html">
+                Newsletter 58   1993-09-03
+            </a></b></li>
+        </ul>
+    </span><span id="For_54">
+        <ul >
+            <li><b><a id="GenericLink_54" href="resource/nl/CFnewslet.59.html">
+                Newsletter 59   1993-11-05
+            </a></b></li>
+        </ul>
+    </span><span id="For_55">
+        <ul >
+            <li><b><a id="GenericLink_55" href="resource/nl/CFnewslet.60.html">
+                Newsletter 60   1994-01-07
+            </a></b></li>
+        </ul>
+    </span><span id="For_56">
+        <ul >
+            <li><b><a id="GenericLink_56" href="resource/nl/CFnewslet.61.html">
+                Newsletter 61   1994-03-30
+            </a></b></li>
+        </ul>
+    </span><span id="For_57">
+        <ul >
+            <li><b><a id="GenericLink_57" href="resource/nl/CFnewslet.62.html">
+                Newsletter 62   1994-06-14
+            </a></b></li>
+        </ul>
+    </span><span id="For_58">
+        <ul >
+            <li><b><a id="GenericLink_58" href="resource/nl/CFnewslet.63.html">
+                Newsletter 63   1994-09-20
+            </a></b></li>
+        </ul>
+    </span><span id="For_59">
+        <ul >
+            <li><b><a id="GenericLink_59" href="resource/nl/CFnewslet.64.html">
+                Newsletter 64   1994-12-15
+            </a></b></li>
+        </ul>
+    </span><span id="For_60">
+        <ul >
+            <li><b><a id="GenericLink_60" href="resource/nl/CFnewslet.65.html">
+                Newsletter 65 (check date)   1995-03-22
+            </a></b></li>
+        </ul>
+    </span><span id="For_61">
+        <ul >
+            <li><b><a id="GenericLink_61" href="resource/nl/CFnewslet.66.html">
+                Newsletter 66 (check date)   1995-07-10
+            </a></b></li>
+        </ul>
+    </span><span id="For_62">
+        <ul >
+            <li><b><a id="GenericLink_62" href="resource/nl/CFnewslet.67.html">
+                Newsletter 67   1996-01-05
+            </a></b></li>
+        </ul>
+    </span><span id="For_63">
+        <ul >
+            <li><b><a id="GenericLink_63" href="resource/nl/CFnewslet.68.html">
+                Newsletter 68   1996-05-23
+            </a></b></li>
+        </ul>
+    </span><span id="For_64">
+        <ul >
+            <li><b><a id="GenericLink_64" href="resource/nl/CFnewslet.69.html">
+                Newsletter 69 (check date)   1997-07-23
+            </a></b></li>
+        </ul>
+    </span><span id="For_65">
+        <ul >
+            <li><b><a id="GenericLink_65" href="resource/nl/CFnewslet.70.html">
+                Newsletter 70 (check date)   1998-11-06
+            </a></b></li>
+        </ul>
+    </span>
+</div>
+
+        </td></tr></table>
+    </td></tr>
+    <!-- bottom part -->
+     <tr><td rowspan="1" colspan="3" width="691">
+         <br>
+         <br>
+         <br>
+         <br>
+
+         <img src="image/sumhorsa.gif" width="791" />
+        <p align="center">Comments or questions? Please email to <a href="mailto:cftr.admin@genet.sickkids.on.ca">cftr.admin</a>
+            <br>
+            The Database was last updated at Apr 25, 2011
+        </p>
+    </td></tr>
+</table>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-7453350-1");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+<script type="text/javascript"><!--
+tapestry.addOnLoad(function(e) {
+if(tapestry.fx) { tapestry.fx.attachAjaxStatus("AjaxStatus"); }});
+// --></script></body>
+</html>
+<!-- Render time: ~ 1 ms -->
+
+

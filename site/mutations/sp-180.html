@@ -1,0 +1,659 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!-- Application: penguin -->
+<!-- Page: MutationDetailPage -->
+<!-- Generated: Wed Jul 01 19:47:16 EDT 2026 -->
+<html>
+<head>
+<meta name="generator" content="Tapestry Application Framework, version 4.1.6-SNAPSHOT" />
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+<title>Cystic Fibrosis Mutation Database: Mutation Detail</title>
+<meta key="keywords" content="genet, cystic fibrosis mutation database, CFTR, CFMDB, chromosome 7, chromosome7, bioinformatics resources, bioinformatic, genetic, research, human, genome project, hospital sick children, sickkids" />
+<script type="text/javascript">djConfig = {"baseRelativePath":"../assets/static/dojo-0.4.3-custom-4.1.6/","preventBackButtonFix":false,"parseWidgets":false,"locale":"en-us"} </script>
+
+<script type="text/javascript" src="../assets/static/dojo-0.4.3-custom-4.1.6/dojo.js"></script><script type="text/javascript" src="../assets/static/dojo-0.4.3-custom-4.1.6/dojo2.js"></script>
+<script type="text/javascript">
+dojo.registerModulePath("tapestry", "../assets/static/tapestry-4.1.6");
+</script>
+<script type="text/javascript" src="../assets/static/tapestry-4.1.6/core.js"></script>
+<script type="text/javascript">
+dojo.require("tapestry.namespace");
+tapestry.requestEncoding='UTF-8';
+</script>
+<link rel="stylesheet" type="text/css" href="../include/main.css" />
+<link rel="stylesheet" type="text/css" href="../include/mutationSearch.css" />
+<link rel="stylesheet" type="text/css" href="../include/forms.css" />
+<link rel="stylesheet" type="text/css" href="../include/phoenix.css" />
+<link rel="stylesheet" type="text/css" href="../include/institution.css" />
+<link rel="stylesheet" type="text/css" href="../include/mutationSubmission.css" />
+</head>
+
+<script language="JavaScript" type="text/javascript">
+    function DivSetVisible(divid, divshimid) {
+        if (document.all && (navigator.userAgent.indexOf("Opera") == -1)) {
+            var DivRef = document.getElementById(divid);
+            DivRef.style.display = "block";
+
+            var IfrRef = document.getElementById(divshimid); // co
+            IfrRef.style.width = DivRef.offsetWidth;
+            IfrRef.style.height = DivRef.offsetHeight;
+            IfrRef.style.top = DivRef.style.top;
+            IfrRef.style.left = DivRef.style.left;
+            IfrRef.style.zIndex = DivRef.style.zIndex - 1;
+            IfrRef.style.display = "block";
+        }
+    }
+    function DivSetInvisible(divid, divshimid) {
+        if (document.all && (navigator.userAgent.indexOf("Opera") == -1)) {
+            var DivRef = document.getElementById(divid);
+            DivRef.style.display = "none";
+            var IfrRef = document.getElementById(divshimid);
+            IfrRef.style.display = "none";
+        }
+    }
+	function setElemCoords(evnt, elem) {
+	// this function was changed to work for both Firefox and IE
+		var myposx = 0;
+		var posy = 0;
+		if (!evnt) var evnt = window.evnt;
+		if (evnt.pageX || evnt.pageY) 	{
+			myposx = evnt.pageX;
+			posy = evnt.pageY;
+		}
+		else if (evnt.clientX || evnt.clientY) 	{
+			myposx = evnt.clientX + document.body.scrollLeft
+			+ document.documentElement.scrollLeft;
+			posy = evnt.clientY + document.body.scrollTop
+			+ document.documentElement.scrollTop;
+		}
+		elem.style.left = myposx + 20 + "px";
+		elem.style.top = posy + 10 + "px";
+	}
+	function xCoord (e){
+
+	}
+	function hideElem(id) {
+		document.getElementById(id).style.display = "none";
+	}
+	function showElem(event, id) {
+		var elem = document.getElementById(id);
+		elem.style.position = "absolute";
+		setElemCoords(event, elem);
+		elem.style.display = "block";
+	}
+</script>
+<noscript>
+    <META HTTP-EQUIV="Refresh" CONTENT="0; URL=/">
+</noscript>
+
+
+
+
+<body marginwidth="0" topmargin="0" marginheight="0" leftmargin="0" id="Body">
+<script type="text/javascript"><!--
+dojo.require("tapestry.fx");
+// --></script>
+<table border="0" cellpadding="0" cellspacing="0" width="791" height="110">
+    <tr>
+        <td rowspan="1" colspan="3" width="691" height="58">
+        	<a id="PageLink" href="../Home.html"><img src="image/mutationlogo.gif" width="791" height="98" border="0"/></a>
+		</td>
+    </tr>
+    <tr><td>
+        <div class="container">
+            <div class="pageHeader">
+
+                <div class="clearBoth"></div>
+
+                <div class="mainMenu">
+                    <ul id="topnav">
+                        <li class="topnavhead"
+                            style="width: 80px;"><a href="Home.html" class="headnavref">Home</a>
+                        </li>
+                        <li class="topnavhead"
+                            onMouseOver="this.className='sfhover'; DivSetVisible('navitem1', 'ulShim1');"
+                            onMouseOut="this.className='topnavhead'; DivSetInvisible('navitem1', 'ulShim1');"
+                            style="width: 76px;"><a href="PicturePage.html" class="headnavref">Search</a>
+                            <ul id="navitem1" style="width: 14em; z-index: 100;">
+                                <li style="width: 14em;"><a href="PicturePage.html">Graphic Search</a></li>
+                                <li style="width: 14em;"><a href="SearchPage.html">Basic Text Search</a></li>
+                                <li style="width: 14em;"><a href="AdvancedSearchPage.html">Advanced Text Search</a></li>
+                                <!--
+                                <li style="width: 14em;"><a href="MutationSearch.html">Criteria Search</a></li>
+                                -->
+                            </ul>
+                            <!--
+                            <iframe id="ulShim1" src="include/iframe_blank.html" scrolling="no" frameborder="0" style="position:absolute; top:0px; left:0px; display:none;"></iframe>
+                            -->
+                        <li class="headdivide"></li>
+                        <li class="topnavhead"
+                            onMouseOver="this.className='sfhover'; DivSetVisible('navitem2', 'ulShim2');"
+                            onMouseOut="this.className='topnavhead'; DivSetInvisible('navitem2', 'ulShim2');"
+                            style="width: 96px;"><a href="GenomicDnaSequencePage.html" class="headnavref">CFTR&nbsp;Gene</a>
+                             <ul id="navitem2" style="width: 24em; z-index: 100;">
+                                <li style="width: 24em;"><a href="GenomicDnaSequencePage.html">Genomic DNA Sequence</a>
+                                </li>
+                                <li style="width: 24em;"><a href="MRnaPolypeptideSequencePage.html">mRNA(cDNA) and Polypeptide Sequence</a>
+                                </li>
+                                <li style="width: 24em;"><a href="CftrDomainPage.html">CFTR Domains</a></li>
+                                 <li style="width: 24em;"><a href="../download/mouse_cftr_genomic.doc">Mouse CFTR Genomic Sequence</a></li>
+                            </ul>
+                            <!--
+                            <iframe id="ulShim2" src="include/iframe_blank.html" scrolling="no" frameborder="0" style="position:absolute; top:0px; left:0px; display:none;"></iframe>
+                            -->
+                        <li class="headdivide"></li>
+                        <li class="headdivide"></li>
+
+                        <li class="topnavhead"
+                            onMouseOver="this.className='sfhover'; DivSetVisible('navitem3', 'ulShim3');"
+                            onMouseOut="this.className='topnavhead'; DivSetInvisible('navitem3', 'ulShim3');"
+                            style="width: 70px;"><a href="ConsortiumBackgroundPage.html"  class="headnavref">History</a>
+                            <ul id="navitem3" style="width: 10em; z-index: 100;">
+                                <li style="width: 10em;"><a href="ConsortiumBackgroundPage.html">Background</a></li>
+                                <li style="width: 10em;"><a href="ConsortiumGuidelinesPage.html">Guidelines</a></li>
+                                <li style="width: 10em;"><a href="ConsortiumDataPage1.html">Data</a></li>
+                                <li style="width: 10em;"><a href="NewsLetters.html">News&nbsp;Letters</a></li>
+                            </ul>
+                            <!--
+                            <iframe id="ulShim3" src="include/iframe_blank.html" scrolling="no" frameborder="0" style="position:absolute; top:0px; left:0px; display:none;"></iframe>                        <li class="headdivide"></li>
+                            -->
+                        </li>
+
+                        <li class="headdivide"></li>
+                        <li class="topnavhead"
+                            style="width: 70px;"><a href="Team.html" class="headnavref">Team</a>
+                        </li>
+
+                        <li class="headdivide"></li>
+                        <li class="topnavhead"
+                            style="width: 80px;"><a href="StatisticsPage.html" class="headnavref">Statistics</a>
+                        </li>
+
+                        <li class="headdivide"></li>
+                        <li class="topnavhead"
+                            style="width: 70px;"><a href="LinkPage.html" class="headnavref">Links</a>
+                        </li>
+
+                        <li class="headdivide"></li>
+                        <li class="topnavhead"
+                            style="width: 70px;"><a href="SubmitPage.html" class="headnavref">Submit</a>
+                        </li>
+                        <li class="topnavhead"
+
+                            onMouseOver="this.className='sfhover'; DivSetVisible('navitem5', 'ulShim5');"
+                            onMouseOut="this.className='topnavhead'; DivSetInvisible('navitem5', 'ulShim5');"
+                            style="width: 58px;"><a href="HelpPage.html" class="headnavref">Help</a>
+                            <ul id="navitem5" style="width: 18em; z-index: 100;">
+                                <li style="width: 18em;"><a href="Contact.html">Contact Information</a></li>
+                                <li style="width: 18em;"><a href="HelpPage.html#term">Terminology</a></li>
+                                <li style="width: 18em;"><a href="HelpPage.html#faq">Frequently Asked Questions</a></li>
+                            </ul>
+                            <!--
+                            <iframe id="ulShim5" src="include/iframe_blank.html" scrolling="no" frameborder="0" style="position:absolute; top:0px; left:0px; display:none;"></iframe>                        <li class="headdivide"></li>
+                            -->
+                        </li>
+
+                    </ul>
+
+                </div>
+                <style type="text/css">
+                    ul#navitem1, ul#navitem2, ul#navitem3, ul#navitem4, ul#navitem5, {
+                        width: 10em;
+                    }
+
+                    ul#navitem1 li, ul#navitem2 li, ul#navitem3 li, ul#navitem4 li, ul#navitem5 li, {
+                        font-family: verdana, arial, helvetica, sans-serif;
+                        font-size: 11px;
+                        width: 10em;
+                        font-weight: normal;
+                        border-bottom: 1px solid #cccccc;
+                        background: #eEF3F7;
+                    }
+
+                    ul#navitem1 li a, ul#navitem2 li a, ul#navitem3 li a, ul#navitem4 li a, ul#navitem5 li a, {
+                        font-size: 11px;
+                    }
+                </style>
+                <script type="text/javascript" language="javascript">
+                    // remove menu flicker when useing overLIB  in IE.
+                    if (document.all && (navigator.userAgent.indexOf("Opera") == -1)) {
+                        sfHover = function() {
+                            var sfEls =document.getElementById("topnav").getElementsByTagName("li");
+                            for (var i = 0; i < sfEls.length; i++) {
+                                // **** use onmousemove instead of onmouseover ****
+                                sfEls[i].onmousemove = sfEls[i].onmouseover;
+                            }
+                        }
+                        if (window.attachEvent) window.attachEvent("onload", sfHover);
+                    }
+                </script>
+
+
+            </div>
+
+        </div>
+
+    </td></tr>
+    <tr><td>
+    	<div style="display:none;color:white;background:red;position:absolute;top:0;right:0" id="AjaxStatus">
+			Loading...
+		</div>
+	</td></tr>
+    <tr><td>
+
+        <br><br>
+        <table cellpadding="2" cellspacing="2" width="100%"><tr><td style="font-size:small; ">
+
+<table border="0" style="width:780px">
+	<tr>
+	<td  align="center" >
+	    <h3>Mutation Details for c.1000C&gt;T </h3>
+	</td>
+	</tr>
+	
+	<tr><td>
+	<table border="1" cellpadding="4" cellspacing="3" style="table-layout:fixed;">
+	    <tr>
+	        <td width="15%">
+	            <span class="thead">cDNA Name</span>
+	        </td>
+	        <td width="85%">
+	            <!-- <span jwcid="@Insert" value="ognl:mutation.description"></span>&nbsp; -->         
+	            c.1000C&gt;T&nbsp;
+	        </td>
+	    </tr>
+	    	    
+	    <tr>
+	        <td width="15%">
+	            <span class="thead">Protein Name</span>
+	        </td>
+	        <td width="85%">
+	            p.Arg334Trp&nbsp;
+	        </td>
+	    </tr>
+	    
+	    <tr>
+	        <td width="15%">
+	            <span class="thead">Exon or Intron</span>
+	        </td>
+	        <td width="85%">
+	            exon 8&nbsp;
+	        </td>
+	    </tr>
+            
+            <tr>
+	        <td width="15%">
+	            <span class="thead">Legacy Exon or Intron</span>
+	        </td>
+	        <td width="85%">
+	            exon 7&nbsp;
+	        </td>
+	    </tr>
+	    <tr>
+	        <td width="15%">
+	            <span class="header">Legacy Name</span>
+	        </td>
+	        <td width="85%">
+	            <span class="row" id="Insert_4">R334W</span>&nbsp;
+	        </td>
+	    </tr>
+	    
+	    <tr>
+	        <td width="15%">
+	            <span class="notification">Other Details</span>
+	        </td>
+	        <td width="85%">
+				This mutation has been found in two Spanish CF chromosomes.  One of the patients has the [delta]F508 mutation in the other chromosome and the other patient does not.  We have not found this mutation on 30 normal chromosomes with the same haplotype, and in 88 CF chromosomes without the [delta]F508, and in 24 with the [delta]F508.  The mutation destroys a MapI site and is easily identified by agarose gel electrophoresis after PCR with intron primers.&nbsp;
+	        </td>
+	    </tr>
+	    
+		<span>
+		    <tr>
+		        <td width="15%">
+		            <span class="thead">Contributors</span>
+		        </td>
+		        <td width="85%">
+					Estivill X,
+Chillon M,
+Nunes V,
+Morral N&nbsp;&nbsp;
+					1990-03-16
+		        </td>
+		    </tr>
+		    <tr>
+		        <td width="15%">
+		            <span class="thead">Institute</span>
+		        </td>
+		        <td width="85%">
+					Hospital de la Santa Creu I Sant Pau
+Barcleona, Spain&nbsp;
+		        </td>
+		
+		    </tr>
+	    </span>
+	    <tr>
+	    <span id="If_3">
+	        <td width="15%">
+	            <span class="thead">Phenotype Information</span>
+	        </td>
+	        <td width="85%">
+	            <a id="GenericLink" href="http://www.cftr2.org/">CFTR2</a>
+	        </td>
+	    </span>
+		
+	    </tr>
+	    <tr>
+	        <td width="15%" valign="top">
+	            <span class="thead">Reference</span>
+	        </td>
+	        <td width="85%">
+	            Estivill et al. 1991&nbsp;
+	        </td>
+	    </tr>
+	</table>
+
+	
+	<br>
+	To check if there are any papers published about this mutation/variant on PubMed, please <a href="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?cmd=Search&amp;db=PubMed&amp;term=R334W" id="Any">click here.</a>
+	<br>
+	</td></tr>
+	
+	<tr><td width="100%">
+	<span id="If_5">
+	    <form method="post" action="/MutationDetailPage,$Form.sdirect" id="Form">
+<div style="display:none;" id="Formhidden"><input type="hidden" name="formids" value="Hidden,PropertySelection" />
+<input type="hidden" name="seedids" value="ZH4sIAAAAAAAAAFWPTQ6CMBCFYeFNWLLAv0SXmPiDcWHkAKaBUaswJW014pm8mndwShuLm873pq/zpu9PMHgFQbgNN7EC+eAFREncsLMphagbgYC6Y9SMI0hiBUpxgYYaOhZCll0/v0BVdY2ypbKnKTuON8L0yp65ZvquSBwAye9MGVKsCchOP3VMOm2L7Qw9juxlrzP2OPE4tT5jX1YK/MXM47yX4ELNsDXQR3nhljev/3ZxG5isFFsrTNpKyDpKvjNdyblTAQAA" />
+<input type="hidden" name="submitmode" value="" />
+<input type="hidden" name="submitname" value="" />
+<input type="hidden" name="Hidden" id="Hidden" value="180" />
+</div>
+	        
+	
+	        <b>Literature referencing this mutation.  Sort by:&nbsp;</b><select name="PropertySelection" id="PropertySelection">
+<option value="0">Author</option>
+<option value="1">Publish Date</option>
+</select>
+	        <input type="submit"/>
+	        <br>
+	        Note: This reference list is not up-to-date at this stage, but may be searched for some rare variants without pubmed hits.
+	            <br>
+	            <br>
+	        <ul>
+	        <span id="For">
+	            <li type="disc">
+	            <a id="GenericLink_0" href="http://www.jbc.org/cgi/pmidlookup?view=full&amp;pmid=10744680">
+	              Adato A, Weston MD, Berry A, Kimberling WJ, Bonne-Tamir A &nbsp;
+	              Three novel mutations and twelve polymorphisms identified in the USH2A gene in Israeli USH2 families. &nbsp;
+	              2000 004;15(4):388
+	            </a>
+	            <br>
+	            </li>
+	        </span><span id="For_0">
+	            <li type="disc">
+	            
+	              Antinolo G, Borrego S, Gili M, Dapena J, Alfageme I, Reina F &nbsp;
+	              Genotype-phenotype relationship in 12 patients carrying cystic fibrosis mutation R334W. &nbsp;
+	              1997 002;34(2):89-91
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_1">
+	            <li type="disc">
+	            <a id="GenericLink_0_1" href="http://www.catchword.com/rpsv/cgi-bin/cgi?body=linker&amp;ini=nlm&amp;reqidx=issn=1090-6576vl=4is=1yr=2000mn=Janpg=69">
+	              Bernardino AL, Ferri A, Passos-Bueno MR, Kim CE, Nakaie CM, Gomes CE, Damaceno N, Zatz M &nbsp;
+	              Molecular analysis in Brazilian cystic fibrosis patients reveals five novel mutations. &nbsp;
+	              2000;4(1):69-74
+	            </a>
+	            <br>
+	            </li>
+	        </span><span id="For_2">
+	            <li type="disc">
+	            
+	              Claustres M, Desgeorges M, Kjellberg P, Tissot C, Demaille J &nbsp;
+	              Analysis of 30 known cystic fibrosis mutations: 10 mutations account for 27% of non-delta F508 chromosomes in southern France. &nbsp;
+	              1992 012;90(4):464-6
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_3">
+	            <li type="disc">
+	            <a id="GenericLink_0_3" href="http://link.springer-ny.com/link/service/journals/00439/bibs/6098003/60980336.htm">
+	              Claustres M, Desgeorges M, Moine P, Morral N, Estivill X &nbsp;
+	              CFTR haplotypic variability for normal and mutant genes in cystic fibrosis families from southern France. &nbsp;
+	              1996 009;98(3):336-44
+	            </a>
+	            <br>
+	            </li>
+	        </span><span id="For_4">
+	            <li type="disc">
+	            
+	              Duarte A, Amaral M, Barreto C, Pacheco P, Lavinha J &nbsp;
+	              Complex cystic fibrosis allele R334W-R1158X results in reduced levels of correctly processed mRNA in a pancreatic sufficient patient. &nbsp;
+	              1996;8(2):134-9
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_5">
+	            <li type="disc">
+	            
+	              Estivill X, Bancells C, Ramos C &nbsp;
+	              Geographic distribution and regional origin of 272 cystic fibrosis mutations in European populations. The Biomed CF Mutation Analysis Consortium. &nbsp;
+	              1997;10(2):135-54
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_6">
+	            <li type="disc">
+	            
+	              Estivill X, Ortigosa L, Perez-Frias J, Dapena J, Ferrer J, Pena L, Pena L, Llevadot R, Gimenez J, Nunes V, et al &nbsp;
+	              Clinical characteristics of 16 cystic fibrosis patients with the missense mutation R334W, a pancreatic insufficiency mutation with variable age of onset and interfamilial clinical differences. &nbsp;
+	              1995 003;95(3):331-6
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_7">
+	            <li type="disc">
+	            
+	              Federici S, Iron A, Reboul MP, Desgeorges M, Claustres M, Bremont F, Bieth E &nbsp;
+	               &nbsp;
+	              2001 002;8(2):150-7
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_8">
+	            <li type="disc">
+	            
+	              Ferec C, Verlingue C, Guillermit H, Quere I, Raguenes O, Feigelson J, Audrezet MP, Moullier P, Mercier B &nbsp;
+	              Genotype analysis of adult cystic fibrosis patients. &nbsp;
+	              1993 010;2(10):1557-60
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_9">
+	            <li type="disc">
+	            
+	              Flores-Martinez SE, Dean M, Saiki RK, Gallegos-Arreola MP, Moran-Moguel MC, Sanchez-Corona J &nbsp;
+	              Molecular analysis of northwestern Mexican patients with cystic fibrosis: screening of 10 known mutations. Mutations in brief no. 185. Online. &nbsp;
+	              1998;12(3):217-8
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_10">
+	            <li type="disc">
+	            
+	              Friedman KJ, Heim RA, Knowles MR, Silverman LM &nbsp;
+	              Rapid characterization of the variable length polythymidine tract in the cystic fibrosis (CFTR) gene: association of the 5T allele with selected CFTR mutations and its incidence in atypical sinopulmonary disease. &nbsp;
+	              1997;10(2):108-15
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_11">
+	            <li type="disc">
+	            
+	              Grebe TA, Seltzer WK, DeMarchi J, Silva DK, Doane WW, Gozal D, Richter SF, Bowman CM, Norman RA, Rhodes SN, et al &nbsp;
+	              Genetic analysis of Hispanic individuals with cystic fibrosis. &nbsp;
+	              1994 003;54(3):443-6
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_12">
+	            <li type="disc">
+	            <a id="GenericLink_0_12" href="http://www.jcb.org/cgi/pmidlookup?view=full&amp;pmid=9813087">
+	              Jiang Q, Mak D, Devidas S, Schwiebert EM, Bragin A, Zhang Y, Skach WR, Guggino WB, Foskett JK, Engelhardt JF &nbsp;
+	              Cystic fibrosis transmembrane conductance regulator-associated ATP release is controlled by a chloride sensor. &nbsp;
+	              1998 011 2;143(3):645-57
+	            </a>
+	            <br>
+	            </li>
+	        </span><span id="For_13">
+	            <li type="disc">
+	            
+	              Kravchenko SA, Livshits LA &nbsp;
+	              [An analysis of mutations in the 7th, 10th and 11th exons and of the polymorphism of the 4 nucleotide tandem repeats from the 3' end of the 6th intron of the CFTR gene in families from Ukraine with a high risk of mucoviscidosis]. &nbsp;
+	              1993 007-008;27(4):72-7
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_14">
+	            <li type="disc">
+	            
+	              Kristidis P, Bozon D, Corey M, Markiewicz D, Rommens J, Tsui LC, Durie P &nbsp;
+	              Genetic determination of exocrine pancreatic function in cystic fibrosis. &nbsp;
+	              1992 006;50(6):1178-84
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_15">
+	            <li type="disc">
+	            
+	              Livshits LA, Kravchenko SA &nbsp;
+	              Cystic Fibrosis in Ukraine: age, origin and tracing of the delta F508 mutation. &nbsp;
+	              1996 012;10(3):219-27
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_16">
+	            <li type="disc">
+	            
+	              Morral N, Llevadot R, Casals T, Gasparini P, Macek M, Dork T, Estivill X &nbsp;
+	              Independent origins of cystic fibrosis mutations R334W, R347P, R1162X, and 3849 + 10kbC--&gt;T provide evidence of mutation recurrence in the CFTR gene. &nbsp;
+	              1994 011;55(5):890-8
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_17">
+	            <li type="disc">
+	            
+	              Nunes V, Gasparini P, Novelli G, Gaona A, Bonizzato A, Sangiuolo F, Balassopoulou A, Gimenez FJ, Dognini M, Ravnik-Glavac M, et al &nbsp;
+	              Analysis of 14 cystic fibrosis mutations in five south European populations. &nbsp;
+	              1991 010;87(6):737-8
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_18">
+	            <li type="disc">
+	            
+	              Petrova NV, Kapranov NI, Ginter EK &nbsp;
+	              [Detection of frequent mutations of the CFTR gene in cystic fibrosis patients from Central Russia]. &nbsp;
+	              1997 001;33(1):106-9
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_19">
+	            <li type="disc">
+	            
+	              Picci L, Anglani F, Scarpa M, Zacchello F &nbsp;
+	              Screening for cystic fibrosis gene mutations by multiplex DNA amplification. &nbsp;
+	              1992 003;88(5):552-6
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_20">
+	            <li type="disc">
+	            
+	              Potapova OYu , Voronina OV, Gaitskhoki VS, Bogacheva EV, Uembitskaya TE, Kuprina EA, Kapranov NI, Berlin YuA , Schwartz EI &nbsp;
+	              Identification of the linkage of mutations causing cystic fibrosis to different alleles of a tetranucleotide repeat in intron 6a of the CFTR gene. &nbsp;
+	              1994 004;51(2):185-7
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_21">
+	            <li type="disc">
+	            
+	              Ravnik-Glavac M, Gasparini P, Peterlin B, Strukelj M, Glavac D, Canki-Klain N, Pignatti PF, Komel R &nbsp;
+	              Cystic fibrosis gene mutations and linked RFLPs in the Slovenian population. &nbsp;
+	              1992;35(2):85-8
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_22">
+	            <li type="disc">
+	            
+	              Sheppard DN, Rich DP, Ostedgaard LS, Gregory RJ, Smith AE, Welsh MJ &nbsp;
+	              Mutations in CFTR associated with mild-disease-form Cl- channels with altered pore properties. &nbsp;
+	              1993 003 11;362(6416):160-4
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_23">
+	            <li type="disc">
+	            
+	              Yilmaz E, Erdem H, Ozguc M, Coskun T, Ozcelik U, Gocmen A, Ozalp I &nbsp;
+	              Study of 12 mutations in Turkish cystic fibrosis patients. &nbsp;
+	              1995 005-006;45(3):175-7
+	            
+	            <br>
+	            </li>
+	        </span><span id="For_24">
+	            <li type="disc">
+	            <a id="GenericLink_0_24" href="http://www.jbc.org/cgi/pmidlookup?view=full&amp;pmid=10744680">
+	              Yue H, Devidas S, Guggino WB &nbsp;
+	              The two halves of CFTR form a dual-pore ion channel. &nbsp;
+	              2000 004 7;275(14):10030-4
+	            </a>
+	            <br>
+	            </li>
+	        </span>
+	        </ul>
+	    </form>
+	</span>
+	</td></tr>
+</table>
+
+
+        </td></tr></table>
+    </td></tr>
+    <!-- bottom part -->
+     <tr><td rowspan="1" colspan="3" width="691">
+         <br>
+         <br>
+         <br>
+         <br>
+
+         <img src="image/sumhorsa.gif" width="791" />
+        <p align="center">Comments or questions? Please email to <a href="mailto:cftr.admin@genet.sickkids.on.ca">cftr.admin</a>
+            <br>
+            The Database was last updated at Apr 25, 2011
+        </p>
+    </td></tr>
+</table>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-7453350-1");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+<script type="text/javascript"><!--
+tapestry.addOnLoad(function(e) {
+if(tapestry.fx) { tapestry.fx.attachAjaxStatus("AjaxStatus"); }
+dojo.require("tapestry.form");tapestry.form.registerForm("Form");
+
+tapestry.form.focusField('PropertySelection');});
+// --></script></body>
+</html>
+<!-- Render time: ~ 1 ms -->
+
+
