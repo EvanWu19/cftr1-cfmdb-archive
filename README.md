@@ -49,9 +49,13 @@ this is the genuine state of an archived dynamic site, not something altered.
 
 ## How to browse
 
+- **Hosted (GitHub Pages):** open the archived homepage at
+  <https://evanwu19.github.io/cftr1-cfmdb-archive/site/Home.html> and navigate as
+  you would the original site.
 - **Locally:** open [`site/Home.html`](site/Home.html) in any browser.
-- **Hosted (GitHub Pages):** the entry point is `Home.html` at the Pages URL for
-  this repository.
+- **Direct record URL:** each mutation is at
+  `.../site/mutations/sp-<ID>.html` (e.g. F508del is
+  [`sp-246`](https://evanwu19.github.io/cftr1-cfmdb-archive/site/mutations/sp-246.html)).
 
 ## Attribution
 
