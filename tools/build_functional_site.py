@@ -28,10 +28,12 @@ SEARCH_PAGES = {"SearchPage.html", "AdvancedSearchPage.html", "MutationSearch.ht
 
 
 def svc_local(url):
+    """Local filename for a *.svc image (captured PNGs), served with .png so the
+    browser gets image/png. Mirrors capture_dynamic.svc_name but with .png."""
     m = re.search(r"/([^/?]+\.svc)\?(.*)$", H.unescape(url))
     if not m:
-        base = re.sub(r"[^A-Za-z0-9.]", "_", H.unescape(url)); return base + ".img"
-    return m.group(1) + "__" + re.sub(r"[^A-Za-z0-9]", "_", m.group(2)) + ".img"
+        return re.sub(r"[^A-Za-z0-9.]", "_", H.unescape(url)) + ".png"
+    return m.group(1) + "__" + re.sub(r"[^A-Za-z0-9]", "_", m.group(2)) + ".png"
 
 
 # ---------- link conversion ----------
@@ -152,7 +154,8 @@ def main():
             open(os.path.join(SITE, "picture", "domain_" + did + ".html"), "w", encoding="utf-8").write(html)
             ndom += 1
         for p in glob.glob(os.path.join(DYN, "*.img")):
-            shutil.copy(p, os.path.join(SITE, "picture", "img", os.path.basename(p)))
+            dst = os.path.basename(p)[:-4] + ".png"  # captured PNGs; serve as .png
+            shutil.copy(p, os.path.join(SITE, "picture", "img", dst))
         # overview image referenced by root PicturePage.html lives at picture/img/
         # (already copied above since capture saved it under raw/dynamic/*.img)
 
