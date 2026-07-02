@@ -120,6 +120,14 @@ def main():
         if os.path.isdir(os.path.join(RAW, sub)):
             shutil.copytree(os.path.join(RAW, sub), os.path.join(SITE, sub), dirs_exist_ok=True)
     shutil.copy(os.path.join(SRC, "cfmdb_search.js"), os.path.join(SITE, "cfmdb_search.js"))
+    # landing redirect so /site/ (no explicit file) resolves to the homepage
+    open(os.path.join(SITE, "index.html"), "w", encoding="utf-8").write(
+        '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">'
+        '<title>CFTR1 / CFMDB Archive</title>'
+        '<meta http-equiv="refresh" content="0; url=Home.html">'
+        '<link rel="canonical" href="Home.html"></head><body>'
+        '<p>Redirecting to the <a href="Home.html">CFTR1 / CFMDB archive</a>&hellip;</p>'
+        '</body></html>\n')
 
     # static + search pages (root, depth 0)
     for p in glob.glob(os.path.join(RAW, "*.html")):
