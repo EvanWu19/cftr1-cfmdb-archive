@@ -45,16 +45,62 @@ are reproduced client-side over an index (`site/records.json`) built from the
 - **All internal links** (nav, detail pages, cross-references) are rewritten to
   resolve as static files.
 
-### Fidelity notes (what is captured vs derived)
+### Fidelity notes — exact capture vs. reconstruction
 
-- **Region, Nucleotide Change, Consequence** are harvested from the live search
-  backend for 1,635 / 2,120 records (the backend's text search caps coverage);
-  the remainder show those two columns blank but are fully searchable by name /
-  phenotype and have complete detail pages.
-- **Mutation type** (structural: Substitution/Deletion/… and functional:
-  Missense/Nonsense/…), used by the Criteria/Advanced type filters, is **derived
-  from HGVS nomenclature**, because the database's own type field is not present
-  on any capturable page. It is an interpretation, not the original DB value.
+The 2,120 **detail pages** — each variant's authoritative record (cDNA / protein
+/ legacy name, region, submitted phenotype, contributors, institute, reference,
+PubMed link) — are captured **exactly and completely for every record**. The two
+notes below concern *only the search layer*: the columns and filters that the
+original site generated dynamically on the server. That backend is gone, so those
+had to be reconstructed — and reconstruction cannot recover data the server never
+put on a capturable page. Here is exactly where the limits are.
+
+**1. Two search-result columns can be blank: Nucleotide Change & Consequence.**
+
+The original search *results table* shows six columns. They do not all come from
+the same place, and they do not all have the same coverage:
+
+| Result column | Where it comes from | Populated |
+|---|---|---|
+| cDNA / Protein / Legacy name | The captured detail pages | complete |
+| Region | The detail page's *Exon or Intron* field (captured) | 1,818 / 2,120 |
+| **Nucleotide Change** | Harvested from the live search backend | 1,635 / 2,120 |
+| **Consequence** | Harvested from the live search backend | 1,583 / 2,120 |
+
+"Nucleotide Change" and "Consequence" appeared **only** in the rows the server's
+search engine generated on the fly — they are never printed on a detail page. To
+preserve them at all, I replayed queries against the live site before it was
+retired and scraped those rows. The server's own text index only ever returned a
+subset of the database in response to searches, and that is the hard ceiling on
+coverage: for the ~485 records it never surfaced, these two columns are shown
+**blank**. Nothing else is lost for those records — they are still fully
+searchable (by cDNA / protein / legacy name, region, and phenotype text) and
+their detail pages are 100% complete. Only these two supplementary columns are
+affected.
+
+**2. The mutation-*type* filters are derived from HGVS names, not the DB's own value.**
+
+The Criteria and Advanced searches let you filter by mutation type — a
+**structural** class (Substitution, Deletion, Insertion, Indel, …) and a
+**functional** class (Missense, Nonsense, Frameshift, Splice, …). The original
+database clearly stored such a value, because its filters used it — but that field
+is **not printed on any page that can be captured**: not on the detail pages, and
+not in the search-result rows. There was simply no authoritative copy of it to
+preserve, so with an exact capture alone the type filters would do nothing.
+
+To keep them working, each variant's type is instead **computed from its HGVS
+name** using standard rules — e.g. `>` → substitution; `del` / `ins` / `dup` /
+`delins` → the matching structural class; a protein change like `p.Met470Val` →
+missense, a `Ter` / `*` change → nonsense, `fs` → frameshift, canonical splice
+positions → splice. This classification is present for 2,118 / 2,120 (structural)
+and 2,120 / 2,120 (functional).
+
+This is an **interpretation from nomenclature, not the database's original
+classification.** It is correct for the large majority of variants and makes the
+filters usable, but for ambiguous cases the filtered set may differ from what the
+original site would have returned. Importantly, this affects *only* the type
+grouping used by those two filters — the variant records themselves are untouched
+and exact.
 
 ## How to browse
 
