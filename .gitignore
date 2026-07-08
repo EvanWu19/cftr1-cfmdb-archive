@@ -1,3 +1,6 @@
 crawl.log
 __pycache__/
 *.pyc
+
+audit_console.txt
+fetch_missing_result.json

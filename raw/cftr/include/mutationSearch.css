@@ -1,0 +1,225 @@
+@CHARSET "UTF-8";
+
+table.layoutTable {
+	border-width: 0px;
+	width: 100%;
+	font: inherit;	
+}
+
+/*
+ *	Define search div related attributes (headers, sub-headers, sections, sub-sections, error display)
+ */
+div.mutationSearchSection {
+	background-color: #C2DFFF;
+	border-color: darkBlue;
+	border-style: solid;
+	border-width: 3px 1px;
+	margin-bottom: 10px;
+	width: 75%;
+}
+
+div.mutationSearchSection table {
+	border-spacing: 0px;
+}
+
+div.mutationSearchSubSection, div.mutationSearchErrors, div.mutationSearchSubHeader {
+	margin-left: 5px;
+}
+
+div.mutationSearchSubSection, div.mutationSearchErrors {
+	border: 1px solid gray;
+	margin-bottom: 5px;
+	margin-right: 5px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+
+div.mutationSearchHeader, div.mutationSearchSubSection, input.mutationSearchButton, div.mutationSearchErrors {
+	background-color: lightYellow;
+}
+
+div.mutationSearchHeader, .mutationSearchHeaderFont {
+	font-family: sans-serif;
+	font-size: x-large;
+	font-variant: small-caps;
+}
+
+div.mutationSearchHeader, div.mutationSearchSubHeader, .mutationSearchHeaderFont, td.mutationSearchResultCount {
+	color: #000050;
+}
+
+div.mutationSearchHeader {
+	border-bottom: 1px solid black;
+	border-top: 1px solid black;
+	margin-bottom: 5px;
+	margin-top: 5px;
+	padding-left: 5px;
+	padding-right: 5px;
+}
+
+div.mutationSearchHeader:hover {
+	cursor: pointer;
+}
+
+div.mutationSearchSubHeader {
+	font-family: sans-serif;
+	font-size: large;
+}
+
+div.mutationSearchHeader, div.mutationSearchSubHeader {
+	text-align: left;
+}
+
+div.mutationSearchFooter {
+	margin-bottom: 5px;
+	margin-left: 5px;
+	margin-right: 5px;
+	text-align: center;
+}
+
+/*
+ *	Define form related attributes (buttons, selectors, input)
+ */
+form.mutationSearchForm {
+	font-family: sans-serif,arial;
+	margin: 0px;
+	padding: 0px;
+}
+
+form.mutationSearchForm input, form.mutationSearchForm select {
+	border: 1px solid gray;
+}
+
+input.mutationSearchButton {
+	width: auto;
+}
+
+table.mutationSearchTable input, table.mutationSearchTable select, table.mutationSearchDomain select {
+	background-color: white;
+}
+
+table.mutationSearchTable input, table.mutationSearchTable select, table.mutationSearchDomain  {
+	width: 90%;
+}
+
+form.mutationSearchForm td.mutationSearchDomain {
+	width: 50%;
+}
+
+/*
+ *	Define table related attributes for the table which contains all form related content
+ */
+table.mutationSearchTable {
+	width: 90%;
+}
+
+table.mutationSearchTable td.mutationSearchField {
+	width: 60%;
+}mutationSearchResultCount
+
+table.mutationSearchTable td.mutationSearchTitle {
+	width: 40%;
+}
+
+table.mutationSearchDomain td {
+	width: 50%;
+}
+
+table.mutationSearchDomain select {
+	width: 100%;
+}
+
+table.mutationSearchDomain td {
+	text-align: center;
+}
+
+/*
+ * @MutalyzerMutationDisplay definitions
+ */
+
+hr.mutationSearchDivider {
+	border: none;
+	border-top: 3px double #000050;
+	width: 100%;
+	margin: 0px;
+}
+
+table.mutalyzerMutationDisplay {
+	font-family: sans-serif;
+	font-size: small;
+	height: 3em;
+	width: 100%;
+	border-top: 3px double #000050;
+}
+
+td.mutalyzerMutationDisplay_Substitution {
+	background-color: red;
+}
+
+td.mutalyzerMutationDisplay_Deletion {
+	background-color: orange;
+}
+
+td.mutalyzerMutationDisplay_Insertion {
+	background-color: blue;
+}
+
+td.mutalyzerMutationDisplay_Indel {
+	background-color: green;
+}
+
+td.mutalyzerMutationDisplay_Inversion {
+	background-color: yellow;
+}
+
+td.mutalyzerMutationDisplay_Microsatellite {
+	background-color: purple;
+}
+
+td.mutalyzerMutationDisplay_Duplication {
+	background-color: fuchsia;
+}
+
+td.mutalyzerMutationDisplayType {
+	width: 1%;
+}
+
+td.mutalyzerMutationDisplayDomain {
+	width: 13%;
+}
+
+td.mutalyzerMutationDisplayHGVS {
+	width: 30%;
+}
+
+td.mutalyzerMutationDisplayContrib {
+	width: 40%;
+}
+
+td.mutalyzerMutationDisplayDate {
+	width: 15%;
+}
+
+td.mutalyzerMutationDisplayDomain, td.mutalyzerMutationDisplayHGVS, 
+td.mutalyzerMutationDisplayContrib, td.mutalyzerMutationDisplayContrib, 
+td.mutalyzerMutationDisplayDate {
+	background-color: lightYellow;
+}
+
+td.mutalyzerMutationDisplayColumn, div.mutalyzerMutationDisplayType {
+	vertical-align: middle;
+	text-align: center;
+}
+
+/*
+ * Misc definitions
+ */
+ 
+td.mutationSearchResultCount {
+	text-align: right;
+	position: relative;
+	font-family: sans-serif;
+	font-size: small;
+	font-style: oblique;
+	font-variant: normal;
+}

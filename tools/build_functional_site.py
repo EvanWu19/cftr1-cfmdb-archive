@@ -26,6 +26,33 @@ SRC = os.path.join(ROOT, "site_src")
 
 SEARCH_PAGES = {"SearchPage.html", "AdvancedSearchPage.html", "MutationSearch.html"}
 
+# root-level targets that, when referenced *relatively* from a sub-directory page,
+# must be prefixed with the correct number of "../" so they resolve.
+ROOT_HTML = {os.path.basename(p) for p in glob.glob(os.path.join(RAW, "*.html"))}
+ROOT_DIRS = ("image/", "include/", "assets/", "download/", "resource/",
+             "cftr/", "cftrdnasequence/", "polypeptideSequence/")
+ROOT_FILES = {"CFTR.fasta"}
+
+
+def prefix_relative_root_links(html, root):
+    """For sub-directory pages (root != ''), prefix links that point at
+    root-level pages / dirs / files. Same-directory siblings (e.g. picture
+    domain_*.html, img/*) and absolute / external / anchor links are left alone."""
+    if not root:
+        return html
+
+    def repl(m):
+        attr, q, val = m.group(1), m.group(2), m.group(3)
+        head = val.split("?")[0].split("#")[0]
+        if val.startswith(("http://", "https://", "mailto:", "javascript:",
+                           "data:", "#", "/", "../", root)):
+            return m.group(0)
+        if head in ROOT_HTML or head in ROOT_FILES or head.startswith(ROOT_DIRS):
+            return f'{attr}={q}{root}{val}{q}'
+        return m.group(0)
+
+    return re.sub(r'(href|src|action)=(["\'])([^"\']*)\2', repl, html)
+
 
 def svc_local(url):
     """Local filename for a *.svc image (captured PNGs), served with .png so the
@@ -38,11 +65,22 @@ def svc_local(url):
 
 # ---------- link conversion ----------
 def convert_common(html, root):
+    # dead Tapestry session ids in links -> drop
+    html = re.sub(r';jsessionid=[A-Za-z0-9]+', '', html)
+    # dynamic detail links -> static files
     html = re.sub(r'/?MutationDetailPage\.external\?sp=(\d+)',
                   lambda m: root + "mutations/sp-" + m.group(1) + ".html", html)
-    for d in ("include", "assets", "image"):
+    # server-absolute asset/resource dirs -> root-relative
+    for d in ("include", "assets", "image", "download", "resource", "cftr",
+              "cftrdnasequence", "polypeptideSequence"):
         html = html.replace('"/' + d + '/', '"' + root + d + '/').replace("'/" + d + "/", "'" + root + d + "/")
-    html = html.replace('href="/Home.html"', 'href="' + root + 'Home.html"')
+    # server-absolute root pages -> root-relative (e.g. /Home.html)
+    html = re.sub(r'(href|src)="/([A-Za-z][A-Za-z0-9]*\.html)"',
+                  lambda m: m.group(1) + '="' + root + m.group(2) + '"', html)
+    # dead Tapestry form POST endpoints -> inert (avoid 404 on submit)
+    html = re.sub(r'action="/[^"]*\.s?direct[^"]*"', 'action="#"', html)
+    # remaining relative links to root-level targets -> add ../ depth
+    html = prefix_relative_root_links(html, root)
     return html
 
 
@@ -116,9 +154,21 @@ def main():
     if os.path.exists(SITE):
         shutil.rmtree(SITE)
     os.makedirs(SITE)
-    for sub in ("include", "assets", "image", "download"):
+    for sub in ("include", "assets", "image", "download", "resource", "cftr"):
         if os.path.isdir(os.path.join(RAW, sub)):
             shutil.copytree(os.path.join(RAW, sub), os.path.join(SITE, sub), dirs_exist_ok=True)
+    # root-level non-html assets (e.g. CFTR.fasta) copied verbatim
+    for f in ("CFTR.fasta",):
+        if os.path.isfile(os.path.join(RAW, f)):
+            shutil.copy(os.path.join(RAW, f), os.path.join(SITE, f))
+    # some copied resource/cftr pages are full CFMDB templates (nav + css):
+    # convert their links with the correct sub-directory depth
+    for sub in ("resource", "cftr"):
+        for p in glob.glob(os.path.join(SITE, sub, "**", "*.html"), recursive=True):
+            rel = os.path.relpath(p, SITE).replace("\\", "/")
+            depth = rel.count("/")            # dirs between site root and file
+            html = open(p, encoding="utf-8", errors="ignore").read()
+            open(p, "w", encoding="utf-8").write(convert_common(html, "../" * depth))
     shutil.copy(os.path.join(SRC, "cfmdb_search.js"), os.path.join(SITE, "cfmdb_search.js"))
     # landing redirect so /site/ (no explicit file) resolves to the homepage
     open(os.path.join(SITE, "index.html"), "w", encoding="utf-8").write(

@@ -1,0 +1,72 @@
+@CHARSET "UTF-8";
+
+div.submissionForm {
+	width: 75%;
+	text-align: center;
+}
+
+div.section, div.submissionErrors, div.notification {
+	font-family: verdana,arial,helvetica,sans-serif;
+}
+
+div.section div.header {
+	background-color: #84C680;
+}
+
+div.submissionErrors, div.notification {
+	width: 75%;
+	text-align: left;
+	font-size: 20px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+
+div.notification {
+	color: green; 
+}
+
+div.submissionErrors {
+	color: #FF0000;
+}
+
+div.section {
+	font-size: 14px; 
+	display: table;
+	margin-bottom: 5px;
+	width: 100%;
+}
+
+div.section div.header {
+	display: table-caption;
+	margin-bottom: 5px;
+	font-weight: bold;
+	color: white;
+	padding: 5px;
+	width: 100%;
+}
+
+div.section div.row {
+	display: table-row;
+}
+
+div.section div.row div.rowLabel {
+	width: 40%;
+	text-align: left;
+	display: table-cell;
+	vertical-align: middle;
+	padding-top: 1px;
+	padding-bottom: 1px;
+}
+
+div.section div.row div.formContent, div.section div.row div.analysisContent {
+	text-align: left;
+	display: table-cell;
+}
+
+div.section div.row div.formContent {
+	vertical-align: middle;	
+}
+
+div.section div.row div.analysisContent {
+	font-family: courier,verdana,arial,helvetica,sans-serif;
+}

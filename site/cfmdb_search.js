@@ -30,7 +30,12 @@
       DATA = []; PENDING.splice(0).forEach(function (f) { f(DATA); });
     });
   }
-  function norm(s) { return (s == null ? "" : String(s)).toLowerCase(); }
+  // lower-case, and canonicalise the delta symbol so "[delta]F508", "ΔF508"
+  // and "deltaF508" all match the same records
+  function norm(s) {
+    return (s == null ? "" : String(s)).toLowerCase()
+      .replace(/\[delta\]|Δ|∆|δ/g, "delta");
+  }
   function names(r) { return [r.cdna_name, r.protein_name, r.legacy_name]; }
   function contribText(r) { return (r.contributors || []).map(function (c) { return c.names; }).join(" "); }
   function years(r) {

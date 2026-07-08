@@ -10,12 +10,16 @@ functions** (text search, graphic search) which otherwise die with the server.
 
 - **Original site last updated:** 25 April 2011
 - **Captured:** 1 July 2026
-- **Contents:** all 18 static pages, all assets, **2,120 mutation records**
-  (complete set; IDs `sp=1 … 2239` with gaps where IDs were unused), the full
+- **Contents:** all 18 static pages, all assets, **2,121 mutation records**
+  (complete set; IDs `sp=0 … 2239` with gaps where IDs were unused), the full
   **Graphic Search** (overview map + 55 exon/intron drill-down pages + images),
-  and a search index.
+  the **67 CF Consortium newsletters** and consortium data tables, `CFTR.fasta`
+  (full CFTR genomic sequence), and a search index.
 - **Integrity:** every statically-fetched file is logged in
   [`manifest.jsonl`](manifest.jsonl) with URL, status, size and SHA-256.
+- **Link & function test:** see [`TESTING_REPORT.md`](TESTING_REPORT.md) — all
+  87,727 references audited; every fixable broken link fixed; the 46 that remain
+  are dead on the original server too or need the retired dynamic backend.
 
 ## Two layers: exact capture + working reconstruction
 

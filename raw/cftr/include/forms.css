@@ -1,0 +1,265 @@
+			.form-frame {
+				width: 600px;
+				float: left;
+				padding-top: 5px;
+				padding-bottom: 10px;
+				margin-bottom: 10px;
+				background: #eee;
+                margin-left: 10%;
+                }
+			.error-frame {
+				border-style: solid;
+				border-width: 1px;
+				border-color: #ffaaaa;
+                width: 590px;
+                float: left;
+                padding-top: 5px;
+                padding-bottom: 10px;
+                margin-bottom: 10px;
+				padding-left: 6px;
+				background: #fffff4;
+				display: inline;
+				font-size: 12px;
+				font-weight: bold;
+				color: #f00;
+				text-align: left;
+				}
+			.error-frame li {
+				width: 78%;
+				font-size: 10px;
+				line-height: 150%;
+				font-weight: normal;
+				text-align: left;
+				color: #f00;
+				list-style: none;
+				margin-left: 6px;
+				margin-right: 0px;
+				}
+			.transaction-frame {
+				width: 44%;
+				float: left;
+				padding-top: 5px;
+				padding-bottom: 10px;
+				margin-bottom: 10px;
+				margin-left: 17px;
+				background: #eee;
+				display: inline; /* For IE Win. */
+				}
+			.form-row,
+			.button-row,
+			.form-row-half,
+			.form-row-onethird,
+			.form-row-twothirds,
+			.form-row-middlethird,
+			.form-row-lastthird,
+			.form-row-bigmiddle,
+			.form-row-smallend,
+			.form-row-onequarter,
+			.form-row-threequarter {
+				float: left;
+				width: 570px; /* Total width is less than 400px because IE Win and Mac was having trouble floating everything within 400px. */
+				margin-left: 10px;
+				margin-right: 10px;
+                text-align: left;
+                display: inline; /* For IE Win. */
+                /* border: 1px solid #930; */
+                }
+            .form-row-onethird {
+                width: 190px;
+                margin-left: 10px;
+                margin-right:0px;
+            }
+
+            .form-row-middlethird {
+                width: 190px;
+                margin-left: 0px;
+                margin-right: 0px;
+                /*
+                margin-left: 200px;
+                margin-right: 200px;
+                */
+            }
+
+            .form-row-lastthird {
+                width: 190px;
+                margin-right:10px;
+                margin-left: 0px;
+                /* margin-left: 390px; */
+                /* margin-right: 10px; */
+            }
+
+            .form-row-bigmiddle {
+                width: 280px;
+                margin-left: 0px;
+                margin-right: 0px;
+            }
+
+            .form-row-smallend {
+                width: 100px;
+                margin-right: 10px;
+                margin-left: 0px;
+            }
+
+            .form-row-twothirds {
+                width: 380px;
+                margin-right: 10px;
+                margin-left: 0px;
+            }
+
+            .form-row-onequarter {
+                width: 140px;
+                margin-right: 0px;
+                margin-left: 10px;
+            }
+
+            .form-row-threequarter {
+                width: 430px;
+                margin-right: 10px;
+                margin-left: 0px;
+            }
+
+            .form-header, .form-header-first {
+				font-size: 16px;
+				font-weight: bold;
+				text-transform: uppercase;
+				padding-top: 0.75em;
+				padding-bottom: 0em;
+				float: left;
+				width: 370px; /* Total width is less than 400px because IE Win and Mac was having trouble floating everything within 400px. */
+				margin-left: 10px;
+				margin-right: 10px;
+				display: inline; /* For IE Win. */
+				}
+			.form-header-first {
+				padding-top: 0em;
+				}
+			.form-row p {
+				margin-right: 0;
+				}
+			.form-row-half { 
+				width: 285px; /* Had to define width for Safari or labels grew too large. */
+				margin-right: 0;}
+			.form-row-half p {
+				margin-right: 0;
+				}
+			.form-row-half-singlecolumn { 
+				float: left;
+				width: 285px;
+				margin-left: 10px;
+				margin-right: 285px; /* To force a single column. */
+				display: inline; /* For IE Win. */
+				}
+			.form-label {
+				float: left;
+				font-weight: bold;
+				color: #69c;
+				width: 100%; /* Prevents smaller fields from floating to the right. */
+				}
+			.form-label span {
+				font-weight:normal;
+				font-size: 85%;
+				}
+			.error-form-label {
+				float: left;
+				font-weight: bold;
+				color: #f00;
+				width: 100%; /* Prevents smaller fields from floating to the right. */
+				}
+	
+			.form-field, .form-field-half {
+				float: left;
+				clear: left;
+				margin-top: -3px;
+				margin-bottom: 4px;
+				width: 100%;
+				}
+				
+			.form-field-half {
+				width: 40%;
+				}
+			.form-spacer {
+				height: 20px;
+				clear: both;
+				line-height: 0px; /* otherwise IE expands the empty divs to accommodate some text */
+				font-size: 0px;
+				}
+			.form-spacer-10 {
+				height: 10px;
+				clear: both;
+				line-height: 0px; /* otherwise IE expands the empty divs to accommodate some text */
+				font-size: 0px;
+				}
+			.form-spacer-0 {
+				height: 1px;
+				width: 100%;
+				clear: both;
+				line-height: 0px; /* otherwise IE expands the empty divs to accommodate some text */
+				font-size: 0px;
+				}
+			.form-button {
+				}
+			.form-checkbox {
+				float: left;
+				}
+
+			.form-checkbox input {
+				width: auto;
+			}
+
+			.form-checkbox-label {
+				/* padding-left: 2em; */
+				line-height: 150%;
+			}
+			
+			.form-checkbox-label label {
+				width: auto;
+				text-align: left;
+			}
+				
+			.form-label label {
+				text-align: left;
+				width: 75%;
+				line-height: 21px;
+				/* border: 1px dashed green; */
+			}
+			
+			.button-row {
+				text-align: right;
+				float: right;
+				/* border: 1px dotted green; */
+				width: 380px;
+			}
+				
+.receipt-label, .transaction-label {
+	float: left;
+	width: 70%; /* Total width is less than 400px because IE Win and Mac was having trouble floating everything within 400px. */
+	line-height: 125%;
+	padding-bottom: .5em;
+	display: inline; /* For IE Win. */
+	}
+.receipt-label .indent {
+	margin-left: 15px;
+	}
+.receipt-amount, .grand-total, .transaction-value {
+	float: right;
+	width: 20%;
+	line-height: 125%;
+	padding-bottom: .5em;
+	padding-right: 6px;
+	text-align: right;
+	display: inline; /* For IE Win. */
+	}
+.totals {
+	font-weight: bold;
+	color: black;
+	}
+.grand-total {
+	background-color: #69c;
+	padding-top: 2px;
+	padding-bottom: 2px;
+	color: white;
+	font-weight: bold;
+	}
+.error {
+	color: #f00;
+}
