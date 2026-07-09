@@ -46,6 +46,9 @@ are reproduced client-side over an index (`site/records.json`) built from the
   drill-down pages were captured from the live server (they are GET pages); their
   images are cached locally and every image-map / mutation link rewritten to
   static files, so click-through navigation works exactly as before.
+- **Genomic DNA Sequence viewer** — reimplemented (`cfmdb_sequence.js`) over the
+  captured [`CFTR.fasta`](CFTR.fasta) (189,638 nt): enter a start position +
+  length, or click the ruler, to view any window of the CFTR genomic sequence.
 - **All internal links** (nav, detail pages, cross-references) are rewritten to
   resolve as static files.
 

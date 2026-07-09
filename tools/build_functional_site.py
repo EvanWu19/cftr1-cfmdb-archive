@@ -182,6 +182,7 @@ def main():
             html = open(p, encoding="utf-8", errors="ignore").read()
             open(p, "w", encoding="utf-8").write(convert_common(html, "../" * depth))
     shutil.copy(os.path.join(SRC, "cfmdb_search.js"), os.path.join(SITE, "cfmdb_search.js"))
+    shutil.copy(os.path.join(SRC, "cfmdb_sequence.js"), os.path.join(SITE, "cfmdb_sequence.js"))
     # landing redirect so /site/ (no explicit file) resolves to the homepage
     open(os.path.join(SITE, "index.html"), "w", encoding="utf-8").write(
         '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">'
@@ -201,6 +202,10 @@ def main():
             html = convert_common(html, "")
         if name in SEARCH_PAGES:
             html = inject_search(html, "")
+        if name == "GenomicDnaSequencePage.html":
+            tag = '<script src="cfmdb_sequence.js"></script>'
+            m = re.search(r'</body>', html, re.I)
+            html = html[:m.start()] + tag + html[m.start():] if m else html + tag
         open(os.path.join(SITE, name), "w", encoding="utf-8").write(html)
 
     # mutation detail pages (depth 1)

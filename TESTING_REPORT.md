@@ -78,7 +78,8 @@ either dead on the original server too, or require the retired dynamic backend.
 | Graphic Search (overview→region→variant) | ✅ Works | images + click-through resolve |
 | Mutation detail pages | ✅ Works | nav, logos, PubMed link |
 | Newsletters / Consortium data | ✅ Now works | were 404, now captured |
-| Genomic / mRNA / polypeptide **sequence viewers** | ⚠️ Non-functional | interactive; needs dead backend — see below |
+| **Genomic DNA Sequence viewer** | ✅ Now works | reimplemented over `CFTR.fasta` — see below |
+| mRNA / polypeptide sequence viewer | ⚠️ Data not in archive | see below |
 | Submit-a-mutation form | ⚠️ Inert (by design) | cannot submit to a retired database |
 
 ## Remaining issues
@@ -89,13 +90,23 @@ either dead on the original server too, or require the retired dynamic backend.
 - **1 legacy CGI** (`/cftr-cgi-bin/sidestring`, image generator) referenced by a
   1999 consortium table — 404 on the live server.
 
-### B. Requires the retired dynamic backend (data preserved where possible)
-- **Sequence viewers** (`GenomicDnaSequencePage`, `MRnaPolypeptideSequencePage`):
-  the pages render, but their "click a region / enter positions → show 2,000 nt"
-  feature fetched data live from endpoints that now return **empty** on GET
-  (`cftrdnasequence*.txt`, `polypeptideSequence/*.txt`). The interactive slicer
-  is not reproduced. **Mitigation:** the complete CFTR genomic sequence is
-  preserved in [`CFTR.fasta`](CFTR.fasta) (192 kB).
+### B. Sequence viewers
+- **Genomic DNA Sequence viewer — REBUILT (works).** The original fetched a
+  window of the CFTR genomic sequence from a server endpoint that now returns
+  empty on GET. Because the full sequence was recovered in
+  [`CFTR.fasta`](CFTR.fasta) (189,638 nt), the viewer is reimplemented
+  client-side (`site_src/cfmdb_sequence.js`): enter a start position + length
+  (100/500/1000/2000/5000 nt) **or click the ruler** to jump to a genomic
+  position, and the formatted sequence window is rendered in-page. Verified in a
+  browser (e.g. position 117,120 → the correct 2,000 nt window; ruler click at
+  25 % → ~47,285).
+- **mRNA / polypeptide sequence viewer — data not in the archive.** This page
+  needs the CFTR cDNA and 1-/3-letter protein sequences, which came only from the
+  dynamic endpoints (`polypeptideSequence/*.txt`, empty on GET) — unlike the
+  genomic page, that sequence was never captured, so there is no archived data to
+  drive it. It could be restored by adding the standard CFTR reference cDNA
+  (NM_000492) and protein (NP_000483), but those are external reference sequences,
+  not archive content, so they are omitted unless you want them added.
 - **Submit form**: intentionally inert — a preservation archive cannot accept new
   submissions.
 
