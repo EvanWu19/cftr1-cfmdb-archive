@@ -1,34 +1,49 @@
 # CFTR1 / CFMDB Archive — Full Link & Function Test Report
 
-**Date:** 8 July 2026
+**Date:** 9 July 2026 (round 2; round 1 was 8 July 2026)
 **Scope:** every internal link and every interactive function of the reconstructed
 site (`site/`), tested exhaustively; easy issues fixed, deeper issues reported.
 
 ## Method
 
-- **Static link audit** (`tools/audit_links.py`): parsed all **2,418** files and
-  every `href` / `src` / `<area>` / `<form action>` / CSS `url()` — **87,727
+- **Static link audit** (`tools/audit_links.py`): parsed all **2,285** files and
+  every `href` / `src` / `<area>` / `<form action>` / CSS `url()` — **87,881
   references**, resolving each internal target to a real local file.
-- **Function tests**: verified each search form's required DOM element IDs exist
-  and the search engine (`cfmdb_search.js`) is wired in; then ran the exact
-  match logic of all four search modes against the live index (`records.json`,
-  2,121 records) with representative queries.
-- **Graphic search**: verified the overview map, all 55 region drill-down pages,
-  their 56 images, and mutation click-through links resolve.
-- Live re-confirmation in a browser was attempted but the Chrome extension was
-  disconnected this session; the headless checks above stand in for it.
+- **Function tests**: every interactive function was driven **live in a browser**
+  (round 2) — all four search modes, both sequence viewers, and the graphic
+  click-through — in addition to headless verification of the match logic against
+  the index (`records.json`, 2,121 records).
+- **Graphic search**: overview map, all 55 region drill-down pages, their images,
+  and mutation click-through verified end-to-end (overview → region → detail).
 
 ## Result summary
 
-| | Before this pass | After |
+| | Before round 1 | After round 2 |
 |---|---|---|
-| Unique broken internal links | **118** | **46** (all unfixable-at-source — see below) |
+| Unique broken internal links | **118** | **42** (all dead on the original server too — see below) |
 | Un-converted dead dynamic endpoints | 7 | **0** |
 | Mutation records in archive | 2,120 | **2,121** (recovered `sp=0`) |
-| Sub-resources captured | — | **+120** (newsletters, consortium tables, images, JS libs, FASTA) |
+| Sub-resources captured | — | **+123** (newsletters, consortium tables, images, JS libs, FASTA, cDNA/protein) |
+| Interactive functions working | search only | **all** (4 search modes, graphic, 2 sequence viewers) |
 
-Every broken link that *could* be fixed was fixed. The 46 that remain are all
-either dead on the original server too, or require the retired dynamic backend.
+Every broken link that *could* be fixed was fixed. The 42 that remain are all
+dead on the original server itself (40 newsletter images, 1 legacy CGI) or a
+record that is empty upstream (`sp-1873`).
+
+### Round-2 live browser confirmation (9 July 2026)
+
+All functions were exercised in a real browser and produced correct results:
+
+| Function | Live check | Result |
+|---|---|---|
+| Basic search | `M470` | 9 hits, links sp-1019 ✓ |
+| Advanced search | Exon 2 alone / +Large In/del +Promoter | 37 / 110 ✓ |
+| Precision search | `R117H` (all fields) | 23 hits, incl. R117H ✓ |
+| Criteria search | structural = Deletion | 355 ✓ |
+| Graphic search | overview → exon-11 region → detail | image loads; 93 variant links resolve ✓ |
+| Genomic sequence viewer | position 1000 + ruler + plain-copy link | correct window, all modes ✓ |
+| mRNA/polypeptide viewer | nt 100 → DNA / 1-letter / 3-letter | correct, nt→aa maps to residue 34 ✓ |
+| Detail page | sp-246 (F508del) | logo + all 20 nav links resolve, PubMed link, data shown ✓ |
 
 ## Fixes applied
 
@@ -65,6 +80,19 @@ either dead on the original server too, or require the retired dynamic backend.
    patterns). This also corrected 35 promoter variants that were mislabelled
    *Splicing*. Verified F508del stays *In frame* and `3849+10kbC>T` stays
    *Splicing*.
+8. **Both sequence viewers rebuilt** — the genomic viewer over `CFTR.fasta`
+   (189,638 nt), and the mRNA/polypeptide viewer over the CFTR coding cDNA
+   (4,443 nt) + protein (1,480 aa, one/three-letter) recovered from the live
+   endpoint (`?startPoint=&endPoint=&mode=`). Start-position + length, clickable
+   ruler, and the original representation links.
+9. **(round 2) Genomic "DNA sequence" plain-copy link wired** — the genomic
+   page's `ServiceLink` ("sequence only copy") was not handled and 404-ed; it now
+   renders the current window as a plain, unnumbered sequence for copy-paste.
+10. **(round 2) Dead default sequence hrefs neutralised** — the `0_0`
+   `polypeptideSequence/*.txt` and `cftrdnasequence/*.txt` default links (which
+   return empty and are overridden by the viewer's JS) are set to `#`, so nothing
+   404s even with JavaScript disabled. This removed the last 4 non-source-dead
+   broken links (46 → 42).
 
 ## Function-by-function results
 

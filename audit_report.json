@@ -1,9 +1,9 @@
 {
   "files_audited": 2285,
   "counts": {
-    "total_refs": 87879,
-    "internal": 82684,
-    "inpage_or_js": 207,
+    "total_refs": 87881,
+    "internal": 82682,
+    "inpage_or_js": 211,
     "mailto": 2208,
     "external": 2780
   },
@@ -133,21 +133,9 @@
     ],
     "CFnewslet.91.gif": [
       "resource/nl/CFnewslet.9.html"
-    ],
-    "cftrdnasequence/cftrdnasequence0_0.txt": [
-      "GenomicDnaSequencePage.html"
-    ],
-    "polypeptideSequence/DNASequence0_0.txt": [
-      "MRnaPolypeptideSequencePage.html"
-    ],
-    "polypeptideSequence/OneLetterPolypeptideSequence0_0.txt": [
-      "MRnaPolypeptideSequencePage.html"
-    ],
-    "polypeptideSequence/ThreeLetterPolypeptideSequence0_0.txt": [
-      "MRnaPolypeptideSequencePage.html"
     ]
   },
-  "broken_internal_unique_targets": 46,
+  "broken_internal_unique_targets": 42,
   "dynamic_unconverted": {},
   "dynamic_unconverted_count": 0,
   "external_urls": [

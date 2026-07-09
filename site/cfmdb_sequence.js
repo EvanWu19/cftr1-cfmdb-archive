@@ -58,25 +58,33 @@
     form.parentNode.insertBefore(ruler(189638, "genomic", function (p) { startEl.value = p; run(); }), form);
     form.parentNode.insertBefore(box, form.nextSibling);
 
-    function render(seq, start, len) {
+    function render(seq, start, len, plain) {
       var s = Math.max(1, Math.min(start | 0 || 1, seq.length));
-      var sub = seq.substr(s - 1, len), out = [], i;
-      for (i = 0; i < sub.length; i += 60) out.push(pad(s + i, 9) + "  " + grouped(sub.substr(i, 60), 10));
+      var sub = seq.substr(s - 1, len), body, i, out = [];
+      if (plain) {                       // "sequence only copy" — no numbering/spacing
+        body = sub;
+      } else {
+        for (i = 0; i < sub.length; i += 60) out.push(pad(s + i, 9) + "  " + grouped(sub.substr(i, 60), 10));
+        body = out.join("\n");
+      }
       box.innerHTML = '<div style="font-size:small;margin:6px 0"><b>CFTR genomic sequence</b> — positions <b>'
-        + s + '</b>–<b>' + (s + sub.length - 1) + '</b> of ' + seq.length + ' nt</div>' + pre(out.join("\n"));
+        + s + '</b>–<b>' + (s + sub.length - 1) + '</b> of ' + seq.length + ' nt'
+        + (plain ? ' (sequence-only copy)' : '') + '</div>' + pre(body);
     }
-    function run() {
+    function run(plain) {
       var len = LEN[lenSel ? lenSel.value : "3"] || 2000, start = parseInt(startEl.value, 10) || 1;
-      if (SEQ !== null) return render(SEQ, start, len);
+      if (SEQ !== null) return render(SEQ, start, len, plain);
       fetchText("CFTR.fasta").then(function (t) {
         SEQ = t.split(/\r?\n/).filter(function (l) { return l && l.charAt(0) !== ">"; })
           .join("").toUpperCase().replace(/[^ACGTN]/g, "");
-        render(SEQ, start, len);
+        render(SEQ, start, len, plain);
       });
     }
     form.setAttribute("action", "#");
-    form.addEventListener("submit", function (e) { e.preventDefault(); run(); });
-    if (getBtn) getBtn.addEventListener("click", function (e) { e.preventDefault(); run(); });
+    form.addEventListener("submit", function (e) { e.preventDefault(); run(false); });
+    if (getBtn) getBtn.addEventListener("click", function (e) { e.preventDefault(); run(false); });
+    var svc = document.getElementById("ServiceLink");   // "DNA sequence" plain-copy link
+    if (svc) svc.addEventListener("click", function (e) { e.preventDefault(); run(true); });
   }
 
   // ---------------- mRNA(cDNA) & Polypeptide page ----------------

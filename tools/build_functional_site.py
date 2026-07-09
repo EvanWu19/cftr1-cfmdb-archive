@@ -79,6 +79,10 @@ def convert_common(html, root):
                   lambda m: m.group(1) + '="' + root + m.group(2) + '"', html)
     # dead Tapestry form POST endpoints -> inert (avoid 404 on submit)
     html = re.sub(r'action="/[^"]*\.s?direct[^"]*"', 'action="#"', html)
+    # dead default sequence-endpoint links (0_0 windows return empty); the
+    # client-side viewer wires these by id, so neutralise the href to avoid 404
+    html = re.sub(r'href="[^"]*(?:cftrdnasequence|polypeptideSequence)/[^"]*\.txt[^"]*"',
+                  'href="#"', html)
     # remaining relative links to root-level targets -> add ../ depth
     html = prefix_relative_root_links(html, root)
     return html
