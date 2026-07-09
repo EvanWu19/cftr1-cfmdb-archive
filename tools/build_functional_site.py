@@ -173,6 +173,8 @@ def main():
     for f in ("CFTR.fasta",):
         if os.path.isfile(os.path.join(RAW, f)):
             shutil.copy(os.path.join(RAW, f), os.path.join(SITE, f))
+    if os.path.isdir(os.path.join(RAW, "sequence")):
+        shutil.copytree(os.path.join(RAW, "sequence"), os.path.join(SITE, "sequence"), dirs_exist_ok=True)
     # some copied resource/cftr pages are full CFMDB templates (nav + css):
     # convert their links with the correct sub-directory depth
     for sub in ("resource", "cftr"):
@@ -202,7 +204,7 @@ def main():
             html = convert_common(html, "")
         if name in SEARCH_PAGES:
             html = inject_search(html, "")
-        if name == "GenomicDnaSequencePage.html":
+        if name in ("GenomicDnaSequencePage.html", "MRnaPolypeptideSequencePage.html"):
             tag = '<script src="cfmdb_sequence.js"></script>'
             m = re.search(r'</body>', html, re.I)
             html = html[:m.start()] + tag + html[m.start():] if m else html + tag

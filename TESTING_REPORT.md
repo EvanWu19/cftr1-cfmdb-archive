@@ -79,7 +79,7 @@ either dead on the original server too, or require the retired dynamic backend.
 | Mutation detail pages | ✅ Works | nav, logos, PubMed link |
 | Newsletters / Consortium data | ✅ Now works | were 404, now captured |
 | **Genomic DNA Sequence viewer** | ✅ Now works | reimplemented over `CFTR.fasta` — see below |
-| mRNA / polypeptide sequence viewer | ⚠️ Data not in archive | see below |
+| **mRNA / polypeptide sequence viewer** | ✅ Now works | cDNA + protein recovered from live server — see below |
 | Submit-a-mutation form | ⚠️ Inert (by design) | cannot submit to a retired database |
 
 ## Remaining issues
@@ -100,13 +100,16 @@ either dead on the original server too, or require the retired dynamic backend.
   position, and the formatted sequence window is rendered in-page. Verified in a
   browser (e.g. position 117,120 → the correct 2,000 nt window; ruler click at
   25 % → ~47,285).
-- **mRNA / polypeptide sequence viewer — data not in the archive.** This page
-  needs the CFTR cDNA and 1-/3-letter protein sequences, which came only from the
-  dynamic endpoints (`polypeptideSequence/*.txt`, empty on GET) — unlike the
-  genomic page, that sequence was never captured, so there is no archived data to
-  drive it. It could be restored by adding the standard CFTR reference cDNA
-  (NM_000492) and protein (NP_000483), but those are external reference sequences,
-  not archive content, so they are omitted unless you want them added.
+- **mRNA / polypeptide sequence viewer — REBUILT (works).** The cDNA and protein
+  sequences *were* fetchable from the live server after all: the endpoint accepts
+  `?startPoint=&endPoint=&mode=` (mode 0 = DNA, 1 = three-letter, 2 = one-letter)
+  in nucleotide coordinates — the `0_0` default just returns empty. The full CFTR
+  coding cDNA (**4,443 nt**), one-letter protein (**1,480 aa**) and three-letter
+  protein were recovered and saved under [`sequence/`](sequence/). The viewer is
+  reimplemented over them (`site_src/cfmdb_sequence.js`): start position + length,
+  a clickable ruler, and the page's original three links (DNA / three-letter /
+  one-letter) switch representation. Verified in a browser (cDNA `ATGCAGAGG…`,
+  protein `MQRSPLEKAS…`, `MetGlnArgSerPro…`).
 - **Submit form**: intentionally inert — a preservation archive cannot accept new
   submissions.
 
