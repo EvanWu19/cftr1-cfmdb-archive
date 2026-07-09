@@ -121,6 +121,18 @@ def func_type(rec):
     p = (rec.get("protein_name") or "").lower()
     c = (rec.get("cdna_name") or "").lower()
     reg = (rec.get("region") or "").lower()
+    lreg = (rec.get("legacy_region") or "").lower()
+    name = ((rec.get("legacy_name") or "") + " " + (rec.get("cdna_name") or "")).lower()
+    # Promoter — region is authoritative; check before the splice rule because
+    # promoter cDNA positions (c.-887 …) otherwise look like splice positions.
+    if "promoter" in reg or "promoter" in lreg:
+        return "Promoter"
+    # Large In/del — gross rearrangements: whole-exon / multi-exon deletions,
+    # kb-scale deletions, uncertain-boundary notation c.(?_x)_(y_?)del.
+    if ("(?_" in c or "cftrdele" in name or "delex" in name or "del ex" in name
+            or " - " in reg
+            or ("kb" in c and ("del" in c or "ins" in c or "dup" in c))):
+        return "Large In/del"
     if "ter" in p or p.endswith("*") or re.search(r"\*\d*$", p): return "Nonsense"
     if "fs" in p: return "Frame Shift"
     if "intron" in reg or re.search(r"[+\-]\d", c): return "Splicing"

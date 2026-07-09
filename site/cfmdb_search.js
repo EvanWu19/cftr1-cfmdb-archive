@@ -36,6 +36,11 @@
     return (s == null ? "" : String(s)).toLowerCase()
       .replace(/\[delta\]|Δ|∆|δ/g, "delta");
   }
+  // whole-token region match, so "exon 2" does NOT also match "exon 20".."exon 27"
+  function regionHas(reg, opt) {
+    var esc = opt.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+    return new RegExp("(^|[^a-z0-9])" + esc + "(?![0-9])").test(reg);
+  }
   function names(r) { return [r.cdna_name, r.protein_name, r.legacy_name]; }
   function contribText(r) { return (r.contributors || []).map(function (c) { return c.names; }).join(" "); }
   function years(r) {
@@ -135,7 +140,7 @@
           var regionChecks = [];
           if (exons.length || introns.length) {
             var reg = norm(r.region) + " " + norm(r.legacy_region);
-            regionChecks = exons.concat(introns).map(function (x) { return reg.indexOf(x) >= 0; });
+            regionChecks = exons.concat(introns).map(function (x) { return regionHas(reg, x); });
           }
           if (types.length) checks.push(types.indexOf(norm(r.func_type)) >= 0);
           var yy = years(r);
@@ -181,7 +186,7 @@
           if (stype && norm(r.struct_type) !== stype) return false;
           if (coding.length || noncoding.length) {
             var reg = norm(r.region) + " " + norm(r.legacy_region);
-            if (!coding.concat(noncoding).some(function (x) { return reg.indexOf(x) >= 0; })) return false;
+            if (!coding.concat(noncoding).some(function (x) { return regionHas(reg, x); })) return false;
           }
           return true;
         });

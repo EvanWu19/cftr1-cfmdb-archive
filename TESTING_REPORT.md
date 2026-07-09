@@ -54,6 +54,17 @@ either dead on the original server too, or require the retired dynamic backend.
 5. **Search: delta-symbol normalisation** — `ΔF508`, `[delta]F508` and
    `deltaF508` now all match the same records (previously only `[delta]F508` /
    `F508` did).
+6. **Region filter whole-token match** — selecting *Exon 2* used to substring-
+   match *Exon 20–27* and every range containing a "2" (**435 hits**); it now
+   matches only genuine exon-2 records (**37**). Applies to the exon/intron and
+   coding/non-coding filters in Advanced and Criteria search.
+7. **Mutation-type derivation extended** — the *Promoter* (35) and *Large In/del*
+   (43) type options were previously never produced, so those two filters
+   returned nothing; the derivation now emits them (Promoter from the region
+   field; Large In/del from whole-exon / multi-exon / kb-scale rearrangement
+   patterns). This also corrected 35 promoter variants that were mislabelled
+   *Splicing*. Verified F508del stays *In frame* and `3849+10kbC>T` stays
+   *Splicing*.
 
 ## Function-by-function results
 
@@ -92,10 +103,10 @@ either dead on the original server too, or require the retired dynamic backend.
 - **`sp=1873`** is referenced by graphic region page `domain_8` but the record is
   **empty on the original server** — a source-side inconsistency; no record
   exists to link to.
-- **Mutation-type filters** are HGVS-derived (the DB's own type field is not on
-  any capturable page). Two dropdown options — **"Large In/del"** and
-  **"Promoter"** — are never produced by the derivation, so filtering by those
-  two returns nothing.
+- **Mutation-type filters** are HGVS/region-derived (the DB's own type field is
+  not on any capturable page), so the classification is an interpretation, not
+  the original DB value. All eight type options now return results (see fix 7);
+  edge cases may still differ from the original's own labelling.
 - **`term=null` PubMed links on 477 detail pages** — faithful to the original:
   the server wrote `term=null` for variants with no legacy/protein name, so the
   "check PubMed" link is unhelpful for those records.

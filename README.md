@@ -35,7 +35,7 @@ functions** (text search, graphic search) which otherwise die with the server.
 
 The original server-side Tapestry backend no longer answers, so the functions
 are reproduced client-side over an index (`site/records.json`) built from the
-2,120 detail pages, enriched with data captured live before retirement.
+2,121 detail pages, enriched with data captured live before retirement.
 
 - **Basic / Advanced / Precision / Criteria text search** — reimplemented in
   `cfmdb_search.js` with the original forms, fields, case-insensitive substring
@@ -51,7 +51,7 @@ are reproduced client-side over an index (`site/records.json`) built from the
 
 ### Fidelity notes — exact capture vs. reconstruction
 
-The 2,120 **detail pages** — each variant's authoritative record (cDNA / protein
+The 2,121 **detail pages** — each variant's authoritative record (cDNA / protein
 / legacy name, region, submitted phenotype, contributors, institute, reference,
 PubMed link) — are captured **exactly and completely for every record**. The two
 notes below concern *only the search layer*: the columns and filters that the
@@ -67,9 +67,9 @@ the same place, and they do not all have the same coverage:
 | Result column | Where it comes from | Populated |
 |---|---|---|
 | cDNA / Protein / Legacy name | The captured detail pages | complete |
-| Region | The detail page's *Exon or Intron* field (captured) | 1,818 / 2,120 |
-| **Nucleotide Change** | Harvested from the live search backend | 1,635 / 2,120 |
-| **Consequence** | Harvested from the live search backend | 1,583 / 2,120 |
+| Region | The detail page's *Exon or Intron* field (captured) | 1,819 / 2,121 |
+| **Nucleotide Change** | Harvested from the live search backend | 1,635 / 2,121 |
+| **Consequence** | Harvested from the live search backend | 1,583 / 2,121 |
 
 "Nucleotide Change" and "Consequence" appeared **only** in the rows the server's
 search engine generated on the fly — they are never printed on a detail page. To
@@ -96,8 +96,10 @@ To keep them working, each variant's type is instead **computed from its HGVS
 name** using standard rules — e.g. `>` → substitution; `del` / `ins` / `dup` /
 `delins` → the matching structural class; a protein change like `p.Met470Val` →
 missense, a `Ter` / `*` change → nonsense, `fs` → frameshift, canonical splice
-positions → splice. This classification is present for 2,118 / 2,120 (structural)
-and 2,120 / 2,120 (functional).
+positions → splice; promoter-region variants → promoter; whole-exon / multi-exon
+/ kb-scale rearrangements → large in/del. This classification is present for
+2,119 / 2,121 (structural) and 2,121 / 2,121 (functional), and all eight
+functional-type filter options return results.
 
 This is an **interpretation from nomenclature, not the database's original
 classification.** It is correct for the large majority of variants and makes the
