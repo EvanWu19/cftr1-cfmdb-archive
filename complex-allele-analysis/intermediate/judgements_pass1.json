@@ -1,0 +1,3902 @@
+[
+ {
+  "sp_id": 9,
+  "is_complex_allele": "uncertain",
+  "confidence": "high",
+  "keyword": "together with",
+  "text_referring_to": "The mutation was found together with R3W in a 14 years old male patient diagnosed at 9 months, also carrying N1303K on the other allele",
+  "reason": "Q2X co-occurs with R3W ('Q2X together with R3W'), but other_details explicitly states 'we cannot indicate if those two nucleotidic variations were localised on the same chromosome or not' -- so cis vs trans for R3W is genuinely undetermined. N1303K is separately reported on the other allele (trans) and is not a complex partner.",
+  "partner_tokens": [
+   "R3W"
+  ]
+ },
+ {
+  "sp_id": 10,
+  "is_complex_allele": "no",
+  "confidence": "high",
+  "keyword": "on the other allele",
+  "text_referring_to": "The mutation was identified in a 3-yearold CF patient also carrying delF508 on the other allele",
+  "reason": "All co-occurring mutations (delF508, and 2789+5G>A in a second patient) are explicitly reported on the other allele -- compound heterozygous / trans, not a complex allele.",
+  "partner_tokens": []
+ },
+ {
+  "sp_id": 15,
+  "is_complex_allele": "no",
+  "confidence": "high",
+  "keyword": "on the other chromosome",
+  "text_referring_to": "The mutation is present in conjunction with E92K on the other chromosome in a Turkish CF patient.",
+  "reason": "E92K is explicitly on the other chromosome / other allele -- trans, not a complex allele.",
+  "partner_tokens": []
+ },
+ {
+  "sp_id": 16,
+  "is_complex_allele": "yes",
+  "confidence": "high",
+  "keyword": "in cis",
+  "text_referring_to": "185+4A->T was found in a CBAVD patient also carrying F508del in cis. (pers. corr. Claustres)",
+  "reason": "F508del is explicitly stated to be 'in cis' with 185+4A->T on the same allele -- a complex allele.",
+  "partner_tokens": [
+   "F508del"
+  ]
+ },
+ {
+  "sp_id": 26,
+  "is_complex_allele": "no",
+  "confidence": "high",
+  "keyword": "on his other chromosome",
+  "text_referring_to": "The patient who carries this mutation has the exon 12 mutation Y563N on his other chromosome.",
+  "reason": "Y563N is explicitly on the patient's other chromosome -- trans. The haplotype 2-2-2-1 is a marker background, not a cis CFTR variant.",
+  "partner_tokens": []
+ },
+ {
+  "sp_id": 40,
+  "is_complex_allele": "no",
+  "confidence": "high",
+  "keyword": "paternal chromosome",
+  "text_referring_to": "The paternal chromosome carries the mutation R352Q.",
+  "reason": "W57G is on the maternal chromosome while R352Q is on the paternal chromosome / other allele -- trans. Haplotype A is background only.",
+  "partner_tokens": []
+ },
+ {
+  "sp_id": 44,
+  "is_complex_allele": "no",
+  "confidence": "high",
+  "keyword": "other CF chromosome",
+  "text_referring_to": "The mutation was seen in a girl whose other CF chromosome carries the [delta]F508 mutation.",
+  "reason": "deltaF508 is explicitly on the other CF chromosome -- trans. The 'A' haplotype (XV2c type 1, KM19 type 1) are marker haplotypes, not cis CFTR variants.",
+  "partner_tokens": []
+ },
+ {
+  "sp_id": 47,
+  "is_complex_allele": "no",
+  "confidence": "high",
+  "keyword": "second mutation",
+  "text_referring_to": "The second mutation is yet unknown. The mutation segregates with haplotype C.",
+  "reason": "No co-occurring named CFTR variant -- the second mutation is unknown and only haplotype C background is reported, so there is no cis partner.",
+  "partner_tokens": []
+ },
+ {
+  "sp_id": 48,
+  "is_complex_allele": "no",
+  "confidence": "medium",
+  "keyword": "the other mutation",
+  "text_referring_to": "347delC was found in one French CF patient, with the other mutation being N1303K.",
+  "reason": "N1303K is described as 'the other mutation' / 'also carrying' -- the second mutation of a compound-heterozygous genotype (trans). It is not stated to be in cis.",
+  "partner_tokens": []
+ },
+ {
+  "sp_id": 50,
+  "is_complex_allele": "no",
+  "confidence": "medium",
+  "keyword": "on the other allele",
+  "text_referring_to": "This mutation was identified in a German PI patient with N1303K on the other allele. The patient carries haplotype C and the 125G->C polymorphism.",
+  "reason": "N1303K is explicitly on the other allele -- trans. The 125G->C polymorphism is reported as patient/haplotype-C background but is not explicitly stated to be in cis with R75X, so it does not qualify as a stated cis partner.",
+  "partner_tokens": []
+ },
+ {
+  "sp_id": 55,
+  "is_complex_allele": "no",
+  "confidence": "high",
+  "keyword": "haplotype",
+  "text_referring_to": "This Gly to Glu change is associated with a group IIb haplotype.",
+  "reason": "Only a group IIb marker haplotype background is reported; no co-occurring CFTR variant, so no complex allele.",
+  "partner_tokens": []
+ },
+ {
+  "sp_id": 56,
+  "is_complex_allele": "no",
+  "confidence": "high",
+  "keyword": "on the other chromosome",
+  "text_referring_to": "The patient with G85V carried G542X on the other chromosome, and presented mild phenotype with PI.",
+  "reason": "G542X is explicitly on the other chromosome / other allele -- trans, not a complex allele.",
+  "partner_tokens": []
+ },
+ {
+  "sp_id": 60,
+  "is_complex_allele": "yes",
+  "confidence": "high",
+  "keyword": "found together with",
+  "text_referring_to": "L88X(T->A) was found together with G1069R in a 16 years old male  patient carrying deltaF508 on the other allele, diagnosed at 4 mths of age.",
+  "reason": "L88X and G1069R are described as found together in a patient whose deltaF508 sits on the OTHER allele; since deltaF508 occupies one chromosome, L88X+G1069R must lie together on the remaining chromosome (cis) = complex allele. deltaF508 is the trans partner, not part of the complex allele.",
+  "partner_tokens": [
+   "G1069R"
+  ]
+ },
+ {
+  "sp_id": 62,
+  "is_complex_allele": "no",
+  "confidence": "high",
+  "keyword": "haplotype",
+  "text_referring_to": "The CF child has a [delta]F508 on th other chromosome.",
+  "reason": "deltaF508 is explicitly on the other chromosome (trans/compound het). 'Haplotype C' is background haplotype only, and 'one additional patient with G91R' refers to a separate individual. No cis partner variant.",
+  "partner_tokens": []
+ },
+ {
+  "sp_id": 63,
+  "is_complex_allele": "uncertain",
+  "confidence": "low",
+  "keyword": "rare polymorphism at codon T966",
+  "text_referring_to": "The patient carries haplotype C and the rare polymorphism at codon T966.",
+  "reason": "Patient is 405+1G->A / deltaF508 compound het (deltaF508 trans). A rare polymorphism at codon T966 co-occurs and is grouped with the mutant-chromosome haplotype description, but its phase relative to 405+1G->A is not explicitly stated as cis, so cis vs trans is genuinely ambiguous.",
+  "partner_tokens": [
+   "T966"
+  ]
+ },
+ {
+  "sp_id": 67,
+  "is_complex_allele": "no",
+  "confidence": "high",
+  "keyword": "also found",
+  "text_referring_to": "We have found a child with the following genotype 406-6T->C/[delta]F508, he is symptom free as the sweat test is normal.",
+  "reason": "Genotype 406-6T->C/deltaF508 is a compound heterozygote (deltaF508 in trans). The variant being 'also found in a male individual' refers to a different, separate person, not a cis partner. No same-allele second variant.",
+  "partner_tokens": []
+ },
+ {
+  "sp_id": 71,
+  "is_complex_allele": "no",
+  "confidence": "high",
+  "keyword": "haplotype",
+  "text_referring_to": "The mutation on the other chromosome of this patient is unknown, but has the haplotype C/D.",
+  "reason": "The second mutation is on the OTHER chromosome and is unknown (trans). 'Haplotype C/D' is background marker haplotype, not a co-occurring CFTR sequence variant. No cis partner.",
+  "partner_tokens": []
+ },
+ {
+  "sp_id": 72,
+  "is_complex_allele": "no",
+  "confidence": "high",
+  "keyword": "haplotype",
+  "text_referring_to": "The haplotype is 2-2-1 (KM19-D9-J44) with seven GATT repeats.",
+  "reason": "Only a marker haplotype (2-2-1, KM19-D9-J44) and a GATT microsatellite repeat count are described as the allele background. GATT repeats/marker haplotypes are not functional complex-allele partner variants and no second CFTR sequence change is reported in cis.",
+  "partner_tokens": []
+ },
+ {
+  "sp_id": 74,
+  "is_complex_allele": "no",
+  "confidence": "medium",
+  "keyword": "125G/125C also present",
+  "text_referring_to": "he was heterozygous at the cDNA 125 in 5'UTR (i.e., 125G/125C), and this is the only difference from his healthy sister who is also heterozygous for Q98R mutation, but 125G/125G, suggesting that 125C may be disease-causing.",
+  "reason": "The affected patient is Q98R het with CF (PI, CBAVD, high sweat Cl) and no other exonic mutation; his sister is also Q98R het but 125G/125G and healthy. For the patient to have CF, 125C must act as the SECOND disease allele in trans to Q98R (compound het) — if 125C were in cis with Q98R the other allele would be normal and he would be an asymptomatic carrier. Also, in the other listed patient deltaF508 is on the other allele (trans). No cis pairing established.",
+  "partner_tokens": []
+ },
+ {
+  "sp_id": 75,
+  "is_complex_allele": "no",
+  "confidence": "medium",
+  "keyword": "found together with",
+  "text_referring_to": "This mutation was found together with [delta]F508 in a patient with extreme mild symptoms.",
+  "reason": "'Found together with deltaF508' in a symptomatic patient is the standard description of a P99L/deltaF508 compound heterozygote (trans): the patient has (mild) CF, requiring two affected alleles. A cis [deltaF508+P99L] allele would leave the second chromosome normal = asymptomatic carrier, contradicting the reported symptoms. No 'same allele/chromosome' cis signal is present.",
+  "partner_tokens": []
+ },
+ {
+  "sp_id": 76,
+  "is_complex_allele": "no",
+  "confidence": "high",
+  "keyword": "haplotype",
+  "text_referring_to": "The mutation was identified in 2 siblings, genotype 435insA/2184delA,2183A->G, both male (7 and 16 years old)",
+  "reason": "435insA sits alone on its allele. The complex pair [2184delA;2183A->G] is on the OTHER chromosome (trans to 435insA), per genotype 435insA/2184delA,2183A->G (and originally the other chromosome was 'unknown'). 435insA's own background is only haplotype 2-2-1/GATT repeats, so 435insA itself carries no cis partner.",
+  "partner_tokens": []
+ },
+ {
+  "sp_id": 78,
+  "is_complex_allele": "yes",
+  "confidence": "high",
+  "keyword": "on the same chromosome",
+  "text_referring_to": "Another change (silent) on the same chromosome with 441delA mutant allele is T to A at position 486 in exon 4 (TCT to TCA; both serine codons).",
+  "reason": "The silent 486T->A is explicitly stated to be on the SAME chromosome as the 441delA mutant allele, and the genotype is written 441delA,486T->A/delF508 — so 441delA + 486T->A form a cis complex allele. deltaF508 is the trans partner, not part of the complex allele.",
+  "partner_tokens": [
+   "486T->A",
+   "T to A at position 486"
+  ]
+ },
+ {
+  "sp_id": 83,
+  "is_complex_allele": "no",
+  "confidence": "high",
+  "keyword": "second mutation",
+  "text_referring_to": "The second mutation of the patient is not yet detected ... carries 2381C->T on the other allele.",
+  "reason": "The 'second mutation' (later identified as 2381C->T) is on the OTHER allele (trans/compound het). No variant is reported on the same allele as 460delG.",
+  "partner_tokens": []
+ },
+ {
+  "sp_id": 85,
+  "is_complex_allele": "no",
+  "confidence": "high",
+  "keyword": "N1303K on other allele",
+  "text_referring_to": "The male has CBAVD and N1303K on other allele.",
+  "reason": "N1303K is explicitly on the OTHER allele (trans/compound het) in the male patient; the female patient had no other mutation found. No same-allele partner for P111L.",
+  "partner_tokens": []
+ },
+ {
+  "sp_id": 88,
+  "is_complex_allele": "no",
+  "confidence": "high",
+  "keyword": "haplotype",
+  "text_referring_to": "",
+  "reason": "Only haplotype/linkage markers (2-1-1-2 XV2c-KM19-D9-J44) and a GATT repeat count are described; no co-occurring CFTR variant on the same allele. GATT is a haplotyping microsatellite, not a functional cis partner.",
+  "partner_tokens": []
+ },
+ {
+  "sp_id": 93,
+  "is_complex_allele": "no",
+  "confidence": "high",
+  "keyword": "other CF chromosome",
+  "text_referring_to": "his other CF chromosome is [delta]F508",
+  "reason": "deltaF508 is stated to be on the patient's other CF chromosome (trans / compound heterozygote), not the same allele. Haplotype 2.2.1.1.2.2 is only linkage background.",
+  "partner_tokens": [
+   "[delta]F508"
+  ]
+ },
+ {
+  "sp_id": 96,
+  "is_complex_allele": "no",
+  "confidence": "high",
+  "keyword": "on the other chromosome",
+  "text_referring_to": "carry the [delta]F508 mutation on the other chromosome",
+  "reason": "In both twin patients deltaF508 is on the other chromosome / other allele (trans / compound heterozygote). Haplotype B is only linkage background.",
+  "partner_tokens": [
+   "[delta]F508",
+   "DeltaF508"
+  ]
+ },
+ {
+  "sp_id": 103,
+  "is_complex_allele": "no",
+  "confidence": "medium",
+  "keyword": "the other mutation in this patient",
+  "text_referring_to": "occurs with an X2K2 haplotype as does the other mutation in this patient",
+  "reason": "Refers to 'the other mutation in this patient' (unnamed second allele of a compound heterozygote); the two alleles merely share the same X2K2 haplotype background. No cis relationship is stated and the partner is not named.",
+  "partner_tokens": []
+ },
+ {
+  "sp_id": 114,
+  "is_complex_allele": "uncertain",
+  "confidence": "low",
+  "keyword": "also carries",
+  "text_referring_to": "She also carries the R792X and L967S mutations.",
+  "reason": "Patient carries 621+2T>G plus two additional named mutations (R792X and L967S); with three variants across two alleles at least one cis pairing is mathematically required, but the text does not state which variants share an allele — cis vs trans genuinely ambiguous.",
+  "partner_tokens": [
+   "R792X",
+   "L967S"
+  ]
+ },
+ {
+  "sp_id": 115,
+  "is_complex_allele": "no",
+  "confidence": "high",
+  "keyword": "on the other allele",
+  "text_referring_to": "The mutation was identified in a patient carrying G542X on the other allele.",
+  "reason": "G542X is reported on the other allele (trans / compound heterozygote).",
+  "partner_tokens": [
+   "G542X"
+  ]
+ },
+ {
+  "sp_id": 116,
+  "is_complex_allele": "no",
+  "confidence": "high",
+  "keyword": "on the other allele",
+  "text_referring_to": "The mutation was identified in a CF patient carrying 2143delT on the other allele.",
+  "reason": "2143delT is the 'second mutation' explicitly on the other allele (trans / compound heterozygote); the second patient's second mutation is unknown.",
+  "partner_tokens": [
+   "2143delT"
+  ]
+ },
+ {
+  "sp_id": 118,
+  "is_complex_allele": "no",
+  "confidence": "high",
+  "keyword": "second chromosome",
+  "text_referring_to": "the second chromosome carries the [delta]F508",
+  "reason": "deltaF508 is on the second chromosome / other allele (trans / compound heterozygote).",
+  "partner_tokens": [
+   "[delta]F508",
+   "deltaF508"
+  ]
+ },
+ {
+  "sp_id": 122,
+  "is_complex_allele": "yes",
+  "confidence": "high",
+  "keyword": "same chromosome",
+  "text_referring_to": "The mutation was found on the same chromosome carrying 406-6T->C, in a male CF patient whose other mutation is 1154insTC.",
+  "reason": "657delA is explicitly found on the same chromosome as 406-6T->C = cis / complex allele. The patient's other-allele (trans) mutation is 1154insTC, which is not the complex-allele partner.",
+  "partner_tokens": [
+   "406-6T->C"
+  ]
+ },
+ {
+  "sp_id": 124,
+  "is_complex_allele": "no",
+  "confidence": "high",
+  "keyword": "on the other chromosomes",
+  "text_referring_to": "The mutation on the other chromosomes of the patient carrying the frameshift is R334W",
+  "reason": "R334W is on the other chromosome / other allele (trans / compound heterozygote).",
+  "partner_tokens": [
+   "R334W"
+  ]
+ },
+ {
+  "sp_id": 125,
+  "is_complex_allele": "no",
+  "confidence": "high",
+  "keyword": "on the other allele",
+  "text_referring_to": "D192N was found in a 44y female patient also carrying deltaF508 on the other allele.",
+  "reason": "deltaF508 is on the other allele; patient described as deltaF508-heterozygous (trans / compound heterozygote).",
+  "partner_tokens": [
+   "deltaF508",
+   "[delta]F508"
+  ]
+ },
+ {
+  "sp_id": 128,
+  "is_complex_allele": "no",
+  "confidence": "high",
+  "keyword": "paternal chromosome",
+  "text_referring_to": "the paternal chromosome carries the [delta]F508 mutation",
+  "reason": "E193K is on the maternal chromosome (associated with haplotype C); the paternal (other) chromosome carries deltaF508 (trans / compound heterozygote).",
+  "partner_tokens": [
+   "[delta]F508",
+   "DelF508"
+  ]
+ },
+ {
+  "sp_id": 131,
+  "is_complex_allele": "no",
+  "confidence": "high",
+  "keyword": "compounded with",
+  "text_referring_to": "This mutation is compunded with another yet unidentified CF allele.",
+  "reason": "Patient is a compound heterozygote: the variant is 'compounded with another yet unidentified CF allele' (trans / second allele), not on the same allele. The extracted keyword 'together' actually refers to clinical features ('sinusitis... together with nasal polyposis'), not a variant. Partner is unidentified.",
+  "partner_tokens": []
+ },
+ {
+  "sp_id": 138,
+  "is_complex_allele": "no",
+  "confidence": "high",
+  "keyword": "haplotype",
+  "text_referring_to": "",
+  "reason": "'P205S is associated with haplotype 16/44/13' describes an RFLP marker haplotype background, not a co-occurring CFTR variant in cis. No partner variant named.",
+  "partner_tokens": []
+ },
+ {
+  "sp_id": 140,
+  "is_complex_allele": "no",
+  "confidence": "high",
+  "keyword": "other chromosome",
+  "text_referring_to": "Mutation on the other chromosome of the pancreatic insufficient patient is 2183AA->G.",
+  "reason": "The co-occurring variant 2183AA->G is explicitly stated to be 'on the other chromosome' (trans / compound heterozygote), not the same allele.",
+  "partner_tokens": [
+   "2183AA->G"
+  ]
+ },
+ {
+  "sp_id": 142,
+  "is_complex_allele": "no",
+  "confidence": "high",
+  "keyword": "on the other chromosome",
+  "text_referring_to": "The patient (13 years old) is compound heterozygote.  He carries [delta]F508 on the other chormosome",
+  "reason": "Patient is a compound heterozygote carrying deltaF508 'on the other chromosome' (trans); phenotype confirms 'deltaF508 on the other allele'. 'In association with haplotype D' is a marker background, not a cis variant.",
+  "partner_tokens": [
+   "[delta]F508",
+   "deltaF508"
+  ]
+ },
+ {
+  "sp_id": 144,
+  "is_complex_allele": "no",
+  "confidence": "high",
+  "keyword": "on the other allele",
+  "text_referring_to": "one male, 33y and one female, 25y also carrying deltaF508 on the other allele.",
+  "reason": "deltaF508 is explicitly 'on the other allele' (trans / compound heterozygote), not in cis.",
+  "partner_tokens": [
+   "deltaF508"
+  ]
+ },
+ {
+  "sp_id": 149,
+  "is_complex_allele": "no",
+  "confidence": "high",
+  "keyword": "other CF allele",
+  "text_referring_to": "The patient's other CF allele is [delta]F508.",
+  "reason": "The co-occurring deltaF508 is the patient's 'other CF allele' (trans / compound heterozygote); phenotype repeats 'deltaF508 on the other allele'. Not in cis.",
+  "partner_tokens": [
+   "[delta]F508",
+   "deltaF508"
+  ]
+ },
+ {
+  "sp_id": 152,
+  "is_complex_allele": "no",
+  "confidence": "high",
+  "keyword": "on the other allele",
+  "text_referring_to": "He has mild pulmonary symptoms and also carries deltaF508 on the other allele.",
+  "reason": "deltaF508 is explicitly on the other allele (trans / compound heterozygote), not the same allele.",
+  "partner_tokens": [
+   "deltaF508"
+  ]
+ },
+ {
+  "sp_id": 153,
+  "is_complex_allele": "no",
+  "confidence": "high",
+  "keyword": "on the other allele",
+  "text_referring_to": "He is PS and also carries 1342-6(5T) on the other allele.",
+  "reason": "The 5T poly-T variant (1342-6(5T)) is explicitly 'on the other allele' (trans), so despite being a poly-T tract it is NOT a cis complex-allele partner here.",
+  "partner_tokens": [
+   "1342-6(5T)",
+   "5T"
+  ]
+ },
+ {
+  "sp_id": 156,
+  "is_complex_allele": "no",
+  "confidence": "high",
+  "keyword": "compound heterozygote",
+  "text_referring_to": "The child is inferred to have been a compound heterozygote of [delta]F508 and M265R since her father is a carrier of [delta]F508.",
+  "reason": "Explicit compound heterozygote of deltaF508 and M265R (two separate alleles / trans); phenotype confirms 'delF508 on the other allele'. Not cis.",
+  "partner_tokens": [
+   "[delta]F508",
+   "delF508"
+  ]
+ },
+ {
+  "sp_id": 163,
+  "is_complex_allele": "yes",
+  "confidence": "medium",
+  "keyword": "in association with",
+  "text_referring_to": "a family where R297Q was associated with two of the most severe molecular defects DF508 or N1303K on healthy subjects ... Dubourg et al. identified the same aminoacid change (R297Q) in association with the 574delA mutation in an healthy subject.",
+  "reason": "R297Q is argued to be a benign polymorphism found in association with severe pathogenic mutations (DF508, N1303K, 574delA) on the chromosomes of healthy subjects — i.e. riding in cis on the same allele (a complex allele), which is the basis for calling it a polymorphism rather than a mutation. Cis is strongly implied by the association/linkage language plus the healthy-carrier polymorphism argument, but 'cis/same allele' is not stated verbatim, hence medium confidence. The X2 K1 marker haplotype and the phenotype field's unrelated F508del/2512delG compound heterozygote are not the cis signal.",
+  "partner_tokens": [
+   "DF508",
+   "N1303K",
+   "574delA"
+  ]
+ },
+ {
+  "sp_id": 165,
+  "is_complex_allele": "no",
+  "confidence": "high",
+  "keyword": "on the other allele",
+  "text_referring_to": "The mutation was found in a French CF female patient carrying deltaF508 on the other allele.",
+  "reason": "deltaF508 is explicitly on the other allele (trans / compound heterozygote). 'Also found in the same family' refers to independent detection of Y304X itself, not a partner variant.",
+  "partner_tokens": [
+   "deltaF508"
+  ]
+ },
+ {
+  "sp_id": 168,
+  "is_complex_allele": "no",
+  "confidence": "high",
+  "keyword": "second mutation",
+  "text_referring_to": "The second mutation is [delta]F508.",
+  "reason": "In this compound-heterozygous patient the 'second mutation' deltaF508 is the other allele (trans), not in cis with [delta]F311.",
+  "partner_tokens": [
+   "[delta]F508"
+  ]
+ },
+ {
+  "sp_id": 171,
+  "is_complex_allele": "no",
+  "confidence": "high",
+  "keyword": "second mutation",
+  "text_referring_to": "This mutation, in exon 7 of the CFTR gene, was found by direct sequencing and the second mutation is [delta]F508.",
+  "reason": "Compound heterozygote: 'the second mutation is [delta]F508' is the patient's other disease allele (trans), not in cis with G314E.",
+  "partner_tokens": [
+   "[delta]F508"
+  ]
+ },
+ {
+  "sp_id": 180,
+  "is_complex_allele": "no",
+  "confidence": "high",
+  "keyword": "other chromosome",
+  "text_referring_to": "One of the patients has the [delta]F508 mutation in the other chromosome and the other patient does not.",
+  "reason": "deltaF508 is explicitly 'in the other chromosome' (trans); haplotype mention is background, no cis partner for R334W.",
+  "partner_tokens": [
+   "[delta]F508"
+  ]
+ },
+ {
+  "sp_id": 182,
+  "is_complex_allele": "no",
+  "confidence": "high",
+  "keyword": "on the other allele",
+  "text_referring_to": "-3 with DelF508 on the other allele, all males, born in 1985, 1994 and 1995, 2 of them with abnormal sweat chloride,one with DIOS and moderately severe pulmonary disease.",
+  "reason": "All co-mentioned variants are each patient's other allele (compound het, trans): DelF508 'on the other allele', plus separate patients carrying G551D and G542X. XV2c/KM19 are haplotype markers, not cis variants.",
+  "partner_tokens": [
+   "DelF508",
+   "G551D",
+   "G542X"
+  ]
+ },
+ {
+  "sp_id": 186,
+  "is_complex_allele": "no",
+  "confidence": "high",
+  "keyword": "none",
+  "text_referring_to": "",
+  "reason": "No co-occurring CFTR variant reported; 'non-[delta]F CF chromosomes' refers to the screening panel and 'There is no haplotype information' is stated.",
+  "partner_tokens": []
+ },
+ {
+  "sp_id": 189,
+  "is_complex_allele": "no",
+  "confidence": "high",
+  "keyword": "on the other allele",
+  "text_referring_to": "the patients carried deltaF508 and 1677delTA respectively on the other allele, which are usually associated with severe CF phenotype.",
+  "reason": "deltaF508 and 1677delTA are each 'on the other allele' (trans); the M348K individual carries L346P 'on the other allele' (trans) as well. No cis partner for L346P.",
+  "partner_tokens": [
+   "deltaF508",
+   "1677delTA",
+   "M348K"
+  ]
+ },
+ {
+  "sp_id": 194,
+  "is_complex_allele": "no",
+  "confidence": "high",
+  "keyword": "on the other allele",
+  "text_referring_to": "M348K was found in a symptomless 48-year old individual also carrying L346P on the other allele.",
+  "reason": "L346P is explicitly 'on the other allele' (trans); other_details states the mutation on the other chromosome is otherwise unknown. No cis partner for M348K.",
+  "partner_tokens": [
+   "L346P"
+  ]
+ },
+ {
+  "sp_id": 196,
+  "is_complex_allele": "no",
+  "confidence": "high",
+  "keyword": "haplotype",
+  "text_referring_to": "This mutation has been detected in a PS patient (paternal chromosome), associated with the haplotype A; the maternal chromosome carries a still uncharacterized mutation.",
+  "reason": "R352Q's paternal allele is associated only with background haplotype A; the maternal (trans) mutation is uncharacterized/unnamed. No cis partner variant.",
+  "partner_tokens": []
+ },
+ {
+  "sp_id": 197,
+  "is_complex_allele": "yes",
+  "confidence": "high",
+  "keyword": "together",
+  "text_referring_to": "These two mutation were discovered together on 6 CF chromosomes, from 3 unrelated Jewish CF families from Georgia, Russia.  All the CF children in these families were homozygous for these two mutations.",
+  "reason": "HGVS cis notation c.[1075C>A;1079C>A]; the two changes were 'discovered together' on the same 6 CF chromosomes and patients were homozygous for both — a bundled complex allele (Q359K + T360K in cis).",
+  "partner_tokens": [
+   "Q359K",
+   "T360K",
+   "1075C>A",
+   "1079C>A",
+   "Gln359Lys",
+   "Thr360Lys"
+  ]
+ },
+ {
+  "sp_id": 201,
+  "is_complex_allele": "no",
+  "confidence": "high",
+  "keyword": "on the other allele",
+  "text_referring_to": "The French CF patient (male, 15y) had no meconium ileus at birth, is PI, has severe lung disease and carries 1078delT on the other allelle.",
+  "reason": "1078delT is explicitly 'on the other allele' (trans); the 'other C haplotype carries a non identified mutation' and the 'A haplotype' is background. No cis partner for 1221delCT.",
+  "partner_tokens": [
+   "1078delT"
+  ]
+ },
+ {
+  "sp_id": 206,
+  "is_complex_allele": "no",
+  "confidence": "high",
+  "keyword": "on the other allele",
+  "text_referring_to": "Male 30y: moderate lung disease and CBAVD, R117H was found on the other allele.\nMale 34y: no lung disease, CUAVD and hydrocele. G551D was found on the other allele.",
+  "reason": "other_details' ambiguous 'also found to carry G551D' is disambiguated by the phenotype: both G551D and R117H were 'found on the other allele' (trans). No cis partner for L375F.",
+  "partner_tokens": [
+   "G551D",
+   "R117H"
+  ]
+ },
+ {
+  "sp_id": 212,
+  "is_complex_allele": "yes",
+  "confidence": "high",
+  "keyword": "associated with",
+  "text_referring_to": "1341+18A>C was identified associated with G1349D in a 26 years old male with CBAVD, who is PS and has no lung disease. He carries R117H-7T on the other allele.",
+  "reason": "1341+18A>C is 'identified associated with G1349D', and R117H-7T is explicitly 'the other allele' — this forces 1341+18A>C and G1349D onto the same remaining allele (cis complex allele). The original note also reports 1341+18C/A 'found associated with the mutation G1349D'.",
+  "partner_tokens": [
+   "G1349D"
+  ]
+ },
+ {
+  "sp_id": 214,
+  "is_complex_allele": "yes",
+  "confidence": "medium",
+  "keyword": "preceded by",
+  "text_referring_to": "1342-2 A->C is preceded by a (TG)12T7 sequence linked to the haplotype 1-1-2-1 (XV2c/KM19/D9/J44) and six GATT repeats.",
+  "reason": "1342-2A>C 'is preceded by a (TG)12T7 sequence' — a TG repeat plus 7T poly-T tract in cis on the same allele; per curation rules TG-repeat/poly-T tracts stated in cis count as complex-allele partners. Y1092X is the compound-het other allele (trans).",
+  "partner_tokens": [
+   "(TG)12T7",
+   "7T"
+  ]
+ },
+ {
+  "sp_id": 218,
+  "is_complex_allele": "yes",
+  "confidence": "high",
+  "keyword": "in cis",
+  "text_referring_to": "This mutation is frequently associated in cis with other missense mutations (G576A and R668C).",
+  "reason": "Other Details explicitly states D443Y is frequently associated in cis with the missense mutations G576A and R668C, and the phenotype confirms the patient carries G576A. delF508 is separately described as being on the other chromosome (trans) and is excluded as a partner.",
+  "partner_tokens": [
+   "G576A",
+   "R668C"
+  ]
+ },
+ {
+  "sp_id": 222,
+  "is_complex_allele": "no",
+  "confidence": "high",
+  "keyword": "haplotype",
+  "text_referring_to": "",
+  "reason": "Only a haplotype background (French-Canadian, haplotype group Ib) is mentioned; haplotype markers are not CFTR variants and no co-occurring CFTR variant in cis is named.",
+  "partner_tokens": []
+ },
+ {
+  "sp_id": 225,
+  "is_complex_allele": "no",
+  "confidence": "high",
+  "keyword": "on the other allele",
+  "text_referring_to": "G542X on the other allele",
+  "reason": "G542X is explicitly on the other allele (trans, compound heterozygous). The XV2c/CS7/KM19/D9 markers are haplotype background, not CFTR variants, and the G542X count refers to the survey panel, not this variant's allele.",
+  "partner_tokens": []
+ },
+ {
+  "sp_id": 228,
+  "is_complex_allele": "no",
+  "confidence": "high",
+  "keyword": "on the other allele",
+  "text_referring_to": "also carrying deltaF508 on the other allele",
+  "reason": "deltaF508 is explicitly on the other allele (trans, compound heterozygous). No cis partner is described.",
+  "partner_tokens": []
+ },
+ {
+  "sp_id": 237,
+  "is_complex_allele": "no",
+  "confidence": "high",
+  "keyword": "haplotype",
+  "text_referring_to": "",
+  "reason": "Only a haplotype background (haplotype IIIb) is described; no co-occurring CFTR variant in cis.",
+  "partner_tokens": []
+ },
+ {
+  "sp_id": 241,
+  "is_complex_allele": "no",
+  "confidence": "high",
+  "keyword": "haplotype",
+  "text_referring_to": "",
+  "reason": "Only a haplotype background (haplotype C, Xv2C/KM19) and restriction-site information are described; no co-occurring CFTR variant in cis.",
+  "partner_tokens": []
+ },
+ {
+  "sp_id": 243,
+  "is_complex_allele": "no",
+  "confidence": "high",
+  "keyword": "second mutation",
+  "text_referring_to": "The second mutation is [delta]F508.  The heteroduplex I506S/[delta]F508 can be distinguished from wt/[delta]F508 duplices",
+  "reason": "The patient is a compound heterozygote; delF508 is the second mutation on the other allele. The heteroduplex I506S/delF508 (distinguishable from wt/delF508 duplices) forms between the two separate alleles, confirming the variants are in trans, not in cis.",
+  "partner_tokens": []
+ },
+ {
+  "sp_id": 244,
+  "is_complex_allele": "no",
+  "confidence": "high",
+  "keyword": "on the other allele",
+  "text_referring_to": "2589+5G>A was found on the other allele.",
+  "reason": "2589+5G>A is explicitly on the other allele (trans). The phrase 'second mutation at codon 506' refers to I506T being the second variant reported at codon 506 (after I506S by Deufel), not a cis partner.",
+  "partner_tokens": []
+ },
+ {
+  "sp_id": 248,
+  "is_complex_allele": "no",
+  "confidence": "high",
+  "keyword": "haplotype",
+  "text_referring_to": "",
+  "reason": "Only a haplotype background (B haplotype) is described; no co-occurring CFTR variant in cis.",
+  "partner_tokens": []
+ },
+ {
+  "sp_id": 250,
+  "is_complex_allele": "no",
+  "confidence": "high",
+  "keyword": "in association with",
+  "text_referring_to": "",
+  "reason": "'In association with the A haplotype' refers to a haplotype background, not a co-occurring CFTR variant. No cis partner variant is named.",
+  "partner_tokens": []
+ },
+ {
+  "sp_id": 252,
+  "is_complex_allele": "no",
+  "confidence": "high",
+  "keyword": "compound heterozygous",
+  "text_referring_to": "compound heterozygous for this mutation and [delta]F508",
+  "reason": "The patient is explicitly compound heterozygous, with delF508 (and G542X in a second patient) on the other allele (trans). Not a complex allele.",
+  "partner_tokens": []
+ },
+ {
+  "sp_id": 258,
+  "is_complex_allele": "no",
+  "confidence": "high",
+  "keyword": "haplotype",
+  "text_referring_to": "",
+  "reason": "Only a haplotype background (B haplotype, Ashkenazic Jewish origin) and detection method are described; no co-occurring CFTR variant in cis.",
+  "partner_tokens": []
+ },
+ {
+  "sp_id": 260,
+  "is_complex_allele": "no",
+  "confidence": "high",
+  "keyword": "haplotype",
+  "text_referring_to": "The boy who is 9 years old has inherited the deltion from his mother and carries a yet undefined mutation on the other chromosome.",
+  "reason": "The only co-occurring variant is an undefined mutation on the OTHER chromosome (trans). Haplotype B is a background haplotype, not a cis variant partner. Not a complex allele.",
+  "partner_tokens": []
+ },
+ {
+  "sp_id": 264,
+  "is_complex_allele": "yes",
+  "confidence": "high",
+  "keyword": "same allele",
+  "text_referring_to": "-102T>A was found on the same allele as S549R(T>G), R334W was found on the other allele.",
+  "reason": "-102T>A is explicitly reported on the SAME allele as S549R(T>G) in multiple patients, and one patient is homozygous for -102T>A, S549R(T>G) together, establishing a cis complex allele. The variants R334W, DeltaF508, G542X, S945L and R1158X are each on the other allele (trans) and are not cis partners.",
+  "partner_tokens": [
+   "-102T>A"
+  ]
+ },
+ {
+  "sp_id": 266,
+  "is_complex_allele": "no",
+  "confidence": "high",
+  "keyword": "haplotype",
+  "text_referring_to": "Both patients have the [delta]F508 mutation on the other allele.",
+  "reason": "DeltaF508 is on the OTHER allele (trans, compound heterozygous); haplotype 2 is background. No cis partner. Not a complex allele.",
+  "partner_tokens": []
+ },
+ {
+  "sp_id": 269,
+  "is_complex_allele": "no",
+  "confidence": "high",
+  "keyword": "haplotype",
+  "text_referring_to": "This mutation appears to be associated with a particular ten site haplotype shown on the following pages.",
+  "reason": "Only a haplotype association is described; no second CFTR variant reported in cis. Not a complex allele.",
+  "partner_tokens": []
+ },
+ {
+  "sp_id": 270,
+  "is_complex_allele": "no",
+  "confidence": "high",
+  "keyword": "haplotype",
+  "text_referring_to": "She carried R553X on the other allele.",
+  "reason": "R553X is on the OTHER allele (trans); haplotype C is background. No cis partner. Not a complex allele.",
+  "partner_tokens": []
+ },
+ {
+  "sp_id": 274,
+  "is_complex_allele": "yes",
+  "confidence": "high",
+  "keyword": "same allele",
+  "text_referring_to": "DeltaF508 was found on the same allele as R553Q, R558X was found on the other allele.",
+  "reason": "R553Q is carried on the maternal [delta]F508 CF chromosome, and the phenotype states DeltaF508 was found on the SAME allele as R553Q - a cis complex allele (the classic F508del;R553Q). The 553X/R558X stop mutation is on the other (paternal) allele (trans).",
+  "partner_tokens": [
+   "DeltaF508",
+   "[delta]F508"
+  ]
+ },
+ {
+  "sp_id": 276,
+  "is_complex_allele": "no",
+  "confidence": "high",
+  "keyword": "haplotype",
+  "text_referring_to": "The other allele is uncharacterized and the haplotypes associated with the CF alleles in this patient are AC (XV2C/KM19).",
+  "reason": "The other allele is uncharacterized (unknown trans mutation); only haplotype AC background is reported. No cis partner. Not a complex allele.",
+  "partner_tokens": []
+ },
+ {
+  "sp_id": 278,
+  "is_complex_allele": "no",
+  "confidence": "high",
+  "keyword": "haplotype",
+  "text_referring_to": "We have not found this mutation on 27 normal Black chromosomes which have at least a 2 site haplotype in common with the haplotype associated with this mutation.",
+  "reason": "Only haplotype background is discussed; no second CFTR variant reported in cis. Not a complex allele.",
+  "partner_tokens": []
+ },
+ {
+  "sp_id": 279,
+  "is_complex_allele": "no",
+  "confidence": "high",
+  "keyword": "compound heterozygote",
+  "text_referring_to": "tTHe patientis a compound heterozygote with 1717-1G->A on the other chromosome.",
+  "reason": "The patient is a compound heterozygote with 1717-1G->A on the OTHER chromosome (trans). R560T is mentioned only because the HphI digestion detects both R560T and R560K, not a cis relationship. Not a complex allele.",
+  "partner_tokens": []
+ },
+ {
+  "sp_id": 280,
+  "is_complex_allele": "no",
+  "confidence": "high",
+  "keyword": "haplotype",
+  "text_referring_to": "The individual carrying this mutation is from family #32 and the chromosome is marked by haplotype IIIb.",
+  "reason": "Only haplotype IIIb background is reported. The deltaF508 mention states R560T is NOT present on deltaF508 chromosomes (an absence statement), not a cis partner. Not a complex allele.",
+  "partner_tokens": []
+ },
+ {
+  "sp_id": 282,
+  "is_complex_allele": "uncertain",
+  "confidence": "low",
+  "keyword": "second mutation",
+  "text_referring_to": "No second mutation was found, except for 125G->C.",
+  "reason": "A second change, 125G->C (a known common polymorphism), co-occurs in this atypical-CF patient, but the text does not state whether it is in cis or trans with 1811+18G->A. Phase genuinely not stated, so cis vs trans is ambiguous.",
+  "partner_tokens": [
+   "125G->C"
+  ]
+ },
+ {
+  "sp_id": 283,
+  "is_complex_allele": "yes",
+  "confidence": "high",
+  "keyword": "together",
+  "text_referring_to": "Mutation 1811+1.2kbA->G has been detected in chromosomes with the 3601-111G->C change (in intron 18) ... the 3601-111G-> change is strongly associated with mutation 1811+1.2kbA->G, as both changes have always been detected together",
+  "reason": "1811+1.2kbA->G is detected in chromosomes carrying 3601-111G->C, and both changes have ALWAYS been detected together on the same chromosome - a cis complex allele (3601-111G->C being a likely benign in-cis change). The deltaF508 and G542X carried by the two index patients are trans, not the cis partner.",
+  "partner_tokens": [
+   "3601-111G->C"
+  ]
+ },
+ {
+  "sp_id": 286,
+  "is_complex_allele": "no",
+  "confidence": "high",
+  "keyword": "none",
+  "text_referring_to": "DeltaF508 was found on the other allele.",
+  "reason": "Patient is a compound heterozygote for A561E and deltaF508, with deltaF508 explicitly on the other allele (trans). Haplotype A is only a background association. No cis partner.",
+  "partner_tokens": []
+ },
+ {
+  "sp_id": 292,
+  "is_complex_allele": "no",
+  "confidence": "high",
+  "keyword": "none",
+  "text_referring_to": "",
+  "reason": "Only haplotype/microsatellite background reported (haplotype C, IVS8CA=7; haplotype B in some cases). The 394delTT reference concerns other chromosomes in the screening cohort, not a cis co-occurrence. No cis partner.",
+  "partner_tokens": []
+ },
+ {
+  "sp_id": 293,
+  "is_complex_allele": "no",
+  "confidence": "high",
+  "keyword": "none",
+  "text_referring_to": "He carries DelF508 on the other allele.",
+  "reason": "The 'also carries [delta]F508' is clarified by the phenotype as deltaF508 on the other allele (trans compound heterozygote). Not cis.",
+  "partner_tokens": []
+ },
+ {
+  "sp_id": 295,
+  "is_complex_allele": "no",
+  "confidence": "high",
+  "keyword": "none",
+  "text_referring_to": "also carrying deltaF508 on the other allele",
+  "reason": "deltaF508 is explicitly on the other allele (trans compound heterozygote); haplotype A is only a background association. No cis partner.",
+  "partner_tokens": []
+ },
+ {
+  "sp_id": 300,
+  "is_complex_allele": "no",
+  "confidence": "high",
+  "keyword": "none",
+  "text_referring_to": "",
+  "reason": "Only a group IV haplotype background is mentioned; no co-occurring variant on either allele is named. No cis partner.",
+  "partner_tokens": []
+ },
+ {
+  "sp_id": 301,
+  "is_complex_allele": "no",
+  "confidence": "high",
+  "keyword": "none",
+  "text_referring_to": "G576X was found in a patient also carrying 621+1G>T on the other allele.",
+  "reason": "621+1G>T is explicitly on the other allele (trans compound heterozygote); the second mutation was otherwise reported as unknown. Not cis.",
+  "partner_tokens": []
+ },
+ {
+  "sp_id": 302,
+  "is_complex_allele": "yes",
+  "confidence": "high",
+  "keyword": "same allele",
+  "text_referring_to": "1874insT was found on the same allele as Y577F, DeltaF508 was found on the other allele.",
+  "reason": "Phenotype explicitly states 1874insT is on the SAME allele as Y577F (cis) = complex allele. The separately mentioned deltaF508 is on the other allele (trans, not part of the complex allele).",
+  "partner_tokens": [
+   "1874insT"
+  ]
+ },
+ {
+  "sp_id": 304,
+  "is_complex_allele": "no",
+  "confidence": "high",
+  "keyword": "none",
+  "text_referring_to": "This mutation has been detected in a PS patient (maternal chromosome), associated with haplotype C; the paternal CF chromosome carries the [delta]F508 mutation.",
+  "reason": "D579G is on the maternal chromosome while deltaF508 is on the paternal chromosome (other allele, trans). Haplotype C is background only. No cis partner.",
+  "partner_tokens": []
+ },
+ {
+  "sp_id": 305,
+  "is_complex_allele": "yes",
+  "confidence": "high",
+  "keyword": "found together",
+  "text_referring_to": "Mutation Y577F and 1874insT were found together in another CF patient from Austria; this boy is also heterozygous for [delta]F508.",
+  "reason": "Y577F and 1874insT were found together (cis); the reciprocal Y577F record states they are on the same allele, and deltaF508 is on the other allele. Y577F is the cis complex-allele partner.",
+  "partner_tokens": [
+   "Y577F"
+  ]
+ },
+ {
+  "sp_id": 307,
+  "is_complex_allele": "no",
+  "confidence": "high",
+  "keyword": "none",
+  "text_referring_to": "1609delCA was found on the other allele.",
+  "reason": "1609delCA is explicitly on the other chromosome/allele (trans compound heterozygote); the microsatellite haplotype (18/37/13) is background. No cis partner.",
+  "partner_tokens": []
+ },
+ {
+  "sp_id": 311,
+  "is_complex_allele": "no",
+  "confidence": "high",
+  "keyword": "none",
+  "text_referring_to": "She carries deltaF508 on the other allele.",
+  "reason": "'Second mutation reported at position 1898+1' is a literature comparison to a different variant (1898+1G->A, Strong et al.) in another report, not a cis co-occurrence. deltaF508 is on the other allele (trans). No cis partner.",
+  "partner_tokens": []
+ },
+ {
+  "sp_id": 314,
+  "is_complex_allele": "no",
+  "confidence": "high",
+  "keyword": "none",
+  "text_referring_to": "",
+  "reason": "Consanguineous patient; text is a splicing/transcript analysis. 'Also found' refers to exon 12-minus transcript in individuals without the mutation and to the mutation being found in two other patients, not to a co-occurring CFTR variant. No complex allele.",
+  "partner_tokens": []
+ },
+ {
+  "sp_id": 322,
+  "is_complex_allele": "yes",
+  "confidence": "high",
+  "keyword": "on the same allele",
+  "text_referring_to": "carries the 1716G->A polymorphism on the same allele (haplotype D) and an unknown mutation on the other chromosome",
+  "reason": "Text states the 1716G->A polymorphism is on the SAME allele as L619S (haplotype D), with the second mutation (CFTRdele2,3) on the other chromosome; phenotype genotype '1716G>A,L619S/CFTRdele2,3(21kb)' confirms 1716G>A and L619S are in cis. Complex allele.",
+  "partner_tokens": [
+   "1716G->A",
+   "1716G>A"
+  ]
+ },
+ {
+  "sp_id": 327,
+  "is_complex_allele": "no",
+  "confidence": "high",
+  "keyword": "haplotype",
+  "text_referring_to": "The 2043delG mutation was found in 2 patients ... carrying deltaF508 on the other allele",
+  "reason": "The only co-mentioned CF mutation (deltaF508) is explicitly on the OTHER allele (trans, compound het). Haplotype B is background; 'also creates a stop codon' describes this frameshift's own consequence, not a second variant.",
+  "partner_tokens": []
+ },
+ {
+  "sp_id": 331,
+  "is_complex_allele": "no",
+  "confidence": "high",
+  "keyword": "also has",
+  "text_referring_to": "The patient also has a deletion in exon 13 on her other CF chromosome: 1949del84.",
+  "reason": "The co-occurring 1949del84 is explicitly on 'her other CF chromosome' / 'the other allele' (trans, compound het), not in cis.",
+  "partner_tokens": []
+ },
+ {
+  "sp_id": 335,
+  "is_complex_allele": "no",
+  "confidence": "medium",
+  "keyword": "together",
+  "text_referring_to": "The 2143delT allels carry haplotype B together with six GATT repeats.",
+  "reason": "Named CF mutations (deltaF508, G551D) are trans (compound heterozygotes). The only cis features are haplotype B and six GATT repeats, which are haplotype-marker background, not a functional complex-allele partner. Borderline due to 'together with' phrasing.",
+  "partner_tokens": []
+ },
+ {
+  "sp_id": 338,
+  "is_complex_allele": "no",
+  "confidence": "high",
+  "keyword": "compound heterozygous",
+  "text_referring_to": "who are compund heterozygous for T338I, D1270N and S912X respectively",
+  "reason": "T338I, D1270N and S912X are the respective trans alleles ('compound heterozygous for') on the opposite chromosome in each patient - not a complex allele.",
+  "partner_tokens": []
+ },
+ {
+  "sp_id": 340,
+  "is_complex_allele": "no",
+  "confidence": "high",
+  "keyword": "complex",
+  "text_referring_to": "",
+  "reason": "Keyword 'complex' refers to a 'complex deletion' carried by four DIFFERENT German patients, not a cis partner of 2184insA; haplotypes C/D are background. No cis co-variant for this variant.",
+  "partner_tokens": []
+ },
+ {
+  "sp_id": 344,
+  "is_complex_allele": "no",
+  "confidence": "high",
+  "keyword": "carries also",
+  "text_referring_to": "detected in a 20 year old female who carries also [delta]F508 on the other chromosome",
+  "reason": "deltaF508 is explicitly 'on the other chromosome' (trans, compound het), not in cis.",
+  "partner_tokens": []
+ },
+ {
+  "sp_id": 346,
+  "is_complex_allele": "yes",
+  "confidence": "high",
+  "keyword": "associated with",
+  "text_referring_to": "The mutation was found associated with Q715Q in a French male CF patient carrying deltaF508 on the other allele.",
+  "reason": "K716X was 'found associated with Q715Q' while deltaF508 is on the OTHER allele; since deltaF508 is the trans allele, Q715Q co-occurs in cis with K716X on the same allele (nonsense + adjacent silent variant). Complex allele.",
+  "partner_tokens": [
+   "Q715Q"
+  ]
+ },
+ {
+  "sp_id": 347,
+  "is_complex_allele": "no",
+  "confidence": "high",
+  "keyword": "haplotype",
+  "text_referring_to": "she is PI, has PI colonization and carries delF508 on the other allele",
+  "reason": "delF508 is on the other allele (trans). The cis features are only the RFLP haplotype 1-2-2-1 (XV2c-KM19-D9-J44) and seven GATT repeats (haplotype-marker background), not a complex-allele partner.",
+  "partner_tokens": []
+ },
+ {
+  "sp_id": 359,
+  "is_complex_allele": "no",
+  "confidence": "high",
+  "keyword": "haplotypes",
+  "text_referring_to": "",
+  "reason": "Only 'C/D haplotypes' background is mentioned; no second variant reported on the same allele.",
+  "partner_tokens": []
+ },
+ {
+  "sp_id": 364,
+  "is_complex_allele": "no",
+  "confidence": "high",
+  "keyword": "genotypes",
+  "text_referring_to": "The genotypes of the 4 Greek patients are:  [delta]F508/E822X, 3272-26A->G/E822X, 621+1G->T/E822X and E822X/?.",
+  "reason": "All four genotypes use '/' to separate the two alleles (deltaF508/E822X, 3272-26A->G/E822X, 621+1G->T/E822X); the co-variants are trans (compound het), not in cis.",
+  "partner_tokens": []
+ },
+ {
+  "sp_id": 367,
+  "is_complex_allele": "no",
+  "confidence": "high",
+  "keyword": "haplotype",
+  "text_referring_to": "The deceased French CF patient (male) carried deltaF508 on the other allele.",
+  "reason": "deltaF508 is on the other allele / genotype deltaF508/G827X (trans, compound het); C haplotype is background. No cis partner.",
+  "partner_tokens": []
+ },
+ {
+  "sp_id": 373,
+  "is_complex_allele": "no",
+  "confidence": "high",
+  "keyword": "haplotype",
+  "text_referring_to": "",
+  "reason": "Only mentions association with 'haplotype A (caucasian)', an RFLP haplotype background marker, not a co-occurring CFTR variant on the same allele. No cis partner variant named.",
+  "partner_tokens": []
+ },
+ {
+  "sp_id": 379,
+  "is_complex_allele": "no",
+  "confidence": "high",
+  "keyword": "on the other allele",
+  "text_referring_to": "He carries 457TAT->G on the other allele.",
+  "reason": "The second mutation 457TAT->G is inherited from the father while this mutation is from the mother, and the phenotype states it is on the other allele — a trans compound-heterozygous relationship, not cis.",
+  "partner_tokens": []
+ },
+ {
+  "sp_id": 380,
+  "is_complex_allele": "uncertain",
+  "confidence": "low",
+  "keyword": "allele 5T intron 8",
+  "text_referring_to": "Mutation was observed in a Spanish man with CBAVD, carrying [delta]F508 and allele 5T intron 8.",
+  "reason": "deltaF508 is explicitly on the other allele (trans), but the patient also carries the 5T poly-T tract; the phase of 5T relative to 2751+3A->G is not stated, so cis vs trans is genuinely ambiguous.",
+  "partner_tokens": [
+   "5T"
+  ]
+ },
+ {
+  "sp_id": 392,
+  "is_complex_allele": "yes",
+  "confidence": "high",
+  "keyword": "same allele",
+  "text_referring_to": "The patient carries G1244V on the same allele as S912L and G542X on the other.",
+  "reason": "Text explicitly states G1244V is on the same allele as S912L (cis) — a bona fide complex allele. G542X is on the other allele (trans) and is excluded as a cis partner.",
+  "partner_tokens": [
+   "G1244V"
+  ]
+ },
+ {
+  "sp_id": 395,
+  "is_complex_allele": "no",
+  "confidence": "high",
+  "keyword": "haplotype",
+  "text_referring_to": "He carried deltaF508 on the other allele.",
+  "reason": "Association with 'haplotype A (Caucasian)' is an RFLP background marker, not a cis variant. The only co-occurring CFTR variant (deltaF508) is explicitly on the other allele (trans).",
+  "partner_tokens": []
+ },
+ {
+  "sp_id": 400,
+  "is_complex_allele": "no",
+  "confidence": "high",
+  "keyword": "haplotype",
+  "text_referring_to": "",
+  "reason": "Only associated with 'haplotype A', an RFLP background marker; no co-occurring CFTR variant named on the same allele.",
+  "partner_tokens": []
+ },
+ {
+  "sp_id": 401,
+  "is_complex_allele": "no",
+  "confidence": "high",
+  "keyword": "second mutation",
+  "text_referring_to": "Two of the CF patients have the [delta]F508 mutation on the other allel, wheras the third one has the [delta]L1260 mutation as second mutation.",
+  "reason": "Both co-occurring variants (deltaF508 and deltaL1260) are described as the second mutation on the other allele — trans compound-heterozygous relationships, not cis.",
+  "partner_tokens": []
+ },
+ {
+  "sp_id": 404,
+  "is_complex_allele": "no",
+  "confidence": "high",
+  "keyword": "on the other allele",
+  "text_referring_to": "also carrying 3791T/C(T1220I)on the other allele",
+  "reason": "The co-occurring variant 3791T/C (T1220I) is explicitly stated to be on the other allele (trans), so this is a compound heterozygote, not a complex allele.",
+  "partner_tokens": []
+ },
+ {
+  "sp_id": 406,
+  "is_complex_allele": "uncertain",
+  "confidence": "medium",
+  "keyword": "unclear if the 2 mutations were located on different chromosomes",
+  "text_referring_to": "M952I was found in a CBAVD patient who also carries R117H but it was unclear if the 2 mutations were located on different chromosomes due to the lack of family members.",
+  "reason": "Other Details explicitly flags the phase of M952I and R117H as unknown ('unclear if... located on different chromosomes'); although a separate Girodon phenotype note puts R117H on the other allele, the primary submission leaves cis vs trans genuinely ambiguous.",
+  "partner_tokens": [
+   "R117H"
+  ]
+ },
+ {
+  "sp_id": 408,
+  "is_complex_allele": "no",
+  "confidence": "high",
+  "keyword": "second chromosome carries",
+  "text_referring_to": "The second chromosome carries a [delta]F508.",
+  "reason": "deltaF508 is explicitly on the second chromosome (trans); 'haplotype A' is a background marker. No cis partner.",
+  "partner_tokens": []
+ },
+ {
+  "sp_id": 416,
+  "is_complex_allele": "no",
+  "confidence": "high",
+  "keyword": "haplotype",
+  "text_referring_to": "This mutation was detected in a severely affected PI German CF patient with [delta]F508 on the other allele. The insertion co-inherited with the XV-2c/KM.19 haplotype C and with seven GATT repeats.",
+  "reason": "deltaF508 is explicitly on the other allele (trans). The cis-inherited elements (XV-2c/KM.19 haplotype C, seven GATT repeats) are polymorphic RFLP/marker haplotype background, not reportable complex-allele partner variants.",
+  "partner_tokens": []
+ },
+ {
+  "sp_id": 422,
+  "is_complex_allele": "no",
+  "confidence": "high",
+  "keyword": "other CF allele",
+  "text_referring_to": "the patient is pancreatic inssufficient, with the other CF allele being W1282X",
+  "reason": "Co-occurring variants W1282X (one patient) and deltaF508 (a fetus) are each described as 'the other CF allele'/'the other mutation' — trans compound-heterozygous relationships, not cis.",
+  "partner_tokens": []
+ },
+ {
+  "sp_id": 426,
+  "is_complex_allele": "no",
+  "confidence": "high",
+  "keyword": "on the other allele",
+  "text_referring_to": "He carries DelF508 on the other allele.",
+  "reason": "DelF508 is explicitly on the other allele (trans/compound heterozygous). 'Haplotype A' is a marker-haplotype background, not a cis variant partner.",
+  "partner_tokens": [
+   "DelF508"
+  ]
+ },
+ {
+  "sp_id": 436,
+  "is_complex_allele": "no",
+  "confidence": "high",
+  "keyword": "compound heterozygous with",
+  "text_referring_to": "The CF patient with the mutation is compound heterozygous with R117H on ther other allele.",
+  "reason": "R117H is explicitly on the other allele (compound heterozygous/trans), not in cis.",
+  "partner_tokens": [
+   "R117H"
+  ]
+ },
+ {
+  "sp_id": 437,
+  "is_complex_allele": "yes",
+  "confidence": "high",
+  "keyword": "found on one CF chromosome",
+  "text_referring_to": "The two mutations have been found on one CF chromosomes after DGGE screening and DNA sequencing. The first is a nucleotide change at the 5' splice site consensus sequence (3272-1 G->A). The second is a nucleotide change at position 3286 T->G leading to F1052V amino acid change.",
+  "reason": "Both mutations are stated to be on one (same) CF chromosome: this variant (3272-1 G->A) plus 3286 T->G (F1052V) in cis = complex allele.",
+  "partner_tokens": [
+   "3286 T->G",
+   "F1052V"
+  ]
+ },
+ {
+  "sp_id": 440,
+  "is_complex_allele": "no",
+  "confidence": "high",
+  "keyword": "on the other chromosome",
+  "text_referring_to": "This mutation was detected by DGGE and direct sequencing and was found in a 15-year old French patient who bears [delta]F508 on the other chromosome.",
+  "reason": "[delta]F508 is explicitly on the other chromosome (trans/compound heterozygous), not the same allele.",
+  "partner_tokens": [
+   "[delta]F508",
+   "deltaF508"
+  ]
+ },
+ {
+  "sp_id": 441,
+  "is_complex_allele": "no",
+  "confidence": "medium",
+  "keyword": "co-inherited with",
+  "text_referring_to": "L1059X co-inherited with tbe XV-2c/KM.19 haplotype C and with seven GATT repeats.",
+  "reason": "The only named CFTR mutation, R553X, is on the other chromosome (trans). The co-inherited XV-2c/KM.19 haplotype C and seven GATT repeats are haplotype-marker background, not a functional cis variant partner. Nuance: the GATT repeat is intragenic and reported in cis, but is treated here as haplotype background rather than a complex-allele partner.",
+  "partner_tokens": [
+   "R553X"
+  ]
+ },
+ {
+  "sp_id": 445,
+  "is_complex_allele": "no",
+  "confidence": "high",
+  "keyword": "on the other allele",
+  "text_referring_to": "The W1063X was found in a male individual also carrying 1811+1,6kbA>G on the other allele.",
+  "reason": "1811+1,6kbA>G is explicitly on the other allele (trans/compound heterozygous), not in cis.",
+  "partner_tokens": [
+   "1811+1,6kbA>G"
+  ]
+ },
+ {
+  "sp_id": 450,
+  "is_complex_allele": "no",
+  "confidence": "high",
+  "keyword": "the other haplotype",
+  "text_referring_to": "This mutation was found on one CF chromosome, the other haplotype carries an unidentified mutation.",
+  "reason": "R1066H is on one CF chromosome; the other haplotype (trans) carries an unidentified mutation. No named cis partner.",
+  "partner_tokens": []
+ },
+ {
+  "sp_id": 456,
+  "is_complex_allele": "no",
+  "confidence": "high",
+  "keyword": "on the other chromosome",
+  "text_referring_to": "The mutation was found in an adult French patient who bears [delta]F508 on the other chromosome.",
+  "reason": "[delta]F508 is explicitly on the other chromosome (trans/compound heterozygous), not the same allele.",
+  "partner_tokens": [
+   "[delta]F508",
+   "deltaF508"
+  ]
+ },
+ {
+  "sp_id": 457,
+  "is_complex_allele": "no",
+  "confidence": "high",
+  "keyword": "in the other chromosome",
+  "text_referring_to": "CF patient with unknown mutation in the other chromosome, presented lung involvement and PI.",
+  "reason": "The other chromosome carries an unknown mutation (trans); no named cis partner. Also seen in 2 CBAVD patients but no co-allele stated.",
+  "partner_tokens": []
+ },
+ {
+  "sp_id": 459,
+  "is_complex_allele": "no",
+  "confidence": "high",
+  "keyword": "haplotype",
+  "text_referring_to": "The mutation is on the maternal chromosome with haplotype IIIc.",
+  "reason": "Haplotype IIIc on the maternal chromosome is a marker-haplotype background, not a cis variant partner.",
+  "partner_tokens": []
+ },
+ {
+  "sp_id": 460,
+  "is_complex_allele": "no",
+  "confidence": "high",
+  "keyword": "on the other chromosome",
+  "text_referring_to": "The other chromosome is [delta]F508 and the H1085R is on a B haplotype.",
+  "reason": "All co-occurring variants ([delta]F508 and 2711delT) are on the other allele/chromosome (trans). B haplotype is background, and homozygosity for H1085R is not a complex allele.",
+  "partner_tokens": [
+   "[delta]F508",
+   "deltaF508",
+   "2711delT"
+  ]
+ },
+ {
+  "sp_id": 463,
+  "is_complex_allele": "no",
+  "confidence": "high",
+  "keyword": "haplotype",
+  "text_referring_to": "It was found in Toronto family #34 on a haplotype group IIa chromosome from the mother.",
+  "reason": "Haplotype group IIa is a marker-haplotype background, not a cis variant partner.",
+  "partner_tokens": []
+ },
+ {
+  "sp_id": 464,
+  "is_complex_allele": "no",
+  "confidence": "high",
+  "keyword": "none",
+  "text_referring_to": "",
+  "reason": "Patient is homozygous for haplotype C and homozygous for the Y1092X mutation. No second distinct CFTR variant is named, so there is no cis partner. 'Haplotype' denotes chromosomal background only.",
+  "partner_tokens": []
+ },
+ {
+  "sp_id": 468,
+  "is_complex_allele": "no",
+  "confidence": "high",
+  "keyword": "none",
+  "text_referring_to": "The patient carries the [delta]F508 mutation on the other allele.",
+  "reason": "The co-occurring [delta]F508 is explicitly on the other allele (trans / compound heterozygous), not in cis. 'Also carries' refers to the trans allele. Not a complex allele.",
+  "partner_tokens": []
+ },
+ {
+  "sp_id": 480,
+  "is_complex_allele": "no",
+  "confidence": "high",
+  "keyword": "none",
+  "text_referring_to": "The patient carries the F1052V mutation on the other chromosome and presents a mild form of CF.",
+  "reason": "F1052V is explicitly on the other chromosome (trans); haplotype C is only chromosomal background. Not a complex allele.",
+  "partner_tokens": []
+ },
+ {
+  "sp_id": 483,
+  "is_complex_allele": "no",
+  "confidence": "high",
+  "keyword": "none",
+  "text_referring_to": "The patient carries the [delta]F508 mutation on the other chromosome and presents a severe form of CF.",
+  "reason": "[delta]F508 is explicitly on the other chromosome (trans); haplotype A is background. Not a complex allele.",
+  "partner_tokens": []
+ },
+ {
+  "sp_id": 484,
+  "is_complex_allele": "yes",
+  "confidence": "high",
+  "keyword": "same chromosome",
+  "text_referring_to": "The mutation was found on the same chromosome carrying R75Q, in a male CF patient whose other mutation is [delta]F508.",
+  "reason": "Q1144X is explicitly on the same chromosome as R75Q (cis), forming a complex allele. [delta]F508 is the trans allele (the patient's other mutation) and is not a cis partner.",
+  "partner_tokens": [
+   "R75Q"
+  ]
+ },
+ {
+  "sp_id": 486,
+  "is_complex_allele": "no",
+  "confidence": "high",
+  "keyword": "none",
+  "text_referring_to": "This mutation has been found in an infertile man with CBAVD carrying the [delta]F508 mutation on the other allele.",
+  "reason": "[delta]F508 is explicitly on the other allele (trans). 'Also carrying' refers to the trans allele. Not a complex allele.",
+  "partner_tokens": []
+ },
+ {
+  "sp_id": 504,
+  "is_complex_allele": "yes",
+  "confidence": "high",
+  "keyword": "in cis",
+  "text_referring_to": "This mutation was found together with K1220E on the same non-[delta]F508 CF chromosome. ... 3732delA was in cis with 3791C/T (K1220E).",
+  "reason": "3732delA is explicitly in cis / on the same non-F508 chromosome with K1220E (also written as the legacy nucleotide 3791C/T), forming a complex allele. The 1717-1G>A mutation is on the other allele (trans) and is not a cis partner.",
+  "partner_tokens": [
+   "K1220E",
+   "3791C/T"
+  ]
+ },
+ {
+  "sp_id": 505,
+  "is_complex_allele": "no",
+  "confidence": "high",
+  "keyword": "none",
+  "text_referring_to": "one with CBAVD diagnosed at 28y, PS, carrying I980K on the other allele, the other 2both PI, with severe lung disease and positive sweat chloride carrying deltaF508 on the other allele ... and Y1092X",
+  "reason": "The mutation was found in three separate patients; each co-occurring mutation (I980K, deltaF508, Y1092X) is explicitly on the other allele/chromosome (trans). No cis partner is described. Not a complex allele.",
+  "partner_tokens": []
+ },
+ {
+  "sp_id": 506,
+  "is_complex_allele": "no",
+  "confidence": "high",
+  "keyword": "none",
+  "text_referring_to": "This patient is a compounded heterozygot and carry [delta]F508 on the other chromosome.",
+  "reason": "Compound heterozygote with [delta]F508 on the other chromosome (trans); haplotype B is background only. Not a complex allele.",
+  "partner_tokens": []
+ },
+ {
+  "sp_id": 518,
+  "is_complex_allele": "no",
+  "confidence": "high",
+  "keyword": "none",
+  "text_referring_to": "",
+  "reason": "Product of a consanguineous mating, homozygous for the B haplotype (chromosomal background). No second distinct CFTR variant is named, so no cis partner. Not a complex allele.",
+  "partner_tokens": []
+ },
+ {
+  "sp_id": 521,
+  "is_complex_allele": "no",
+  "confidence": "high",
+  "keyword": "none",
+  "text_referring_to": "He carries DeltaF508 on the other allele.",
+  "reason": "[delta]F508 is explicitly on the other allele (trans); the A/B haplotype is chromosomal background. Not a complex allele.",
+  "partner_tokens": []
+ },
+ {
+  "sp_id": 524,
+  "is_complex_allele": "yes",
+  "confidence": "high",
+  "keyword": "same allele",
+  "text_referring_to": "Tha patient carries S912L on the same allele and G542X on the other allele.",
+  "reason": "G1244V (maternal CF allele) and S912L are explicitly on the same allele (cis), forming a complex allele. G542X is on the paternal / other allele (trans) and is not a cis partner.",
+  "partner_tokens": [
+   "S912L"
+  ]
+ },
+ {
+  "sp_id": 528,
+  "is_complex_allele": "yes",
+  "confidence": "medium",
+  "keyword": "associated with F508C",
+  "text_referring_to": "S1251N is associated with the haplotype 2-1-1-2 (XV2c-KM, 19-D9-J44) and with F508C.",
+  "reason": "F508C is listed alongside the haplotype as a property of the S1251N-bearing chromosome, indicating F508C is in cis on the same allele as S1251N (complex allele S1251N;F508C). 'associated with' is slightly less explicit than 'same chromosome', hence medium confidence.",
+  "partner_tokens": [
+   "F508C"
+  ]
+ },
+ {
+  "sp_id": 531,
+  "is_complex_allele": "yes",
+  "confidence": "high",
+  "keyword": "occurs on a chromosome carrying",
+  "text_referring_to": "In addition, this alteration occurs on a chromosome carrying a nonsense mutation in exon 20 (S1255X).",
+  "reason": "The missense I1203V is explicitly stated to occur on the same chromosome that carries S1255X (the record variant), i.e. I1203V+S1255X in cis — a complex allele.",
+  "partner_tokens": [
+   "I1203V"
+  ]
+ },
+ {
+  "sp_id": 537,
+  "is_complex_allele": "no",
+  "confidence": "high",
+  "keyword": "on the other chromosome",
+  "text_referring_to": "The patient also carries an [delta]F508 mutation on the other chromosome.",
+  "reason": "The co-occurring [delta]F508 is explicitly on the other chromosome (trans / compound heterozygous), so D1270N is not part of a complex allele.",
+  "partner_tokens": [
+   "[delta]F508"
+  ]
+ },
+ {
+  "sp_id": 540,
+  "is_complex_allele": "no",
+  "confidence": "high",
+  "keyword": "on the other chromosome",
+  "text_referring_to": "S977P and 4012insT were both found on the other chromosome.",
+  "reason": "Co-occurring S977P and 4012insT are both on the OTHER chromosome relative to R1283K (trans). The G1244E and W1282X mentions in other_details are only restriction-pattern comparisons, not co-occurring variants.",
+  "partner_tokens": [
+   "S977P",
+   "4012insT"
+  ]
+ },
+ {
+  "sp_id": 543,
+  "is_complex_allele": "no",
+  "confidence": "high",
+  "keyword": "on the other allele",
+  "text_referring_to": "The male CF patient is PI and carries DeltaF508 on the other allele.",
+  "reason": "Co-occurring DeltaF508 is explicitly on the other allele (trans). The 2-2-1 haplotype and 'seven GATT repeats' are background haplotype markers, not a functional cis partner.",
+  "partner_tokens": [
+   "DeltaF508"
+  ]
+ },
+ {
+  "sp_id": 544,
+  "is_complex_allele": "no",
+  "confidence": "high",
+  "keyword": "also carries",
+  "text_referring_to": "",
+  "reason": "'An older sibling also carries Q1291H' refers to a relative carrying the SAME variant, not a second co-occurring variant; the text states 'No other CF mutation has been identified.' No complex allele.",
+  "partner_tokens": []
+ },
+ {
+  "sp_id": 545,
+  "is_complex_allele": "no",
+  "confidence": "high",
+  "keyword": "compound heterozygotes",
+  "text_referring_to": "The two affected children are compound heterozygotes.  The first is 22 years old, PI with cirrhosis.  He carries the [delta]F508 on the other chromosome.",
+  "reason": "Patients are compound heterozygotes; [delta]F508 (and an unidentified mutation in the second child) are on the other chromosome (trans), not in cis with 4005+1G->A.",
+  "partner_tokens": [
+   "[delta]F508"
+  ]
+ },
+ {
+  "sp_id": 554,
+  "is_complex_allele": "no",
+  "confidence": "high",
+  "keyword": "on the other chromosome",
+  "text_referring_to": "The third patient has the 551 mutation on the other chromosome.",
+  "reason": "The co-occurring '551' mutation (and uncharacterized mutations in the other patients) are on the other chromosome (trans). The 1,2,2 haplotype is only background.",
+  "partner_tokens": [
+   "551"
+  ]
+ },
+ {
+  "sp_id": 564,
+  "is_complex_allele": "no",
+  "confidence": "high",
+  "keyword": "in the other allele",
+  "text_referring_to": "Two of them had mutations W216X and G1349S in the other allele.  It was also found in 3 out of 25 patients with diffuse panbronchiolitis, one of them having E217G in the other allele.",
+  "reason": "Co-occurring W216X, G1349S and E217G are each reported 'in the other allele' (trans / compound heterozygous), not in cis with Q1352H.",
+  "partner_tokens": [
+   "W216X",
+   "G1349S",
+   "E217G"
+  ]
+ },
+ {
+  "sp_id": 567,
+  "is_complex_allele": "no",
+  "confidence": "high",
+  "keyword": "haplotype",
+  "text_referring_to": "",
+  "reason": "Only a haplotype background (A XV2c/KM19) is reported for E1371X; no co-occurring variant on the same allele is named. Haplotype alone is not a complex-allele partner.",
+  "partner_tokens": []
+ },
+ {
+  "sp_id": 568,
+  "is_complex_allele": "uncertain",
+  "confidence": "medium",
+  "keyword": "also carrying",
+  "text_referring_to": "D1377H, was found in a 46y old M, diagnosed with CBAVD at 35y, PS, also carrying 2622+1G>A. (pers. corr. Girodon)",
+  "reason": "D1377H co-occurs with 2622+1G>A but the text does not state cis vs trans. Clinically (CBAVD, PS, two mutations named) it is most likely compound heterozygous (trans), but since the allele is genuinely not stated, marked uncertain.",
+  "partner_tokens": [
+   "2622+1G>A"
+  ]
+ },
+ {
+  "sp_id": 576,
+  "is_complex_allele": "no",
+  "confidence": "high",
+  "keyword": "on the other chromosome",
+  "text_referring_to": "The mutation is found, associated with haplotype D, in a French patient having [delta]F508 on the other chromosome.",
+  "reason": "Co-occurring [delta]F508/F508del is explicitly on the other chromosome/allele (trans, compound heterozygous per phenotype note); haplotype D is only background. Not a complex allele.",
+  "partner_tokens": [
+   "[delta]F508",
+   "F508del"
+  ]
+ },
+ {
+  "sp_id": 582,
+  "is_complex_allele": "no",
+  "confidence": "high",
+  "keyword": "on the other allele",
+  "text_referring_to": "carrying F1052V on the other allele",
+  "reason": "F1052V is explicitly stated to be on the other allele (compound heterozygote, in trans), not in cis. Not a complex allele.",
+  "partner_tokens": [
+   "F1052V"
+  ]
+ },
+ {
+  "sp_id": 583,
+  "is_complex_allele": "no",
+  "confidence": "high",
+  "keyword": "on the other allele",
+  "text_referring_to": "The mutation was found in a CF patient carrying 2752-15C->G on the other allele",
+  "reason": "The co-occurring variant 2752-15C->G is explicitly on the other allele (in trans). The separate P1013L note (52y female) gives no cis partner. Not a complex allele.",
+  "partner_tokens": [
+   "2752-15C->G"
+  ]
+ },
+ {
+  "sp_id": 584,
+  "is_complex_allele": "no",
+  "confidence": "high",
+  "keyword": "none",
+  "text_referring_to": "",
+  "reason": "The second mutation is listed as unknown and no named co-occurring CFTR variant is present. Nothing signals a complex allele.",
+  "partner_tokens": []
+ },
+ {
+  "sp_id": 585,
+  "is_complex_allele": "no",
+  "confidence": "high",
+  "keyword": "none",
+  "text_referring_to": "",
+  "reason": "Patient is homozygous for L218X (same variant on both alleles); second mutation is unknown and no distinct cis partner is described. Not a complex allele.",
+  "partner_tokens": []
+ },
+ {
+  "sp_id": 586,
+  "is_complex_allele": "no",
+  "confidence": "medium",
+  "keyword": "second mutation",
+  "text_referring_to": "The second mutation: [delta]F508.",
+  "reason": "Per CFTR1 convention the 'second mutation' field denotes the mutation on the other allele of a compound heterozygote (in trans), not a cis change. Not a complex allele; cis is not explicitly restated here, hence medium confidence.",
+  "partner_tokens": [
+   "[delta]F508"
+  ]
+ },
+ {
+  "sp_id": 589,
+  "is_complex_allele": "no",
+  "confidence": "high",
+  "keyword": "compound heterozygote",
+  "text_referring_to": "This individual is a compound heterozygote for the 2143delT CF mutations.",
+  "reason": "Compound heterozygote with 2143delT on the other allele (phenotype: '2143delT was on the other allele'). The separately cited Northern Ireland patient carried R1070P paternal and deltaF508 maternal, i.e. on different alleles. All relationships are in trans; no cis partner. Not a complex allele.",
+  "partner_tokens": [
+   "2143delT",
+   "[delta]F508"
+  ]
+ },
+ {
+  "sp_id": 590,
+  "is_complex_allele": "no",
+  "confidence": "high",
+  "keyword": "also has",
+  "text_referring_to": "The mutation was seen in a 45 year-old male with absence of the vas deferens, who also has [delta]F508.",
+  "reason": "G576A was detected while screening 'over 100 non-[delta]F508 chromosomes', so it lies on a chromosome lacking deltaF508; therefore deltaF508 is on the other allele (in trans, a CBAVD compound heterozygote). Not a complex allele.",
+  "partner_tokens": [
+   "[delta]F508"
+  ]
+ },
+ {
+  "sp_id": 593,
+  "is_complex_allele": "no",
+  "confidence": "high",
+  "keyword": "on the other chromosome",
+  "text_referring_to": "she carries a [delta]F508 on the other chromosome",
+  "reason": "deltaF508 is explicitly on the other chromosome / other allele (in trans). Not a complex allele.",
+  "partner_tokens": [
+   "[delta]F508",
+   "delF508"
+  ]
+ },
+ {
+  "sp_id": 600,
+  "is_complex_allele": "no",
+  "confidence": "high",
+  "keyword": "on the other allele",
+  "text_referring_to": "The mutation was identified in a male patient, PS, with mild pulmonary symptoms and P5L on the other allele.",
+  "reason": "P5L (P5) is explicitly on the other allele (in trans). Not a complex allele.",
+  "partner_tokens": [
+   "P5",
+   "P5L"
+  ]
+ },
+ {
+  "sp_id": 606,
+  "is_complex_allele": "no",
+  "confidence": "high",
+  "keyword": "complex mutation",
+  "text_referring_to": "The male patient also carries Deltaf508 on the other allele.",
+  "reason": "The word 'complex mutation' refers to the indel structure (deletes 10 bp and inserts one C at a single locus) — a single complex mutational event, not a two-variant complex allele. The co-occurring deltaF508 is explicitly on the other allele (in trans). Not a complex allele.",
+  "partner_tokens": [
+   "[delta]F508",
+   "Deltaf508"
+  ]
+ },
+ {
+  "sp_id": 632,
+  "is_complex_allele": "no",
+  "confidence": "high",
+  "keyword": "compound heterozygous",
+  "text_referring_to": "He carries I336K on the other allele.",
+  "reason": "Compound heterozygous; I336K is explicitly on the other allele. The 'R334L and I336K' phrasing describes the two trans mutations of a compound heterozygote, not a cis bundle. Not a complex allele.",
+  "partner_tokens": [
+   "I336K"
+  ]
+ },
+ {
+  "sp_id": 636,
+  "is_complex_allele": "no",
+  "confidence": "high",
+  "keyword": "complex mutation",
+  "text_referring_to": "",
+  "reason": "The word 'complex mutation' refers to the indel structure (deletion of ACCAAAG plus insertion of TA at a single locus) — a single complex mutational event, not a two-variant complex allele. No second CFTR variant is mentioned. Not a complex allele.",
+  "partner_tokens": []
+ },
+ {
+  "sp_id": 637,
+  "is_complex_allele": "no",
+  "confidence": "high",
+  "keyword": "other chromosome",
+  "text_referring_to": "The patient carries [delta]F508 on her other chromosome.",
+  "reason": "The 'A haplotype' is a chromosomal background marker, not a co-occurring CFTR variant, and deltaF508 is explicitly on the patient's OTHER chromosome (trans). No cis partner.",
+  "partner_tokens": []
+ },
+ {
+  "sp_id": 642,
+  "is_complex_allele": "no",
+  "confidence": "medium",
+  "keyword": "also carried",
+  "text_referring_to": "This patient also carried the Y1092X CF mutation in exon 17b.",
+  "reason": "Y1092X (exon 17b) lies within the CFTRdele14b-18 deletion (exons 14b-18), so it cannot physically be in cis; the patient is a compound heterozygote (severe CF) with Y1092X on the intact other allele. 'Also carried' denotes the trans disease allele.",
+  "partner_tokens": []
+ },
+ {
+  "sp_id": 650,
+  "is_complex_allele": "no",
+  "confidence": "medium",
+  "keyword": "also carries",
+  "text_referring_to": "She also carries 2789+4G->A.",
+  "reason": "Other_details states 'the mutation on the other chromosome is unknown'; the subsequently reported 2789+4G->A is the second, trans disease allele (consistent with the mild PS phenotype against a severe frameshift). Not stated as cis.",
+  "partner_tokens": []
+ },
+ {
+  "sp_id": 676,
+  "is_complex_allele": "no",
+  "confidence": "high",
+  "keyword": "other allele",
+  "text_referring_to": "T1057A\twas found in a 9 year old male also carrying N1303K on the other allele",
+  "reason": "N1303K is explicitly on the other allele (trans); T1057A is treated as a polymorphism. No cis partner.",
+  "partner_tokens": []
+ },
+ {
+  "sp_id": 678,
+  "is_complex_allele": "no",
+  "confidence": "high",
+  "keyword": "other allele",
+  "text_referring_to": "The R1128X mutation was found in a 7 y male CF patient diagnosed at birth, also carrying deltaF508 on the other allele.",
+  "reason": "DeltaF508 is explicitly on the other allele (trans); the additional R1128X/W1098X case is a compound-heterozygous genotype notation. No cis partner.",
+  "partner_tokens": []
+ },
+ {
+  "sp_id": 683,
+  "is_complex_allele": "yes",
+  "confidence": "high",
+  "keyword": "same chromosome",
+  "text_referring_to": "The mutation was found on the same chromosome carrying [delta]F508.",
+  "reason": "Q1313K is reported on the same chromosome as / in cis with deltaF508 (West Midlands family in other_details, and phenotype: 'carries the Q1313K polymorphism in cis with DeltaF508'), constituting a complex allele. The 2789+5G->A found 'on the other allele' is trans and not part of the complex allele.",
+  "partner_tokens": [
+   "[delta]F508",
+   "DeltaF508"
+  ]
+ },
+ {
+  "sp_id": 713,
+  "is_complex_allele": "no",
+  "confidence": "high",
+  "keyword": "other chromosome",
+  "text_referring_to": "This mutation was found by DGGE and identified by DNA sequencing in a CBAVD patient who carries D1152H on the other chromosome.",
+  "reason": "D1152H and deltaF508 are each explicitly on the other chromosome (trans) in the respective patients described. No cis partner.",
+  "partner_tokens": []
+ },
+ {
+  "sp_id": 741,
+  "is_complex_allele": "uncertain",
+  "confidence": "high",
+  "keyword": "do not know on which allele",
+  "text_referring_to": "3850-79T/C and 3271+101C/G were identified in a CBAVD patient who\nalso had F508, 5T/9T, and many other SNP : P1290P, I1027T : but we do\nnot know on which allele.",
+  "reason": "Multiple variants co-occur in one CBAVD patient, but the text explicitly states the phase is unknown ('we do not know on which allele'). Cis vs trans genuinely ambiguous.",
+  "partner_tokens": [
+   "3271+101C/G",
+   "F508",
+   "5T/9T",
+   "P1290P",
+   "I1027T"
+  ]
+ },
+ {
+  "sp_id": 743,
+  "is_complex_allele": "uncertain",
+  "confidence": "medium",
+  "keyword": "and",
+  "text_referring_to": "The CF patient has G542X and S977F.",
+  "reason": "The CF patient carries both G542X and S977F, but the text does not state cis vs trans. Most likely a compound heterozygote (trans) given a severe null (G542X) in a CF patient, but phase is not stated.",
+  "partner_tokens": [
+   "G542X"
+  ]
+ },
+ {
+  "sp_id": 749,
+  "is_complex_allele": "yes",
+  "confidence": "high",
+  "keyword": "Both chromosomes also carry",
+  "text_referring_to": "Both chromosomes also carry the Q1352H missense variant in exon 22.",
+  "reason": "The 5T allele is trans (other allele per phenotype), but Q1352H is stated to be present on BOTH chromosomes, therefore necessarily in cis with R297W — making [R297W;Q1352H] a complex allele.",
+  "partner_tokens": [
+   "Q1352H"
+  ]
+ },
+ {
+  "sp_id": 756,
+  "is_complex_allele": "no",
+  "confidence": "high",
+  "keyword": "another known CF-allele",
+  "text_referring_to": "In three unrelated patients (all with another known CF-allele) we identified the same shift in exon 20.",
+  "reason": "Each patient carries 'another known CF-allele' (the second, trans disease allele of a compound heterozygote); R117H and G551D are other mutations seen in the population screen, not cis partners. No complex allele.",
+  "partner_tokens": []
+ },
+ {
+  "sp_id": 797,
+  "is_complex_allele": "yes",
+  "confidence": "high",
+  "keyword": "same allele",
+  "text_referring_to": "5T was found on the same allele as F994C. DeltaF508 was found on the other allele.",
+  "reason": "5T (poly-T) is explicitly on the same allele as F994C (cis), forming the complex allele [F994C;5T]. DeltaF508 is on the other allele (trans) and not part of the complex allele.",
+  "partner_tokens": [
+   "5T"
+  ]
+ },
+ {
+  "sp_id": 811,
+  "is_complex_allele": "no",
+  "confidence": "high",
+  "keyword": "on the other allele",
+  "text_referring_to": "N1303K was found on the other allele. (pers. corr. Bombieri)",
+  "reason": "Although other_details says the variant was found 'in conjunction with N1303K', the phenotype explicitly states N1303K is on the other allele (trans/compound heterozygous), so not a complex allele.",
+  "partner_tokens": [
+   "N1303K"
+  ]
+ },
+ {
+  "sp_id": 814,
+  "is_complex_allele": "yes",
+  "confidence": "high",
+  "keyword": "on the same allele",
+  "text_referring_to": "DeltaF508 and 3212C/T were found on the same allele as R1422W, D993Y was found on the other allele.",
+  "reason": "DeltaF508 and 3212C/T are explicitly reported on the same allele as R1422W (cis) = complex allele. D993Y is on the other allele (trans) and therefore excluded as a cis partner.",
+  "partner_tokens": [
+   "DeltaF508",
+   "3212C/T"
+  ]
+ },
+ {
+  "sp_id": 819,
+  "is_complex_allele": "no",
+  "confidence": "high",
+  "keyword": "on the other allele",
+  "text_referring_to": "The mutation was detected by DGGE and identified by direct sequencing in a CBAVD patient with R1070Q on the other allele.",
+  "reason": "R1070Q is explicitly on the other allele (trans/compound heterozygous), so not a complex allele.",
+  "partner_tokens": [
+   "R1070Q"
+  ]
+ },
+ {
+  "sp_id": 827,
+  "is_complex_allele": "uncertain",
+  "confidence": "high",
+  "keyword": "we do not know on which allele",
+  "text_referring_to": "3850-79T/C and 3271+101C/G were identified in a CBAVD patient who also had F508, 5T/9T, and many other SNP : P1290P, I1027T : but we do not know on which allele.",
+  "reason": "Several variants co-occur in the patient but the text explicitly states the phase is unknown ('we do not know on which allele'), so cis vs trans is genuinely ambiguous.",
+  "partner_tokens": [
+   "3850-79T/C",
+   "F508",
+   "5T/9T",
+   "P1290P",
+   "I1027T"
+  ]
+ },
+ {
+  "sp_id": 828,
+  "is_complex_allele": "yes",
+  "confidence": "high",
+  "keyword": "on the same CF allele",
+  "text_referring_to": "This in-frame deletion was found associated with I148T on the same CF allele.",
+  "reason": "3199del6 is explicitly associated with I148T on the same CF allele (cis) = complex allele; genotype 'I148T,3199del6/deltaF508' confirms I148T is cis while deltaF508 is the trans allele.",
+  "partner_tokens": [
+   "I148T"
+  ]
+ },
+ {
+  "sp_id": 832,
+  "is_complex_allele": "no",
+  "confidence": "high",
+  "keyword": "on the other CF chromosome",
+  "text_referring_to": "The patient was also found to have the 5T allele in cis with TG12 on the other CF chromosome.",
+  "reason": "The 'in cis' describes 5T being together with TG12, but that 5T-TG12 haplotype sits on the OTHER CF chromosome relative to S307N; therefore 5T/TG12 are in trans to S307N and this is not a complex allele with S307N.",
+  "partner_tokens": [
+   "5T",
+   "TG12"
+  ]
+ },
+ {
+  "sp_id": 834,
+  "is_complex_allele": "no",
+  "confidence": "high",
+  "keyword": "none",
+  "text_referring_to": "",
+  "reason": "Patient is heterozygous for V1147I; the 'also has' phrasing refers to clinical features (failure to thrive, heart disease), not a second CFTR variant. No co-occurring variant is named, so no complex allele.",
+  "partner_tokens": []
+ },
+ {
+  "sp_id": 836,
+  "is_complex_allele": "no",
+  "confidence": "high",
+  "keyword": "in trans",
+  "text_referring_to": "Three of the patents had mutation [delta]F508 in trans and one had mutation 1898+1G>T in trans.",
+  "reason": "The co-occurring mutations (deltaF508, 1898+1G>T, W1282X) are explicitly reported in trans / on the other chromosome, so not a complex allele.",
+  "partner_tokens": [
+   "[delta]F508",
+   "deltaF508",
+   "1898+1G>T",
+   "1898+1G->T",
+   "W1282X"
+  ]
+ },
+ {
+  "sp_id": 840,
+  "is_complex_allele": "uncertain",
+  "confidence": "medium",
+  "keyword": "also carrying",
+  "text_referring_to": "405+42A/G was found in an Estonian individual also carrying S1235R.",
+  "reason": "The individual is heterozygous for S1235R and 405+42A/G was found in the same person, but the phase (cis vs trans) is not stated anywhere, so the relationship is ambiguous.",
+  "partner_tokens": [
+   "S1235R"
+  ]
+ },
+ {
+  "sp_id": 841,
+  "is_complex_allele": "no",
+  "confidence": "medium",
+  "keyword": "on the other allele",
+  "text_referring_to": "DeltaF508 was found on the other allele.",
+  "reason": "Although other_details states parental DNA was unavailable to determine phase, the phenotype explicitly places DeltaF508 on the other allele (trans), so not a complex allele.",
+  "partner_tokens": [
+   "DeltaF508",
+   "[delta]F508"
+  ]
+ },
+ {
+  "sp_id": 844,
+  "is_complex_allele": "no",
+  "confidence": "high",
+  "keyword": "in the other allele",
+  "text_referring_to": "It was also found by Yoshimura in 1999, in the CFTR alleles of a single patient with diffuse panbronchiolitis who has Q1352 H in the other allele.",
+  "reason": "The index patient's second mutation is unknown; the only named co-occurring variant (Q1352H, from the Yoshimura patient) is explicitly in the other allele (trans), so no cis partner.",
+  "partner_tokens": [
+   "Q1352 H",
+   "Q1352H"
+  ]
+ },
+ {
+  "sp_id": 846,
+  "is_complex_allele": "no",
+  "confidence": "high",
+  "keyword": "on the other cromosome",
+  "text_referring_to": "The mutation was identified in a 25 years old male, also carrying deltaF508 on the other cromosome.",
+  "reason": "deltaF508 is explicitly on the other chromosome (trans/compound heterozygous), so not a complex allele.",
+  "partner_tokens": [
+   "deltaF508",
+   "[delta]F508"
+  ]
+ },
+ {
+  "sp_id": 848,
+  "is_complex_allele": "no",
+  "confidence": "high",
+  "keyword": "on the other allele",
+  "text_referring_to": "He carries K68E on the other allele.",
+  "reason": "The second variant K68E is explicitly stated to be on the other allele (trans compound heterozygote), not in cis; not a complex allele.",
+  "partner_tokens": [
+   "K68E"
+  ]
+ },
+ {
+  "sp_id": 852,
+  "is_complex_allele": "yes",
+  "confidence": "medium",
+  "keyword": "found together with",
+  "text_referring_to": "This mutation was found together with a sequence polymorphism at nucleotide position 1929 where A was present instead of T.",
+  "reason": "V603F is reported 'found together with' the 1929 A/T sequence polymorphism with no trans qualifier, indicating a cis complex allele. The authors show phase-awareness elsewhere (deltaF508 'on the other allele' = trans; 5T phase 'could not be determined'), which contrasts with the unqualified cis co-occurrence of the 1929 polymorphism. deltaF508 (one patient) is trans and 5T (other patient) is phase-undetermined, so neither is the complex-allele partner.",
+  "partner_tokens": [
+   "1929",
+   "1929T>A"
+  ]
+ },
+ {
+  "sp_id": 853,
+  "is_complex_allele": "no",
+  "confidence": "high",
+  "keyword": "on the other allele",
+  "text_referring_to": "This mutation was found in one CF patient with E60X on the other allele.",
+  "reason": "E60X is on the other allele (trans compound heterozygote), not in cis; not a complex allele.",
+  "partner_tokens": [
+   "E60X"
+  ]
+ },
+ {
+  "sp_id": 854,
+  "is_complex_allele": "no",
+  "confidence": "high",
+  "keyword": "none",
+  "text_referring_to": "",
+  "reason": "The second (trans) mutation was unknown; no named co-occurring variant and no cis statement, so no complex allele.",
+  "partner_tokens": []
+ },
+ {
+  "sp_id": 855,
+  "is_complex_allele": "yes",
+  "confidence": "medium",
+  "keyword": "associated with",
+  "text_referring_to": "This mutation was found in one CF patient with [delta]F508 on the other chromosome and probably associated with R75Q.",
+  "reason": "deltaF508 is explicitly on the other chromosome (trans), while N1088D is described as probably associated (in cis) with R75Q, making R75Q the complex-allele partner. 'probably' lowers confidence.",
+  "partner_tokens": [
+   "R75Q"
+  ]
+ },
+ {
+  "sp_id": 869,
+  "is_complex_allele": "no",
+  "confidence": "high",
+  "keyword": "on the other chromosome",
+  "text_referring_to": "Although this mutation was idenitified in a CF patient carrying the [delta]F508 mutation on the other chromosome, we think that this is probably a rare polymorphism.",
+  "reason": "deltaF508 is on the other chromosome (trans); I506M itself is judged a likely benign polymorphism. No cis partner, so not a complex allele.",
+  "partner_tokens": [
+   "[delta]F508",
+   "deltaF508"
+  ]
+ },
+ {
+  "sp_id": 872,
+  "is_complex_allele": "yes",
+  "confidence": "high",
+  "keyword": "on the S10R allele",
+  "text_referring_to": "R117H is also found on the S10R allele, with [delta]F508 on the other chromosome.",
+  "reason": "R117H is explicitly on the same (S10R) allele = cis complex allele. deltaF508 is on the other chromosome (trans) and is not the complex-allele partner.",
+  "partner_tokens": [
+   "R117H"
+  ]
+ },
+ {
+  "sp_id": 881,
+  "is_complex_allele": "no",
+  "confidence": "high",
+  "keyword": "on the other CF chromosome",
+  "text_referring_to": "The patient carries [delta]F508 on the other CF chromosome.",
+  "reason": "The 'complex mutation' label refers to the single delins event (c.3400_3401delACinsGTA), not two distinct CFTR variants in cis. The only co-occurring variant, deltaF508, is in trans.",
+  "partner_tokens": [
+   "[delta]F508"
+  ]
+ },
+ {
+  "sp_id": 883,
+  "is_complex_allele": "uncertain",
+  "confidence": "low",
+  "keyword": "on one allele",
+  "text_referring_to": "revealed the [delta]F508 mutation on one allele.  The 1249-27delTA mutation was found after screening all 27 exons by DGGE and sequencing of the exon 8 region.",
+  "reason": "deltaF508 is assigned to one allele, but the phase of the intron-8 1249-27delTA relative to deltaF508 is not stated (could be a cis polymorphism on the deltaF508 allele or a trans second allele). Genuinely ambiguous.",
+  "partner_tokens": [
+   "[delta]F508"
+  ]
+ },
+ {
+  "sp_id": 902,
+  "is_complex_allele": "no",
+  "confidence": "high",
+  "keyword": "none",
+  "text_referring_to": "",
+  "reason": "Only SNP haplotype backgrounds (1-1-2-2, 2-1-2-2) are discussed; no co-occurring CFTR variant reported in cis, so haplotype background only, not a complex allele.",
+  "partner_tokens": []
+ },
+ {
+  "sp_id": 929,
+  "is_complex_allele": "yes",
+  "confidence": "high",
+  "keyword": "on the same allele",
+  "text_referring_to": "This transversion was associated with the previously reported mutation K68N on the same allele in a single CF family of Turkish/Syrian descent.",
+  "reason": "2752-15C>G is explicitly on the same allele as K68N = cis complex allele. A later addendum notes a different individual carries it in trans with W1089X (arguing it is a benign polymorphism), but the original cis report with K68N establishes the complex allele; W1089X is a trans observation in another person.",
+  "partner_tokens": [
+   "K68N"
+  ]
+ },
+ {
+  "sp_id": 938,
+  "is_complex_allele": "uncertain",
+  "confidence": "low",
+  "keyword": "also present",
+  "text_referring_to": "The patient's genotype is F508del/1898+1G>C, the 3271+42A>T polymorphism is also present.",
+  "reason": "The 3271+42A>T polymorphism is also present in an F508del/1898+1G>C compound heterozygote; it physically sits in cis with one of the two alleles, but which variant it partners with is not stated, so the cis partner is ambiguous.",
+  "partner_tokens": [
+   "F508del",
+   "1898+1G>C"
+  ]
+ },
+ {
+  "sp_id": 940,
+  "is_complex_allele": "uncertain",
+  "confidence": "medium",
+  "keyword": "also carrying",
+  "text_referring_to": "The mutation was found in a PS individual also carrying the P1290P polymorphism.",
+  "reason": "The P1290P polymorphism co-occurs in the same PS individual, but the phase (cis vs trans) is not stated; two polymorphisms of unknown phase, so cis cannot be established or excluded.",
+  "partner_tokens": [
+   "P1290P"
+  ]
+ },
+ {
+  "sp_id": 955,
+  "is_complex_allele": "yes",
+  "confidence": "medium",
+  "keyword": "in strong association with",
+  "text_referring_to": "C in strong association with R117H.",
+  "reason": "The c.-4C (129 C) variant is described as being in strong association (linkage/same haplotype) with R117H, indicating it is carried on the same chromosome as R117H (cis) — a complex-allele relationship.",
+  "partner_tokens": [
+   "R117H"
+  ]
+ },
+ {
+  "sp_id": 971,
+  "is_complex_allele": "no",
+  "confidence": "high",
+  "keyword": "on the other CF chromosome",
+  "text_referring_to": "both carriers of the [delta]F508 on the other CF chromosome",
+  "reason": "deltaF508 is explicitly on the other CF chromosome (trans); this is a compound heterozygote, not a complex allele.",
+  "partner_tokens": [
+   "[delta]F508",
+   "deltaF508"
+  ]
+ },
+ {
+  "sp_id": 974,
+  "is_complex_allele": "no",
+  "confidence": "medium",
+  "keyword": "heterozygous for [delta]F508",
+  "text_referring_to": "reported in a Scottish CF patient who is heterozygous for [delta]F508 and whose second mutation is as yet unidentified",
+  "reason": "This synonymous polymorphism (A209A) is reported across several unrelated patients each carrying deltaF508 as their disease allele (compound-het background, second mutation unidentified); no cis relationship is stated.",
+  "partner_tokens": [
+   "[delta]F508"
+  ]
+ },
+ {
+  "sp_id": 977,
+  "is_complex_allele": "uncertain",
+  "confidence": "medium",
+  "keyword": "5T allele (5/9)",
+  "text_referring_to": "He also has the [delta]F508 mutation and the 5T allele (5/9).",
+  "reason": "deltaF508 is explicitly on the other allele (phenotype: 'he carries deltaF508 on the other allele') = trans; however the patient's 5T poly-T allele (5/9) is not phased relative to T1053I, so a possible cis complex allele of T1053I with 5T cannot be excluded.",
+  "partner_tokens": [
+   "5T",
+   "5/9",
+   "[delta]F508",
+   "deltaF508"
+  ]
+ },
+ {
+  "sp_id": 978,
+  "is_complex_allele": "no",
+  "confidence": "high",
+  "keyword": "on the other allele",
+  "text_referring_to": "carries M152R on the other allele",
+  "reason": "Compound heterozygote; M152R is explicitly on the other allele (trans) relative to 1540del10.",
+  "partner_tokens": [
+   "M152R"
+  ]
+ },
+ {
+  "sp_id": 979,
+  "is_complex_allele": "no",
+  "confidence": "high",
+  "keyword": "on the other allele",
+  "text_referring_to": "has 1540del110 on the other allele",
+  "reason": "Compound heterozygote; 1540del10 (written 1540del110 in phenotype) is explicitly on the other allele (trans) relative to M152R.",
+  "partner_tokens": [
+   "1540del10",
+   "1540del110"
+  ]
+ },
+ {
+  "sp_id": 980,
+  "is_complex_allele": "no",
+  "confidence": "high",
+  "keyword": "on the other allele",
+  "text_referring_to": "F1052V and S1235R were both found on the other allele.",
+  "reason": "F1052V and S1235R are explicitly on the other allele (trans) relative to 1341+28C/T; they form a complex allele with each other but not with this variant.",
+  "partner_tokens": [
+   "F1052V",
+   "S1235R"
+  ]
+ },
+ {
+  "sp_id": 982,
+  "is_complex_allele": "yes",
+  "confidence": "high",
+  "keyword": "on the same allele",
+  "text_referring_to": "3499+37G>A was found on the same allele as T501A.",
+  "reason": "The polymorphism 3499+37G>A is explicitly reported on the same chromosome / same allele as T501A (complex allele); the separately noted 1811+1.6kbA>G mutation is in trans on the other allele.",
+  "partner_tokens": [
+   "3499+37G->A",
+   "3499+37G>A"
+  ]
+ },
+ {
+  "sp_id": 989,
+  "is_complex_allele": "no",
+  "confidence": "high",
+  "keyword": "on the other allele",
+  "text_referring_to": "also carrying deltaF508 on the other allele.",
+  "reason": "deltaF508 is explicitly on the other allele (trans); compound heterozygote, not a complex allele.",
+  "partner_tokens": [
+   "[delta]F508",
+   "deltaF508"
+  ]
+ },
+ {
+  "sp_id": 991,
+  "is_complex_allele": "no",
+  "confidence": "medium",
+  "keyword": "second mutation",
+  "text_referring_to": "It was found in one Native Canadian CF patient (second mutation: Y1307X).",
+  "reason": "'second mutation: Y1307X' denotes the mutation on the other allele in a compound heterozygote (CFTR1 database convention, consistent with paired record 992); no cis/same-allele relationship is stated.",
+  "partner_tokens": [
+   "Y1307X"
+  ]
+ },
+ {
+  "sp_id": 992,
+  "is_complex_allele": "no",
+  "confidence": "medium",
+  "keyword": "second mutation",
+  "text_referring_to": "It was found in one Native Canadian CF patient (second mutation: R555G).",
+  "reason": "'second mutation: R555G' denotes the other allele in a compound heterozygote (CFTR1 convention, consistent with paired record 991); no cis/same-allele relationship is stated.",
+  "partner_tokens": [
+   "R555G"
+  ]
+ },
+ {
+  "sp_id": 993,
+  "is_complex_allele": "no",
+  "confidence": "high",
+  "keyword": "on the other allele",
+  "text_referring_to": "The mutation was found in a CBAVD patient, carrying delta F508 on the other allele.",
+  "reason": "delta F508 is explicitly on the other allele (in trans); this is a compound heterozygote, not a complex allele.",
+  "partner_tokens": []
+ },
+ {
+  "sp_id": 994,
+  "is_complex_allele": "no",
+  "confidence": "high",
+  "keyword": "second mutation",
+  "text_referring_to": "",
+  "reason": "The second mutation is unknown; no co-occurring variant is named, so there is no complex allele.",
+  "partner_tokens": []
+ },
+ {
+  "sp_id": 995,
+  "is_complex_allele": "no",
+  "confidence": "high",
+  "keyword": "second mutation",
+  "text_referring_to": "It was found in one CF patient (second mutation: [delta]F508).",
+  "reason": "'second mutation: F508del' is the database's standard notation for the variant on the other allele (compound heterozygote / trans), not a cis complex allele.",
+  "partner_tokens": []
+ },
+ {
+  "sp_id": 996,
+  "is_complex_allele": "no",
+  "confidence": "high",
+  "keyword": "second mutation",
+  "text_referring_to": "",
+  "reason": "The second mutation is unknown; no co-occurring variant is named, so there is no complex allele.",
+  "partner_tokens": []
+ },
+ {
+  "sp_id": 1036,
+  "is_complex_allele": "yes",
+  "confidence": "high",
+  "keyword": "complex allele",
+  "text_referring_to": "Tthis substitution was found on an allele also bearing 876-14del12. This chromosome was given to a CF child with [delta]F508 on the other allele. No other substitution has been identified on this complex allele.",
+  "reason": "The variant is explicitly on the same allele as 876-14del12 and the text calls it a 'complex allele'; deltaF508 is on the other allele (trans, excluded as a partner).",
+  "partner_tokens": [
+   "876-14del12"
+  ]
+ },
+ {
+  "sp_id": 1037,
+  "is_complex_allele": "no",
+  "confidence": "high",
+  "keyword": "on the other allele",
+  "text_referring_to": "4269-108A->G was found in a male patient born in 1991, diagnosed at 3 months, with severe lung disease, positive sweat chloride, also carrying deltaF508 on the other allele.",
+  "reason": "deltaF508 is explicitly on the other allele (in trans); compound heterozygote, not a complex allele.",
+  "partner_tokens": []
+ },
+ {
+  "sp_id": 1041,
+  "is_complex_allele": "no",
+  "confidence": "high",
+  "keyword": "on the other allele",
+  "text_referring_to": "one diagnosed at 12y, has mild lung disease, is PI, sweat chloride >100mmol/l;excellent nutritional status; G673X on the other allele.",
+  "reason": "G673X is on the other allele (trans) in one patient and unknown in the other; compound heterozygote, not a complex allele.",
+  "partner_tokens": []
+ },
+ {
+  "sp_id": 1049,
+  "is_complex_allele": "yes",
+  "confidence": "high",
+  "keyword": "same chromosome",
+  "text_referring_to": "The patient had 1677delTA on the same chromosome and [delta]F508 on the other.",
+  "reason": "1677delTA is explicitly on the same chromosome (cis) as T760M, forming a complex allele; deltaF508 is on the other allele (trans, excluded as a partner).",
+  "partner_tokens": [
+   "1677delTA"
+  ]
+ },
+ {
+  "sp_id": 1051,
+  "is_complex_allele": "yes",
+  "confidence": "high",
+  "keyword": "same chromosome",
+  "text_referring_to": "It was found in one CF patient (with IVS8-5T on the same chromosome and [delta]F508 on the other); mild lung disease, pancreatic insufficency and sweat chlorideas of 95.",
+  "reason": "IVS8-5T (poly-T 5T) is explicitly on the same chromosome (cis) as 4006delA, forming a complex allele; deltaF508 is on the other allele (trans, excluded).",
+  "partner_tokens": [
+   "IVS8-5T"
+  ]
+ },
+ {
+  "sp_id": 1052,
+  "is_complex_allele": "no",
+  "confidence": "high",
+  "keyword": "on the other chromosome",
+  "text_referring_to": "Patient has 296+9A->T on the other chromosome.",
+  "reason": "296+9A->T is explicitly on the other chromosome (in trans); compound heterozygote, not a complex allele.",
+  "partner_tokens": []
+ },
+ {
+  "sp_id": 1057,
+  "is_complex_allele": "yes",
+  "confidence": "medium",
+  "keyword": "haplotype",
+  "text_referring_to": "The Y849X mutation is associated to the haplotype \"V, 1, 2, 16, 30, 13\" (M470V, XV2c, KM19, IVS8CA, IVS17bCA and IVS17bTA).",
+  "reason": "Y849X is reported on a defined haplotype that includes the M470V coding polymorphism; a haplotype is by definition cis and M470V in cis counts as a complex-allele partner per the rule. The framing is a marker/haplotype background (other components are non-coding RFLP/microsatellite markers), so confidence is medium. F508del from the genotype is on the other allele (trans).",
+  "partner_tokens": [
+   "M470V"
+  ]
+ },
+ {
+  "sp_id": 1059,
+  "is_complex_allele": "yes",
+  "confidence": "high",
+  "keyword": "in cis",
+  "text_referring_to": "The mutation was identified in cis with G576A and R668C in a female CF patient carrying deltaF508 on the other allele.",
+  "reason": "The phenotype explicitly states S589I is in cis with G576A and R668C, forming a complex allele; deltaF508 is on the other allele (trans). Other Details noted phase was initially unestablished, but the phenotype resolves it as cis.",
+  "partner_tokens": [
+   "G576A",
+   "R668C"
+  ]
+ },
+ {
+  "sp_id": 1063,
+  "is_complex_allele": "yes",
+  "confidence": "high",
+  "keyword": "same chromosome",
+  "text_referring_to": "The mutation and polymorphism are on the same chromosome (established in the mother).",
+  "reason": "Y161S (the record variant) and a silent polymorphism are stated to be on the same chromosome (cis), confirmed in the mother = complex allele. delF508 is the 'other CF mutation' on the other allele (trans, not a cis partner). The cis polymorphism partner is not named by any identifier in this record's own text (it is the 612T/A / 480T>A silent variant per companion record 1064).",
+  "partner_tokens": []
+ },
+ {
+  "sp_id": 1064,
+  "is_complex_allele": "yes",
+  "confidence": "high",
+  "keyword": "same chromosome",
+  "text_referring_to": "(Y161S) was seen in a 6 year-old CF patient whose other CF mutation is DeltaF508. The mutation and polymorphism are on the same chromosome (established in the mother).",
+  "reason": "This record is the silent polymorphism 612T/A (480T>A), stated to be on the same chromosome as Y161S (explicitly named), established in the mother = complex allele in cis. DeltaF508 is the 'other CF mutation' on the other allele (trans, not a partner).",
+  "partner_tokens": [
+   "Y161S"
+  ]
+ },
+ {
+  "sp_id": 1067,
+  "is_complex_allele": "no",
+  "confidence": "high",
+  "keyword": "other allele",
+  "text_referring_to": "It was found in a patient of Caucasian origin with [delta]F508 on the other allele.",
+  "reason": "delF508 is explicitly on the other allele (trans / compound heterozygous). No cis co-variant reported.",
+  "partner_tokens": []
+ },
+ {
+  "sp_id": 1095,
+  "is_complex_allele": "yes",
+  "confidence": "high",
+  "keyword": "same chromosome",
+  "text_referring_to": "who carries [delta]F508 on the same chromosome and the 5T allele in intron 8 in trans.",
+  "reason": "2851A/G (I907V) carries delF508 on the SAME chromosome (cis partner) = complex allele [I907V + delF508]; phenotype confirms 'DeltaF508 was found on the same allele as 2851A/G'. The 5T allele is explicitly in trans (other allele), so it is NOT a partner.",
+  "partner_tokens": [
+   "[delta]F508",
+   "DeltaF508"
+  ]
+ },
+ {
+  "sp_id": 1096,
+  "is_complex_allele": "no",
+  "confidence": "high",
+  "keyword": "other chromosome",
+  "text_referring_to": "in a CF patient carrying [delta]F508 in the other chromosome.",
+  "reason": "delF508 is explicitly in the other chromosome (trans / compound heterozygous). The 'also found in one additional patient' refers to a separate carrier, not a cis co-variant.",
+  "partner_tokens": []
+ },
+ {
+  "sp_id": 1099,
+  "is_complex_allele": "no",
+  "confidence": "high",
+  "keyword": "other allele",
+  "text_referring_to": "The mutation was found in a 24-year old female cayying delF508 on the other allele.",
+  "reason": "delF508 is explicitly on the other allele (trans / compound heterozygous). 'Also found in one additional patient' refers to a separate patient, not a cis partner.",
+  "partner_tokens": []
+ },
+ {
+  "sp_id": 1106,
+  "is_complex_allele": "no",
+  "confidence": "high",
+  "keyword": "other allele",
+  "text_referring_to": "The male patient (8 years old) carries 3849+10kbC->T on the other allele and has sweat chloride 82 mmol/l.",
+  "reason": "The co-variant 3849+10kbC->T is explicitly on the other allele (trans / compound heterozygous). No cis co-variant reported.",
+  "partner_tokens": []
+ },
+ {
+  "sp_id": 1109,
+  "is_complex_allele": "yes",
+  "confidence": "high",
+  "keyword": "in cis",
+  "text_referring_to": "48C/G is a polymorphism, found in cis with 3532AC>GTA.",
+  "reason": "48C/G promoter polymorphism is explicitly in cis / on the same chromosome as the 3532AC->GTA mutation = complex allele. delF508 is on the other allele (trans, not a partner). Polymorphism reported in cis counts as a complex-allele partner.",
+  "partner_tokens": [
+   "3532AC->GTA",
+   "3532AC>GTA"
+  ]
+ },
+ {
+  "sp_id": 1117,
+  "is_complex_allele": "no",
+  "confidence": "high",
+  "keyword": "other chromosome",
+  "text_referring_to": "in adult patient carryng 3659delC in the other chromosome",
+  "reason": "Both co-variants are trans: one patient carries 3659delC in the other chromosome, another carries delF508 on the other chromosome/allele. No cis co-variant; these are compound-heterozygous relationships in different patients.",
+  "partner_tokens": []
+ },
+ {
+  "sp_id": 1127,
+  "is_complex_allele": "no",
+  "confidence": "high",
+  "keyword": "none",
+  "text_referring_to": "",
+  "reason": "Phenotype states 'No other mutation has been found' for both sibling patients. No co-occurring variant; the 'also has Oligo azoospermia' is a clinical feature, not a variant.",
+  "partner_tokens": []
+ },
+ {
+  "sp_id": 1141,
+  "is_complex_allele": "yes",
+  "confidence": "high",
+  "keyword": "same allele",
+  "text_referring_to": "The mutation was found in a patient with CBAVD carrying 3041-4A>G on the same allele and the deltaF508 on the other one.",
+  "reason": "L973P is explicitly carried with 3041-4A>G on the same allele (cis) = complex allele. deltaF508 is on the other allele (trans, not a partner).",
+  "partner_tokens": [
+   "3041-4A>G"
+  ]
+ },
+ {
+  "sp_id": 1172,
+  "is_complex_allele": "no",
+  "confidence": "high",
+  "keyword": "none",
+  "text_referring_to": "",
+  "reason": "'The mutation was also identified/found by Ferec et al' refers to independent confirmation of the same variant by another laboratory, not a co-occurring CFTR variant. No cis or trans partner reported.",
+  "partner_tokens": []
+ },
+ {
+  "sp_id": 1183,
+  "is_complex_allele": "no",
+  "confidence": "high",
+  "keyword": "on the other allele",
+  "text_referring_to": "Both have DelF508 on the other allele.",
+  "reason": "F508del is described as the patient's OTHER CF mutation, explicitly on the other allele (compound heterozygous/trans). The 'also carries/found' keyword matched but refers to the trans allele, not a cis complex allele.",
+  "partner_tokens": [
+   "DelF508",
+   "[delta]F508"
+  ]
+ },
+ {
+  "sp_id": 1184,
+  "is_complex_allele": "no",
+  "confidence": "medium",
+  "keyword": "on the other allele",
+  "text_referring_to": "V456A was found in a male patient also carrying 1342-6(5T) on the other allele.",
+  "reason": "The named partner 1342-6(5T) is explicitly on the other allele (trans). The patient is also heterozygous for the promoter variant -895T/G, but its phase relative to V456A is not stated and it is presented as an incidental finding, not a same-allele partner; no cis relationship is asserted, so not a complex allele.",
+  "partner_tokens": [
+   "1342-6(5T)",
+   "-895T/G"
+  ]
+ },
+ {
+  "sp_id": 1189,
+  "is_complex_allele": "no",
+  "confidence": "high",
+  "keyword": "on the other chromosome",
+  "text_referring_to": "It was found in a young female carrying ^ÐF508 on the other chromosome.",
+  "reason": "F508del is explicitly on the other chromosome/other allele (trans, compound heterozygous). No cis partner stated.",
+  "partner_tokens": [
+   "^ÐF508",
+   "deltaF508"
+  ]
+ },
+ {
+  "sp_id": 1190,
+  "is_complex_allele": "no",
+  "confidence": "high",
+  "keyword": "on the other chromosome",
+  "text_referring_to": "It was found in a CBAVD patient bearing [delta]F508 on the other chromosome.",
+  "reason": "F508del is explicitly on the other chromosome/other allele (trans). No cis relationship stated for E528D.",
+  "partner_tokens": [
+   "[delta]F508",
+   "deltaF508"
+  ]
+ },
+ {
+  "sp_id": 1194,
+  "is_complex_allele": "yes",
+  "confidence": "high",
+  "keyword": "complex mutation",
+  "text_referring_to": "This complex mutation was identified at the homozygous or hemizygous state (the parents were not available) in a young patient from Brazil, and having a classical severe form of CF.",
+  "reason": "The variant name itself (2104insA+2109-2118del10) bundles two cis changes on one allele - an insertion (2104insA / c.1972_1973insA) plus a deletion (2109-2118del10) - and the text explicitly calls it a 'complex mutation'. This is a complex allele by definition.",
+  "partner_tokens": [
+   "2109-2118del10"
+  ]
+ },
+ {
+  "sp_id": 1197,
+  "is_complex_allele": "yes",
+  "confidence": "high",
+  "keyword": "in cis",
+  "text_referring_to": "was found in cis with F1052V in a CBAVD patient carrying [delta]F508 on the other chromosome.",
+  "reason": "Text explicitly states I918M was found 'in cis with F1052V' - a complex allele. The deltaF508 is separately on the other chromosome (trans) and is not the complex-allele partner; the cis partner is F1052V. Phenotype confirms 'I918M in cis with F1052V and deltaF508 was on the other allele'.",
+  "partner_tokens": [
+   "F1052V"
+  ]
+ },
+ {
+  "sp_id": 1198,
+  "is_complex_allele": "no",
+  "confidence": "high",
+  "keyword": "on the other allele",
+  "text_referring_to": "V920L was found in a male patient with CBAVD also carrying deltaF508 on the other allele.",
+  "reason": "F508del is stated to be on the other allele (trans, compound heterozygous). other_details notes chromosomal assignment was not possible, but no cis relationship is established; not reported as a complex allele.",
+  "partner_tokens": [
+   "^ÐF508",
+   "deltaF508"
+  ]
+ },
+ {
+  "sp_id": 1201,
+  "is_complex_allele": "no",
+  "confidence": "high",
+  "keyword": "on the other allele",
+  "text_referring_to": "L1339F was found in a male CBAVD patient also carrying deltaF508 on the other allele.",
+  "reason": "F508del is explicitly on the other allele (trans, compound heterozygous). No cis partner stated for L1339F.",
+  "partner_tokens": [
+   "^ÐF508",
+   "deltaF508"
+  ]
+ },
+ {
+  "sp_id": 1203,
+  "is_complex_allele": "no",
+  "confidence": "high",
+  "keyword": "on the other allele",
+  "text_referring_to": "406-13T/C was found in a 73 year old female patient also carrying N782K on the other allele.",
+  "reason": "N782K is explicitly on the other allele (trans). 406-13T/C is reported as a polymorphism with no cis partner; not a complex allele.",
+  "partner_tokens": [
+   "N782K"
+  ]
+ },
+ {
+  "sp_id": 1209,
+  "is_complex_allele": "uncertain",
+  "confidence": "high",
+  "keyword": "cis or trans",
+  "text_referring_to": "The 5T splice variant was also found.  We are waiting for parental DNA to determine if the 5T is in cis or trans with this mutation.",
+  "reason": "The 5T splice variant co-occurs with F693L, but the text explicitly states the phase is undetermined ('waiting for parental DNA to determine if the 5T is in cis or trans'). Genuinely ambiguous cis vs trans.",
+  "partner_tokens": [
+   "5T"
+  ]
+ },
+ {
+  "sp_id": 1216,
+  "is_complex_allele": "no",
+  "confidence": "high",
+  "keyword": "on the other allele",
+  "text_referring_to": "They carry K1177X (the 5-year old) and H139L (the 2-year old) on the other allele.",
+  "reason": "Compound heterozygous state: one patient homozygous for K1177X, the second heterozygous for K1177X/H139L with H139L on the other allele (trans). The '/' genotype notation and 'on the other allele' indicate trans, not a cis complex allele.",
+  "partner_tokens": [
+   "H139L"
+  ]
+ },
+ {
+  "sp_id": 1253,
+  "is_complex_allele": "no",
+  "confidence": "high",
+  "keyword": "on the other allele",
+  "text_referring_to": "This mutation has been found in an infertile man with CBAVD carrying the R74W+D1270N mutations on the other allele",
+  "reason": "R74W+D1270N (itself a complex allele) is explicitly on the OTHER allele relative to P841R (trans). P841R is not in cis with them, so this record (P841R) is not a complex allele.",
+  "partner_tokens": [
+   "R74W+D1270N",
+   "R74W",
+   "D1270N"
+  ]
+ },
+ {
+  "sp_id": 1288,
+  "is_complex_allele": "no",
+  "confidence": "high",
+  "keyword": "on the other allele",
+  "text_referring_to": "He carries G1244V and S912L on the other allele.",
+  "reason": "The co-mentioned variants G1244V and S912L are explicitly reported on the OTHER allele (in trans) relative to N1195T, so N1195T is not part of a complex allele.",
+  "partner_tokens": []
+ },
+ {
+  "sp_id": 1330,
+  "is_complex_allele": "yes",
+  "confidence": "high",
+  "keyword": "same chromosome",
+  "text_referring_to": "carrying L973P on the same chromosome and deltaF508 on the other allele.",
+  "reason": "L973P is explicitly on the SAME chromosome (cis) as this variant, forming a complex allele; deltaF508 is on the other allele (trans) and is not a cis partner.",
+  "partner_tokens": [
+   "L973P"
+  ]
+ },
+ {
+  "sp_id": 1344,
+  "is_complex_allele": "no",
+  "confidence": "high",
+  "keyword": "none",
+  "text_referring_to": "",
+  "reason": "No co-occurring CFTR variant is reported in cis. The keyword 'linked to' refers to bronchiectasis likely not being linked to CFTR mutations, and 3120+41delA is considered a polymorphism.",
+  "partner_tokens": []
+ },
+ {
+  "sp_id": 1349,
+  "is_complex_allele": "yes",
+  "confidence": "high",
+  "keyword": "in cis",
+  "text_referring_to": "M469V in cis with M470V (1540A/G), also carrying deltaF508 on the other allele.",
+  "reason": "M469V is explicitly stated to be in cis with the M470V (1540A/G) polymorphism, forming a complex allele; deltaF508 is on the other allele (trans).",
+  "partner_tokens": [
+   "M470V",
+   "1540A/G"
+  ]
+ },
+ {
+  "sp_id": 1350,
+  "is_complex_allele": "uncertain",
+  "confidence": "medium",
+  "keyword": "also carries",
+  "text_referring_to": "also cariies  875+1G->A and S1235R.",
+  "reason": "The patient 'also carries' 875+1G->A and S1235R, but the phase (cis vs trans) relative to 3629delT is not stated; with two additional variants and no phasing info it is genuinely ambiguous whether any is in cis.",
+  "partner_tokens": [
+   "875+1G->A",
+   "S1235R"
+  ]
+ },
+ {
+  "sp_id": 1377,
+  "is_complex_allele": "no",
+  "confidence": "high",
+  "keyword": "in trans",
+  "text_referring_to": "This mutation was identified in trans with N1303K",
+  "reason": "L1324P is explicitly reported in trans with N1303K (compound heterozygous), not on the same allele, so it is not a complex allele.",
+  "partner_tokens": []
+ },
+ {
+  "sp_id": 1378,
+  "is_complex_allele": "no",
+  "confidence": "high",
+  "keyword": "none",
+  "text_referring_to": "",
+  "reason": "The trigger 'in association with' refers to fetal clinical features (bowel dilation in association with microcephaly and cerebral atrophy), not a co-occurring variant; the text explicitly states 'No other CF mutation was found.'",
+  "partner_tokens": []
+ },
+ {
+  "sp_id": 1380,
+  "is_complex_allele": "no",
+  "confidence": "high",
+  "keyword": "complex",
+  "text_referring_to": "",
+  "reason": "'Complex anomaly' describes the structural nature of the delins variant (c.4_53+69delins299 / CFTRdele1) itself, not a second CFTR variant in cis; the patient is heterozygous for F508del, which is on the other allele (compound het).",
+  "partner_tokens": []
+ },
+ {
+  "sp_id": 1381,
+  "is_complex_allele": "yes",
+  "confidence": "high",
+  "keyword": "in cis",
+  "text_referring_to": "The deletion is in cis with V754M.",
+  "reason": "The deletion is explicitly stated to be in cis with V754M, forming a complex allele; the patient is heterozygous for 1812-1G>A, which is on the other allele (trans).",
+  "partner_tokens": [
+   "V754M"
+  ]
+ },
+ {
+  "sp_id": 1391,
+  "is_complex_allele": "no",
+  "confidence": "high",
+  "keyword": "compound heterozygote",
+  "text_referring_to": "the second one is compound heterozygote W1282X and S737F",
+  "reason": "W1282X and S737F are reported as a compound heterozygote pairing (in trans, on opposite alleles), which is not a complex allele.",
+  "partner_tokens": []
+ },
+ {
+  "sp_id": 1393,
+  "is_complex_allele": "no",
+  "confidence": "high",
+  "keyword": "compound heterozygote",
+  "text_referring_to": "The second one is compound heterozygote W1282X and S737F",
+  "reason": "W1282X and S737F are reported as a compound heterozygote pairing (in trans, on opposite alleles), which is not a complex allele.",
+  "partner_tokens": []
+ },
+ {
+  "sp_id": 1401,
+  "is_complex_allele": "yes",
+  "confidence": "high",
+  "keyword": "in cis",
+  "text_referring_to": "This mutation was identified on one Italian CF chromosome in cis  with a new variant L24F.",
+  "reason": "The variant is explicitly reported on one CF chromosome in cis with the new variant L24F, forming a complex allele; the other chromosome bears delF508 (trans).",
+  "partner_tokens": [
+   "L24F"
+  ]
+ },
+ {
+  "sp_id": 1402,
+  "is_complex_allele": "yes",
+  "confidence": "high",
+  "keyword": "in cis",
+  "text_referring_to": "This mutation was identified in cis with the novel mutation 296+2T to G on one Italian CF chromosome.",
+  "reason": "Explicitly stated 'in cis with' the novel mutation 296+2T to G on the same Italian CF chromosome; delF508 is on the other chromosome. Clear complex allele.",
+  "partner_tokens": [
+   "296+2T to G"
+  ]
+ },
+ {
+  "sp_id": 1406,
+  "is_complex_allele": "yes",
+  "confidence": "high",
+  "keyword": "same chromosome",
+  "text_referring_to": "This mutation was identified on one Italian CF chromosome, and on the same chromosome the S977F variant was found.",
+  "reason": "R1438W and S977F are reported on the same chromosome (same allele); delF508 is on the other chromosome. Complex allele.",
+  "partner_tokens": [
+   "S977F"
+  ]
+ },
+ {
+  "sp_id": 1409,
+  "is_complex_allele": "no",
+  "confidence": "high",
+  "keyword": "compound heterozygous",
+  "text_referring_to": "The patient (29 years old) is compound heterozygous for F508 and Q1035X.",
+  "reason": "Patient is compound heterozygous for F508 and Q1035X, meaning the two variants are on opposite alleles (trans), not a complex allele.",
+  "partner_tokens": []
+ },
+ {
+  "sp_id": 1411,
+  "is_complex_allele": "no",
+  "confidence": "high",
+  "keyword": "complex anomaly",
+  "text_referring_to": "The complex anomaly was identified in a 6 yrs old girl, heterozygous for F508del.",
+  "reason": "'Complex anomaly' refers to the single delins (deletion-insertion) rearrangement itself, not a complex allele of two variants; the patient is heterozygous for F508del (F508del in trans). No cis partner variant.",
+  "partner_tokens": []
+ },
+ {
+  "sp_id": 1412,
+  "is_complex_allele": "no",
+  "confidence": "high",
+  "keyword": "complex anomaly",
+  "text_referring_to": "The complex anomaly was identified in a 17 yrs old patient heterozygous for F508del.",
+  "reason": "'Complex anomaly' describes the single delins rearrangement itself, not a complex allele; patient heterozygous for F508del (trans). No cis partner variant.",
+  "partner_tokens": []
+ },
+ {
+  "sp_id": 1413,
+  "is_complex_allele": "no",
+  "confidence": "high",
+  "keyword": "complex anomaly",
+  "text_referring_to": "The complex anomaly was identified in a 6 yrs old girl, heterozygous for F508del.",
+  "reason": "'Complex anomaly' describes the single delins rearrangement itself, not a complex allele; patient heterozygous for F508del (trans). No cis partner variant.",
+  "partner_tokens": []
+ },
+ {
+  "sp_id": 1416,
+  "is_complex_allele": "yes",
+  "confidence": "high",
+  "keyword": "on a chromosome with",
+  "text_referring_to": "The K114X mutation was seen on a chromosome with R668C and G576A.",
+  "reason": "K114X was seen on a chromosome (same allele) together with R668C and G576A; delF508 is on the other chromosome. Complex allele with two cis partners.",
+  "partner_tokens": [
+   "R668C",
+   "G576A"
+  ]
+ },
+ {
+  "sp_id": 1422,
+  "is_complex_allele": "no",
+  "confidence": "medium",
+  "keyword": "complex allele",
+  "text_referring_to": "we suggest the putative 3849+10kbC>T;R668C/E92D compound genotype in the patient, as we already found the complex allele 3849+10kbC>T;R668C in another patient.",
+  "reason": "The complex allele referenced is 3849+10kbC>T;R668C; the proposed compound genotype 3849+10kbC>T;R668C/E92D places E92D on the opposite allele (trans to the complex allele). Segregation not performed, but E92D is proposed in trans, so E92D itself is not part of a complex allele.",
+  "partner_tokens": []
+ },
+ {
+  "sp_id": 1425,
+  "is_complex_allele": "uncertain",
+  "confidence": "medium",
+  "keyword": "also carries",
+  "text_referring_to": "The patient also carries D110H at the heterozygous state but the segregation has not been performed.",
+  "reason": "Patient carries both I752S and D110H at the heterozygous state, but segregation was not performed, so cis vs trans is not established. Genuinely ambiguous.",
+  "partner_tokens": [
+   "D110H"
+  ]
+ },
+ {
+  "sp_id": 1430,
+  "is_complex_allele": "no",
+  "confidence": "high",
+  "keyword": "complex anomaly",
+  "text_referring_to": "The complex anomaly was identified in a 10 yrs old boy, diagnosed with CF at 1 month and heterozygous for F508del.",
+  "reason": "'Complex anomaly' refers to the single delins rearrangement itself, not a complex allele; patient heterozygous for F508del (trans). No cis partner variant.",
+  "partner_tokens": []
+ },
+ {
+  "sp_id": 1431,
+  "is_complex_allele": "yes",
+  "confidence": "high",
+  "keyword": "in cis",
+  "text_referring_to": "The deletion is in cis with V754M.",
+  "reason": "Explicitly 'in cis with V754M', and a second French CF patient 'also carries V754M on the same chromosome'; the trans allele carries 1812-1G>A. Clear complex allele with V754M. (The G542X/V754M compound-het case is a different, unrelated patient.)",
+  "partner_tokens": [
+   "V754M"
+  ]
+ },
+ {
+  "sp_id": 1433,
+  "is_complex_allele": "no",
+  "confidence": "high",
+  "keyword": "haplotype",
+  "text_referring_to": "The deletion is linked to a common CFTR haplotype (IVS1(CA)-IVS8(CA)-IVS17b(CA)).",
+  "reason": "'Linked to a common CFTR haplotype (IVS1(CA)-IVS8(CA)-IVS17b(CA))' describes neutral microsatellite haplotype-background markers used for tracing, not a functional cis partner variant; F508del is on the other chromosome (trans). Haplotype background with no cis partner, so not a complex allele.",
+  "partner_tokens": []
+ },
+ {
+  "sp_id": 1436,
+  "is_complex_allele": "no",
+  "confidence": "high",
+  "keyword": "complex allele on the other chromosome",
+  "text_referring_to": "This missense mutation was found in a patient referred for CBAVD and carrying a complex allele on the other chromosome [p.R74W; p.V201M; p.D1270N]",
+  "reason": "The complex allele [R74W; V201M; D1270N] is explicitly on the OTHER chromosome (in trans), so C866R itself is not part of a complex allele.",
+  "partner_tokens": []
+ },
+ {
+  "sp_id": 1459,
+  "is_complex_allele": "uncertain",
+  "confidence": "medium",
+  "keyword": "harbors G542X mutation and S1235R mutation. Phase not established",
+  "text_referring_to": "The proband harbors G542X mutation and S1235R mutation. Phase not established",
+  "reason": "The deletion patient carries additional G542X and S1235R mutations, but phase is explicitly not established, so cis vs trans is ambiguous.",
+  "partner_tokens": [
+   "G542X",
+   "S1235R"
+  ]
+ },
+ {
+  "sp_id": 1466,
+  "is_complex_allele": "uncertain",
+  "confidence": "high",
+  "keyword": "also has the 5T allele (phase unknown)",
+  "text_referring_to": "This mutation was found in a CBAVD Pakistani male, who also has the 5T allele (phase unknown).",
+  "reason": "L183I co-occurs with the 5T poly-T allele, but phase is explicitly stated as unknown, so cis vs trans cannot be determined.",
+  "partner_tokens": [
+   "5T"
+  ]
+ },
+ {
+  "sp_id": 1480,
+  "is_complex_allele": "no",
+  "confidence": "high",
+  "keyword": "second mutation",
+  "text_referring_to": "Previous mutation testing had revealed the heterozygous presence of deltaF508 that was inherited from her mother. DNA Sequencing did not identify second mutation. Analysis by SQF PCR of fragments representing the promoter and all CFTR exons identified a tandem duplication of exons 6b-10.",
+  "reason": "The duplication is the sought-after second mutation in a compound-het patient; deltaF508 (maternal) is on the other allele (trans), not in cis with the duplication.",
+  "partner_tokens": []
+ },
+ {
+  "sp_id": 1481,
+  "is_complex_allele": "no",
+  "confidence": "high",
+  "keyword": "No other mutations were found on the same allele",
+  "text_referring_to": "No other mutations were found on the same allele.  The mutation 3849+10KbCtoT was found on the other allele.",
+  "reason": "Text explicitly states no other mutations on the same allele as G1244R; 3849+10kbC>T is on the other allele (trans).",
+  "partner_tokens": []
+ },
+ {
+  "sp_id": 1489,
+  "is_complex_allele": "yes",
+  "confidence": "high",
+  "keyword": "in cis",
+  "text_referring_to": "This mutation was identified in cis with another mutation: H939R. This is a novel complex CFTR allele: H939R + H949L.",
+  "reason": "H949L is explicitly identified in cis with H939R, forming the novel complex allele H939R + H949L.",
+  "partner_tokens": [
+   "H939R"
+  ]
+ },
+ {
+  "sp_id": 1490,
+  "is_complex_allele": "no",
+  "confidence": "high",
+  "keyword": "No other mutations were found on the same allele",
+  "text_referring_to": "No other mutations were found on the same allele.  The mutation W1282X was found on the other allele.",
+  "reason": "Text explicitly states no other mutations on the same allele as G1247R; W1282X is on the other allele (trans).",
+  "partner_tokens": []
+ },
+ {
+  "sp_id": 1491,
+  "is_complex_allele": "no",
+  "confidence": "high",
+  "keyword": "No other mutations were found on the same alleles",
+  "text_referring_to": "No other mutations were found on the same alleles. In two of the subjects carrying this mutation and sharing the same regional origin, the 2789+5GtoA was found on both other alleles. In the other subject the G85E was found.",
+  "reason": "Text explicitly states no other mutations on the same alleles as H1375P; 2789+5G>A and G85E are on the other alleles (trans).",
+  "partner_tokens": []
+ },
+ {
+  "sp_id": 1492,
+  "is_complex_allele": "no",
+  "confidence": "high",
+  "keyword": "associated with",
+  "text_referring_to": "In one family this mutation was associated with N1303K, in the other family it was associated with the F508del.",
+  "reason": "The phenotype genotypes P574S/N1303K and P574S/F508del use standard compound-heterozygous slash notation (two alleles), and the CBAVD/affected phenotype confirms two affected alleles, so partners are in trans, not cis.",
+  "partner_tokens": []
+ },
+ {
+  "sp_id": 1493,
+  "is_complex_allele": "yes",
+  "confidence": "high",
+  "keyword": "on the same allele",
+  "text_referring_to": "This mutation is present with F508del on the same allele. A559T is present on the other allele .",
+  "reason": "M595T is explicitly reported present with F508del on the same allele (cis); A559T is separately noted on the other allele (trans).",
+  "partner_tokens": [
+   "F508del"
+  ]
+ },
+ {
+  "sp_id": 1499,
+  "is_complex_allele": "no",
+  "confidence": "high",
+  "keyword": "The second mutation in this patient is not identified",
+  "text_referring_to": "A 9 year old boy with pancreatitis. The second mutation in this patient is not identified.",
+  "reason": "The second mutation is not identified and no cis partner is reported.",
+  "partner_tokens": []
+ },
+ {
+  "sp_id": 1500,
+  "is_complex_allele": "uncertain",
+  "confidence": "high",
+  "keyword": "Family studies have not been performed to identify which allele carries two mutations",
+  "text_referring_to": "He also had another missense variant in exon 17a, I1027T (3212T>C) which has been reported earlier. Family studies have not been performed to identify which allele carries two mutations.",
+  "reason": "One allele carries two mutations (a complex allele exists), but with deltaF508 stated on the other allele and family studies not done, it is ambiguous whether Y913X is in cis with I1027T or whether deltaF508 is; phase of I1027T relative to Y913X is undetermined.",
+  "partner_tokens": [
+   "I1027T",
+   "3212T>C"
+  ]
+ },
+ {
+  "sp_id": 1505,
+  "is_complex_allele": "no",
+  "confidence": "high",
+  "keyword": "none",
+  "text_referring_to": "",
+  "reason": "Only one CFTR variant is present; the second (disease-causing) mutation was not identified and no other variant is co-mentioned, so there is no cis partner.",
+  "partner_tokens": []
+ },
+ {
+  "sp_id": 1506,
+  "is_complex_allele": "uncertain",
+  "confidence": "low",
+  "keyword": "also carries a polymorphism",
+  "text_referring_to": "He also carries a polymorphism 1497G>A within exon 9.",
+  "reason": "The disease-causing second mutation was not identified; besides I285F the patient carries a co-occurring polymorphism 1497G>A, but the report does not state whether it is in cis or trans with I285F, so phase is genuinely ambiguous.",
+  "partner_tokens": [
+   "1497G>A"
+  ]
+ },
+ {
+  "sp_id": 1507,
+  "is_complex_allele": "no",
+  "confidence": "high",
+  "keyword": "none",
+  "text_referring_to": "",
+  "reason": "The second mutation was not identified and no other variant is co-mentioned; no cis partner exists.",
+  "partner_tokens": []
+ },
+ {
+  "sp_id": 1508,
+  "is_complex_allele": "no",
+  "confidence": "high",
+  "keyword": "none",
+  "text_referring_to": "",
+  "reason": "The second mutation was not found and no other variant is co-mentioned; no cis partner exists.",
+  "partner_tokens": []
+ },
+ {
+  "sp_id": 1510,
+  "is_complex_allele": "no",
+  "confidence": "high",
+  "keyword": "none",
+  "text_referring_to": "",
+  "reason": "No second variant was found. The 'also found' phrasing refers to the SAME variant recurring in other unrelated patients (a 9-year-old and a 6-month-old), not a co-occurring partner variant on the same allele.",
+  "partner_tokens": []
+ },
+ {
+  "sp_id": 1537,
+  "is_complex_allele": "yes",
+  "confidence": "medium",
+  "keyword": "in cis",
+  "text_referring_to": "DeltaF508 was found on the other allele , (have poli T 5 in cis with TG 12).",
+  "reason": "F508del is explicitly on the OTHER allele (trans, excluded). The 5T tract is explicitly stated to be in cis with TG12; since F508del sits on a 9T background, the 5T-TG12 tract must lie on the A238V allele, making A238V a complex allele in cis with poly-T 5T and TG12.",
+  "partner_tokens": [
+   "poli T 5",
+   "5T",
+   "TG 12",
+   "TG12"
+  ]
+ },
+ {
+  "sp_id": 1543,
+  "is_complex_allele": "yes",
+  "confidence": "high",
+  "keyword": "same allele",
+  "text_referring_to": "He carries R553X on the same allele and D806G on the other allele.",
+  "reason": "R553X is explicitly stated to be on the same allele as Q1463H (cis), forming a complex allele. D806G is on the other allele (trans) and is therefore not a cis partner.",
+  "partner_tokens": [
+   "R553X"
+  ]
+ },
+ {
+  "sp_id": 1549,
+  "is_complex_allele": "yes",
+  "confidence": "high",
+  "keyword": "same allele",
+  "text_referring_to": "she carriers R851X in the same allele.",
+  "reason": "R851X is explicitly reported in the same allele as M1137T (cis), forming a complex allele.",
+  "partner_tokens": [
+   "R851X"
+  ]
+ },
+ {
+  "sp_id": 1576,
+  "is_complex_allele": "yes",
+  "confidence": "high",
+  "keyword": "on the same",
+  "text_referring_to": "He carries I148T on the same and deltaF508 on the other allele.",
+  "reason": "I148T is explicitly on the same allele as D373E (cis) = complex allele, contrasted with deltaF508 on the other allele (trans, excluded).",
+  "partner_tokens": [
+   "I148T"
+  ]
+ },
+ {
+  "sp_id": 1578,
+  "is_complex_allele": "uncertain",
+  "confidence": "low",
+  "keyword": "1716 a/g polimorfism",
+  "text_referring_to": "The change was found in the asymptomatic wife (poliT 7-7 and 1716 a/g polimorfism)",
+  "reason": "I586V co-occurs in the asymptomatic wife with poliT 7-7 (homozygous, non-informative for phase) and the 1716 a/g polymorphism, but their phase relative to I586V is not stated. The R117H and L997F pair belongs to the husband (a different individual) and is not a partner of I586V, so cis vs trans of the wife's co-occurring polymorphism is genuinely ambiguous.",
+  "partner_tokens": [
+   "1716 a/g",
+   "1716G>A",
+   "poliT 7-7"
+  ]
+ },
+ {
+  "sp_id": 1580,
+  "is_complex_allele": "no",
+  "confidence": "high",
+  "keyword": "with G542X",
+  "text_referring_to": "his father is CBAVD with G542X mutation.",
+  "reason": "G542X is reported in the patient's FATHER, a different individual; it is not stated to occur on the proband's L1335F allele. There is no cis partner for L1335F.",
+  "partner_tokens": []
+ },
+ {
+  "sp_id": 1588,
+  "is_complex_allele": "no",
+  "confidence": "high",
+  "keyword": "other chromosome",
+  "text_referring_to": "The patient also has a delta F508 mutation on his other chromosome.",
+  "reason": "delta F508 is explicitly on the patient's other chromosome (trans / compound heterozygous), not the same allele, so this is not a complex allele.",
+  "partner_tokens": []
+ },
+ {
+  "sp_id": 1594,
+  "is_complex_allele": "uncertain",
+  "confidence": "medium",
+  "keyword": "also found to carry",
+  "text_referring_to": "The mutation was identified in a CBAVD patient who was also found to carry two CFTR variants, IVS8T5 and 1716A->G. Segregation analysis was not possible.",
+  "reason": "Variant co-occurs with IVS8-T5 and 1716A->G in a CBAVD patient, but segregation was explicitly not possible. 2221insA could sit alone on one allele (with T5 and 1716A->G together on the other = not a complex allele) or share an allele with 1716A->G (= complex allele); phasing genuinely unknown.",
+  "partner_tokens": [
+   "IVS8T5",
+   "1716A->G"
+  ]
+ },
+ {
+  "sp_id": 1595,
+  "is_complex_allele": "uncertain",
+  "confidence": "medium",
+  "keyword": "also heterozygous for",
+  "text_referring_to": "The variation was identified in a CF patient who was also heterozygous for deltaF508 and W1204X. Segregation analysis was not performed yet.",
+  "reason": "This variant (suggested to be a polymorphism) is present in a patient compound heterozygous for deltaF508 and W1204X; by phase it must lie in cis with one of those two, but segregation was not performed so which allele is unknown. A cis partner exists but is unresolved.",
+  "partner_tokens": [
+   "deltaF508",
+   "W1204X"
+  ]
+ },
+ {
+  "sp_id": 1598,
+  "is_complex_allele": "no",
+  "confidence": "medium",
+  "keyword": "also had",
+  "text_referring_to": "The mutation was identified in a CF neonate who also had 712-1G>T.",
+  "reason": "Affected CF neonate carrying V1020E plus the pathogenic splice mutation 712-1G>T, with no other CFTR mutation found after extensive screening. The two deleterious mutations form the disease-causing pair on opposite alleles (compound heterozygous / trans); no cis relationship stated.",
+  "partner_tokens": [
+   "712-1G>T"
+  ]
+ },
+ {
+  "sp_id": 1599,
+  "is_complex_allele": "yes",
+  "confidence": "high",
+  "keyword": "in cis",
+  "text_referring_to": "The mutation was identified in a CBAVD patient in cis with another, close, exon 21 variation, Q1309H (4059G>T). The complex allele was inherited from the mother.",
+  "reason": "Explicitly stated to be in cis with Q1309H (4059G>T) and called a complex allele inherited from the mother. D1152H is separately noted as being in trans, so it is not the complex-allele partner.",
+  "partner_tokens": [
+   "Q1309H",
+   "4059G>T"
+  ]
+ },
+ {
+  "sp_id": 1600,
+  "is_complex_allele": "yes",
+  "confidence": "high",
+  "keyword": "in cis",
+  "text_referring_to": "The mutation was identified in a CBAVD patient in cis with 4041_4046insTGT. ... The complex allele was inherited from the mother.",
+  "reason": "Explicitly in cis with 4041_4046insTGT (the reciprocal record 1599 variant) and described as a complex allele inherited from the mother. D1152H is separately in trans and is not the complex-allele partner.",
+  "partner_tokens": [
+   "4041_4046insTGT"
+  ]
+ },
+ {
+  "sp_id": 1603,
+  "is_complex_allele": "no",
+  "confidence": "medium",
+  "keyword": "also found to carry",
+  "text_referring_to": "The mutation was identified in a CBAVD patient who was also found to carry deltaF508. No segregation analysis was performed yet. No other CFTR mutation was found after extensive screening of the coding regions.",
+  "reason": "CBAVD patient with E1401G plus deltaF508 and no other mutation found; the two form the compound-heterozygous (trans) pair. Although segregation was not performed, deltaF508 is the second/opposite disease allele, not a cis complex-allele partner.",
+  "partner_tokens": [
+   "deltaF508"
+  ]
+ },
+ {
+  "sp_id": 1604,
+  "is_complex_allele": "no",
+  "confidence": "high",
+  "keyword": "complex",
+  "text_referring_to": "The complex mutation was identified in trans of deltaF508 in an infant who was diagnosed with CF based on neonatal screening results.",
+  "reason": "'Complex' here describes the variant's own multi-nucleotide change (4242_4242+1delGGinsTT), not a cis relationship. The only co-mentioned variant, deltaF508, is explicitly in trans, so this is not a complex allele.",
+  "partner_tokens": [
+   "deltaF508"
+  ]
+ },
+ {
+  "sp_id": 1606,
+  "is_complex_allele": "no",
+  "confidence": "low",
+  "keyword": "also carried",
+  "text_referring_to": "The patient also carried the (TG)12T5 variant of IVS8.",
+  "reason": "CBAVD patient with a CFTR exon 11-13 duplication (severe) plus the (TG)12T5 IVS8 variant. Phasing is not explicitly stated, but under the CBAVD compound-het model (TG)12T5 is the trans second allele rather than a cis partner; no cis statement is made.",
+  "partner_tokens": [
+   "(TG)12T5"
+  ]
+ },
+ {
+  "sp_id": 1611,
+  "is_complex_allele": "no",
+  "confidence": "high",
+  "keyword": "probably in trans",
+  "text_referring_to": "The patient also presents the mutation Q378R probably in trans.",
+  "reason": "The co-occurring variant Q378R is explicitly reported as probably in trans (opposite allele), so this is not a cis complex allele.",
+  "partner_tokens": [
+   "Q378R"
+  ]
+ },
+ {
+  "sp_id": 1616,
+  "is_complex_allele": "no",
+  "confidence": "medium",
+  "keyword": "also having other reported mutations/sequence variations",
+  "text_referring_to": "This patient was also having other reported  mutations/sequence variations like (P1290P, 4002 A>G) of Exon 20,  1525-61 A>G of intron 9, 2694T/G and 2694 T/C of exon 14A, 3601-20 T>C intron 18 of CFTR gene.",
+  "reason": "Heterozygous chronic-pancreatitis patient in whom the variant is listed alongside several common CFTR polymorphisms/sequence variants as a screening/haplotype background. No cis relationship is asserted, so this is not a complex allele.",
+  "partner_tokens": [
+   "P1290P",
+   "4002 A>G",
+   "1525-61 A>G",
+   "2694T/G",
+   "2694 T/C",
+   "3601-20 T>C"
+  ]
+ },
+ {
+  "sp_id": 1617,
+  "is_complex_allele": "no",
+  "confidence": "medium",
+  "keyword": "also having reported S.V",
+  "text_referring_to": "This patient was also having reported S.V (P1290P, 4002 A>G) of Exon 20 of CFTR gene.",
+  "reason": "Heterozygous chronic-pancreatitis patient in whom the variant is listed together with common polymorphisms P1290P and 4002 A>G as background. No cis relationship is asserted, so this is not a complex allele.",
+  "partner_tokens": [
+   "P1290P",
+   "4002 A>G"
+  ]
+ },
+ {
+  "sp_id": 1632,
+  "is_complex_allele": "no",
+  "confidence": "medium",
+  "keyword": "also had",
+  "text_referring_to": "one Spanish patient with suspect of a mild form of CF with \"allergic rhinitis-bronchial asthma\" who also had [delta]F508 mutation.",
+  "reason": "Patient with a mild CF phenotype (high sweat chloride) carrying M595I plus deltaF508; the two form the compound-heterozygous (trans) pair. deltaF508 is the second/opposite allele, not a cis partner, and no cis relationship is stated.",
+  "partner_tokens": [
+   "[delta]F508"
+  ]
+ },
+ {
+  "sp_id": 1639,
+  "is_complex_allele": "uncertain",
+  "confidence": "low",
+  "keyword": "also carrying",
+  "text_referring_to": "moreover detected in a 50 years old Italian man, also carrying R31C, with BPCO, Bronchiectasis, lung infection by Pseudomonas aeruginosa and sweat chloride 36mEq/l",
+  "reason": "The 50-year-old man carries both 1341+6A>G and R31C, but no cis/trans phase is stated, so complex-allele status is genuinely ambiguous.",
+  "partner_tokens": [
+   "R31C"
+  ]
+ },
+ {
+  "sp_id": 1644,
+  "is_complex_allele": "uncertain",
+  "confidence": "low",
+  "keyword": "also reported to have sequence variations",
+  "text_referring_to": "This patient was also reported to have sequence variations ( 1540 A/G and 1525-61 A/G) of exon10 and intron9 of CFTR gene.",
+  "reason": "S158N co-reported with polymorphisms 1540A/G (M470V) and 1525-61A/G; these read like incidental background variants and no cis/trans phase is stated, so it cannot be confirmed as a complex allele.",
+  "partner_tokens": [
+   "1540 A/G",
+   "1525-61 A/G"
+  ]
+ },
+ {
+  "sp_id": 1645,
+  "is_complex_allele": "no",
+  "confidence": "high",
+  "keyword": "none",
+  "text_referring_to": "",
+  "reason": "Record only reports the patient being negative/excluded for other CFTR (deltaF508, intron19) and non-CFTR mutations; the 'also found' matches refer to negative results, no co-occurring cis variant.",
+  "partner_tokens": []
+ },
+ {
+  "sp_id": 1648,
+  "is_complex_allele": "yes",
+  "confidence": "high",
+  "keyword": "same allele",
+  "text_referring_to": "A new polymorphism , 2391C/T was found on the same allele as 2380_2387del.",
+  "reason": "2391C/T is explicitly reported on the same allele as this variant (2380_2387del) -> complex allele. The p.Gly542X the patient is heterozygous for is the trans/compound-het allele, not the cis partner.",
+  "partner_tokens": [
+   "2391C/T"
+  ]
+ },
+ {
+  "sp_id": 1649,
+  "is_complex_allele": "yes",
+  "confidence": "high",
+  "keyword": "same allele",
+  "text_referring_to": "This polymorphism was found on the same allele as 2380_2387del.",
+  "reason": "This variant (2391C/T) is explicitly on the same allele as 2380_2387del -> complex allele. p.Gly542X is the opposite (trans) allele of the compound-heterozygous patient.",
+  "partner_tokens": [
+   "2380_2387del"
+  ]
+ },
+ {
+  "sp_id": 1655,
+  "is_complex_allele": "no",
+  "confidence": "high",
+  "keyword": "none",
+  "text_referring_to": "",
+  "reason": "The named mutations 3849+10kbC>T, dele2,3(21kb) and R117H were excluded (not found), so there is no co-occurring cis partner.",
+  "partner_tokens": []
+ },
+ {
+  "sp_id": 1656,
+  "is_complex_allele": "no",
+  "confidence": "high",
+  "keyword": "none",
+  "text_referring_to": "",
+  "reason": "As with the sibling record, 3849+10kbC>T, dele2,3(21kb) and R117H were explicitly excluded; no co-occurring variant reported in cis.",
+  "partner_tokens": []
+ },
+ {
+  "sp_id": 1668,
+  "is_complex_allele": "uncertain",
+  "confidence": "high",
+  "keyword": "in cis or in trans",
+  "text_referring_to": "He carries also IVS8-5T allele but we couldn't establish if both variations are in cis or in trans",
+  "reason": "3121-14C>A co-occurs with IVS8-5T, but the authors explicitly state they could not determine whether the two variations are in cis or in trans -> genuinely uncertain.",
+  "partner_tokens": [
+   "IVS8-5T",
+   "5T"
+  ]
+ },
+ {
+  "sp_id": 1684,
+  "is_complex_allele": "yes",
+  "confidence": "medium",
+  "keyword": "in conjunction with",
+  "text_referring_to": "This mutation was present in a CBAVD patient in conjunction with L206W",
+  "reason": "W216C reported 'in conjunction with' L206W, matching the 'occurs in combination with' complex-allele language with no trans indication; phase not literally stated as 'cis', hence medium confidence.",
+  "partner_tokens": [
+   "L206W"
+  ]
+ },
+ {
+  "sp_id": 1685,
+  "is_complex_allele": "yes",
+  "confidence": "medium",
+  "keyword": "in conjunction with",
+  "text_referring_to": "This mutation was present in a CBAVD patient in conjunction with R347P",
+  "reason": "This variant (c.1196C>T / A399V, legacy I1328T) reported 'in conjunction with' R347P, matching 'in combination with' complex-allele language with no trans indication; phase not explicitly 'cis', hence medium confidence.",
+  "partner_tokens": [
+   "R347P"
+  ]
+ },
+ {
+  "sp_id": 1696,
+  "is_complex_allele": "no",
+  "confidence": "high",
+  "keyword": "none",
+  "text_referring_to": "",
+  "reason": "Homozygous Y852X; the 'also' refers to an affected sister (a relative, not a variant), and no further sequence changes were found after full sequencing/MLPA -> no cis partner.",
+  "partner_tokens": []
+ },
+ {
+  "sp_id": 1698,
+  "is_complex_allele": "yes",
+  "confidence": "medium",
+  "keyword": "deltaF508 mutation in both CFTR alleles",
+  "text_referring_to": "The deltaF508 mutation in both CFTR alleles was also found.",
+  "reason": "Infant is reported deltaF508 on both CFTR alleles (homozygous) and also carries P324L; since both alleles bear deltaF508, P324L must lie in cis with a deltaF508 -> complex allele. Phase is inferred from the stated homozygosity rather than an explicit cis statement.",
+  "partner_tokens": [
+   "deltaF508"
+  ]
+ },
+ {
+  "sp_id": 1699,
+  "is_complex_allele": "no",
+  "confidence": "high",
+  "keyword": "also excluded",
+  "text_referring_to": "",
+  "reason": "The named mutations 3849+10kbC>T, dele2,3(21kb) and R117H were explicitly EXCLUDED/not found; only T351I was identified. No co-occurring variant on the same allele, so no complex allele.",
+  "partner_tokens": []
+ },
+ {
+  "sp_id": 1700,
+  "is_complex_allele": "no",
+  "confidence": "high",
+  "keyword": "in trans",
+  "text_referring_to": "This mutation was identified in trans of deltaF508 in Polish infant during CF newborn screening program.",
+  "reason": "deltaF508 is explicitly stated to be in trans (opposite allele), making this a compound heterozygote, not a complex allele. Other mutations were excluded.",
+  "partner_tokens": []
+ },
+ {
+  "sp_id": 1710,
+  "is_complex_allele": "uncertain",
+  "confidence": "high",
+  "keyword": "in cis or in trans",
+  "text_referring_to": "He carries also IVS8-5T allele but we couldn´t stablish if both variations are in cis or in trans.",
+  "reason": "The variant co-occurs with the IVS8-5T poly-T allele, but the authors explicitly state they could not determine whether the two are in cis or in trans, so phase is genuinely ambiguous.",
+  "partner_tokens": [
+   "IVS8-5T"
+  ]
+ },
+ {
+  "sp_id": 1711,
+  "is_complex_allele": "yes",
+  "confidence": "high",
+  "keyword": "complex allele",
+  "text_referring_to": "This mutation was identified on an allele carrying p.Ile148Thr... compound heterozygous for this complex allele and a frequent CFTR mutation: [c.3263dupA;p.Ile148Thr]+[p.Arg334Trp]",
+  "reason": "c.3263dupA is explicitly on the same allele as p.Ile148Thr, written with semicolon-in-brackets notation [c.3263dupA;p.Ile148Thr] and called a 'complex allele'. The +[p.Arg334Trp] is the trans allele (compound het), not part of the complex allele.",
+  "partner_tokens": [
+   "p.Ile148Thr"
+  ]
+ },
+ {
+  "sp_id": 1721,
+  "is_complex_allele": "uncertain",
+  "confidence": "medium",
+  "keyword": "also carrying",
+  "text_referring_to": "This patient was also carrying other sequence variation c. 1812-99 C>T in of CFTR gene.",
+  "reason": "The patient carries an additional CFTR variant c.1812-99C>T alongside D572H, but no phase (cis/trans) is stated. N34S/PRSS1/SPINK1 are other genes, not CFTR partners. Co-occurrence with unstated phase = uncertain.",
+  "partner_tokens": [
+   "c. 1812-99 C>T"
+  ]
+ },
+ {
+  "sp_id": 1723,
+  "is_complex_allele": "uncertain",
+  "confidence": "medium",
+  "keyword": "also reported to have",
+  "text_referring_to": "This patient was also reported to have Sequence Variations (1540 A>G and 1525-61 A>G) of exon 10 and intron 9 of CFTR gene.",
+  "reason": "The second (pancreatitis) patient carrying S158N is reported to also have CFTR variants 1540A>G (M470V) and 1525-61A>G, but phase is not stated, so cis vs trans is ambiguous.",
+  "partner_tokens": [
+   "1540 A>G",
+   "1525-61 A>G"
+  ]
+ },
+ {
+  "sp_id": 1724,
+  "is_complex_allele": "no",
+  "confidence": "high",
+  "keyword": "none",
+  "text_referring_to": "",
+  "reason": "The word 'also' refers to an elder sibling having similar clinical complaints, not to a co-occurring CFTR variant. No second variant is reported, so no complex allele.",
+  "partner_tokens": []
+ },
+ {
+  "sp_id": 1737,
+  "is_complex_allele": "yes",
+  "confidence": "high",
+  "keyword": "same allele",
+  "text_referring_to": "p.Phe640Phe was found on the same allele as p.[Arg74Trp;Val201Met;Asp1270Asn]",
+  "reason": "p.Phe640Phe is explicitly stated to be on the same allele as the complex allele p.[Arg74Trp;Val201Met;Asp1270Asn] (a cis triple mutation). p.Phe508del is the other allele (compound het/trans), not part of the complex allele.",
+  "partner_tokens": [
+   "Arg74Trp",
+   "Val201Met",
+   "Asp1270Asn"
+  ]
+ },
+ {
+  "sp_id": 1739,
+  "is_complex_allele": "no",
+  "confidence": "high",
+  "keyword": "second mutation",
+  "text_referring_to": "Second mutation is G551D",
+  "reason": "Two siblings with classic CF carry G463V and G551D; 'second mutation' denotes the second disease-causing allele. Classic CF requires both alleles affected, so G463V and G551D are in trans (compound het), not a complex allele.",
+  "partner_tokens": []
+ },
+ {
+  "sp_id": 1743,
+  "is_complex_allele": "uncertain",
+  "confidence": "high",
+  "keyword": "The phase of all four sequence changes is unknown",
+  "text_referring_to": "She also carries the L467F and 3030G/A polymorphisms. The phase of all four sequence changes is unknown.",
+  "reason": "4243-7delT co-occurs with F508del, L467F and 3030G/A, but the report explicitly states the phase of all four sequence changes is unknown, so cis vs trans cannot be established.",
+  "partner_tokens": [
+   "F508del",
+   "L467F",
+   "3030G/A"
+  ]
+ },
+ {
+  "sp_id": 1748,
+  "is_complex_allele": "no",
+  "confidence": "high",
+  "keyword": "on the other allele",
+  "text_referring_to": "No other mutations were found on the same allele. The 2789+5GtoA mutation was found on the other allele.",
+  "reason": "Extended sequencing found no other mutation on the same allele as this variant; 2789+5G>A is explicitly on the OTHER allele (trans). Compound heterozygote, not a complex allele.",
+  "partner_tokens": []
+ },
+ {
+  "sp_id": 1769,
+  "is_complex_allele": "no",
+  "confidence": "high",
+  "keyword": "compound heterozygote",
+  "text_referring_to": "The patient is compound heterozygote, the second mutation is F508del",
+  "reason": "The patient is explicitly a compound heterozygote with F508del as the second (trans) allele, so the two variants are on opposite chromosomes — not a complex allele.",
+  "partner_tokens": []
+ },
+ {
+  "sp_id": 1770,
+  "is_complex_allele": "no",
+  "confidence": "high",
+  "keyword": "same allele",
+  "text_referring_to": "The patient is compound heterozygote, the second mutation is F508del",
+  "reason": "Explicitly 'compound heterozygote' — F508del is the second mutation on the opposite allele (trans). The 'same allele' phrase in the phenotype refers to the father carrying the same (this) variant by inheritance, not a cis partner. Not a complex allele.",
+  "partner_tokens": [
+   "F508del"
+  ]
+ },
+ {
+  "sp_id": 1771,
+  "is_complex_allele": "no",
+  "confidence": "high",
+  "keyword": "second mutation",
+  "text_referring_to": "he patient is compound heterozygote, the second mutation is C to T at 146 (p.P5L)",
+  "reason": "Explicitly 'compound heterozygote'; the second mutation P5L (146C>T) is on the opposite allele (trans). Not a complex allele.",
+  "partner_tokens": [
+   "p.P5L",
+   "P5L",
+   "146C>T",
+   "C to T at 146"
+  ]
+ },
+ {
+  "sp_id": 1772,
+  "is_complex_allele": "no",
+  "confidence": "high",
+  "keyword": "none",
+  "text_referring_to": "",
+  "reason": "'No second mutation detected after sequencing of all CFTR-exons' — there is no co-occurring variant at all. Not a complex allele.",
+  "partner_tokens": []
+ },
+ {
+  "sp_id": 1773,
+  "is_complex_allele": "no",
+  "confidence": "high",
+  "keyword": "second mutation",
+  "text_referring_to": "The patient is compound heterozygote, the second mutation is G to A at 2789+5",
+  "reason": "Explicitly 'compound heterozygote'; the second mutation 2789+5G>A is on the opposite allele (trans). Not a complex allele.",
+  "partner_tokens": [
+   "2789+5G>A",
+   "G to A at 2789+5"
+  ]
+ },
+ {
+  "sp_id": 1774,
+  "is_complex_allele": "no",
+  "confidence": "high",
+  "keyword": "second mutation",
+  "text_referring_to": "The patient is compound heterozygote, the second mutation is F508del",
+  "reason": "Explicitly 'compound heterozygote'; F508del is the second mutation on the opposite allele (trans). Not a complex allele.",
+  "partner_tokens": [
+   "F508del"
+  ]
+ },
+ {
+  "sp_id": 1775,
+  "is_complex_allele": "no",
+  "confidence": "high",
+  "keyword": "second mutation",
+  "text_referring_to": "The patient is compound heterozygote, the second mutation is A to C at 18126 (p.R560S)",
+  "reason": "Explicitly 'compound heterozygote'; the second mutation R560S is on the opposite allele (trans). Not a complex allele.",
+  "partner_tokens": [
+   "p.R560S",
+   "R560S",
+   "18126A>C",
+   "A to C at 18126"
+  ]
+ },
+ {
+  "sp_id": 1776,
+  "is_complex_allele": "no",
+  "confidence": "high",
+  "keyword": "second mutation",
+  "text_referring_to": "The patient is compound heterozygote, the second mutation is C to T at 3328 in exon 17b (p.R1066C)",
+  "reason": "Explicitly 'compound heterozygote'; the second mutation R1066C (3328C>T) is on the opposite allele (trans). Not a complex allele.",
+  "partner_tokens": [
+   "p.R1066C",
+   "R1066C",
+   "3328C>T",
+   "C to T at 3328"
+  ]
+ },
+ {
+  "sp_id": 1806,
+  "is_complex_allele": "no",
+  "confidence": "high",
+  "keyword": "second mutation",
+  "text_referring_to": "He was heterozygous for this mutation and the second mutation is deltaF508.",
+  "reason": "Patient is heterozygous for this variant with deltaF508 as the second mutation on the opposite allele (compound heterozygote, trans). Not a complex allele.",
+  "partner_tokens": [
+   "deltaF508",
+   "F508del"
+  ]
+ },
+ {
+  "sp_id": 1880,
+  "is_complex_allele": "no",
+  "confidence": "medium",
+  "keyword": "second mutation",
+  "text_referring_to": "The screening revealed a second mutation (p.N1303K)",
+  "reason": "N1303K reported as the 'second mutation'; diagnostic sweat chloride (90 meq/L) indicates biallelic CF, so the two pathogenic mutations are the patient's two disease alleles (trans / compound heterozygous). Phase not explicitly stated but clinically implied trans; not a complex allele.",
+  "partner_tokens": [
+   "p.N1303K",
+   "N1303K"
+  ]
+ },
+ {
+  "sp_id": 1890,
+  "is_complex_allele": "uncertain",
+  "confidence": "high",
+  "keyword": "Also has",
+  "text_referring_to": "Also has S1235R (p.Ser1235Arg; c.3705T>G). Phase unknown",
+  "reason": "Co-occurrence with S1235R is stated, but the record explicitly says 'Phase unknown' — cis vs trans is not determined. Genuinely ambiguous.",
+  "partner_tokens": [
+   "S1235R",
+   "p.Ser1235Arg",
+   "c.3705T>G"
+  ]
+ },
+ {
+  "sp_id": 1893,
+  "is_complex_allele": "no",
+  "confidence": "high",
+  "keyword": "none",
+  "text_referring_to": "",
+  "reason": "'No second mutation detected after sequencing entire gene (coding regions)' — no co-occurring variant. Not a complex allele.",
+  "partner_tokens": []
+ },
+ {
+  "sp_id": 1898,
+  "is_complex_allele": "no",
+  "confidence": "medium",
+  "keyword": "also carrying",
+  "text_referring_to": "This mutation was identified in Canadian CF patient who is also carrying the F508del allele.",
+  "reason": "F508del is described as a separate allele the CF patient 'is also carrying' — standard phrasing for the compound-heterozygous (trans) partner allele, matching the rubric's 'also carries' = trans example. Not a complex allele.",
+  "partner_tokens": [
+   "F508del"
+  ]
+ },
+ {
+  "sp_id": 1927,
+  "is_complex_allele": "uncertain",
+  "confidence": "high",
+  "keyword": "phase unknown",
+  "text_referring_to": "Nigerian male with CBAVD; also has TG11T5, phase unknown",
+  "reason": "CBAVD patient also carries the TG11T5 poly-T/TG background, but the text explicitly states 'phase unknown', so it cannot be determined whether TG11T5 is in cis with 1680-2a>G.",
+  "partner_tokens": [
+   "TG11T5"
+  ]
+ },
+ {
+  "sp_id": 1937,
+  "is_complex_allele": "yes",
+  "confidence": "high",
+  "keyword": "same chromosome (cis)",
+  "text_referring_to": "He had in the same chromosome (cis) the missense mutation p.Glu826Lys.",
+  "reason": "Phenotype explicitly places p.Glu826Lys on 'the same chromosome (cis)' as this variant, forming a complex allele. p.Phe508del is on the other chromosome (trans) and is excluded.",
+  "partner_tokens": [
+   "p.Glu826Lys"
+  ]
+ },
+ {
+  "sp_id": 1938,
+  "is_complex_allele": "yes",
+  "confidence": "medium",
+  "keyword": "found together with",
+  "text_referring_to": "The mutant sequence was not found in 107 other chromosomes from Brazilian CF patients and was found together with a missense mutation, R347Q.",
+  "reason": "Variant was 'found together with' the missense R347Q with no trans qualifier; in this database's convention this denotes a same-allele complex allele (cf. sp_id 2059 where trans is explicitly flagged as the exception). Phase not spelled out as same-chromosome, hence medium.",
+  "partner_tokens": [
+   "R347Q"
+  ]
+ },
+ {
+  "sp_id": 1984,
+  "is_complex_allele": "uncertain",
+  "confidence": "high",
+  "keyword": "cis or trans",
+  "text_referring_to": "Its not posible determinate if both variations are in cis or trans because we have not sample of the parents.",
+  "reason": "A second variation co-occurs, but the submitter explicitly states it is not possible to determine whether the variations are in cis or trans due to lack of parental samples. Partner variant not named.",
+  "partner_tokens": []
+ },
+ {
+  "sp_id": 2008,
+  "is_complex_allele": "yes",
+  "confidence": "high",
+  "keyword": "in cis",
+  "text_referring_to": "The novel variant was inherited in cis with p.Asp110Glu while the patient also carried p.Ser737Phe in trans.",
+  "reason": "Variant was 'inherited in cis with p.Asp110Glu', an explicit complex allele. p.Ser737Phe is separately noted 'in trans' and is excluded as a complex partner.",
+  "partner_tokens": [
+   "p.Asp110Glu"
+  ]
+ },
+ {
+  "sp_id": 2027,
+  "is_complex_allele": "uncertain",
+  "confidence": "medium",
+  "keyword": "also carries",
+  "text_referring_to": "Individual also carriers c.1584G>A variant.",
+  "reason": "Individual 'also carries' c.1584G>A, but no phase information is given; cis vs trans is genuinely not stated, so co-occurrence is ambiguous.",
+  "partner_tokens": [
+   "c.1584G>A"
+  ]
+ },
+ {
+  "sp_id": 2031,
+  "is_complex_allele": "yes",
+  "confidence": "medium",
+  "keyword": "found together with",
+  "text_referring_to": "The mutant sequence was not found in 220 other chromosomes from Argentina CF patients and was found together with a splice mutation, c.2657+5G>A (2789+5G>A).",
+  "reason": "Variant was 'found together with' the splice mutation c.2657+5G>A with no trans qualifier; same-allele wording per database convention. Exact phase not stated as same-chromosome, hence medium.",
+  "partner_tokens": [
+   "c.2657+5G>A",
+   "2789+5G>A"
+  ]
+ },
+ {
+  "sp_id": 2034,
+  "is_complex_allele": "yes",
+  "confidence": "medium",
+  "keyword": "found together with",
+  "text_referring_to": "The mutant sequence was not found in 220 other chromosomes from Argentina CF patients and was found together with a nonsense mutation, (c.3484C>T, p.Arg1162*).",
+  "reason": "Variant was 'found together with' the nonsense mutation c.3484C>T/p.Arg1162* with no trans qualifier; same-allele wording per database convention. Phase not explicitly same-chromosome, hence medium.",
+  "partner_tokens": [
+   "c.3484C>T",
+   "p.Arg1162*"
+  ]
+ },
+ {
+  "sp_id": 2046,
+  "is_complex_allele": "yes",
+  "confidence": "medium",
+  "keyword": "found together with",
+  "text_referring_to": "The mutant sequence was not found in 200 other chromosomes from Belgium CF patients and was found together with a nonsense mutation, (c.1624G>T, p.Gly542*).",
+  "reason": "Variant was 'found together with' the nonsense mutation c.1624G>T/p.Gly542* with no trans qualifier; same-allele wording per database convention. Phase not explicitly same-chromosome, hence medium.",
+  "partner_tokens": [
+   "c.1624G>T",
+   "p.Gly542*"
+  ]
+ },
+ {
+  "sp_id": 2056,
+  "is_complex_allele": "yes",
+  "confidence": "medium",
+  "keyword": "found together with",
+  "text_referring_to": "This deletion was not found in 220 other chromosomes from Argentina CF patients and it was found together with another classical mutation, c.2052_2053insA.",
+  "reason": "Variant was 'found together with another classical mutation' c.2052_2053insA with no trans qualifier; same-allele wording per database convention. Parental studies still in progress, so phase not confirmed, hence medium.",
+  "partner_tokens": [
+   "c.2052_2053insA"
+  ]
+ },
+ {
+  "sp_id": 2059,
+  "is_complex_allele": "no",
+  "confidence": "high",
+  "keyword": "in trans",
+  "text_referring_to": "The mutant sequence was found together with a c.1521_1523delCTT (p.Phe508del) mutation. The parents study defined both variant in trans.",
+  "reason": "Although 'found together with' p.Phe508del, the submitter explicitly states the parental study defined both variants in trans - a compound heterozygote, not a complex allele.",
+  "partner_tokens": []
+ },
+ {
+  "sp_id": 2060,
+  "is_complex_allele": "yes",
+  "confidence": "medium",
+  "keyword": "found together with",
+  "text_referring_to": "The mutant sequence was found together with a c.1521_1523delCTT (p.Phe508del) mutation.",
+  "reason": "Variant was 'found together with' p.Phe508del with no trans qualifier, so read as a complex allele per database convention. Note the near-identical sibling record (2059) was resolved to trans, so phase is not independently confirmed here; medium confidence.",
+  "partner_tokens": [
+   "c.1521_1523delCTT",
+   "p.Phe508del"
+  ]
+ },
+ {
+  "sp_id": 2065,
+  "is_complex_allele": "no",
+  "confidence": "medium",
+  "keyword": "also carries",
+  "text_referring_to": "The patient also carries F508del.",
+  "reason": "Val43X (nonsense) plus F508del in a severely affected CF girl; severe CF requires two defective alleles, so the two variants lie on opposite chromosomes (compound het). 'Also carries' denotes the second allele in trans, not a cis partner. Trans not literally stated, hence medium.",
+  "partner_tokens": [
+   "F508del"
+  ]
+ },
+ {
+  "sp_id": 2070,
+  "is_complex_allele": "no",
+  "confidence": "high",
+  "keyword": "complex mutation",
+  "text_referring_to": "The c.2752-1_2756delGGTGGCinsTTG mutation is a complex mutation, in which six nucleotides (GGTGCC)are deleted from 2752-1 (intron14a) until nucleotide 2756 (exon14b) and replaced by three nucleotides (TTG).",
+  "reason": "'Complex mutation' here describes a single delins/indel event (six nucleotides deleted and replaced by three across the intron14a/exon14b boundary), not two distinct CFTR variants in cis; the patient is homozygous for this one mutation. No separate partner variant exists.",
+  "partner_tokens": []
+ },
+ {
+  "sp_id": 2170,
+  "is_complex_allele": "no",
+  "confidence": "high",
+  "keyword": "on the second allele",
+  "text_referring_to": "Patient from Serbia, with D1152H on the second allele.",
+  "reason": "D1152H is explicitly reported 'on the second allele' (trans); this is a compound heterozygote, not a complex allele.",
+  "partner_tokens": [
+   "D1152H"
+  ]
+ },
+ {
+  "sp_id": 2173,
+  "is_complex_allele": "no",
+  "confidence": "high",
+  "keyword": "on the second allele",
+  "text_referring_to": "Romanian patient, with N1303K on the second allele.",
+  "reason": "N1303K is explicitly reported 'on the second allele' (trans); compound heterozygote, not a complex allele.",
+  "partner_tokens": [
+   "N1303K"
+  ]
+ },
+ {
+  "sp_id": 2176,
+  "is_complex_allele": "no",
+  "confidence": "high",
+  "keyword": "on the second allele",
+  "text_referring_to": "Ukrainian patient with G542X on the second allele.",
+  "reason": "G542X is explicitly reported 'on the second allele' (trans); compound heterozygote, not a complex allele.",
+  "partner_tokens": [
+   "G542X"
+  ]
+ },
+ {
+  "sp_id": 2183,
+  "is_complex_allele": "no",
+  "confidence": "high",
+  "keyword": "in trans with",
+  "text_referring_to": "Presumed in trans with F508del.",
+  "reason": "F508del is explicitly stated to be 'in trans' with this variant; compound heterozygote, the opposite of a cis complex allele.",
+  "partner_tokens": [
+   "F508del"
+  ]
+ },
+ {
+  "sp_id": 2193,
+  "is_complex_allele": "no",
+  "confidence": "medium",
+  "keyword": "second mutation",
+  "text_referring_to": "The second mutation (c.3635delT, p.Val1212AlafsX16) in this patient is also absent in CFTR1 database, which will also be submitted later.",
+  "reason": "Described as the patient's 'second mutation'; with a classic-CF sweat chloride of 151 mmol/L, the two variants are the two disease alleles of a compound-heterozygous patient (in trans), not a cis complex allele. Cis/trans not literally stated, hence medium.",
+  "partner_tokens": [
+   "c.3635delT",
+   "p.Val1212AlafsX16"
+  ]
+ },
+ {
+  "sp_id": 2194,
+  "is_complex_allele": "no",
+  "confidence": "medium",
+  "keyword": "second mutation",
+  "text_referring_to": "The second mutation (c.607A>T p.Ile203Phe) in this patient is also absent in CFTR1 database, which has been submitted before.",
+  "reason": "Reciprocal record of the same patient (sweat Cl 151, classic CF); c.607A>T is the 'second mutation' / other disease allele of a compound heterozygote (trans), not a cis partner. Cis/trans not explicitly stated, hence medium.",
+  "partner_tokens": [
+   "c.607A>T",
+   "p.Ile203Phe"
+  ]
+ },
+ {
+  "sp_id": 2196,
+  "is_complex_allele": "no",
+  "confidence": "high",
+  "keyword": "second mutation",
+  "text_referring_to": "The second mutation in the patient was not detected by Sanger sequencing of all 27 exons or MLPA.",
+  "reason": "The second (other-allele) mutation of this compound-het patient was not detected; no named variant and no cis relationship. Not a complex allele.",
+  "partner_tokens": []
+ },
+ {
+  "sp_id": 2223,
+  "is_complex_allele": "no",
+  "confidence": "high",
+  "keyword": "in addition to F508del",
+  "text_referring_to": "CFTR sequencing initially revealed three SNPs (in addition to F508del), however another patient with N1303K and this mutation was discovered 3 years later, leading to identification of this mutation as causative of the phenotype",
+  "reason": "This deep-intronic variant is the causative disease allele in trans with F508del in this patient (and with N1303K in a different patient); F508del/N1303K are on the opposite chromosome, not in cis. The three SNPs are benign background and are not stated to be in cis.",
+  "partner_tokens": [
+   "F508del",
+   "N1303K"
+  ]
+ },
+ {
+  "sp_id": 2227,
+  "is_complex_allele": "no",
+  "confidence": "high",
+  "keyword": "none",
+  "text_referring_to": "",
+  "reason": "No co-occurring CFTR variant is reported in this patient. 'A different nucleotide substitution has been reported at this position' refers to a separate variant described elsewhere in the literature at the same nucleotide site, not a cis partner in this patient.",
+  "partner_tokens": []
+ },
+ {
+  "sp_id": 2229,
+  "is_complex_allele": "uncertain",
+  "confidence": "medium",
+  "keyword": "also identified",
+  "text_referring_to": "Genetic report also identified the 13-5T variant.",
+  "reason": "The poly-T tract variant '13-5T' is co-identified with E1433K, but the record does not state whether it is in cis (same allele) or in trans. Poly-T can be a cis complex-allele partner, so cis vs trans is genuinely ambiguous here.",
+  "partner_tokens": [
+   "13-5T",
+   "5T"
+  ]
+ }
+]

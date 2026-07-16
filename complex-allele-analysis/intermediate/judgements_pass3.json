@@ -1,0 +1,1910 @@
+[
+ {
+  "sp_id": 16,
+  "verdict": "yes",
+  "cis_partners": [
+   {
+    "as_written": "F508del in cis",
+    "best_hgvs_or_name": "F508del"
+   }
+  ],
+  "trans_partners": [],
+  "reason": "Phenotype explicitly states 185+4A->T (c.53+4A>T) 'was found in a CBAVD patient also carrying F508del in cis.' So F508del is the cis partner (unusual: here ΔF508 is IN CIS, not trans). Verdict yes."
+ },
+ {
+  "sp_id": 60,
+  "verdict": "yes",
+  "cis_partners": [
+   {
+    "as_written": "G1069R",
+    "best_hgvs_or_name": "G1069R"
+   }
+  ],
+  "trans_partners": [
+   "deltaF508 / F508del (on the other allele)"
+  ],
+  "reason": "L88X 'was found together with G1069R' in a patient 'carrying deltaF508 on the other allele.' Since ΔF508 is trans, L88X + G1069R occupy the remaining allele together → cis. Verdict yes; cis=G1069R, trans=ΔF508 (inference case)."
+ },
+ {
+  "sp_id": 78,
+  "verdict": "yes",
+  "cis_partners": [
+   {
+    "as_written": "486T->A",
+    "best_hgvs_or_name": "486T>A"
+   }
+  ],
+  "trans_partners": [
+   "F508del (delta F508, 'on the other chromosome')"
+  ],
+  "reason": "other_details: silent change 'T to A at position 486' is 'on the same chromosome with 441delA mutant allele' (cis); ΔF508 is 'on the other chromosome' (trans). Genotype '441delA,486T->A/delF508' confirms. Verdict yes; cis=486T>A, trans=F508del."
+ },
+ {
+  "sp_id": 122,
+  "verdict": "yes",
+  "cis_partners": [
+   {
+    "as_written": "406-6T->C",
+    "best_hgvs_or_name": "406-6T>C"
+   }
+  ],
+  "trans_partners": [
+   "1154insTC (on the other allele)"
+  ],
+  "reason": "657delA (c.526delA) 'was found on the same chromosome carrying 406-6T->C' (explicit cis); the patient's other mutation 1154insTC is 'on the other allele' (trans). Verdict yes; cis=406-6T>C, trans=1154insTC."
+ },
+ {
+  "sp_id": 163,
+  "verdict": "uncertain",
+  "cis_partners": [],
+  "trans_partners": [],
+  "reason": "R297Q is reported 'in association with' 574delA and 'associated with' ΔF508 or N1303K in healthy subjects, but phase (cis vs trans) is never stated for any of them. Per unstated-phase rule → uncertain; no confirmed cis partner. (Phenotype describes an unrelated F508del/2512delG compound het that does not involve R297Q.) Corrected from Yes to uncertain."
+ },
+ {
+  "sp_id": 197,
+  "verdict": "yes",
+  "cis_partners": [],
+  "trans_partners": [],
+  "reason": "primary_cdna is already the double-change complex allele c.[1075C>A;1079C>A] (p.[Gln359Lys;Thr360Lys]); the two changes were 'discovered together on 6 CF chromosomes' and patients were homozygous. The primary name already encodes both changes → cis_partners empty; verdict yes."
+ },
+ {
+  "sp_id": 212,
+  "verdict": "yes",
+  "cis_partners": [
+   {
+    "as_written": "G1349D",
+    "best_hgvs_or_name": "G1349D"
+   }
+  ],
+  "trans_partners": [
+   "R117H-7T (on the other allele)"
+  ],
+  "reason": "1341+18A>C (c.1209+18A>C) was 'identified associated with G1349D'; the patient 'carries R117H-7T on the other allele' (trans). Because R117H-7T is trans, the primary + G1349D lie on the remaining allele → cis. Verdict yes; cis=G1349D, trans=R117H-7T (inference case)."
+ },
+ {
+  "sp_id": 214,
+  "verdict": "yes",
+  "cis_partners": [
+   {
+    "as_written": "(TG)12T7",
+    "best_hgvs_or_name": "(TG)12T7"
+   }
+  ],
+  "trans_partners": [
+   "Y1092X (on the other allele, compound-het patient)"
+  ],
+  "reason": "Splice mutation 1342-2A->C (c.1210-2A>C) 'is preceded by a (TG)12T7 sequence' on its chromosome (cis context). Per the rule, in-cis poly-T/TG-repeat tracts count as cis partners → cis=(TG)12T7. In the second (compound-het) patient Y1092X is on the other allele (trans). Verdict yes."
+ },
+ {
+  "sp_id": 218,
+  "verdict": "yes",
+  "cis_partners": [
+   {
+    "as_written": "G576A",
+    "best_hgvs_or_name": "G576A"
+   },
+   {
+    "as_written": "R668C",
+    "best_hgvs_or_name": "R668C"
+   }
+  ],
+  "trans_partners": [
+   "F508del (delta F508, 'on the other chromosome')"
+  ],
+  "reason": "other_details states D443Y (c.1327G>T) 'is frequently associated in cis with other missense mutations (G576A and R668C)' — explicit cis. ΔF508 is 'on the other chromosome' (trans); phenotype patient carries D443Y+G576A with ΔF508 trans. Verdict yes; cis=G576A,R668C; trans=F508del."
+ },
+ {
+  "sp_id": 238,
+  "verdict": "yes",
+  "cis_partners": [
+   {
+    "as_written": "M470V polymorphism (A to G at 1540)",
+    "best_hgvs_or_name": "M470V"
+   }
+  ],
+  "trans_partners": [],
+  "reason": "Patient is homozygous for 1609delCA (c.1477_1478delCA) AND homozygous for M470V (1540A>G); homozygosity at both loci forces both variants onto every chromosome, so M470V is necessarily in cis on each allele. M470V is a common but real CFTR variant. Verdict yes; cis=M470V."
+ },
+ {
+  "sp_id": 264,
+  "verdict": "yes",
+  "cis_partners": [
+   {
+    "as_written": "-102T>A (on the same allele as S549R(T>G))",
+    "best_hgvs_or_name": "-102T>A"
+   }
+  ],
+  "trans_partners": [
+   "R334W",
+   "F508del (DeltaF508)",
+   "G542X",
+   "S945L",
+   "R1158X"
+  ],
+  "reason": "Across multiple patients '-102T>A was found on the same allele as S549R(T>G)' (explicit cis; patient 13 is homozygous for both). Other-allele (trans) partners vary by patient: R334W, ΔF508, G542X, S945L, R1158X. Verdict yes; cis=-102T>A."
+ },
+ {
+  "sp_id": 274,
+  "verdict": "yes",
+  "cis_partners": [
+   {
+    "as_written": "DeltaF508 (on the maternal chromosome / same allele as R553Q)",
+    "best_hgvs_or_name": "F508del"
+   }
+  ],
+  "trans_partners": [
+   "R558X (text also gives '553X'; paternal / other allele)"
+  ],
+  "reason": "R553Q (c.1658G>A) was found 'on the maternal ΔF508 CF chromosome' and phenotype confirms 'DeltaF508 was found on the same allele as R553Q' → F508del is the cis partner (ΔF508 IN CIS here). The paternal/other allele carries R558X (other_details '553X') → trans. Verdict yes; cis=F508del, trans=R558X."
+ },
+ {
+  "sp_id": 283,
+  "verdict": "yes",
+  "cis_partners": [
+   {
+    "as_written": "3601-111G->C",
+    "best_hgvs_or_name": "3601-111G>C"
+   }
+  ],
+  "trans_partners": [],
+  "reason": "1811+1.2kbA->G (c.1679+1.6kbA>G) 'has been detected in chromosomes with the 3601-111G->C change' and 'both changes have always been detected together' — a same-chromosome (cis) linked benign intronic change. Verdict yes; cis=3601-111G>C."
+ },
+ {
+  "sp_id": 302,
+  "verdict": "yes",
+  "cis_partners": [
+   {
+    "as_written": "1874insT",
+    "best_hgvs_or_name": "1874insT"
+   }
+  ],
+  "trans_partners": [
+   "F508del (DeltaF508, 'on the other allele')"
+  ],
+  "reason": "Phenotype: '1874insT was found on the same allele as Y577F' (explicit cis); ΔF508 'on the other allele' (trans). Verdict yes; cis=1874insT (c.1739_1740insT), trans=F508del."
+ },
+ {
+  "sp_id": 305,
+  "verdict": "yes",
+  "cis_partners": [
+   {
+    "as_written": "Y577F",
+    "best_hgvs_or_name": "Y577F"
+   }
+  ],
+  "trans_partners": [
+   "F508del (delF508, 'on the other allele')"
+  ],
+  "reason": "Reciprocal of sp_id 302: 'Mutation Y577F and 1874insT were found together' in a patient carrying ΔF508 on the other allele (trans). So Y577F is in cis with the primary 1874insT (c.1739_1740insT). Verdict yes; cis=Y577F, trans=F508del."
+ },
+ {
+  "sp_id": 322,
+  "verdict": "yes",
+  "cis_partners": [
+   {
+    "as_written": "1716G->A",
+    "best_hgvs_or_name": "1716G>A"
+   }
+  ],
+  "trans_partners": [
+   "CFTRdele2,3(21kb)"
+  ],
+  "reason": "other_details and phenotype state L619S carries the 1716G>A polymorphism 'on the same allele (haplotype D)'; the other chromosome carries CFTRdele2,3(21kb)/unknown mutation (trans). The 3417A>T silent change mentioned in other_details is a separate polymorphism on a different haplotype (1-1-2), not stated to be in cis with L619S."
+ },
+ {
+  "sp_id": 346,
+  "verdict": "yes",
+  "cis_partners": [
+   {
+    "as_written": "Q715Q",
+    "best_hgvs_or_name": "Q715Q"
+   }
+  ],
+  "trans_partners": [
+   "deltaF508"
+  ],
+  "reason": "K716X 'found associated with Q715Q' (adjacent codon) in a patient 'carrying deltaF508 on the other allele.' Since deltaF508 occupies the other allele, K716X+Q715Q must be together in cis (inference case). Q715Q cis; deltaF508 trans."
+ },
+ {
+  "sp_id": 357,
+  "verdict": "yes",
+  "cis_partners": [
+   {
+    "as_written": "L967S",
+    "best_hgvs_or_name": "L967S"
+   }
+  ],
+  "trans_partners": [
+   "621+2T>G"
+  ],
+  "reason": "Genotype written 'R792X,L967S/621+2T>G' — R792X and L967S grouped on one allele (cis), 621+2T>G on the other allele (trans)."
+ },
+ {
+  "sp_id": 392,
+  "verdict": "yes",
+  "cis_partners": [
+   {
+    "as_written": "G1244V",
+    "best_hgvs_or_name": "G1244V"
+   }
+  ],
+  "trans_partners": [
+   "G542X"
+  ],
+  "reason": "Phenotype: patient 'carries G1244V on the same allele as S912L and G542X on the other.' G1244V cis; G542X trans. (A separate unrelated R709X/S912L asymptomatic patient suggests S912L may be a polymorphism, but the explicit complex allele here is G1244V+S912L.)"
+ },
+ {
+  "sp_id": 437,
+  "verdict": "yes",
+  "cis_partners": [
+   {
+    "as_written": "3286 T->G leading to F1052V",
+    "best_hgvs_or_name": "F1052V"
+   }
+  ],
+  "trans_partners": [],
+  "reason": "other_details: the two changes 3272-1G>A (primary) and 3286T>G (F1052V) were 'found on one CF chromosome' — explicit same chromosome (cis). No trans partner stated."
+ },
+ {
+  "sp_id": 484,
+  "verdict": "yes",
+  "cis_partners": [
+   {
+    "as_written": "R75Q",
+    "best_hgvs_or_name": "R75Q"
+   }
+  ],
+  "trans_partners": [
+   "DeltaF508"
+  ],
+  "reason": "other_details and phenotype: Q1144X 'found on the same chromosome carrying R75Q' with DeltaF508 as the other mutation. R75Q cis; DeltaF508 trans."
+ },
+ {
+  "sp_id": 494,
+  "verdict": "uncertain",
+  "cis_partners": [],
+  "trans_partners": [
+   "I506V"
+  ],
+  "reason": "Contradiction within the SAME patient (4y male): other_details states D1168G 'is on the maternal CF chromosome which also bears the I506V polymorphism' (cis), while phenotype states 'I506V polymorphism on the other allele' (trans). Phase is directly conflicting, so cis cannot be confirmed → uncertain."
+ },
+ {
+  "sp_id": 504,
+  "verdict": "yes",
+  "cis_partners": [
+   {
+    "as_written": "3791C/T (K1220E)",
+    "best_hgvs_or_name": "3791C>T"
+   }
+  ],
+  "trans_partners": [
+   "1717-1G>A"
+  ],
+  "reason": "phenotype: '3732delA was in cis with 3791C/T (K1220E)' and '1717-1G>A on the other allele'; other_details: '3732delA found together with K1220E on the same non-deltaF508 CF chromosome.' K1220E cis; 1717-1G>A trans."
+ },
+ {
+  "sp_id": 509,
+  "verdict": "yes",
+  "cis_partners": [
+   {
+    "as_written": "DelF508 homozygous",
+    "best_hgvs_or_name": "F508del"
+   }
+  ],
+  "trans_partners": [
+   "F508del"
+  ],
+  "reason": "V1212I detected 'as a second alteration' in two deltaF508 HOMOZYGOUS siblings. Because both CFTR alleles carry deltaF508, V1212I necessarily sits on one deltaF508 chromosome → in cis with deltaF508; the second (plain) deltaF508 allele is trans."
+ },
+ {
+  "sp_id": 524,
+  "verdict": "yes",
+  "cis_partners": [
+   {
+    "as_written": "S912L",
+    "best_hgvs_or_name": "S912L"
+   }
+  ],
+  "trans_partners": [
+   "G542X"
+  ],
+  "reason": "phenotype: patient 'carries S912L on the same allele and G542X on the other allele'; other_details: 'paternal CF chromosome carries the G542X.' S912L cis; G542X trans. (Reciprocal record of sp_id 392.)"
+ },
+ {
+  "sp_id": 528,
+  "verdict": "uncertain",
+  "cis_partners": [],
+  "trans_partners": [],
+  "reason": "other_details: 'S1251N is associated with the haplotype 2-1-1-2 ... and with F508C.' The word 'associated with' gives no explicit phase (cis vs trans) for F508C. Although the haplotype framing leans cis, phase is not stated → uncertain. Candidate cis partner: F508C."
+ },
+ {
+  "sp_id": 531,
+  "verdict": "yes",
+  "cis_partners": [
+   {
+    "as_written": "I1203V",
+    "best_hgvs_or_name": "I1203V"
+   }
+  ],
+  "trans_partners": [],
+  "reason": "other_details: I1203V 'occurs on a chromosome carrying a nonsense mutation in exon 20 (S1255X)' — explicit same chromosome (cis). No trans partner stated (phenotype empty)."
+ },
+ {
+  "sp_id": 570,
+  "verdict": "yes",
+  "cis_partners": [
+   {
+    "as_written": "297-3c->T",
+    "best_hgvs_or_name": "297-3C>T"
+   }
+  ],
+  "trans_partners": [],
+  "reason": "other_details: 4279insA observed 'on a CFTR allele with the 297-3c->T putative splice mutation' — same allele (cis), even though they are unsure whether 297-3C>T is a polymorphism. No trans partner stated."
+ },
+ {
+  "sp_id": 683,
+  "verdict": "yes",
+  "cis_partners": [
+   {
+    "as_written": "DeltaF508",
+    "best_hgvs_or_name": "F508del"
+   }
+  ],
+  "trans_partners": [
+   "2789+5G>A"
+  ],
+  "reason": "phenotype: patient 'carries the Q1313K polymorphism in cis with DeltaF508 and on the other allele was found 2789+5G->A'; other_details West Midlands patient: 'found on the same chromosome carrying deltaF508.' Q1313K+deltaF508 cis; 2789+5G>A trans. (A separate French/Bienvenu patient carried Q1313K with deltaF508 in trans, but the cis complex allele is explicit.)"
+ },
+ {
+  "sp_id": 704,
+  "verdict": "yes",
+  "cis_partners": [
+   {
+    "as_written": "[delta]F508",
+    "best_hgvs_or_name": "F508del"
+   }
+  ],
+  "trans_partners": [],
+  "reason": "other_details (Chevalier-Porst): T360R 'was found on a CF chromosome also bearing deltaF508' — explicit same chromosome (cis complex allele). A separate Ferec patient (phenotype) carried deltaF508 on the other allele (trans), but that is a different patient; the cis complex allele T360R+deltaF508 is explicitly documented."
+ },
+ {
+  "sp_id": 712,
+  "verdict": "yes",
+  "cis_partners": [
+   {
+    "as_written": "S549R(T->G)",
+    "best_hgvs_or_name": "c.1647T>G (S549R)"
+   }
+  ],
+  "trans_partners": [
+   "S945L",
+   "F508del"
+  ],
+  "reason": "Patient 1: -102T>A (c.-234T>A) 'associated with the S549R(T->G) mutation' in a patient 'who carries S945L on the other chromosome' — so -102T>A and S549R(T>G) sit on the one chromosome not carrying S945L, i.e. they are in cis (S945L is trans). Patient 2 (genotype S549R/deltaF508) had undetermined phase for -102T>A. Cis is established by patient 1 via the other-allele inference."
+ },
+ {
+  "sp_id": 738,
+  "verdict": "no",
+  "cis_partners": [],
+  "trans_partners": [
+   "F508del",
+   "3212C>T"
+  ],
+  "reason": "D1305E: 'carries [delta]F508 on the other chromosome' and phenotype states 'DeltaF508 and 3212C>T were both found on the other allele.' Both co-mentioned variants are explicitly trans; nothing is in cis with D1305E. Corrected from Yes to no."
+ },
+ {
+  "sp_id": 749,
+  "verdict": "yes",
+  "cis_partners": [
+   {
+    "as_written": "Q1352H",
+    "best_hgvs_or_name": "Q1352H"
+   }
+  ],
+  "trans_partners": [
+   "5T"
+  ],
+  "reason": "Patient is heterozygous R297W / 5T with 5T 'on the other allele' (trans). 'Both chromosomes also carry the Q1352H missense variant,' so Q1352H is present on the R297W allele = cis partner."
+ },
+ {
+  "sp_id": 783,
+  "verdict": "uncertain",
+  "cis_partners": [],
+  "trans_partners": [],
+  "reason": "Silent c.3339T>C (Ala at 1113) described as a 'T to C change accompanying Q1071P.' Co-occurrence with Q1071P is stated but the phase (cis vs trans) is not explicit — 'accompanying' is not same-allele language. Q1071P is the candidate cis partner; unstated phase => uncertain."
+ },
+ {
+  "sp_id": 797,
+  "verdict": "yes",
+  "cis_partners": [
+   {
+    "as_written": "5T",
+    "best_hgvs_or_name": "c.1210-12T[5]"
+   }
+  ],
+  "trans_partners": [
+   "F508del"
+  ],
+  "reason": "Phenotype explicitly states '5T was found on the same allele as F994C' (cis) and 'DeltaF508 was found on the other allele' (trans)."
+ },
+ {
+  "sp_id": 814,
+  "verdict": "yes",
+  "cis_partners": [
+   {
+    "as_written": "DeltaF508",
+    "best_hgvs_or_name": "F508del"
+   },
+   {
+    "as_written": "3212C/T",
+    "best_hgvs_or_name": "3212C>T"
+   }
+  ],
+  "trans_partners": [
+   "D993Y"
+  ],
+  "reason": "Phenotype explicitly states 'DeltaF508 and 3212C/T were found on the same allele as R1422W, D993Y was found on the other allele' — so F508del and 3212C>T are in cis with R1422W (a complex allele) and D993Y is trans. Note: other_details said phase was undetermined (no parental DNA), but the more specific phenotype note resolves it as cis; even the most conservative reading leaves 3212C>T as a stated same-allele partner."
+ },
+ {
+  "sp_id": 828,
+  "verdict": "yes",
+  "cis_partners": [
+   {
+    "as_written": "I148T",
+    "best_hgvs_or_name": "I148T"
+   }
+  ],
+  "trans_partners": [
+   "F508del"
+  ],
+  "reason": "3199del6 (c.3067_3072delATAGTG) 'was found associated with I148T on the same CF allele' (cis). Genotype 'I148T,3199del6/deltaF508' confirms deltaF508 on the other allele (trans)."
+ },
+ {
+  "sp_id": 852,
+  "verdict": "uncertain",
+  "cis_partners": [],
+  "trans_partners": [
+   "F508del"
+  ],
+  "reason": "V603F was 'found together with a sequence polymorphism at nucleotide position 1929' — co-occurrence but phase not explicitly cis. Patient 1 carried deltaF508 'on the other allele' (trans); patient 2 carried 5T but 'the phase with V603F (ie. cis or trans) could not be determined.' No confirmed cis partner; candidates 1929A polymorphism and 5T have unstated/undetermined phase => uncertain."
+ },
+ {
+  "sp_id": 855,
+  "verdict": "uncertain",
+  "cis_partners": [],
+  "trans_partners": [
+   "F508del"
+  ],
+  "reason": "N1088D found in a patient with deltaF508 'on the other chromosome' (trans) and 'probably associated with R75Q.' The 'probably associated with' wording hedges both the association and the phase, so R75Q is only a candidate cis partner, not confirmed => uncertain."
+ },
+ {
+  "sp_id": 872,
+  "verdict": "yes",
+  "cis_partners": [
+   {
+    "as_written": "R117H",
+    "best_hgvs_or_name": "R117H"
+   }
+  ],
+  "trans_partners": [
+   "F508del"
+  ],
+  "reason": "'R117H is also found on the S10R allele' (explicit cis) 'with [delta]F508 on the other chromosome' (trans)."
+ },
+ {
+  "sp_id": 929,
+  "verdict": "yes",
+  "cis_partners": [
+   {
+    "as_written": "K68N",
+    "best_hgvs_or_name": "K68N"
+   }
+  ],
+  "trans_partners": [
+   "W1089X"
+  ],
+  "reason": "2752-15C>G (c.2620-15C>G) 'was associated with the previously reported mutation K68N on the same allele' in a Turkish/Syrian family (explicit cis). The later Schwarz note describes a different (Turkish/Egyptian) man who had W1089X and 2752-15C>G in trans — that is a separate individual, recorded as trans for audit only."
+ },
+ {
+  "sp_id": 945,
+  "verdict": "uncertain",
+  "cis_partners": [],
+  "trans_partners": [],
+  "reason": "3601-111G>C (c.3469-111G>C) described as 'C tightly associated with 1811+1.6kbA>G.' This states linkage/association but not an explicit within-patient cis phase (no 'same allele/chromosome' wording). 1811+1.6kbA>G is the candidate cis partner; unstated phase => uncertain."
+ },
+ {
+  "sp_id": 947,
+  "verdict": "yes",
+  "cis_partners": [
+   {
+    "as_written": "3905insT",
+    "best_hgvs_or_name": "3905insT"
+   }
+  ],
+  "trans_partners": [
+   "F508del"
+  ],
+  "reason": "4005+121delTT was 'found in a non-[delta]F508 CF chromosome ... in which the 3905insT was identified' — both variants on the same (non-deltaF508) chromosome = cis; 'the other CF chromosome was found to be [delta]F508' (trans). The investigators' stated uncertainty concerns pathogenicity of 4005+121delTT, not the phase, which is clear."
+ },
+ {
+  "sp_id": 955,
+  "verdict": "uncertain",
+  "cis_partners": [],
+  "trans_partners": [],
+  "reason": "c.-4G>C (129G/C) described as 'C in strong association with R117H.' Association/linkage is stated but explicit cis phase (same allele/chromosome) is absent. R117H is the candidate cis partner; unstated phase => uncertain."
+ },
+ {
+  "sp_id": 982,
+  "verdict": "yes",
+  "cis_partners": [
+   {
+    "as_written": "3499+37G->A",
+    "best_hgvs_or_name": "3499+37G>A"
+   }
+  ],
+  "trans_partners": [
+   "1811+1.6kbA>G"
+  ],
+  "reason": "T501A patient 'carries the rare polymorphism 3499+37G->A in intron 17b on the same chromosome' (explicit cis); '1811+1.6KbA->G in intron 11 was found in trans.' Phenotype confirms '3499+37G>A on the same allele as T501A' and '1811+16KbA on the other allele.'"
+ },
+ {
+  "sp_id": 1036,
+  "verdict": "yes",
+  "cis_partners": [
+   {
+    "as_written": "876-14del12",
+    "best_hgvs_or_name": "876-14del12 (c.744-14del12)"
+   }
+  ],
+  "trans_partners": [
+   "[delta]F508 (F508del) on the other allele"
+  ],
+  "reason": "Text states the 876-3C->T substitution 'was found on an allele also bearing 876-14del12' and this chromosome was passed to a child with deltaF508 on the other allele. So 876-14del12 is in cis; deltaF508 is trans."
+ },
+ {
+  "sp_id": 1049,
+  "verdict": "yes",
+  "cis_partners": [
+   {
+    "as_written": "1677delTA",
+    "best_hgvs_or_name": "1677delTA (c.1545_1546delTA)"
+   }
+  ],
+  "trans_partners": [
+   "[delta]F508 (F508del)"
+  ],
+  "reason": "The patient 'had 1677delTA on the same chromosome and [delta]F508 on the other.' 1677delTA is in cis with T760M; deltaF508 is trans."
+ },
+ {
+  "sp_id": 1051,
+  "verdict": "yes",
+  "cis_partners": [
+   {
+    "as_written": "IVS8-5T",
+    "best_hgvs_or_name": "c.1210-12T[5]"
+   }
+  ],
+  "trans_partners": [
+   "[delta]F508 (F508del)"
+  ],
+  "reason": "4006delA found 'with IVS8-5T on the same chromosome and [delta]F508 on the other.' The 5T poly-T tract is in cis; deltaF508 is trans."
+ },
+ {
+  "sp_id": 1057,
+  "verdict": "no",
+  "cis_partners": [],
+  "trans_partners": [
+   "[delta]F508 (F508del) - genotype delF508/Y849X"
+  ],
+  "reason": "The only cis features are haplotype/polymorphism markers ('associated to the haplotype V,1,2,16,30,13' = M470V plus anonymous RFLP/microsatellite markers XV2c, KM19, IVS8CA, IVS17bCA, IVS17bTA) describing the chromosomal background, not a second pathogenic mutation. deltaF508 is on the other allele (trans). No genuine complex allele; correcting current 'Yes' to 'no'."
+ },
+ {
+  "sp_id": 1059,
+  "verdict": "yes",
+  "cis_partners": [
+   {
+    "as_written": "G576A",
+    "best_hgvs_or_name": "G576A (c.1727G>C)"
+   },
+   {
+    "as_written": "R668C",
+    "best_hgvs_or_name": "R668C (c.2002C>T)"
+   }
+  ],
+  "trans_partners": [
+   "[delta]F508 (F508del)"
+  ],
+  "reason": "Phenotype note (pers. corr. Schwarz) states S589I was 'identified in cis with G576A and R668C' in a patient carrying deltaF508 on the other allele. G576A and R668C are cis partners (the other_details 'phase yet to be established' is later resolved to cis); deltaF508 is trans."
+ },
+ {
+  "sp_id": 1063,
+  "verdict": "yes",
+  "cis_partners": [
+   {
+    "as_written": "polymorphism (612T/A)",
+    "best_hgvs_or_name": "612T/A (c.480T>A)"
+   }
+  ],
+  "trans_partners": [
+   "[delta]F508 (F508del)"
+  ],
+  "reason": "'The mutation and polymorphism are on the same chromosome (established in the mother).' The mutation is Y161S (primary) and the polymorphism is 612T/A (c.480T>A, the reciprocal record sp 1064). They are in cis; deltaF508 (the other CF mutation) is trans."
+ },
+ {
+  "sp_id": 1064,
+  "verdict": "yes",
+  "cis_partners": [
+   {
+    "as_written": "(Y161S)",
+    "best_hgvs_or_name": "Y161S (c.482A>C)"
+   }
+  ],
+  "trans_partners": [
+   "DeltaF508 (F508del)"
+  ],
+  "reason": "Primary here is the polymorphism 612T/A. Text: '(Y161S) was seen... The mutation and polymorphism are on the same chromosome (established in the mother).' So Y161S is in cis with 612T/A; DeltaF508 (the other CF mutation) is trans."
+ },
+ {
+  "sp_id": 1095,
+  "verdict": "yes",
+  "cis_partners": [
+   {
+    "as_written": "[delta]F508 on the same chromosome / same allele as 2851A/G",
+    "best_hgvs_or_name": "F508del"
+   }
+  ],
+  "trans_partners": [
+   "5T allele in intron 8 (c.1210-12T[5])"
+  ],
+  "reason": "Inverse of the usual case: text explicitly states the patient 'carries [delta]F508 on the same chromosome' as 2851A/G, and 'the 5T allele in intron 8 in trans.' Phenotype confirms 'DeltaF508 was found on the same allele as 2851A/G, 5T was found on the other allele.' So deltaF508 is the cis partner here; 5T is trans."
+ },
+ {
+  "sp_id": 1109,
+  "verdict": "yes",
+  "cis_partners": [
+   {
+    "as_written": "3532AC->GTA",
+    "best_hgvs_or_name": "3532AC>GTA (c.3400_3401delinsGTA)"
+   }
+  ],
+  "trans_partners": [
+   "[delta]F508 (F508del)"
+  ],
+  "reason": "48C/G 'carries the 3532AC->GTA mutation on the same chromosome and the [delta]F508 on the other allele'; phenotype: '48C/G... found in cis with 3532AC>GTA.' 3532AC>GTA is the cis partner; deltaF508 is trans."
+ },
+ {
+  "sp_id": 1141,
+  "verdict": "yes",
+  "cis_partners": [
+   {
+    "as_written": "3041-4A>G",
+    "best_hgvs_or_name": "c.2909-4A>G (3041-4A>G)"
+   }
+  ],
+  "trans_partners": [
+   "deltaF508 (F508del)"
+  ],
+  "reason": "Phenotype: L973P found in a CBAVD patient 'carrying 3041-4A>G on the same allele and the deltaF508 on the other one.' 3041-4A>G is cis (this is the reciprocal of sp 1330); deltaF508 is trans."
+ },
+ {
+  "sp_id": 1180,
+  "verdict": "yes",
+  "cis_partners": [
+   {
+    "as_written": "S895N",
+    "best_hgvs_or_name": "S895N (c.2684G>A)"
+   }
+  ],
+  "trans_partners": [
+   "1898+5G-->T (c.1766+5G>T)"
+  ],
+  "reason": "1898+5G>T is on the first allele; 2215insG is 'on the second CFTR allele.' S895N 'cosegregated with 2215insG' and, since the other allele is 1898+5G>T, S895N is in cis with 2215insG (the primary). 1898+5G>T is the trans allele."
+ },
+ {
+  "sp_id": 1194,
+  "verdict": "yes",
+  "cis_partners": [
+   {
+    "as_written": "2109-2118del10",
+    "best_hgvs_or_name": "2109-2118del10 (c.1977_1986del10)"
+   }
+  ],
+  "trans_partners": [],
+  "reason": "'This complex mutation' 2104insA+2109-2118del10 comprises two changes on one allele. primary_cdna captures only the insA (c.1972_1973insA), so the co-occurring 2109-2118del10 is the cis partner. Found homozygous/hemizygous, so no trans partner."
+ },
+ {
+  "sp_id": 1197,
+  "verdict": "yes",
+  "cis_partners": [
+   {
+    "as_written": "F1052V",
+    "best_hgvs_or_name": "F1052V (c.3154T>G)"
+   }
+  ],
+  "trans_partners": [
+   "[delta]F508 (F508del)"
+  ],
+  "reason": "I918M 'found in cis with F1052V in a CBAVD patient carrying [delta]F508 on the other chromosome'; phenotype confirms 'I918M in cis with F1052V and deltaF508 was on the other allele.' F1052V is cis; deltaF508 is trans."
+ },
+ {
+  "sp_id": 1329,
+  "verdict": "yes",
+  "cis_partners": [],
+  "trans_partners": [],
+  "reason": "primary_cdna is already written as the full complex allele c.869+4A>C;c.861_865delCTTAA (legacy 1001+4A->C+993delCTTAA); the primary name already contains both cis changes, so cis_partners is empty per rule."
+ },
+ {
+  "sp_id": 1330,
+  "verdict": "yes",
+  "cis_partners": [
+   {
+    "as_written": "L973P",
+    "best_hgvs_or_name": "L973P (c.2918T>C)"
+   }
+  ],
+  "trans_partners": [
+   "deltaF508 (F508del)"
+  ],
+  "reason": "Phenotype: 3041-4A>G found in a CBAVD patient 'carrying L973P on the same chromosome and deltaF508 on the other allele.' L973P is cis (reciprocal of sp 1141); deltaF508 is trans."
+ },
+ {
+  "sp_id": 1349,
+  "verdict": "yes",
+  "cis_partners": [
+   {
+    "as_written": "M470V (1540A/G)",
+    "best_hgvs_or_name": "M470V"
+   }
+  ],
+  "trans_partners": [
+   "deltaF508"
+  ],
+  "reason": "Text explicitly: 'M469V in cis with M470V (1540A/G)'. deltaF508 is on the other allele (trans). Complex allele = M469V;M470V."
+ },
+ {
+  "sp_id": 1374,
+  "verdict": "yes",
+  "cis_partners": [
+   {
+    "as_written": "F508del",
+    "best_hgvs_or_name": "F508del"
+   }
+  ],
+  "trans_partners": [
+   "G85E"
+  ],
+  "reason": "Text: 'associated with F508del on the some [same] chromosome... One allele carries F508del and N1148S, the other one carries G85E.' F508del is on the SAME allele as N1148S (cis, confirmed complex allele); G85E is on the other allele (trans). Here F508del is the cis partner, not trans."
+ },
+ {
+  "sp_id": 1381,
+  "verdict": "yes",
+  "cis_partners": [
+   {
+    "as_written": "V754M",
+    "best_hgvs_or_name": "V754M"
+   }
+  ],
+  "trans_partners": [
+   "1812-1G>A"
+  ],
+  "reason": "other_details: 'The deletion is in cis with V754M' — explicit cis. Index patient is heterozygous for 1812-1G>A (other allele, trans). The G542X/V754M patient referenced is a separate negative-control case, not this patient's trans partner."
+ },
+ {
+  "sp_id": 1397,
+  "verdict": "uncertain",
+  "cis_partners": [],
+  "trans_partners": [],
+  "reason": "other_details only states 'This mutation is associated with F508del' with NO phase given. Contrast same submitter's explicit 'same allele' wording (sp 1374, 1493). Cis vs trans not stated -> uncertain; no confirmed cis partner. Ambiguous co-occurring variant is F508del."
+ },
+ {
+  "sp_id": 1401,
+  "verdict": "yes",
+  "cis_partners": [
+   {
+    "as_written": "L24F",
+    "best_hgvs_or_name": "L24F"
+   }
+  ],
+  "trans_partners": [
+   "delF508"
+  ],
+  "reason": "other_details: '296+2T>G identified... in cis with a new variant L24F. The other chromosome bears a delF508' (trans). Explicit cis. Reciprocal record of sp 1402."
+ },
+ {
+  "sp_id": 1402,
+  "verdict": "yes",
+  "cis_partners": [
+   {
+    "as_written": "296+2T to G",
+    "best_hgvs_or_name": "c.164+2T>G"
+   }
+  ],
+  "trans_partners": [
+   "delF508"
+  ],
+  "reason": "other_details: 'L24F identified in cis with the novel mutation 296+2T to G on one Italian CF chromosome. The other chromosome shows a delF508' (trans). Explicit cis. Reciprocal record of sp 1401."
+ },
+ {
+  "sp_id": 1406,
+  "verdict": "yes",
+  "cis_partners": [
+   {
+    "as_written": "S977F",
+    "best_hgvs_or_name": "S977F"
+   }
+  ],
+  "trans_partners": [
+   "delF508"
+  ],
+  "reason": "other_details: 'R1438W identified on one Italian CF chromosome, and on the same chromosome the S977F variant was found' (cis). delF508 on the other chromosome (trans)."
+ },
+ {
+  "sp_id": 1416,
+  "verdict": "yes",
+  "cis_partners": [
+   {
+    "as_written": "R668C",
+    "best_hgvs_or_name": "R668C"
+   },
+   {
+    "as_written": "G576A",
+    "best_hgvs_or_name": "G576A"
+   }
+  ],
+  "trans_partners": [
+   "delF508"
+  ],
+  "reason": "other_details: 'The K114X mutation was seen on a chromosome with R668C and G576A' — both R668C and G576A are in cis with K114X. Phenotype: 'The other CF chromosome carries the delF508 mutation' (trans)."
+ },
+ {
+  "sp_id": 1431,
+  "verdict": "yes",
+  "cis_partners": [
+   {
+    "as_written": "V754M",
+    "best_hgvs_or_name": "V754M"
+   }
+  ],
+  "trans_partners": [
+   "1812-1G>A"
+  ],
+  "reason": "other_details: 'The deletion is in cis with V754M' — explicit cis, confirmed in a second French patient 'who also carries V754M on the same chromosome'. Index patient heterozygous for 1812-1G>A (other allele, trans). G542X/V754M patient is a separate negative-control case."
+ },
+ {
+  "sp_id": 1489,
+  "verdict": "yes",
+  "cis_partners": [
+   {
+    "as_written": "H939R",
+    "best_hgvs_or_name": "H939R"
+   }
+  ],
+  "trans_partners": [],
+  "reason": "other_details: 'H949L identified in cis with another mutation: H939R. This is a novel complex CFTR allele: H939R + H949L.' Explicit cis. The four patients had different second (trans) alleles, none specified."
+ },
+ {
+  "sp_id": 1493,
+  "verdict": "yes",
+  "cis_partners": [
+   {
+    "as_written": "F508del",
+    "best_hgvs_or_name": "F508del"
+   }
+  ],
+  "trans_partners": [
+   "A559T"
+  ],
+  "reason": "other_details: 'M595T is present with F508del on the same allele' (cis); 'A559T is present on the other allele' (trans). F508del is the cis partner here, not trans."
+ },
+ {
+  "sp_id": 1537,
+  "verdict": "yes",
+  "cis_partners": [
+   {
+    "as_written": "poli T 5",
+    "best_hgvs_or_name": "c.1210-12T[5]"
+   },
+   {
+    "as_written": "TG 12",
+    "best_hgvs_or_name": "TG12"
+   }
+  ],
+  "trans_partners": [
+   "DeltaF508"
+  ],
+  "reason": "Phenotype: 'DeltaF508 was found on the other allele (trans), (have poli T 5 in cis with TG 12).' Since F508del alleles carry a 9T (not 5T) background, the 5T-TG12 tract lies on the A238V allele -> cis with A238V (endorsed inference from DeltaF508 being trans). Poly-T/TG tracts in cis count as cis partners."
+ },
+ {
+  "sp_id": 1543,
+  "verdict": "yes",
+  "cis_partners": [
+   {
+    "as_written": "R553X",
+    "best_hgvs_or_name": "R553X"
+   }
+  ],
+  "trans_partners": [
+   "D806G"
+  ],
+  "reason": "Phenotype: 'He carries R553X on the same allele and D806G on the other allele.' R553X is cis with Q1463H; D806G is trans."
+ },
+ {
+  "sp_id": 1549,
+  "verdict": "yes",
+  "cis_partners": [
+   {
+    "as_written": "R851X",
+    "best_hgvs_or_name": "R851X"
+   }
+  ],
+  "trans_partners": [],
+  "reason": "Phenotype: mother 'carriers R851X in the same allele' as M1137T — explicit cis. No other-allele variant reported (unaffected carrier)."
+ },
+ {
+  "sp_id": 1576,
+  "verdict": "yes",
+  "cis_partners": [
+   {
+    "as_written": "I148T",
+    "best_hgvs_or_name": "I148T"
+   }
+  ],
+  "trans_partners": [
+   "deltaF508"
+  ],
+  "reason": "Phenotype: 'He carries I148T on the same and deltaF508 on the other allele.' I148T is cis with D373E; deltaF508 is trans."
+ },
+ {
+  "sp_id": 1599,
+  "verdict": "yes",
+  "cis_partners": [
+   {
+    "as_written": "Q1309H (4059G>T)",
+    "best_hgvs_or_name": "c.3927G>T"
+   }
+  ],
+  "trans_partners": [
+   "D1152H"
+  ],
+  "reason": "Text states the primary del6insTGT (4041_4046del6insTGT) was identified 'in cis with' the close exon 21 variant Q1309H (4059G>T = c.3927G>T); explicit cis. D1152H was explicitly identified in trans."
+ },
+ {
+  "sp_id": 1600,
+  "verdict": "yes",
+  "cis_partners": [
+   {
+    "as_written": "4041_4046insTGT",
+    "best_hgvs_or_name": "c.3909_3914del6insTGT"
+   }
+  ],
+  "trans_partners": [
+   "D1152H"
+  ],
+  "reason": "Text states the primary Q1309H (c.3927G>T) was 'in cis with' 4041_4046insTGT (the del6insTGT, c.3909_3914del6insTGT); explicit cis. D1152H explicitly in trans."
+ },
+ {
+  "sp_id": 1648,
+  "verdict": "yes",
+  "cis_partners": [
+   {
+    "as_written": "2391C/T",
+    "best_hgvs_or_name": "c.2259C>T"
+   }
+  ],
+  "trans_partners": [
+   "G542X (p.Gly542X)"
+  ],
+  "reason": "The new polymorphism 2391C/T (c.2259C>T) was reported 'on the same allele as' the primary 2380_2387del; explicit cis. Patient is compound heterozygous, with p.Gly542X on the other allele (trans)."
+ },
+ {
+  "sp_id": 1649,
+  "verdict": "yes",
+  "cis_partners": [
+   {
+    "as_written": "2380_2387del",
+    "best_hgvs_or_name": "c.2248_2255del"
+   }
+  ],
+  "trans_partners": [
+   "G542X (p.Gly542X)"
+  ],
+  "reason": "Primary 2391C/T (c.2259C>T) was reported 'on the same allele as' 2380_2387del (c.2248_2255del); explicit cis. Patient compound het with p.Gly542X on the other allele (trans)."
+ },
+ {
+  "sp_id": 1684,
+  "verdict": "uncertain",
+  "cis_partners": [],
+  "trans_partners": [],
+  "reason": "Primary W216C was reported 'in conjunction with' L206W (candidate partner, best_hgvs c.617T>G) with no phase stated; cis vs trans is not specified, so uncertain (not yes)."
+ },
+ {
+  "sp_id": 1685,
+  "verdict": "uncertain",
+  "cis_partners": [],
+  "trans_partners": [],
+  "reason": "Primary A399V (c.1196C>T) was reported 'in conjunction with' R347P (candidate partner, best_hgvs c.1040G>C) with no phase stated; cis vs trans not specified, so uncertain."
+ },
+ {
+  "sp_id": 1698,
+  "verdict": "yes",
+  "cis_partners": [
+   {
+    "as_written": "deltaF508 (in both CFTR alleles)",
+    "best_hgvs_or_name": "F508del"
+   }
+  ],
+  "trans_partners": [],
+  "reason": "Patient is deltaF508 homozygous ('the deltaF508 mutation in both CFTR alleles') and also carries the primary P324L. Because both alleles carry deltaF508, P324L must lie on one of them, i.e. in cis with a deltaF508 copy, forming a [deltaF508;P324L] complex allele (the other deltaF508 copy being on the opposite allele, in trans). Cis is a genetic certainty here."
+ },
+ {
+  "sp_id": 1711,
+  "verdict": "yes",
+  "cis_partners": [
+   {
+    "as_written": "p.Ile148Thr",
+    "best_hgvs_or_name": "c.443T>C (I148T)"
+   }
+  ],
+  "trans_partners": [
+   "p.Arg334Trp (R334W)"
+  ],
+  "reason": "Primary c.3263dupA was 'identified on an allele carrying p.Ile148Thr', written as the complex allele [c.3263dupA;p.Ile148Thr]; explicit cis. Compound-het partner p.Arg334Trp is on the other allele (trans)."
+ },
+ {
+  "sp_id": 1737,
+  "verdict": "yes",
+  "cis_partners": [
+   {
+    "as_written": "Arg74Trp",
+    "best_hgvs_or_name": "c.220C>T (R74W)"
+   },
+   {
+    "as_written": "Val201Met",
+    "best_hgvs_or_name": "c.601G>A (V201M)"
+   },
+   {
+    "as_written": "Asp1270Asn",
+    "best_hgvs_or_name": "c.3808G>A (D1270N)"
+   }
+  ],
+  "trans_partners": [
+   "p.Phe508del (F508del)"
+  ],
+  "reason": "Primary synonymous F640F (c.1920T>C) was 'found on the same allele as' the complex allele p.[Arg74Trp;Val201Met;Asp1270Asn]; explicit cis with all three variants. p.Phe508del is the compound-het partner in trans."
+ },
+ {
+  "sp_id": 1766,
+  "verdict": "uncertain",
+  "cis_partners": [],
+  "trans_partners": [
+   "3849+10kbC>T"
+  ],
+  "reason": "Genotype shorthand '3849+10kb/G437(V), R75Q': the slash places 3849+10kbC>T on the opposite allele from primary G437V (trans). R75Q co-occurs but with no stated phase relative to the primary, so cis vs trans is undetermined -> uncertain (candidate partner R75Q, best_hgvs c.224G>A)."
+ },
+ {
+  "sp_id": 1937,
+  "verdict": "yes",
+  "cis_partners": [
+   {
+    "as_written": "p.Glu826Lys",
+    "best_hgvs_or_name": "c.2476G>A (E826K)"
+   }
+  ],
+  "trans_partners": [
+   "p.Phe508del (F508del)"
+  ],
+  "reason": "Text explicitly states the primary I1103K is on 'the same chromosome (cis)' as p.Glu826Lys; explicit cis. p.Phe508del is on the other chromosome (trans)."
+ },
+ {
+  "sp_id": 1938,
+  "verdict": "uncertain",
+  "cis_partners": [],
+  "trans_partners": [],
+  "reason": "Primary Q1309X (c.3925C>T) was 'found together with' the missense mutation R347Q (candidate partner, best_hgvs c.1040G>A) with no phase stated. Given the CF phenotype this is likely a compound het (trans), but phase is not explicit, so uncertain (not yes)."
+ },
+ {
+  "sp_id": 2008,
+  "verdict": "yes",
+  "cis_partners": [
+   {
+    "as_written": "p.Asp110Glu",
+    "best_hgvs_or_name": "D110E"
+   }
+  ],
+  "trans_partners": [
+   "p.Ser737Phe (S737F)"
+  ],
+  "reason": "Text states the primary Q1209H (c.3627A>C) was 'inherited in cis with' p.Asp110Glu; explicit cis. p.Ser737Phe was explicitly in trans."
+ },
+ {
+  "sp_id": 2031,
+  "verdict": "uncertain",
+  "cis_partners": [],
+  "trans_partners": [],
+  "reason": "Primary c.2554dupT was 'found together with' the splice mutation c.2657+5G>A (2789+5G>A) with no phase stated. Given the CF phenotype (sweat 105) this is likely a compound het (trans), but phase is not explicit, so uncertain."
+ },
+ {
+  "sp_id": 2034,
+  "verdict": "uncertain",
+  "cis_partners": [],
+  "trans_partners": [],
+  "reason": "Primary L49P (c.146T>C) was 'found together with' the nonsense mutation c.3484C>T (p.Arg1162*/R1162X) with no phase stated. Likely compound het (trans) given the CF phenotype and that R1162X is a known severe allele, but phase is not explicit, so uncertain."
+ },
+ {
+  "sp_id": 2046,
+  "verdict": "uncertain",
+  "cis_partners": [],
+  "trans_partners": [],
+  "reason": "Primary L188P (c.563T>C) reported 'found together with' the nonsense mutation G542X (c.1624G>T). Phase is not stated, so cis vs trans is unknown (unstated phase => uncertain). The CFTR-related phenotype (recurrent pancreatitis, high sweat Cl) is most consistent with a compound heterozygote (G542X likely trans), but this is not stated, so there is no confirmed cis partner. Current 'Yes' corrected to uncertain."
+ },
+ {
+  "sp_id": 2056,
+  "verdict": "uncertain",
+  "cis_partners": [],
+  "trans_partners": [],
+  "reason": "Primary N66fs (c.198_202delTCCTA) 'found together with' c.2052_2053insA (legacy 2184insA). Phase not stated and the record notes 'Parents studies are in progress' (phasing not yet performed). Classic severe CF, most consistent with a compound heterozygote, but cis is not established => uncertain; no confirmed cis partner. Current 'Yes' corrected to uncertain."
+ },
+ {
+  "sp_id": 2060,
+  "verdict": "uncertain",
+  "cis_partners": [],
+  "trans_partners": [],
+  "reason": "Primary V1415fs (c.4243_4244insCTGT) 'found together with' F508del (c.1521_1523delCTT). Phase not stated. The classic CF infant presentation (PI, sweat Cl 100) is most consistent with an F508del/frameshift compound heterozygote (F508del likely trans), but phase is not explicitly stated => uncertain; no confirmed cis partner. Current 'Yes' corrected to uncertain."
+ },
+ {
+  "sp_id": 2167,
+  "verdict": "no",
+  "cis_partners": [],
+  "trans_partners": [
+   "c.4200_4201delTG",
+   "c.489+3A>G"
+  ],
+  "reason": "Phenotype states the second allele carries c.4200_4201delTG and c.489+3A>G. Those two variants form a complex allele in trans to the primary c.531dupT (G178fs); the primary is alone on its (first) allele and thus has no cis partner. Current 'Yes' corrected to 'no' (the two co-occurring variants are explicitly on the other allele)."
+ },
+ {
+  "sp_id": 2221,
+  "verdict": "yes",
+  "cis_partners": [
+   {
+    "as_written": "c.1210-1638C>T",
+    "best_hgvs_or_name": "c.1210-1638C>T"
+   },
+   {
+    "as_written": "c.54-4458_54-445delAAC",
+    "best_hgvs_or_name": "c.54-4458_54-445delAAC (likely c.54-4458_54-4456delAAC)"
+   },
+   {
+    "as_written": "c.3717+4941G>T",
+    "best_hgvs_or_name": "c.3717+4941G>T"
+   }
+  ],
+  "trans_partners": [
+   "F508del"
+  ],
+  "reason": "Index CF patient has F508del explicitly 'in trans'. The four hitherto-unknown variants (the entered c.-1019 variant plus c.1210-1638C>T, c.54-4458_54-445delAAC, c.3717+4941G>T) therefore all lie together on the non-F508del allele = in cis. Inference case: because F508del is stated trans, the three other unknown variants are cis partners of the primary. Verdict 'Yes' confirmed."
+ },
+ {
+  "sp_id": 9,
+  "verdict": "uncertain",
+  "cis_partners": [],
+  "trans_partners": [
+   "N1303K"
+  ],
+  "reason": "Primary Q2X (c.4C>T) found together with R3W (c.7C>T). Submitter explicitly states they 'cannot indicate if those two nucleotidic variations were localised on the same chromosome or not' (phase unknown) => uncertain; R3W is not a confirmed cis partner. N1303K is explicitly 'on the other allele' (trans)."
+ },
+ {
+  "sp_id": 31,
+  "verdict": "no",
+  "cis_partners": [],
+  "trans_partners": [
+   "F508del"
+  ],
+  "reason": "Primary S50Y (c.149C>A) in a CBAVD patient with deltaF508 explicitly 'on the other allele' (trans). The only other changes are the recognized benign intronic polymorphisms 1898+152A and 1001+11T, which are not pathogenic complex-allele partners. This is a simple S50Y/deltaF508 compound heterozygote with no real cis partner => 'no'. Current 'Uncertain' corrected to 'no'."
+ },
+ {
+  "sp_id": 63,
+  "verdict": "no",
+  "cis_partners": [],
+  "trans_partners": [
+   "F508del"
+  ],
+  "reason": "Primary 405+1G>A (c.273+1G>A) in a PI patient with deltaF508 explicitly 'on the other allele' (trans). The only other change is a 'rare polymorphism at codon T966' (benign); haplotype C is not a variant. No real second CFTR variant in cis => 'no'. Current 'Uncertain' corrected to 'no'."
+ },
+ {
+  "sp_id": 114,
+  "verdict": "uncertain",
+  "cis_partners": [],
+  "trans_partners": [],
+  "reason": "Primary 621+2T>G (c.489+2T>G) patient 'also carries the R792X and L967S mutations'. Three real mutations in one patient with no phase stated; which are cis vs trans is unknown => uncertain. R792X and L967S are candidate partners but neither is a confirmed cis partner."
+ },
+ {
+  "sp_id": 282,
+  "verdict": "no",
+  "cis_partners": [],
+  "trans_partners": [],
+  "reason": "Primary 1811+18G>A (c.1679+18G>A) in an atypical-CF patient; the record states 'No second mutation was found, except for 125G->C', which is a recognized benign polymorphism. No real second CFTR variant => 'no'. Current 'Uncertain' corrected to 'no'."
+ },
+ {
+  "sp_id": 380,
+  "verdict": "uncertain",
+  "cis_partners": [],
+  "trans_partners": [
+   "F508del"
+  ],
+  "reason": "Primary 2751+3A>G (c.2619+3A>G) in a CBAVD patient with deltaF508 explicitly 'on the other allele' (trans). A 5T tract in intron 8 (c.1210-12T[5]) is also present, but its phase is not stated (not stated in cis), so it cannot be assigned as a confirmed cis partner => uncertain. deltaF508 is trans."
+ },
+ {
+  "sp_id": 406,
+  "verdict": "uncertain",
+  "cis_partners": [],
+  "trans_partners": [],
+  "reason": "Primary M952I (c.2856G>C) co-occurs with R117H. The submission explicitly states 'it was unclear if the 2 mutations were located on different chromosomes' and that M952I status is 'tentative'. A phenotype note (pers. corr. Girodon) says R117H is 'on the other allele', so the record is internally inconsistent and phase is not reliably established => uncertain; R117H is not a confirmed cis partner."
+ },
+ {
+  "sp_id": 488,
+  "verdict": "uncertain",
+  "cis_partners": [],
+  "trans_partners": [],
+  "reason": "Primary 3600+5G>A (c.3468+5G>A) patient carries, in addition, V920M and deltaF508 (three mutations). Phase is not stated and deltaF508 is not stated 'on the other allele'. Most consistent with [3600+5G>A;V920M] in cis opposite deltaF508, but this is not explicit => uncertain; V920M is a candidate but no confirmed cis partner."
+ },
+ {
+  "sp_id": 525,
+  "verdict": "uncertain",
+  "cis_partners": [],
+  "trans_partners": [],
+  "reason": "Primary T1246I (c.3737C>T) identified on a CF chromosome; the patient's other CF mutation is deltaF508, but the submitter explicitly states they 'have yet been unable to show that it is on his other CF chromosome' and are 'uncertain of the status of T1246I'. A phenotype note says deltaF508 is 'on the other allele', but the submission itself leaves phase unproven => uncertain; no confirmed cis partner."
+ },
+ {
+  "sp_id": 568,
+  "verdict": "uncertain",
+  "cis_partners": [],
+  "trans_partners": [],
+  "reason": "Primary D1377H (c.4129G>C) in a CBAVD patient 'also carrying 2622+1G>A'. Phase is not stated => uncertain. Most consistent with a compound heterozygote (2622+1G>A likely trans given the CBAVD phenotype), but not stated; 2622+1G>A is a candidate, not a confirmed cis partner."
+ },
+ {
+  "sp_id": 654,
+  "verdict": "uncertain",
+  "cis_partners": [],
+  "trans_partners": [],
+  "reason": "Primary 991del5; in the female patient (described as T338I heterozygous with hepatopathy) T338I co-occurs, but its phase relative to 991del5 is not stated. Unstated phase -> uncertain."
+ },
+ {
+  "sp_id": 698,
+  "verdict": "uncertain",
+  "cis_partners": [],
+  "trans_partners": [],
+  "reason": "S1255L primary; the same patient was found to carry a novel polymorphism L49L (per phenotype), but the phase between S1255L and L49L is not stated -> uncertain."
+ },
+ {
+  "sp_id": 699,
+  "verdict": "uncertain",
+  "cis_partners": [],
+  "trans_partners": [],
+  "reason": "Primary c.147A>G = L49L (silent, codon 49). It was reported together with S1255L in the same patient (see sp 698), but phase is not stated -> uncertain."
+ },
+ {
+  "sp_id": 741,
+  "verdict": "uncertain",
+  "cis_partners": [],
+  "trans_partners": [],
+  "reason": "3850-79T/C co-occurs with 3271+101C/G, F508, 5T/9T, P1290P and I1027T in one CBAVD patient, but the text explicitly says 'we do not know on which allele' -> phase unknown, uncertain. F508 phase also unknown so not listed as trans."
+ },
+ {
+  "sp_id": 743,
+  "verdict": "no",
+  "cis_partners": [],
+  "trans_partners": [
+   "G542X"
+  ],
+  "reason": "CFTR2 CF patient with genotype G542X and S977F. An affected CF patient carrying the classic severe nonsense mutation G542X plus S977F is compound heterozygous (biallelic disease), so G542X is on the other allele (trans). No cis partner -> no."
+ },
+ {
+  "sp_id": 770,
+  "verdict": "uncertain",
+  "cis_partners": [],
+  "trans_partners": [],
+  "reason": "2736G/A (silent, 'No Changes') is a polymorphism found in a CF patient whose disease alleles are R1066C/2789+5. The polymorphism necessarily lies in cis with one of those two alleles, but which one is not stated -> uncertain."
+ },
+ {
+  "sp_id": 776,
+  "verdict": "yes",
+  "cis_partners": [
+   {
+    "as_written": "I1027T",
+    "best_hgvs_or_name": "c.3080T>C (I1027T)"
+   }
+  ],
+  "trans_partners": [
+   "F508del (deltaF508)"
+  ],
+  "reason": "L997F (3123G>C = c.2991G>C) and I1027T (3212T>C) are reported together as a polymorphism pair in a CF patient whose OTHER mutation is deltaF508. deltaF508 is the trans allele, so by the inference rule L997F and I1027T lie together on the non-F508 allele -> cis partner I1027T; deltaF508 trans."
+ },
+ {
+  "sp_id": 827,
+  "verdict": "uncertain",
+  "cis_partners": [],
+  "trans_partners": [],
+  "reason": "Same CBAVD patient as sp 741; 3271+101C/G co-occurs with 3850-79T/C, F508, 5T/9T, P1290P and I1027T, but the source explicitly states 'we do not know on which allele' -> phase unknown, uncertain."
+ },
+ {
+  "sp_id": 835,
+  "verdict": "no",
+  "cis_partners": [],
+  "trans_partners": [
+   "F508del (deltaF508)"
+  ],
+  "reason": "2789+2insA found in a CAVD patient with deltaF508. Two pathogenic mutations in an affected patient = compound heterozygous, so deltaF508 is on the other allele (trans). No third variant and no cis partner -> no."
+ },
+ {
+  "sp_id": 840,
+  "verdict": "uncertain",
+  "cis_partners": [],
+  "trans_partners": [],
+  "reason": "405+42A/G (intronic) found in an Estonian individual also heterozygous for S1235R; the phase between the two variants is not stated -> uncertain."
+ },
+ {
+  "sp_id": 864,
+  "verdict": "yes",
+  "cis_partners": [
+   {
+    "as_written": "R1162X",
+    "best_hgvs_or_name": "R1162X (c.3484C>T)"
+   }
+  ],
+  "trans_partners": [],
+  "reason": "T351S was observed on the chromosome bearing R1162X in a HEALTHY obligate carrier (father of a CF child). If it were in trans the carrier would be a compound heterozygote (affected), but he is healthy, so T351S must be in cis with R1162X -> yes. The record itself notes it 'was observed on one chromosome ... bearing the R1162X mutation.'"
+ },
+ {
+  "sp_id": 883,
+  "verdict": "uncertain",
+  "cis_partners": [],
+  "trans_partners": [],
+  "reason": "deltaF508 identified on one allele by common-mutation panel; 1249-27delTA (intronic, likely benign) found later by full-exon screening. The phase of 1249-27delTA relative to deltaF508 is not stated -> uncertain."
+ },
+ {
+  "sp_id": 938,
+  "verdict": "uncertain",
+  "cis_partners": [],
+  "trans_partners": [],
+  "reason": "3271+42A>T polymorphism present in a patient with genotype F508del/1898+1G>C. It lies in cis with one of the two disease alleles, but which allele is not stated -> uncertain."
+ },
+ {
+  "sp_id": 940,
+  "verdict": "uncertain",
+  "cis_partners": [],
+  "trans_partners": [],
+  "reason": "3499+37G/A (intronic polymorphism) found in a PS individual also carrying the P1290P polymorphism; the phase between them is not stated -> uncertain."
+ },
+ {
+  "sp_id": 977,
+  "verdict": "uncertain",
+  "cis_partners": [],
+  "trans_partners": [
+   "F508del (deltaF508)"
+  ],
+  "reason": "deltaF508 is explicitly on the other allele (trans), so T1053I is on the non-F508 allele. The patient is 5T/9T, but the record does not state which allele carries the 5T relative to T1053I, so a T1053I;5T cis complex allele is possible but unconfirmed -> uncertain."
+ },
+ {
+  "sp_id": 1017,
+  "verdict": "uncertain",
+  "cis_partners": [
+   {
+    "as_written": "[delta]F508",
+    "best_hgvs_or_name": "F508del"
+   }
+  ],
+  "trans_partners": [],
+  "reason": "Only co-variant is delta-F508, described as 'associated with' the primary c.2620-1G>C in a CF patient; no phase stated. Per the 'associated with X, no phase' rule this is uncertain (never yes). Most likely a simple compound heterozygote (F508del in trans), but the text gives no phase, so F508del is listed only as an unconfirmed candidate."
+ },
+ {
+  "sp_id": 1130,
+  "verdict": "uncertain",
+  "cis_partners": [
+   {
+    "as_written": "the R75Q polymorphism",
+    "best_hgvs_or_name": "R75Q"
+   }
+  ],
+  "trans_partners": [
+   "F508del"
+  ],
+  "reason": "Patient is 'also heterozygous for the delta-F508 mutation' (compound het => F508del in trans) and additionally has the R75Q polymorphism with no stated phase. R75Q is the unconfirmed cis candidate for a possible complex allele => uncertain. (The 196+1G>C note refers to a different mutation, not this patient's genotype.)"
+ },
+ {
+  "sp_id": 1209,
+  "verdict": "uncertain",
+  "cis_partners": [
+   {
+    "as_written": "The 5T splice variant",
+    "best_hgvs_or_name": "c.1210-12T[5]"
+   }
+  ],
+  "trans_partners": [],
+  "reason": "The 5T splice variant co-occurs and the text explicitly states they are 'waiting for parental DNA to determine if the 5T is in cis or trans' => phase undetermined => uncertain."
+ },
+ {
+  "sp_id": 1210,
+  "verdict": "uncertain",
+  "cis_partners": [
+   {
+    "as_written": "the A559T mutation",
+    "best_hgvs_or_name": "A559T"
+   }
+  ],
+  "trans_partners": [],
+  "reason": "Patient is heterozygous for A559T alongside primary G480S; no phase given => uncertain. A559T is the unconfirmed cis candidate (could equally be a compound-het/trans partner)."
+ },
+ {
+  "sp_id": 1224,
+  "verdict": "no",
+  "cis_partners": [],
+  "trans_partners": [
+   "F508del"
+  ],
+  "reason": "Phenotype explicitly states delF508 is on the OTHER allele (trans); F200I is the only variant on its allele and no other CFTR variant is present, so there is no cis partner / no complex allele. Corrected from Uncertain to no (the earlier 'could not determine which allele' note is resolved by the pers. corr. Claustres statement of trans phase)."
+ },
+ {
+  "sp_id": 1296,
+  "verdict": "uncertain",
+  "cis_partners": [
+   {
+    "as_written": "711+1G->T",
+    "best_hgvs_or_name": "711+1G>T"
+   }
+  ],
+  "trans_partners": [],
+  "reason": "CF patient carries 711+1G>T alongside primary H199R; no phase stated => uncertain. 711+1G>T (a severe splice mutation, likely the trans disease allele) is listed as the unconfirmed candidate."
+ },
+ {
+  "sp_id": 1346,
+  "verdict": "yes",
+  "cis_partners": [
+   {
+    "as_written": "1342-6(5T)",
+    "best_hgvs_or_name": "c.1210-12T[5]"
+   }
+  ],
+  "trans_partners": [
+   "F508del"
+  ],
+  "reason": "DeltaF508 is explicitly on the OTHER allele (trans); therefore the 5T (1342-6(5T)) must sit on the same allele as primary R352G (F508del is on a 9T background), i.e. in cis by inference. Corrected from Uncertain to yes; 5T is the cis partner, F508del is trans."
+ },
+ {
+  "sp_id": 1350,
+  "verdict": "uncertain",
+  "cis_partners": [
+   {
+    "as_written": "875+1G->A",
+    "best_hgvs_or_name": "875+1G>A"
+   },
+   {
+    "as_written": "S1235R",
+    "best_hgvs_or_name": "S1235R"
+   }
+  ],
+  "trans_partners": [],
+  "reason": "Patient 'also carries 875+1G>A and S1235R' with no phase stated among the three variants => uncertain. Both are unconfirmed cis candidates; on phenotype grounds 875+1G>A is most likely the trans disease allele and S1235R the passenger, but the text establishes no phase."
+ },
+ {
+  "sp_id": 1392,
+  "verdict": "uncertain",
+  "cis_partners": [
+   {
+    "as_written": "125 g/c sequence variation",
+    "best_hgvs_or_name": "125G>C"
+   }
+  ],
+  "trans_partners": [],
+  "reason": "Patients carry the 125 G/C sequence variation together with the primary del4bp/ins13bp; no phase stated => uncertain. 125G>C is the unconfirmed cis candidate."
+ },
+ {
+  "sp_id": 1425,
+  "verdict": "uncertain",
+  "cis_partners": [
+   {
+    "as_written": "D110H",
+    "best_hgvs_or_name": "D110H"
+   }
+  ],
+  "trans_partners": [],
+  "reason": "Patient carries D110H at the heterozygous state alongside primary I752S; text explicitly states 'the segregation has not been performed' (phase unknown) => uncertain."
+ },
+ {
+  "sp_id": 1438,
+  "verdict": "uncertain",
+  "cis_partners": [
+   {
+    "as_written": "the mutation c.1248+1G>A",
+    "best_hgvs_or_name": "c.1248+1G>A"
+   }
+  ],
+  "trans_partners": [],
+  "reason": "CBAVD patient carries c.1248+1G>A with primary I203M; 'Parental DNA was not available for familial segregation' (phase unknown) => uncertain."
+ },
+ {
+  "sp_id": 1446,
+  "verdict": "uncertain",
+  "cis_partners": [
+   {
+    "as_written": "the I807M change",
+    "best_hgvs_or_name": "I807M"
+   }
+  ],
+  "trans_partners": [
+   "R117H"
+  ],
+  "reason": "Genotype written [R117H] + [Q1352H (G>T)] means R117H is on the other allele (trans) relative to primary Q1352H. I807M is present 'without defined phase' and is the unconfirmed cis candidate => uncertain."
+ },
+ {
+  "sp_id": 1449,
+  "verdict": "uncertain",
+  "cis_partners": [
+   {
+    "as_written": "the R75Q variant",
+    "best_hgvs_or_name": "R75Q"
+   }
+  ],
+  "trans_partners": [],
+  "reason": "Infertile patient 'presents also the R75Q variant' alongside primary c.663G>A; no phase stated => uncertain. R75Q is the unconfirmed cis candidate."
+ },
+ {
+  "sp_id": 1454,
+  "verdict": "uncertain",
+  "cis_partners": [
+   {
+    "as_written": "the 3120+1G>A mutation",
+    "best_hgvs_or_name": "3120+1G>A"
+   }
+  ],
+  "trans_partners": [],
+  "reason": "All three siblings harbor 3120+1G>A alongside the promoter/exon1 deletion; text explicitly states 'Phase has not been established' => uncertain."
+ },
+ {
+  "sp_id": 1455,
+  "verdict": "uncertain",
+  "cis_partners": [
+   {
+    "as_written": "the dF508 mutation",
+    "best_hgvs_or_name": "F508del"
+   }
+  ],
+  "trans_partners": [],
+  "reason": "Proband 'also harbors' the dF508 mutation alongside the exon 22-24 deletion; no phase stated => uncertain. Most likely a simple compound heterozygote (F508del in trans), but no phase is given, so F508del is listed only as an unconfirmed candidate."
+ },
+ {
+  "sp_id": 1457,
+  "verdict": "uncertain",
+  "cis_partners": [],
+  "trans_partners": [],
+  "reason": "Del exon 17a-17b co-occurs with A72D ('the proband harbors also the A72D mutation'). No phase stated, so cis vs trans is unknown -> uncertain. Candidate cis partner if in cis: A72D (c.215C>A). Nothing confirmed in cis; nothing stated in trans."
+ },
+ {
+  "sp_id": 1458,
+  "verdict": "uncertain",
+  "cis_partners": [],
+  "trans_partners": [],
+  "reason": "Del exon 22-23 co-occurs with R1162X ('the proband harbors R1162X mutation'). Phase not stated -> uncertain. Candidate cis partner if in cis: R1162X (c.3484C>T / legacy 3616C>T). Nothing confirmed cis or trans."
+ },
+ {
+  "sp_id": 1459,
+  "verdict": "uncertain",
+  "cis_partners": [],
+  "trans_partners": [],
+  "reason": "Del exon 4-6a co-occurs with G542X and S1235R in a classic-CF infant; text explicitly states 'Phase not established.' Three variants over two alleles means the deletion sits in cis with one (or neither) of them, but which is unknown -> uncertain. Candidate cis partners if in cis: G542X (c.1624G>T) and/or S1235R (c.3705T>G). None confirmed cis; none confirmed trans."
+ },
+ {
+  "sp_id": 1460,
+  "verdict": "uncertain",
+  "cis_partners": [],
+  "trans_partners": [],
+  "reason": "Del exon 2-3 co-occurs with G551D; text explicitly states 'Phase not established.' -> uncertain. Candidate cis partner if in cis: G551D (c.1652G>A / legacy 1784G>A). Biologically likely a simple compound het (trans) in a classic-CF patient, but phase is not stated so it is not called. Nothing confirmed cis/trans."
+ },
+ {
+  "sp_id": 1465,
+  "verdict": "no",
+  "cis_partners": [],
+  "trans_partners": [
+   "R117C"
+  ],
+  "reason": "L61P was identified on one CF chromosome; the 'other mutation' is R117C (481C>T / c.349C>T), i.e. on the other allele = trans. M470V (c.1408A>G) and 2694T>G (synonymous, exon 14a) are recognized benign polymorphisms, not complex-allele partners. The only real second variant is in trans -> no."
+ },
+ {
+  "sp_id": 1466,
+  "verdict": "uncertain",
+  "cis_partners": [],
+  "trans_partners": [],
+  "reason": "L183I in a CBAVD male co-occurs with a 5T allele, but the text explicitly says 'phase unknown' -> uncertain. Candidate cis partner if in cis: 5T (c.1210-12T[5]). Poly-T counts as a cis partner only when stated in cis; here phase is unknown, so cis_partners is empty."
+ },
+ {
+  "sp_id": 1487,
+  "verdict": "uncertain",
+  "cis_partners": [],
+  "trans_partners": [],
+  "reason": "G194R co-occurs with 1341+1G>A (intron 8 splice donor) and a heterozygous 5T variant (intron 8) on Ambry testing; no phase is given -> uncertain. Candidate cis partners if in cis: 1341+1G>A (c.1209+1G>A) and 5T (c.1210-12T[5]). None confirmed cis/trans."
+ },
+ {
+  "sp_id": 1500,
+  "verdict": "uncertain",
+  "cis_partners": [],
+  "trans_partners": [
+   "F508del"
+  ],
+  "reason": "Y913X: deltaF508 is explicitly on the OTHER allele (trans). A third variant I1027T (3212T>C / c.3080T>C) is also present, but 'family studies have not been performed to identify which allele carries two mutations' -> I1027T could be in cis with Y913X or in cis with deltaF508; phase unknown -> uncertain. Candidate cis partner if in cis: I1027T. trans: F508del."
+ },
+ {
+  "sp_id": 1506,
+  "verdict": "no",
+  "cis_partners": [],
+  "trans_partners": [],
+  "reason": "I285F: the record explicitly states the second mutation was NOT identified; the only other change is a benign polymorphism 1497G>A within exon 9. No real second CFTR variant is present in cis -> no. Nothing in trans."
+ },
+ {
+  "sp_id": 1517,
+  "verdict": "uncertain",
+  "cis_partners": [],
+  "trans_partners": [],
+  "reason": "Promoter variant -93G>C (legacy 40G/C) was identified on one CF chromosome; the 125G>C exon-1 variant was also identified (no common CF mutations found, genotype +/+). Phase between the two 5' variants is not stated -> uncertain. Candidate cis partner if in cis: 125G>C (exon 1; commonly regarded as a polymorphism). None confirmed cis/trans."
+ },
+ {
+  "sp_id": 1532,
+  "verdict": "uncertain",
+  "cis_partners": [],
+  "trans_partners": [],
+  "reason": "Deep-intronic 1811+1650T>A was identified in a CF patient 'bearing the 1811+1.6 kbA>G mutation' (a known pathogenic intron-11 variant). No phase stated -> uncertain. Candidate cis partner if in cis: 1811+1.6kbA>G. Nothing confirmed cis/trans."
+ },
+ {
+  "sp_id": 1567,
+  "verdict": "no",
+  "cis_partners": [],
+  "trans_partners": [
+   "F508del"
+  ],
+  "reason": "I1027T (3212T>C / c.3080T>C): the patient's 'other mutation is deltaF508', i.e. on the other allele = trans. The 3123G/C (L997F) material is nomenclature/reporting history (Fanen 1992), not a stated cis partner in this patient. No second CFTR variant is in cis -> no. trans: F508del."
+ },
+ {
+  "sp_id": 1578,
+  "verdict": "no",
+  "cis_partners": [],
+  "trans_partners": [],
+  "reason": "I586V was found in the ASYMPTOMATIC wife, whose only co-variants are poly-T 7T/7T (normal) and the benign polymorphism 1716A>G. The R117H and L997F belong to her husband (a separate individual/genome), not to the I586V-carrying allele. No real second CFTR variant is in cis with I586V -> no. Nothing in trans."
+ },
+ {
+  "sp_id": 1594,
+  "verdict": "uncertain",
+  "cis_partners": [],
+  "trans_partners": [],
+  "reason": "2221insA (frameshift) in a CBAVD patient who also carries IVS8-5T and 1716A>G; 'segregation analysis was not possible' -> phase unknown -> uncertain. Candidate cis partner if in cis: 5T (c.1210-12T[5]); 1716A>G is a benign polymorphism. (A severe frameshift + 5T is usually trans in CBAVD, but phase is not established here.) None confirmed cis/trans."
+ },
+ {
+  "sp_id": 1595,
+  "verdict": "uncertain",
+  "cis_partners": [],
+  "trans_partners": [],
+  "reason": "2623-11C>T (which the record itself suggests may be a polymorphism) co-occurs with heterozygous deltaF508 and W1204X in a classical-CF compound-het patient; 'segregation analysis was not performed yet.' The primary must lie in cis with one of F508del/W1204X and in trans with the other, but which is unknown -> uncertain. Candidate cis partner if in cis: F508del or W1204X. Neither can be confirmed as the trans allele, so trans_partners is left empty."
+ },
+ {
+  "sp_id": 1639,
+  "verdict": "uncertain",
+  "cis_partners": [],
+  "trans_partners": [],
+  "reason": "Primary 1341+6A>G (c.1209+6A>G) co-occurs with R31C (c.91C>T) in one reported patient (50yo man), but no phase is given, so cis vs trans is unstated -> uncertain; no partner is confirmed cis."
+ },
+ {
+  "sp_id": 1644,
+  "verdict": "uncertain",
+  "cis_partners": [],
+  "trans_partners": [],
+  "reason": "S158N (c.473G>A) patient also carries sequence variations 1540A>G (M470V, c.1408A>G) and 1525-61A>G; no phase stated -> uncertain; no confirmed cis partner."
+ },
+ {
+  "sp_id": 1668,
+  "verdict": "uncertain",
+  "cis_partners": [],
+  "trans_partners": [],
+  "reason": "Text explicitly states the IVS8-5T allele (5T; c.1210-12T[5]) co-occurs but that they 'couldn't establish if both variations are in cis or in trans' -> uncertain. 5T is not counted as a cis partner because it is not stated to be in cis."
+ },
+ {
+  "sp_id": 1697,
+  "verdict": "yes",
+  "cis_partners": [
+   {
+    "as_written": "R297Q",
+    "best_hgvs_or_name": "R297Q"
+   }
+  ],
+  "trans_partners": [
+   "F508del"
+  ],
+  "reason": "F508del is explicitly on the other chromosome (trans). The additional heterozygous R297Q is therefore in cis with the primary 2512delG (c.2380delG) by inference -> complex allele 2380delG + R297Q; F508del is the trans partner. Corrected from Uncertain."
+ },
+ {
+  "sp_id": 1704,
+  "verdict": "uncertain",
+  "cis_partners": [],
+  "trans_partners": [],
+  "reason": "Primary c.1392+4G>T patient also has CFTR variant V456A (c.1367T>C); phase not stated -> uncertain; no confirmed cis partner."
+ },
+ {
+  "sp_id": 1710,
+  "verdict": "uncertain",
+  "cis_partners": [],
+  "trans_partners": [],
+  "reason": "Same scenario as sp 1668: c.2989-14C>A co-occurs with the IVS8-5T allele (c.1210-12T[5]), but the text explicitly could not establish cis vs trans -> uncertain; 5T not counted as cis."
+ },
+ {
+  "sp_id": 1715,
+  "verdict": "uncertain",
+  "cis_partners": [],
+  "trans_partners": [],
+  "reason": "C76W (c.228T>G) was identified together with the variant 3849+40A>G in a CBAVD patient; familial segregation was unavailable and phase is not stated -> uncertain."
+ },
+ {
+  "sp_id": 1721,
+  "verdict": "uncertain",
+  "cis_partners": [],
+  "trans_partners": [],
+  "reason": "D572H (c.1714G>C) patient also carries CFTR variant c.1812-99C>T; phase not stated -> uncertain. (N34S is a SPINK1 variant, not CFTR, so it is not a partner.)"
+ },
+ {
+  "sp_id": 1723,
+  "verdict": "uncertain",
+  "cis_partners": [],
+  "trans_partners": [],
+  "reason": "For the pancreatitis patient, S158N (c.473G>A) co-occurs with 1540A>G (M470V) and 1525-61A>G; phase not stated -> uncertain. The first (CF) patient had no reported second CFTR variant."
+ },
+ {
+  "sp_id": 1734,
+  "verdict": "uncertain",
+  "cis_partners": [],
+  "trans_partners": [],
+  "reason": "L1279L (c.3837G>A) patient also has heterozygous G576A (c.1727G>C) and R668C (c.2002C>T); phase not stated -> uncertain. The F508del mentioned is carried by the spouse, not this patient, so it is neither cis nor trans."
+ },
+ {
+  "sp_id": 1735,
+  "verdict": "uncertain",
+  "cis_partners": [],
+  "trans_partners": [],
+  "reason": "Same work-up as sp 1734; L167R (c.500T>G) patient also carries L1279L (c.3837G>A), G576A (c.1727G>C) and R668C (c.2002C>T); phase not stated -> uncertain. F508del is in the spouse, not the patient."
+ },
+ {
+  "sp_id": 1743,
+  "verdict": "uncertain",
+  "cis_partners": [],
+  "trans_partners": [],
+  "reason": "Text explicitly states the phase of all four sequence changes is unknown: primary 4375-7delT (c.4243-7delT), F508del, L467F (c.1399C>T) and 3030G>A. No variant can be confirmed cis; F508del is NOT stated to be on the other allele (phase unknown), so it is not confirmed trans either -> uncertain."
+ },
+ {
+  "sp_id": 1756,
+  "verdict": "uncertain",
+  "cis_partners": [],
+  "trans_partners": [],
+  "reason": "T990S (c.2968A>T) patient also carries CFTR variations 2694T>G, 3041-92G>A, M470V (c.1408A>G) and 1525-61A>G; phase not stated -> uncertain. (N34S is SPINK1, not CFTR.)"
+ },
+ {
+  "sp_id": 1758,
+  "verdict": "yes",
+  "cis_partners": [
+   {
+    "as_written": "S1235R",
+    "best_hgvs_or_name": "S1235R"
+   }
+  ],
+  "trans_partners": [
+   "3659delC"
+  ],
+  "reason": "3659delC (c.3527del) is explicitly on the other chromosome (trans). The additional heterozygous S1235R (c.3705T>G) is therefore in cis with the primary c.3199_3200delinsA by inference -> complex allele; 3659delC is the trans partner. Corrected from Uncertain."
+ },
+ {
+  "sp_id": 1890,
+  "verdict": "uncertain",
+  "cis_partners": [],
+  "trans_partners": [],
+  "reason": "Primary c.3331_3332delinsA co-occurs with S1235R (p.Ser1235Arg; c.3705T>G), but phase is explicitly stated as unknown and there is no other-allele anchor to allow a cis inference -> uncertain."
+ },
+ {
+  "sp_id": 1894,
+  "verdict": "uncertain",
+  "cis_partners": [],
+  "trans_partners": [],
+  "reason": "Primary c.76A>G (p.Lys26Glu) co-occurs with F508del, but the source explicitly states 'phase unknown.' F508del is not said to be on the other allele, so it is neither confirmed cis nor explicitly trans. Unstated phase => uncertain, not confirmed cis (candidate partner: F508del)."
+ },
+ {
+  "sp_id": 1927,
+  "verdict": "uncertain",
+  "cis_partners": [],
+  "trans_partners": [],
+  "reason": "Primary c.1680-2A>G co-occurs with the intron-9 TG11-T5 tract (5T = c.1210-12T[5]), but the text explicitly says 'phase unknown.' Poly-T/TG tracts count as cis partners only when stated in cis; here phase is not stated => uncertain (candidate partner: TG11T5 / 5T)."
+ },
+ {
+  "sp_id": 1940,
+  "verdict": "uncertain",
+  "cis_partners": [],
+  "trans_partners": [],
+  "reason": "Primary c.-347G>A and c.3139+193_c.3139+198delTAAT were 'found in the same individual.' Same individual does not establish same allele; no phase given => uncertain (candidate partner: c.3139+193_c.3139+198delTAAT)."
+ },
+ {
+  "sp_id": 1942,
+  "verdict": "uncertain",
+  "cis_partners": [],
+  "trans_partners": [],
+  "reason": "p.Arg75Gln (R75Q, c.224G>A) was 'also identified in the carrier' of primary c.53+212C>T. Co-occurrence only, phase not stated => uncertain (candidate partner: R75Q)."
+ },
+ {
+  "sp_id": 1943,
+  "verdict": "uncertain",
+  "cis_partners": [],
+  "trans_partners": [],
+  "reason": "c.2909-71G>C was 'identified in the carrier' of primary c.53+248G>C. Co-occurrence only, phase not stated => uncertain (candidate partner: c.2909-71G>C)."
+ },
+ {
+  "sp_id": 1957,
+  "verdict": "uncertain",
+  "cis_partners": [],
+  "trans_partners": [],
+  "reason": "p.Ile807Met (I807M, c.2421A>G) was 'identified in the carrier' of primary c.3893G>T (p.Gly1298Val). Co-occurrence only, phase not stated => uncertain (candidate partner: I807M)."
+ },
+ {
+  "sp_id": 1984,
+  "verdict": "uncertain",
+  "cis_partners": [],
+  "trans_partners": [],
+  "reason": "Source explicitly states it is not possible to determine whether the two variations are in cis or trans (no parental samples). The second variant is not named in the provided text. Phase explicitly undetermined => uncertain, not confirmed cis."
+ },
+ {
+  "sp_id": 2021,
+  "verdict": "uncertain",
+  "cis_partners": [],
+  "trans_partners": [],
+  "reason": "Primary c.320C>A (p.Ala107Asp) co-occurs with p.Trp496Arg (W496R, c.1486T>C, listed in phenotype). No phase information given => uncertain (candidate partner: p.Trp496Arg)."
+ },
+ {
+  "sp_id": 2027,
+  "verdict": "uncertain",
+  "cis_partners": [],
+  "trans_partners": [],
+  "reason": "Primary c.3393_3395delTAT (p.Ile1132del) individual 'also carries' c.1584G>A (legacy 1716G>A, a splicing variant). Phase not stated. Affected CF (meconium ileus, sweat 115) makes trans plausible, but phase is not explicit => uncertain, not confirmed cis (candidate partner: c.1584G>A)."
+ },
+ {
+  "sp_id": 2108,
+  "verdict": "uncertain",
+  "cis_partners": [],
+  "trans_partners": [],
+  "reason": "Affected CF patient is heterozygous for primary c.2473_2476dupAACG (p.Glu827ArgfsX10) and 'also heterozygous for' c.3123dupA (p.Gln1042ThrfsX5). Two LOF frameshifts in an affected patient are clinically most consistent with compound heterozygosity (trans), but the text uses no explicit compound-het / other-allele wording and no HGVS trans notation, so phase is not explicitly stated => uncertain (not confirmed cis; not explicitly trans). Candidate/likely-trans partner: c.3123dupA."
+ },
+ {
+  "sp_id": 2140,
+  "verdict": "no",
+  "cis_partners": [],
+  "trans_partners": [
+   "c.3808del (p.Asp1270Metfs*8)"
+  ],
+  "reason": "Source explicitly reports a 'compound heterozygous patient: c.[3808del];[3895del]' (p.[Asp1270Metfs*8];[Thr1299Hisfs*29]). The c.[..];[..] two-bracket notation plus 'compound heterozygous' label places the two frameshifts in trans (different alleles); cis is also clinically impossible in an affected CF newborn (sweat 97). Primary c.3895delA is therefore alone on its allele, so this is NOT a cis complex allele; c.3808del is the other-allele (trans) compound-het partner. Parental phase was noted as unconfirmed, but the reported genotype is trans."
+ },
+ {
+  "sp_id": 2229,
+  "verdict": "uncertain",
+  "cis_partners": [],
+  "trans_partners": [],
+  "reason": "Primary c.4297G>A (p.Glu1433Lys) patient's genetic report 'also identified the 13-5T variant' (the intron-9 5T poly-T / TG-T tract allele, 5T = c.1210-12T[5]). No phase stated; poly-T counts as cis only when stated in cis => uncertain (candidate partner: 5T)."
+ }
+]
